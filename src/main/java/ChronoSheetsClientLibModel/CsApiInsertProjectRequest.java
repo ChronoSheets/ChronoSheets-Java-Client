@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CsApiInsertProjectRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:02:13.600+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:51:45.139+10:00")
 public class CsApiInsertProjectRequest {
   @SerializedName("ClientId")
   private Integer clientId = null;

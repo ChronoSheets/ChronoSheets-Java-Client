@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * CsApiUsualHoursDay
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:02:13.600+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:51:45.139+10:00")
 public class CsApiUsualHoursDay {
   /**
    * 0 &#x3D; Monday, 1 &#x3D; Tuesday, 2 &#x3D; Wednesday, 3 &#x3D; Thursday, 4 &#x3D; Friday, 5 &#x3D; Saturday, 6 &#x3D; Sunday

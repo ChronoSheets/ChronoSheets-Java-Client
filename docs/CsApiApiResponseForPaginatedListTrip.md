@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **totalSetCount** | **Integer** |  |  [optional]
 **data** | [**List&lt;CsApiTrip&gt;**](CsApiTrip.md) |  |  [optional]
-**status** | [**StatusEnum**](#StatusEnum) | 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired |  [optional]
+**status** | [**StatusEnum**](#StatusEnum) | 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC |  [optional]
 **message** | **String** |  |  [optional]
 
 
@@ -20,6 +20,7 @@ NUMBER_2 | 2
 NUMBER_3 | 3
 NUMBER_4 | 4
 NUMBER_5 | 5
+NUMBER_128 | 128
 
 
 

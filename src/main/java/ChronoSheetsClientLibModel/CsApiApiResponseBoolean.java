@@ -26,13 +26,13 @@ import java.io.IOException;
 /**
  * CsApiApiResponseBoolean
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:02:13.600+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:51:45.139+10:00")
 public class CsApiApiResponseBoolean {
   @SerializedName("Data")
   private Boolean data = null;
 
   /**
-   * 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
+   * 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
@@ -46,7 +46,9 @@ public class CsApiApiResponseBoolean {
     
     NUMBER_4(4),
     
-    NUMBER_5(5);
+    NUMBER_5(5),
+    
+    NUMBER_128(128);
 
     private Integer value;
 
@@ -116,10 +118,10 @@ public class CsApiApiResponseBoolean {
   }
 
    /**
-   * 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
+   * 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC
    * @return status
   **/
-  @ApiModelProperty(value = "0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired")
+  @ApiModelProperty(value = "0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired, 128 = TestingABC")
   public StatusEnum getStatus() {
     return status;
   }

@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * CsApiUpdateUserResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:02:13.600+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:51:45.139+10:00")
 public class CsApiUpdateUserResponse {
   @SerializedName("OrganisationId")
   private Integer organisationId = null;
