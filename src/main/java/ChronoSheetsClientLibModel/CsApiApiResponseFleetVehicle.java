@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CsApiApiResponseFleetVehicle
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T12:42:53.227+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T12:45:21.699+10:00")
 public class CsApiApiResponseFleetVehicle {
   @SerializedName("Data")
   private CsApiFleetVehicle data = null;
