@@ -29,34 +29,34 @@ import java.util.List;
 /**
  * CsApiUsualHoursDay
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T16:22:21.296+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:02:13.600+10:00")
 public class CsApiUsualHoursDay {
   /**
-   * Gets or Sets dayType
+   * 0 &#x3D; Monday, 1 &#x3D; Tuesday, 2 &#x3D; Wednesday, 3 &#x3D; Thursday, 4 &#x3D; Friday, 5 &#x3D; Saturday, 6 &#x3D; Sunday
    */
   @JsonAdapter(DayTypeEnum.Adapter.class)
   public enum DayTypeEnum {
-    MONDAY("Monday"),
+    NUMBER_0(0),
     
-    TUESDAY("Tuesday"),
+    NUMBER_1(1),
     
-    WEDNESDAY("Wednesday"),
+    NUMBER_2(2),
     
-    THURSDAY("Thursday"),
+    NUMBER_3(3),
     
-    FRIDAY("Friday"),
+    NUMBER_4(4),
     
-    SATURDAY("Saturday"),
+    NUMBER_5(5),
     
-    SUNDAY("Sunday");
+    NUMBER_6(6);
 
-    private String value;
+    private Integer value;
 
-    DayTypeEnum(String value) {
+    DayTypeEnum(Integer value) {
       this.value = value;
     }
 
-    public String getValue() {
+    public Integer getValue() {
       return value;
     }
 
@@ -82,7 +82,7 @@ public class CsApiUsualHoursDay {
 
       @Override
       public DayTypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        Integer value = jsonReader.nextInt();
         return DayTypeEnum.fromValue(String.valueOf(value));
       }
     }
@@ -103,10 +103,10 @@ public class CsApiUsualHoursDay {
   }
 
    /**
-   * Get dayType
+   * 0 &#x3D; Monday, 1 &#x3D; Tuesday, 2 &#x3D; Wednesday, 3 &#x3D; Thursday, 4 &#x3D; Friday, 5 &#x3D; Saturday, 6 &#x3D; Sunday
    * @return dayType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "0 = Monday, 1 = Tuesday, 2 = Wednesday, 3 = Thursday, 4 = Friday, 5 = Saturday, 6 = Sunday")
   public DayTypeEnum getDayType() {
     return dayType;
   }

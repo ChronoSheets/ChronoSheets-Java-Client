@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CsApiOrgReportTrip
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T16:22:21.296+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:02:13.600+10:00")
 public class CsApiOrgReportTrip {
   @SerializedName("Username")
   private String username = null;
@@ -60,23 +60,23 @@ public class CsApiOrgReportTrip {
   private Integer orgId = null;
 
   /**
-   * Gets or Sets mobilePlatform
+   * 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
    */
   @JsonAdapter(MobilePlatformEnum.Adapter.class)
   public enum MobilePlatformEnum {
-    UNKNOWN("Unknown"),
+    NUMBER_0(0),
     
-    IOS("iOS"),
+    NUMBER_1(1),
     
-    ANDROID("Android");
+    NUMBER_2(2);
 
-    private String value;
+    private Integer value;
 
-    MobilePlatformEnum(String value) {
+    MobilePlatformEnum(Integer value) {
       this.value = value;
     }
 
-    public String getValue() {
+    public Integer getValue() {
       return value;
     }
 
@@ -102,7 +102,7 @@ public class CsApiOrgReportTrip {
 
       @Override
       public MobilePlatformEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        Integer value = jsonReader.nextInt();
         return MobilePlatformEnum.fromValue(String.valueOf(value));
       }
     }
@@ -318,10 +318,10 @@ public class CsApiOrgReportTrip {
   }
 
    /**
-   * Get mobilePlatform
+   * 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
    * @return mobilePlatform
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "0 = Unknown, 1 = iOS, 2 = Android")
   public MobilePlatformEnum getMobilePlatform() {
     return mobilePlatform;
   }

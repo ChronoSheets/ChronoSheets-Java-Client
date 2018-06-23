@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CsApiUserJobFavourite
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T16:22:21.296+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:02:13.600+10:00")
 public class CsApiUserJobFavourite {
   @SerializedName("Id")
   private Integer id = null;

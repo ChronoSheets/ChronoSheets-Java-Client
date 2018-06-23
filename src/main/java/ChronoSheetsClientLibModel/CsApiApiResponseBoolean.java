@@ -26,35 +26,35 @@ import java.io.IOException;
 /**
  * CsApiApiResponseBoolean
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T16:22:21.296+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T17:02:13.600+10:00")
 public class CsApiApiResponseBoolean {
   @SerializedName("Data")
   private Boolean data = null;
 
   /**
-   * Gets or Sets status
+   * 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
-    SUCCEEDED("Succeeded"),
+    NUMBER_0(0),
     
-    FATALEXCEPTION("FatalException"),
+    NUMBER_1(1),
     
-    GENERALERROR("GeneralError"),
+    NUMBER_2(2),
     
-    VALIDATIONERROR("ValidationError"),
+    NUMBER_3(3),
     
-    UNAUTHORIZED("UnAuthorized"),
+    NUMBER_4(4),
     
-    SESSIONEXPIRED("SessionExpired");
+    NUMBER_5(5);
 
-    private String value;
+    private Integer value;
 
-    StatusEnum(String value) {
+    StatusEnum(Integer value) {
       this.value = value;
     }
 
-    public String getValue() {
+    public Integer getValue() {
       return value;
     }
 
@@ -80,7 +80,7 @@ public class CsApiApiResponseBoolean {
 
       @Override
       public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        Integer value = jsonReader.nextInt();
         return StatusEnum.fromValue(String.valueOf(value));
       }
     }
@@ -116,10 +116,10 @@ public class CsApiApiResponseBoolean {
   }
 
    /**
-   * Get status
+   * 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
    * @return status
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired")
   public StatusEnum getStatus() {
     return status;
   }
