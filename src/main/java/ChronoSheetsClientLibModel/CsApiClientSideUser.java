@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CsApiClientSideUser
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T18:05:00.896+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T01:39:09.827+10:00")
 public class CsApiClientSideUser {
   @SerializedName("Id")
   private Integer id = null;
@@ -43,6 +43,9 @@ public class CsApiClientSideUser {
 
   @SerializedName("LastName")
   private String lastName = null;
+
+  @SerializedName("EmailAddress")
+  private String emailAddress = null;
 
   @SerializedName("Roles")
   private Long roles = null;
@@ -146,6 +149,24 @@ public class CsApiClientSideUser {
     this.lastName = lastName;
   }
 
+  public CsApiClientSideUser emailAddress(String emailAddress) {
+    this.emailAddress = emailAddress;
+    return this;
+  }
+
+   /**
+   * Get emailAddress
+   * @return emailAddress
+  **/
+  @ApiModelProperty(value = "")
+  public String getEmailAddress() {
+    return emailAddress;
+  }
+
+  public void setEmailAddress(String emailAddress) {
+    this.emailAddress = emailAddress;
+  }
+
   public CsApiClientSideUser roles(Long roles) {
     this.roles = roles;
     return this;
@@ -233,6 +254,7 @@ public class CsApiClientSideUser {
         Objects.equals(this.userName, clientSideUser.userName) &&
         Objects.equals(this.firstName, clientSideUser.firstName) &&
         Objects.equals(this.lastName, clientSideUser.lastName) &&
+        Objects.equals(this.emailAddress, clientSideUser.emailAddress) &&
         Objects.equals(this.roles, clientSideUser.roles) &&
         Objects.equals(this.alertSettings, clientSideUser.alertSettings) &&
         Objects.equals(this.setupWizardRequired, clientSideUser.setupWizardRequired) &&
@@ -241,7 +263,7 @@ public class CsApiClientSideUser {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, organisationId, userName, firstName, lastName, roles, alertSettings, setupWizardRequired, organisation);
+    return Objects.hash(id, organisationId, userName, firstName, lastName, emailAddress, roles, alertSettings, setupWizardRequired, organisation);
   }
 
 
@@ -255,6 +277,7 @@ public class CsApiClientSideUser {
     sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    roles: ").append(toIndentedString(roles)).append("\n");
     sb.append("    alertSettings: ").append(toIndentedString(alertSettings)).append("\n");
     sb.append("    setupWizardRequired: ").append(toIndentedString(setupWizardRequired)).append("\n");

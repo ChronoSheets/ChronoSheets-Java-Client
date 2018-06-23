@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CsApiProjectSeriesReportItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T18:05:00.896+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T01:39:09.827+10:00")
 public class CsApiProjectSeriesReportItem {
   @SerializedName("StartDate")
   private OffsetDateTime startDate = null;
