@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CsApiCreateTripRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T00:57:58.441+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T12:28:39.852+10:00")
 public class CsApiCreateTripRequest {
   @SerializedName("TimesheetId")
   private Integer timesheetId = null;
