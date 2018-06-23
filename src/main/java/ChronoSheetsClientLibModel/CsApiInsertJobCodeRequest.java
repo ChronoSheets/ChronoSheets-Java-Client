@@ -1,6 +1,6 @@
 /*
  * ChronoSheets API
- * An API for integrating into ChronoSheets timesheets
+ * ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.
  *
  * OpenAPI spec version: v1
  * Contact: lachlan@chronosheets.com
@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * CsApiInsertJobCodeRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T16:05:15.946+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T16:22:21.296+10:00")
 public class CsApiInsertJobCodeRequest {
   @SerializedName("Code")
   private String code = null;
