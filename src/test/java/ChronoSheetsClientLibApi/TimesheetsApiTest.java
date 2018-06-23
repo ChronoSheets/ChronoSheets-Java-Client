@@ -39,6 +39,23 @@ public class TimesheetsApiTest {
 
     
     /**
+     * Inserts a single timesheet record
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void timesheetsCreateSingleTimesheetTest() throws ApiException {
+        CsApiTimesheet request = null;
+        String xChronosheetsAuth = null;
+        CsApiApiResponseInt32 response = api.timesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Delete a timesheet
      *
      * 
@@ -69,23 +86,6 @@ public class TimesheetsApiTest {
         OffsetDateTime endDate = null;
         String xChronosheetsAuth = null;
         CsApiApiResponseListTimesheet response = api.timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Inserts a single timesheet record
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void timesheetsInsertSingleTimesheetTest() throws ApiException {
-        CsApiTimesheet request = null;
-        String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.timesheetsInsertSingleTimesheet(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

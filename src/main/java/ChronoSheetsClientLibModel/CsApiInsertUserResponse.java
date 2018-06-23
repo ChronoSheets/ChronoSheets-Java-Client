@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * CsApiInsertUserResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T12:28:39.852+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T12:39:02.512+10:00")
 public class CsApiInsertUserResponse {
   @SerializedName("OrganisationId")
   private Integer organisationId = null;

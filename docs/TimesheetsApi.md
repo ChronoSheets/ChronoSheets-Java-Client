@@ -4,11 +4,56 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**timesheetsCreateSingleTimesheet**](TimesheetsApi.md#timesheetsCreateSingleTimesheet) | **PUT** /api/Timesheets/CreateSingleTimesheet | Inserts a single timesheet record
 [**timesheetsDeleteTimesheet**](TimesheetsApi.md#timesheetsDeleteTimesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet
 [**timesheetsGetTimesheets**](TimesheetsApi.md#timesheetsGetTimesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates
-[**timesheetsInsertSingleTimesheet**](TimesheetsApi.md#timesheetsInsertSingleTimesheet) | **PUT** /api/Timesheets/InsertSingleTimesheet | Inserts a single timesheet record
 [**timesheetsUpdateTimesheets**](TimesheetsApi.md#timesheetsUpdateTimesheets) | **POST** /api/Timesheets/UpdateTimesheets | Batch update timesheets
 
+
+<a name="timesheetsCreateSingleTimesheet"></a>
+# **timesheetsCreateSingleTimesheet**
+> CsApiApiResponseInt32 timesheetsCreateSingleTimesheet(request, xChronosheetsAuth)
+
+Inserts a single timesheet record
+
+### Example
+```java
+// Import classes:
+//import ChronoSheetsClient.ApiException;
+//import ChronoSheetsClientLibApi.TimesheetsApi;
+
+
+TimesheetsApi apiInstance = new TimesheetsApi();
+CsApiTimesheet request = new CsApiTimesheet(); // CsApiTimesheet | The timesheet request object
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+try {
+    CsApiApiResponseInt32 result = apiInstance.timesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TimesheetsApi#timesheetsCreateSingleTimesheet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CsApiTimesheet**](CsApiTimesheet.md)| The timesheet request object |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+
+### Return type
+
+[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 <a name="timesheetsDeleteTimesheet"></a>
 # **timesheetsDeleteTimesheet**
@@ -100,51 +145,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
-
-<a name="timesheetsInsertSingleTimesheet"></a>
-# **timesheetsInsertSingleTimesheet**
-> CsApiApiResponseInt32 timesheetsInsertSingleTimesheet(request, xChronosheetsAuth)
-
-Inserts a single timesheet record
-
-### Example
-```java
-// Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.TimesheetsApi;
-
-
-TimesheetsApi apiInstance = new TimesheetsApi();
-CsApiTimesheet request = new CsApiTimesheet(); // CsApiTimesheet | The timesheet request object
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CsApiApiResponseInt32 result = apiInstance.timesheetsInsertSingleTimesheet(request, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TimesheetsApi#timesheetsInsertSingleTimesheet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**CsApiTimesheet**](CsApiTimesheet.md)| The timesheet request object |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
-
-### Return type
-
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 <a name="timesheetsUpdateTimesheets"></a>

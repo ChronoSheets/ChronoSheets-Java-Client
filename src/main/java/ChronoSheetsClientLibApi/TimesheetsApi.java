@@ -61,6 +61,139 @@ public class TimesheetsApi {
     }
 
     /**
+     * Build call for timesheetsCreateSingleTimesheet
+     * @param request The timesheet request object (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call timesheetsCreateSingleTimesheetCall(CsApiTimesheet request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = request;
+
+        // create path and map variables
+        String localVarPath = "/api/Timesheets/CreateSingleTimesheet";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (xChronosheetsAuth != null)
+        localVarHeaderParams.put("x-chronosheets-auth", apiClient.parameterToString(xChronosheetsAuth));
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml", "multipart/form-data"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "multipart/form-data"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call timesheetsCreateSingleTimesheetValidateBeforeCall(CsApiTimesheet request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'request' is set
+        if (request == null) {
+            throw new ApiException("Missing the required parameter 'request' when calling timesheetsCreateSingleTimesheet(Async)");
+        }
+        
+        // verify the required parameter 'xChronosheetsAuth' is set
+        if (xChronosheetsAuth == null) {
+            throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling timesheetsCreateSingleTimesheet(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = timesheetsCreateSingleTimesheetCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Inserts a single timesheet record
+     * 
+     * @param request The timesheet request object (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @return CsApiApiResponseInt32
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public CsApiApiResponseInt32 timesheetsCreateSingleTimesheet(CsApiTimesheet request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CsApiApiResponseInt32> resp = timesheetsCreateSingleTimesheetWithHttpInfo(request, xChronosheetsAuth);
+        return resp.getData();
+    }
+
+    /**
+     * Inserts a single timesheet record
+     * 
+     * @param request The timesheet request object (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @return ApiResponse&lt;CsApiApiResponseInt32&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<CsApiApiResponseInt32> timesheetsCreateSingleTimesheetWithHttpInfo(CsApiTimesheet request, String xChronosheetsAuth) throws ApiException {
+        com.squareup.okhttp.Call call = timesheetsCreateSingleTimesheetValidateBeforeCall(request, xChronosheetsAuth, null, null);
+        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Inserts a single timesheet record (asynchronously)
+     * 
+     * @param request The timesheet request object (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call timesheetsCreateSingleTimesheetAsync(CsApiTimesheet request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInt32> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = timesheetsCreateSingleTimesheetValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for timesheetsDeleteTimesheet
      * @param timesheetId The ID of the timesheet to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -338,139 +471,6 @@ public class TimesheetsApi {
 
         com.squareup.okhttp.Call call = timesheetsGetTimesheetsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CsApiApiResponseListTimesheet>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for timesheetsInsertSingleTimesheet
-     * @param request The timesheet request object (required)
-     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call timesheetsInsertSingleTimesheetCall(CsApiTimesheet request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = request;
-
-        // create path and map variables
-        String localVarPath = "/api/Timesheets/InsertSingleTimesheet";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        if (xChronosheetsAuth != null)
-        localVarHeaderParams.put("x-chronosheets-auth", apiClient.parameterToString(xChronosheetsAuth));
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml", "multipart/form-data"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "multipart/form-data"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call timesheetsInsertSingleTimesheetValidateBeforeCall(CsApiTimesheet request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'request' is set
-        if (request == null) {
-            throw new ApiException("Missing the required parameter 'request' when calling timesheetsInsertSingleTimesheet(Async)");
-        }
-        
-        // verify the required parameter 'xChronosheetsAuth' is set
-        if (xChronosheetsAuth == null) {
-            throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling timesheetsInsertSingleTimesheet(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = timesheetsInsertSingleTimesheetCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * Inserts a single timesheet record
-     * 
-     * @param request The timesheet request object (required)
-     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseInt32
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public CsApiApiResponseInt32 timesheetsInsertSingleTimesheet(CsApiTimesheet request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseInt32> resp = timesheetsInsertSingleTimesheetWithHttpInfo(request, xChronosheetsAuth);
-        return resp.getData();
-    }
-
-    /**
-     * Inserts a single timesheet record
-     * 
-     * @param request The timesheet request object (required)
-     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseInt32&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<CsApiApiResponseInt32> timesheetsInsertSingleTimesheetWithHttpInfo(CsApiTimesheet request, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = timesheetsInsertSingleTimesheetValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     * Inserts a single timesheet record (asynchronously)
-     * 
-     * @param request The timesheet request object (required)
-     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call timesheetsInsertSingleTimesheetAsync(CsApiTimesheet request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInt32> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = timesheetsInsertSingleTimesheetValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
