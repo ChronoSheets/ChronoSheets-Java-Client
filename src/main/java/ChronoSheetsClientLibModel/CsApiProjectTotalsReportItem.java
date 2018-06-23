@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CsApiProjectTotalsReportItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T01:39:09.827+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T01:56:58.748+10:00")
 public class CsApiProjectTotalsReportItem {
   @SerializedName("OrganisationId")
   private Integer organisationId = null;
