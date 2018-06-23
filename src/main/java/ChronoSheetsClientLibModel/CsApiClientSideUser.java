@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CsApiClientSideUser
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T01:56:58.748+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T02:33:30.704+10:00")
 public class CsApiClientSideUser {
   @SerializedName("Id")
   private Integer id = null;
@@ -55,6 +55,9 @@ public class CsApiClientSideUser {
 
   @SerializedName("SetupWizardRequired")
   private Boolean setupWizardRequired = null;
+
+  @SerializedName("IsSubscribedToNewsletter")
+  private Boolean isSubscribedToNewsletter = null;
 
   @SerializedName("Organisation")
   private CsApiOrganisation organisation = null;
@@ -221,6 +224,24 @@ public class CsApiClientSideUser {
     this.setupWizardRequired = setupWizardRequired;
   }
 
+  public CsApiClientSideUser isSubscribedToNewsletter(Boolean isSubscribedToNewsletter) {
+    this.isSubscribedToNewsletter = isSubscribedToNewsletter;
+    return this;
+  }
+
+   /**
+   * Get isSubscribedToNewsletter
+   * @return isSubscribedToNewsletter
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsSubscribedToNewsletter() {
+    return isSubscribedToNewsletter;
+  }
+
+  public void setIsSubscribedToNewsletter(Boolean isSubscribedToNewsletter) {
+    this.isSubscribedToNewsletter = isSubscribedToNewsletter;
+  }
+
   public CsApiClientSideUser organisation(CsApiOrganisation organisation) {
     this.organisation = organisation;
     return this;
@@ -258,12 +279,13 @@ public class CsApiClientSideUser {
         Objects.equals(this.roles, clientSideUser.roles) &&
         Objects.equals(this.alertSettings, clientSideUser.alertSettings) &&
         Objects.equals(this.setupWizardRequired, clientSideUser.setupWizardRequired) &&
+        Objects.equals(this.isSubscribedToNewsletter, clientSideUser.isSubscribedToNewsletter) &&
         Objects.equals(this.organisation, clientSideUser.organisation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, organisationId, userName, firstName, lastName, emailAddress, roles, alertSettings, setupWizardRequired, organisation);
+    return Objects.hash(id, organisationId, userName, firstName, lastName, emailAddress, roles, alertSettings, setupWizardRequired, isSubscribedToNewsletter, organisation);
   }
 
 
@@ -281,6 +303,7 @@ public class CsApiClientSideUser {
     sb.append("    roles: ").append(toIndentedString(roles)).append("\n");
     sb.append("    alertSettings: ").append(toIndentedString(alertSettings)).append("\n");
     sb.append("    setupWizardRequired: ").append(toIndentedString(setupWizardRequired)).append("\n");
+    sb.append("    isSubscribedToNewsletter: ").append(toIndentedString(isSubscribedToNewsletter)).append("\n");
     sb.append("    organisation: ").append(toIndentedString(organisation)).append("\n");
     sb.append("}");
     return sb.toString();

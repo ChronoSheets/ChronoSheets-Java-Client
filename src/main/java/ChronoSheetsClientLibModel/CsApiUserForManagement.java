@@ -27,11 +27,8 @@ import java.io.IOException;
 /**
  * CsApiUserForManagement
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T01:56:58.748+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T02:33:30.704+10:00")
 public class CsApiUserForManagement {
-  @SerializedName("IsSubscribedToNewsletter")
-  private Boolean isSubscribedToNewsletter = null;
-
   @SerializedName("IsAccountActive")
   private Boolean isAccountActive = null;
 
@@ -62,26 +59,11 @@ public class CsApiUserForManagement {
   @SerializedName("SetupWizardRequired")
   private Boolean setupWizardRequired = null;
 
+  @SerializedName("IsSubscribedToNewsletter")
+  private Boolean isSubscribedToNewsletter = null;
+
   @SerializedName("Organisation")
   private CsApiOrganisation organisation = null;
-
-  public CsApiUserForManagement isSubscribedToNewsletter(Boolean isSubscribedToNewsletter) {
-    this.isSubscribedToNewsletter = isSubscribedToNewsletter;
-    return this;
-  }
-
-   /**
-   * Get isSubscribedToNewsletter
-   * @return isSubscribedToNewsletter
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isIsSubscribedToNewsletter() {
-    return isSubscribedToNewsletter;
-  }
-
-  public void setIsSubscribedToNewsletter(Boolean isSubscribedToNewsletter) {
-    this.isSubscribedToNewsletter = isSubscribedToNewsletter;
-  }
 
   public CsApiUserForManagement isAccountActive(Boolean isAccountActive) {
     this.isAccountActive = isAccountActive;
@@ -263,6 +245,24 @@ public class CsApiUserForManagement {
     this.setupWizardRequired = setupWizardRequired;
   }
 
+  public CsApiUserForManagement isSubscribedToNewsletter(Boolean isSubscribedToNewsletter) {
+    this.isSubscribedToNewsletter = isSubscribedToNewsletter;
+    return this;
+  }
+
+   /**
+   * Get isSubscribedToNewsletter
+   * @return isSubscribedToNewsletter
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsSubscribedToNewsletter() {
+    return isSubscribedToNewsletter;
+  }
+
+  public void setIsSubscribedToNewsletter(Boolean isSubscribedToNewsletter) {
+    this.isSubscribedToNewsletter = isSubscribedToNewsletter;
+  }
+
   public CsApiUserForManagement organisation(CsApiOrganisation organisation) {
     this.organisation = organisation;
     return this;
@@ -291,8 +291,7 @@ public class CsApiUserForManagement {
       return false;
     }
     CsApiUserForManagement userForManagement = (CsApiUserForManagement) o;
-    return Objects.equals(this.isSubscribedToNewsletter, userForManagement.isSubscribedToNewsletter) &&
-        Objects.equals(this.isAccountActive, userForManagement.isAccountActive) &&
+    return Objects.equals(this.isAccountActive, userForManagement.isAccountActive) &&
         Objects.equals(this.id, userForManagement.id) &&
         Objects.equals(this.organisationId, userForManagement.organisationId) &&
         Objects.equals(this.userName, userForManagement.userName) &&
@@ -302,12 +301,13 @@ public class CsApiUserForManagement {
         Objects.equals(this.roles, userForManagement.roles) &&
         Objects.equals(this.alertSettings, userForManagement.alertSettings) &&
         Objects.equals(this.setupWizardRequired, userForManagement.setupWizardRequired) &&
+        Objects.equals(this.isSubscribedToNewsletter, userForManagement.isSubscribedToNewsletter) &&
         Objects.equals(this.organisation, userForManagement.organisation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isSubscribedToNewsletter, isAccountActive, id, organisationId, userName, firstName, lastName, emailAddress, roles, alertSettings, setupWizardRequired, organisation);
+    return Objects.hash(isAccountActive, id, organisationId, userName, firstName, lastName, emailAddress, roles, alertSettings, setupWizardRequired, isSubscribedToNewsletter, organisation);
   }
 
 
@@ -316,7 +316,6 @@ public class CsApiUserForManagement {
     StringBuilder sb = new StringBuilder();
     sb.append("class CsApiUserForManagement {\n");
     
-    sb.append("    isSubscribedToNewsletter: ").append(toIndentedString(isSubscribedToNewsletter)).append("\n");
     sb.append("    isAccountActive: ").append(toIndentedString(isAccountActive)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    organisationId: ").append(toIndentedString(organisationId)).append("\n");
@@ -327,6 +326,7 @@ public class CsApiUserForManagement {
     sb.append("    roles: ").append(toIndentedString(roles)).append("\n");
     sb.append("    alertSettings: ").append(toIndentedString(alertSettings)).append("\n");
     sb.append("    setupWizardRequired: ").append(toIndentedString(setupWizardRequired)).append("\n");
+    sb.append("    isSubscribedToNewsletter: ").append(toIndentedString(isSubscribedToNewsletter)).append("\n");
     sb.append("    organisation: ").append(toIndentedString(organisation)).append("\n");
     sb.append("}");
     return sb.toString();

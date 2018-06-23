@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**isSubscribedToNewsletter** | **Boolean** |  |  [optional]
 **isAccountActive** | **Boolean** |  |  [optional]
 **id** | **Integer** |  |  [optional]
 **organisationId** | **Integer** |  |  [optional]
@@ -15,6 +14,7 @@ Name | Type | Description | Notes
 **roles** | **Long** |  |  [optional]
 **alertSettings** | **Long** |  |  [optional]
 **setupWizardRequired** | **Boolean** |  |  [optional]
+**isSubscribedToNewsletter** | **Boolean** |  |  [optional]
 **organisation** | [**CsApiOrganisation**](CsApiOrganisation.md) |  |  [optional]
 
 
