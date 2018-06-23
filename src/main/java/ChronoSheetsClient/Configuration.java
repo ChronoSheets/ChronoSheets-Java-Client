@@ -13,7 +13,7 @@
 
 package ChronoSheetsClient;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T12:39:02.512+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-23T12:42:53.227+10:00")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 
