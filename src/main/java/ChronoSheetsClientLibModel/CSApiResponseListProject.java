@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * CSApiResponseListProject
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-27T00:07:52.261+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-27T00:11:18.354+10:00")
 public class CSApiResponseListProject {
   @SerializedName("Data")
   private List<CSProject> data = null;
