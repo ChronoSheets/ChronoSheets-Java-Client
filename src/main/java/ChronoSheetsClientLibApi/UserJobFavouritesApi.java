@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserJobFavourite;
-import ChronoSheetsClientLibModel.CsApiInsertUserJobFavouriteRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListUserJobFavourite;
+import ChronoSheetsClientLibModel.CSInsertUserJobFavouriteRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -66,7 +66,7 @@ public class UserJobFavouritesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call userJobFavouritesCreateJobFavouriteCall(CsApiInsertUserJobFavouriteRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call userJobFavouritesCreateJobFavouriteCall(CSInsertUserJobFavouriteRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -110,7 +110,7 @@ public class UserJobFavouritesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call userJobFavouritesCreateJobFavouriteValidateBeforeCall(CsApiInsertUserJobFavouriteRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call userJobFavouritesCreateJobFavouriteValidateBeforeCall(CSInsertUserJobFavouriteRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -133,11 +133,11 @@ public class UserJobFavouritesApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseInt32
+     * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseInt32 userJobFavouritesCreateJobFavourite(CsApiInsertUserJobFavouriteRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseInt32> resp = userJobFavouritesCreateJobFavouriteWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseInt32 userJobFavouritesCreateJobFavourite(CSInsertUserJobFavouriteRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseInt32> resp = userJobFavouritesCreateJobFavouriteWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -146,12 +146,12 @@ public class UserJobFavouritesApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseInt32&gt;
+     * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseInt32> userJobFavouritesCreateJobFavouriteWithHttpInfo(CsApiInsertUserJobFavouriteRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseInt32> userJobFavouritesCreateJobFavouriteWithHttpInfo(CSInsertUserJobFavouriteRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = userJobFavouritesCreateJobFavouriteValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -164,7 +164,7 @@ public class UserJobFavouritesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userJobFavouritesCreateJobFavouriteAsync(CsApiInsertUserJobFavouriteRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInt32> callback) throws ApiException {
+    public com.squareup.okhttp.Call userJobFavouritesCreateJobFavouriteAsync(CSInsertUserJobFavouriteRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseInt32> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -186,7 +186,7 @@ public class UserJobFavouritesApi {
         }
 
         com.squareup.okhttp.Call call = userJobFavouritesCreateJobFavouriteValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -268,11 +268,11 @@ public class UserJobFavouritesApi {
      * 
      * @param jobId The ID of the Job (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean userJobFavouritesDeleteJobFavourite(Integer jobId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = userJobFavouritesDeleteJobFavouriteWithHttpInfo(jobId, xChronosheetsAuth);
+    public CSApiResponseBoolean userJobFavouritesDeleteJobFavourite(Integer jobId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = userJobFavouritesDeleteJobFavouriteWithHttpInfo(jobId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -281,12 +281,12 @@ public class UserJobFavouritesApi {
      * 
      * @param jobId The ID of the Job (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> userJobFavouritesDeleteJobFavouriteWithHttpInfo(Integer jobId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> userJobFavouritesDeleteJobFavouriteWithHttpInfo(Integer jobId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = userJobFavouritesDeleteJobFavouriteValidateBeforeCall(jobId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -299,7 +299,7 @@ public class UserJobFavouritesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userJobFavouritesDeleteJobFavouriteAsync(Integer jobId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call userJobFavouritesDeleteJobFavouriteAsync(Integer jobId, String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -321,7 +321,7 @@ public class UserJobFavouritesApi {
         }
 
         com.squareup.okhttp.Call call = userJobFavouritesDeleteJobFavouriteValidateBeforeCall(jobId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -394,11 +394,11 @@ public class UserJobFavouritesApi {
      * Get your job favourites
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListUserJobFavourite
+     * @return CSApiResponseListUserJobFavourite
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListUserJobFavourite userJobFavouritesGetJobFavourites(String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListUserJobFavourite> resp = userJobFavouritesGetJobFavouritesWithHttpInfo(xChronosheetsAuth);
+    public CSApiResponseListUserJobFavourite userJobFavouritesGetJobFavourites(String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListUserJobFavourite> resp = userJobFavouritesGetJobFavouritesWithHttpInfo(xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -406,12 +406,12 @@ public class UserJobFavouritesApi {
      * Get your job favourites
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListUserJobFavourite&gt;
+     * @return ApiResponse&lt;CSApiResponseListUserJobFavourite&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListUserJobFavourite> userJobFavouritesGetJobFavouritesWithHttpInfo(String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListUserJobFavourite> userJobFavouritesGetJobFavouritesWithHttpInfo(String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = userJobFavouritesGetJobFavouritesValidateBeforeCall(xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUserJobFavourite>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUserJobFavourite>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -423,7 +423,7 @@ public class UserJobFavouritesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userJobFavouritesGetJobFavouritesAsync(String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListUserJobFavourite> callback) throws ApiException {
+    public com.squareup.okhttp.Call userJobFavouritesGetJobFavouritesAsync(String xChronosheetsAuth, final ApiCallback<CSApiResponseListUserJobFavourite> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -445,7 +445,7 @@ public class UserJobFavouritesApi {
         }
 
         com.squareup.okhttp.Call call = userJobFavouritesGetJobFavouritesValidateBeforeCall(xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUserJobFavourite>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUserJobFavourite>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

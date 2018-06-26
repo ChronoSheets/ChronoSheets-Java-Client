@@ -14,12 +14,12 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseDoLoginResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseSignupResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseUserProfile;
-import ChronoSheetsClientLibModel.CsApiDoLoginRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateMyProfileRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseDoLoginResponse;
+import ChronoSheetsClientLibModel.CSApiResponseSignupResponse;
+import ChronoSheetsClientLibModel.CSApiResponseUserProfile;
+import ChronoSheetsClientLibModel.CSDoLoginRequest;
+import ChronoSheetsClientLibModel.CSUpdateMyProfileRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -47,8 +47,8 @@ public class UserProfileApiTest {
      */
     @Test
     public void userProfileDoLoginTest() throws ApiException {
-        CsApiDoLoginRequest request = null;
-        CsApiApiResponseDoLoginResponse response = api.userProfileDoLogin(request);
+        CSDoLoginRequest request = null;
+        CSApiResponseDoLoginResponse response = api.userProfileDoLogin(request);
 
         // TODO: test validations
     }
@@ -64,7 +64,7 @@ public class UserProfileApiTest {
     @Test
     public void userProfileDoLogoutTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.userProfileDoLogout(xChronosheetsAuth);
+        CSApiResponseBoolean response = api.userProfileDoLogout(xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -80,7 +80,7 @@ public class UserProfileApiTest {
     @Test
     public void userProfileGetMyProfileTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseUserProfile response = api.userProfileGetMyProfile(xChronosheetsAuth);
+        CSApiResponseUserProfile response = api.userProfileGetMyProfile(xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -96,7 +96,7 @@ public class UserProfileApiTest {
     @Test
     public void userProfileKeepSessionAliveTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.userProfileKeepSessionAlive(xChronosheetsAuth);
+        CSApiResponseBoolean response = api.userProfileKeepSessionAlive(xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -111,9 +111,9 @@ public class UserProfileApiTest {
      */
     @Test
     public void userProfileUpdateMyProfileTest() throws ApiException {
-        CsApiUpdateMyProfileRequest request = null;
+        CSUpdateMyProfileRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseSignupResponse response = api.userProfileUpdateMyProfile(request, xChronosheetsAuth);
+        CSApiResponseSignupResponse response = api.userProfileUpdateMyProfile(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

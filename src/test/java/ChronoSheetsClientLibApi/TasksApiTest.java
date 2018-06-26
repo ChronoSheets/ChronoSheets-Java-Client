@@ -14,12 +14,12 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListTimesheetTask;
-import ChronoSheetsClientLibModel.CsApiApiResponseTimesheetTask;
-import ChronoSheetsClientLibModel.CsApiInsertTaskRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateTaskRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListTimesheetTask;
+import ChronoSheetsClientLibModel.CSApiResponseTimesheetTask;
+import ChronoSheetsClientLibModel.CSInsertTaskRequest;
+import ChronoSheetsClientLibModel.CSUpdateTaskRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -47,9 +47,9 @@ public class TasksApiTest {
      */
     @Test
     public void tasksCreateTaskTest() throws ApiException {
-        CsApiInsertTaskRequest request = null;
+        CSInsertTaskRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.tasksCreateTask(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.tasksCreateTask(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -66,7 +66,7 @@ public class TasksApiTest {
     public void tasksDeleteTaskTest() throws ApiException {
         Integer taskId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.tasksDeleteTask(taskId, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.tasksDeleteTask(taskId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -83,7 +83,7 @@ public class TasksApiTest {
     public void tasksGetTaskByIdTest() throws ApiException {
         Integer taskId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseTimesheetTask response = api.tasksGetTaskById(taskId, xChronosheetsAuth);
+        CSApiResponseTimesheetTask response = api.tasksGetTaskById(taskId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -99,7 +99,7 @@ public class TasksApiTest {
     @Test
     public void tasksGetTasksTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseListTimesheetTask response = api.tasksGetTasks(xChronosheetsAuth);
+        CSApiResponseListTimesheetTask response = api.tasksGetTasks(xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -116,7 +116,7 @@ public class TasksApiTest {
     public void tasksGetTasksForJobTest() throws ApiException {
         Integer jobId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListTimesheetTask response = api.tasksGetTasksForJob(jobId, xChronosheetsAuth);
+        CSApiResponseListTimesheetTask response = api.tasksGetTasksForJob(jobId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -131,9 +131,9 @@ public class TasksApiTest {
      */
     @Test
     public void tasksUpdateTaskTest() throws ApiException {
-        CsApiUpdateTaskRequest request = null;
+        CSUpdateTaskRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.tasksUpdateTask(request, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.tasksUpdateTask(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

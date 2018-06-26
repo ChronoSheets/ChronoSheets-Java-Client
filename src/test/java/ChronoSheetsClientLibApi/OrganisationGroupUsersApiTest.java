@@ -14,9 +14,9 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserForManagement;
-import ChronoSheetsClientLibModel.CsApiSetOrganisationGroupUsersRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseListUserForManagement;
+import ChronoSheetsClientLibModel.CSSetOrganisationGroupUsersRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -46,7 +46,7 @@ public class OrganisationGroupUsersApiTest {
     public void organisationGroupUsersGetOrganisationGroupUsersTest() throws ApiException {
         Integer orgGroupId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListUserForManagement response = api.organisationGroupUsersGetOrganisationGroupUsers(orgGroupId, xChronosheetsAuth);
+        CSApiResponseListUserForManagement response = api.organisationGroupUsersGetOrganisationGroupUsers(orgGroupId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -61,9 +61,9 @@ public class OrganisationGroupUsersApiTest {
      */
     @Test
     public void organisationGroupUsersUpdateOrganisationGroupUsersTest() throws ApiException {
-        CsApiSetOrganisationGroupUsersRequest request = null;
+        CSSetOrganisationGroupUsersRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.organisationGroupUsersUpdateOrganisationGroupUsers(request, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.organisationGroupUsersUpdateOrganisationGroupUsers(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

@@ -14,12 +14,12 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseFleetVehicle;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListFleetVehicle;
-import ChronoSheetsClientLibModel.CsApiInsertVehicleRequest;
-import ChronoSheetsClientLibModel.CsApiSaveVehicleRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseFleetVehicle;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListFleetVehicle;
+import ChronoSheetsClientLibModel.CSInsertVehicleRequest;
+import ChronoSheetsClientLibModel.CSSaveVehicleRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -47,9 +47,9 @@ public class FleetApiTest {
      */
     @Test
     public void fleetCreateVehicleTest() throws ApiException {
-        CsApiInsertVehicleRequest request = null;
+        CSInsertVehicleRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.fleetCreateVehicle(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.fleetCreateVehicle(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -66,7 +66,7 @@ public class FleetApiTest {
     public void fleetGetVehicleByIdTest() throws ApiException {
         Integer vehicleId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseFleetVehicle response = api.fleetGetVehicleById(vehicleId, xChronosheetsAuth);
+        CSApiResponseFleetVehicle response = api.fleetGetVehicleById(vehicleId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -83,7 +83,7 @@ public class FleetApiTest {
     public void fleetGetVehiclesTest() throws ApiException {
         Boolean includeDeleted = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListFleetVehicle response = api.fleetGetVehicles(includeDeleted, xChronosheetsAuth);
+        CSApiResponseListFleetVehicle response = api.fleetGetVehicles(includeDeleted, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -98,9 +98,9 @@ public class FleetApiTest {
      */
     @Test
     public void fleetUpdateVehicleTest() throws ApiException {
-        CsApiSaveVehicleRequest request = null;
+        CSSaveVehicleRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.fleetUpdateVehicle(request, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.fleetUpdateVehicle(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

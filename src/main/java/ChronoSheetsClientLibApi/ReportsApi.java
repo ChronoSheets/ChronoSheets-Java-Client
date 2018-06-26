@@ -27,13 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseCombinedReportsData;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListOrgReportTrip;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListRawReportItem;
-import ChronoSheetsClientLibModel.CsApiApiResponseListJobSeriesReportItem;
-import ChronoSheetsClientLibModel.CsApiApiResponseListProjectCostingReportItem;
-import ChronoSheetsClientLibModel.CsApiApiResponseTrip;
+import ChronoSheetsClientLibModel.CSApiResponseCombinedReportsData;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTrip;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListRawReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseListJobSeriesReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseListProjectCostingReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseTrip;
 import org.threeten.bp.OffsetDateTime;
 
 import java.lang.reflect.Type;
@@ -157,11 +157,11 @@ public class ReportsApi {
      * @param endDate  (required)
      * @param userIds  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseCombinedReportsData
+     * @return CSApiResponseCombinedReportsData
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseCombinedReportsData> resp = reportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+    public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseCombinedReportsData> resp = reportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -172,12 +172,12 @@ public class ReportsApi {
      * @param endDate  (required)
      * @param userIds  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseCombinedReportsData&gt;
+     * @return ApiResponse&lt;CSApiResponseCombinedReportsData&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseCombinedReportsData> reportsGetAllChartsDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseCombinedReportsData> reportsGetAllChartsDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseCombinedReportsData>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseCombinedReportsData>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -192,7 +192,7 @@ public class ReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseCombinedReportsData> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseCombinedReportsData> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -214,7 +214,7 @@ public class ReportsApi {
         }
 
         com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseCombinedReportsData>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseCombinedReportsData>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -305,11 +305,11 @@ public class ReportsApi {
      * @param startDate  (required)
      * @param endDate  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseCombinedReportsData
+     * @return CSApiResponseCombinedReportsData
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseCombinedReportsData reportsGetAllChartsDataUser(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseCombinedReportsData> resp = reportsGetAllChartsDataUserWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+    public CSApiResponseCombinedReportsData reportsGetAllChartsDataUser(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseCombinedReportsData> resp = reportsGetAllChartsDataUserWithHttpInfo(startDate, endDate, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -319,12 +319,12 @@ public class ReportsApi {
      * @param startDate  (required)
      * @param endDate  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseCombinedReportsData&gt;
+     * @return ApiResponse&lt;CSApiResponseCombinedReportsData&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseCombinedReportsData> reportsGetAllChartsDataUserWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseCombinedReportsData> reportsGetAllChartsDataUserWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = reportsGetAllChartsDataUserValidateBeforeCall(startDate, endDate, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseCombinedReportsData>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseCombinedReportsData>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -338,7 +338,7 @@ public class ReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetAllChartsDataUserAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseCombinedReportsData> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetAllChartsDataUserAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, final ApiCallback<CSApiResponseCombinedReportsData> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -360,7 +360,7 @@ public class ReportsApi {
         }
 
         com.squareup.okhttp.Call call = reportsGetAllChartsDataUserValidateBeforeCall(startDate, endDate, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseCombinedReportsData>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseCombinedReportsData>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -442,11 +442,11 @@ public class ReportsApi {
      * 
      * @param tripId The ID of the trip (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseTrip
+     * @return CSApiResponseTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseTrip reportsGetOrgTripById(Integer tripId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseTrip> resp = reportsGetOrgTripByIdWithHttpInfo(tripId, xChronosheetsAuth);
+    public CSApiResponseTrip reportsGetOrgTripById(Integer tripId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseTrip> resp = reportsGetOrgTripByIdWithHttpInfo(tripId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -455,12 +455,12 @@ public class ReportsApi {
      * 
      * @param tripId The ID of the trip (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseTrip&gt;
+     * @return ApiResponse&lt;CSApiResponseTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseTrip> reportsGetOrgTripByIdWithHttpInfo(Integer tripId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseTrip> reportsGetOrgTripByIdWithHttpInfo(Integer tripId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = reportsGetOrgTripByIdValidateBeforeCall(tripId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseTrip>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseTrip>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -473,7 +473,7 @@ public class ReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetOrgTripByIdAsync(Integer tripId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseTrip> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetOrgTripByIdAsync(Integer tripId, String xChronosheetsAuth, final ApiCallback<CSApiResponseTrip> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -495,7 +495,7 @@ public class ReportsApi {
         }
 
         com.squareup.okhttp.Call call = reportsGetOrgTripByIdValidateBeforeCall(tripId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseTrip>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseTrip>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -613,11 +613,11 @@ public class ReportsApi {
      * @param take  (required)
      * @param userIds  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment
+     * @return CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment> resp = reportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> resp = reportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -630,12 +630,12 @@ public class ReportsApi {
      * @param take  (required)
      * @param userIds  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment&gt;
+     * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment> reportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> reportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = reportsGetOrganisationTimesheetFileAttachmentsValidateBeforeCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -652,7 +652,7 @@ public class ReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetOrganisationTimesheetFileAttachmentsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetOrganisationTimesheetFileAttachmentsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -674,7 +674,7 @@ public class ReportsApi {
         }
 
         com.squareup.okhttp.Call call = reportsGetOrganisationTimesheetFileAttachmentsValidateBeforeCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -792,11 +792,11 @@ public class ReportsApi {
      * @param take  (required)
      * @param userIds  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseForPaginatedListOrgReportTrip
+     * @return CSApiResponseForPaginatedListOrgReportTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseForPaginatedListOrgReportTrip> resp = reportsGetOrganisationTripsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> resp = reportsGetOrganisationTripsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -809,12 +809,12 @@ public class ReportsApi {
      * @param take  (required)
      * @param userIds  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseForPaginatedListOrgReportTrip&gt;
+     * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseForPaginatedListOrgReportTrip> reportsGetOrganisationTripsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> reportsGetOrganisationTripsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = reportsGetOrganisationTripsValidateBeforeCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseForPaginatedListOrgReportTrip>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTrip>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -831,7 +831,7 @@ public class ReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetOrganisationTripsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseForPaginatedListOrgReportTrip> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetOrganisationTripsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListOrgReportTrip> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -853,7 +853,7 @@ public class ReportsApi {
         }
 
         com.squareup.okhttp.Call call = reportsGetOrganisationTripsValidateBeforeCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseForPaginatedListOrgReportTrip>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTrip>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -989,11 +989,11 @@ public class ReportsApi {
      * @param skip  (required)
      * @param take  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseForPaginatedListRawReportItem
+     * @return CSApiResponseForPaginatedListRawReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> resp = reportsGetRawDataAdminWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListRawReportItem> resp = reportsGetRawDataAdminWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -1008,12 +1008,12 @@ public class ReportsApi {
      * @param skip  (required)
      * @param take  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseForPaginatedListRawReportItem&gt;
+     * @return ApiResponse&lt;CSApiResponseForPaginatedListRawReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> reportsGetRawDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseForPaginatedListRawReportItem> reportsGetRawDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = reportsGetRawDataAdminValidateBeforeCall(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseForPaginatedListRawReportItem>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListRawReportItem>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1032,7 +1032,7 @@ public class ReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetRawDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseForPaginatedListRawReportItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetRawDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListRawReportItem> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1054,7 +1054,7 @@ public class ReportsApi {
         }
 
         com.squareup.okhttp.Call call = reportsGetRawDataAdminValidateBeforeCall(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseForPaginatedListRawReportItem>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListRawReportItem>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1154,11 +1154,11 @@ public class ReportsApi {
      * @param endDate  (required)
      * @param userIds  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListProjectCostingReportItem
+     * @return CSApiResponseListProjectCostingReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListProjectCostingReportItem> resp = reportsProjectCostingsAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+    public CSApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListProjectCostingReportItem> resp = reportsProjectCostingsAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -1169,12 +1169,12 @@ public class ReportsApi {
      * @param endDate  (required)
      * @param userIds  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListProjectCostingReportItem&gt;
+     * @return ApiResponse&lt;CSApiResponseListProjectCostingReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListProjectCostingReportItem> reportsProjectCostingsAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListProjectCostingReportItem> reportsProjectCostingsAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = reportsProjectCostingsAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListProjectCostingReportItem>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListProjectCostingReportItem>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1189,7 +1189,7 @@ public class ReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsProjectCostingsAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListProjectCostingReportItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsProjectCostingsAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseListProjectCostingReportItem> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1211,7 +1211,7 @@ public class ReportsApi {
         }
 
         com.squareup.okhttp.Call call = reportsProjectCostingsAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListProjectCostingReportItem>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListProjectCostingReportItem>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1302,11 +1302,11 @@ public class ReportsApi {
      * @param startDate  (required)
      * @param endDate  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListJobSeriesReportItem
+     * @return CSApiResponseListJobSeriesReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListJobSeriesReportItem reportsUserJobsOverTime(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListJobSeriesReportItem> resp = reportsUserJobsOverTimeWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+    public CSApiResponseListJobSeriesReportItem reportsUserJobsOverTime(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListJobSeriesReportItem> resp = reportsUserJobsOverTimeWithHttpInfo(startDate, endDate, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -1316,12 +1316,12 @@ public class ReportsApi {
      * @param startDate  (required)
      * @param endDate  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListJobSeriesReportItem&gt;
+     * @return ApiResponse&lt;CSApiResponseListJobSeriesReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListJobSeriesReportItem> reportsUserJobsOverTimeWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListJobSeriesReportItem> reportsUserJobsOverTimeWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = reportsUserJobsOverTimeValidateBeforeCall(startDate, endDate, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListJobSeriesReportItem>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListJobSeriesReportItem>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1335,7 +1335,7 @@ public class ReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsUserJobsOverTimeAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListJobSeriesReportItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsUserJobsOverTimeAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, final ApiCallback<CSApiResponseListJobSeriesReportItem> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1357,7 +1357,7 @@ public class ReportsApi {
         }
 
         com.squareup.okhttp.Call call = reportsUserJobsOverTimeValidateBeforeCall(startDate, endDate, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListJobSeriesReportItem>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListJobSeriesReportItem>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

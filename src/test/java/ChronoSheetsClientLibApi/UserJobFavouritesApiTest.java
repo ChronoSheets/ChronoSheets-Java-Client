@@ -14,10 +14,10 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserJobFavourite;
-import ChronoSheetsClientLibModel.CsApiInsertUserJobFavouriteRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListUserJobFavourite;
+import ChronoSheetsClientLibModel.CSInsertUserJobFavouriteRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -45,9 +45,9 @@ public class UserJobFavouritesApiTest {
      */
     @Test
     public void userJobFavouritesCreateJobFavouriteTest() throws ApiException {
-        CsApiInsertUserJobFavouriteRequest request = null;
+        CSInsertUserJobFavouriteRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.userJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.userJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -64,7 +64,7 @@ public class UserJobFavouritesApiTest {
     public void userJobFavouritesDeleteJobFavouriteTest() throws ApiException {
         Integer jobId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -80,7 +80,7 @@ public class UserJobFavouritesApiTest {
     @Test
     public void userJobFavouritesGetJobFavouritesTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseListUserJobFavourite response = api.userJobFavouritesGetJobFavourites(xChronosheetsAuth);
+        CSApiResponseListUserJobFavourite response = api.userJobFavouritesGetJobFavourites(xChronosheetsAuth);
 
         // TODO: test validations
     }

@@ -27,9 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserForManagement;
-import ChronoSheetsClientLibModel.CsApiSetOrganisationGroupUsersRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseListUserForManagement;
+import ChronoSheetsClientLibModel.CSSetOrganisationGroupUsersRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -134,11 +134,11 @@ public class OrganisationGroupUsersApi {
      * 
      * @param orgGroupId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListUserForManagement
+     * @return CSApiResponseListUserForManagement
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListUserForManagement organisationGroupUsersGetOrganisationGroupUsers(Integer orgGroupId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListUserForManagement> resp = organisationGroupUsersGetOrganisationGroupUsersWithHttpInfo(orgGroupId, xChronosheetsAuth);
+    public CSApiResponseListUserForManagement organisationGroupUsersGetOrganisationGroupUsers(Integer orgGroupId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListUserForManagement> resp = organisationGroupUsersGetOrganisationGroupUsersWithHttpInfo(orgGroupId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -147,12 +147,12 @@ public class OrganisationGroupUsersApi {
      * 
      * @param orgGroupId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListUserForManagement&gt;
+     * @return ApiResponse&lt;CSApiResponseListUserForManagement&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListUserForManagement> organisationGroupUsersGetOrganisationGroupUsersWithHttpInfo(Integer orgGroupId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListUserForManagement> organisationGroupUsersGetOrganisationGroupUsersWithHttpInfo(Integer orgGroupId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = organisationGroupUsersGetOrganisationGroupUsersValidateBeforeCall(orgGroupId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUserForManagement>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUserForManagement>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -165,7 +165,7 @@ public class OrganisationGroupUsersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call organisationGroupUsersGetOrganisationGroupUsersAsync(Integer orgGroupId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListUserForManagement> callback) throws ApiException {
+    public com.squareup.okhttp.Call organisationGroupUsersGetOrganisationGroupUsersAsync(Integer orgGroupId, String xChronosheetsAuth, final ApiCallback<CSApiResponseListUserForManagement> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -187,7 +187,7 @@ public class OrganisationGroupUsersApi {
         }
 
         com.squareup.okhttp.Call call = organisationGroupUsersGetOrganisationGroupUsersValidateBeforeCall(orgGroupId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUserForManagement>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUserForManagement>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -200,7 +200,7 @@ public class OrganisationGroupUsersApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call organisationGroupUsersUpdateOrganisationGroupUsersCall(CsApiSetOrganisationGroupUsersRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call organisationGroupUsersUpdateOrganisationGroupUsersCall(CSSetOrganisationGroupUsersRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -244,7 +244,7 @@ public class OrganisationGroupUsersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call organisationGroupUsersUpdateOrganisationGroupUsersValidateBeforeCall(CsApiSetOrganisationGroupUsersRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call organisationGroupUsersUpdateOrganisationGroupUsersValidateBeforeCall(CSSetOrganisationGroupUsersRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -267,11 +267,11 @@ public class OrganisationGroupUsersApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean organisationGroupUsersUpdateOrganisationGroupUsers(CsApiSetOrganisationGroupUsersRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = organisationGroupUsersUpdateOrganisationGroupUsersWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseBoolean organisationGroupUsersUpdateOrganisationGroupUsers(CSSetOrganisationGroupUsersRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = organisationGroupUsersUpdateOrganisationGroupUsersWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -280,12 +280,12 @@ public class OrganisationGroupUsersApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> organisationGroupUsersUpdateOrganisationGroupUsersWithHttpInfo(CsApiSetOrganisationGroupUsersRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> organisationGroupUsersUpdateOrganisationGroupUsersWithHttpInfo(CSSetOrganisationGroupUsersRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = organisationGroupUsersUpdateOrganisationGroupUsersValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -298,7 +298,7 @@ public class OrganisationGroupUsersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call organisationGroupUsersUpdateOrganisationGroupUsersAsync(CsApiSetOrganisationGroupUsersRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call organisationGroupUsersUpdateOrganisationGroupUsersAsync(CSSetOrganisationGroupUsersRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -320,7 +320,7 @@ public class OrganisationGroupUsersApi {
         }
 
         com.squareup.okhttp.Call call = organisationGroupUsersUpdateOrganisationGroupUsersValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

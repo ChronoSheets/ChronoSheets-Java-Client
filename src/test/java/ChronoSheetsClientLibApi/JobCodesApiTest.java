@@ -14,12 +14,12 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseJobCode;
-import ChronoSheetsClientLibModel.CsApiApiResponseListJobCode;
-import ChronoSheetsClientLibModel.CsApiInsertJobCodeRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateJobCodeRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseJobCode;
+import ChronoSheetsClientLibModel.CSApiResponseListJobCode;
+import ChronoSheetsClientLibModel.CSInsertJobCodeRequest;
+import ChronoSheetsClientLibModel.CSUpdateJobCodeRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -47,9 +47,9 @@ public class JobCodesApiTest {
      */
     @Test
     public void jobCodesCreateJobCodeTest() throws ApiException {
-        CsApiInsertJobCodeRequest request = null;
+        CSInsertJobCodeRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.jobCodesCreateJobCode(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.jobCodesCreateJobCode(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -66,7 +66,7 @@ public class JobCodesApiTest {
     public void jobCodesDeleteJobCodeTest() throws ApiException {
         Integer jobCodeId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -83,7 +83,7 @@ public class JobCodesApiTest {
     public void jobCodesGetJobCodeByIdTest() throws ApiException {
         Integer jobCodeId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseJobCode response = api.jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
+        CSApiResponseJobCode response = api.jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -99,7 +99,7 @@ public class JobCodesApiTest {
     @Test
     public void jobCodesGetJobCodesTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseListJobCode response = api.jobCodesGetJobCodes(xChronosheetsAuth);
+        CSApiResponseListJobCode response = api.jobCodesGetJobCodes(xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -114,9 +114,9 @@ public class JobCodesApiTest {
      */
     @Test
     public void jobCodesUpdateJobCodeTest() throws ApiException {
-        CsApiUpdateJobCodeRequest request = null;
+        CSUpdateJobCodeRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.jobCodesUpdateJobCode(request, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.jobCodesUpdateJobCode(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

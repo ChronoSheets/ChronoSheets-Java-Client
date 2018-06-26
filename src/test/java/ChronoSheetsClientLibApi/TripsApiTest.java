@@ -14,10 +14,10 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListTrip;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseTrip;
-import ChronoSheetsClientLibModel.CsApiCreateTripRequest;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListTrip;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseTrip;
+import ChronoSheetsClientLibModel.CSCreateTripRequest;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -46,9 +46,9 @@ public class TripsApiTest {
      */
     @Test
     public void tripsCreateTripTest() throws ApiException {
-        CsApiCreateTripRequest request = null;
+        CSCreateTripRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.tripsCreateTrip(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.tripsCreateTrip(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -65,7 +65,7 @@ public class TripsApiTest {
     public void tripsGetMyTripByIdTest() throws ApiException {
         Integer tripId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseTrip response = api.tripsGetMyTripById(tripId, xChronosheetsAuth);
+        CSApiResponseTrip response = api.tripsGetMyTripById(tripId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -86,7 +86,7 @@ public class TripsApiTest {
         Integer take = null;
         Integer vehicleId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseForPaginatedListTrip response = api.tripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+        CSApiResponseForPaginatedListTrip response = api.tripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
 
         // TODO: test validations
     }

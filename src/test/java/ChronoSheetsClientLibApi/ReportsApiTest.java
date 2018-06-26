@@ -14,13 +14,13 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseCombinedReportsData;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListOrgReportTrip;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListRawReportItem;
-import ChronoSheetsClientLibModel.CsApiApiResponseListJobSeriesReportItem;
-import ChronoSheetsClientLibModel.CsApiApiResponseListProjectCostingReportItem;
-import ChronoSheetsClientLibModel.CsApiApiResponseTrip;
+import ChronoSheetsClientLibModel.CSApiResponseCombinedReportsData;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTrip;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListRawReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseListJobSeriesReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseListProjectCostingReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseTrip;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -53,7 +53,7 @@ public class ReportsApiTest {
         OffsetDateTime endDate = null;
         String userIds = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseCombinedReportsData response = api.reportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+        CSApiResponseCombinedReportsData response = api.reportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -71,7 +71,7 @@ public class ReportsApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseCombinedReportsData response = api.reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
+        CSApiResponseCombinedReportsData response = api.reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -88,7 +88,7 @@ public class ReportsApiTest {
     public void reportsGetOrgTripByIdTest() throws ApiException {
         Integer tripId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseTrip response = api.reportsGetOrgTripById(tripId, xChronosheetsAuth);
+        CSApiResponseTrip response = api.reportsGetOrgTripById(tripId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -109,7 +109,7 @@ public class ReportsApiTest {
         Integer take = null;
         String userIds = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment response = api.reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+        CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment response = api.reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -130,7 +130,7 @@ public class ReportsApiTest {
         Integer take = null;
         String userIds = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseForPaginatedListOrgReportTrip response = api.reportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+        CSApiResponseForPaginatedListOrgReportTrip response = api.reportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -153,7 +153,7 @@ public class ReportsApiTest {
         Integer skip = null;
         Integer take = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseForPaginatedListRawReportItem response = api.reportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
+        CSApiResponseForPaginatedListRawReportItem response = api.reportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -172,7 +172,7 @@ public class ReportsApiTest {
         OffsetDateTime endDate = null;
         String userIds = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListProjectCostingReportItem response = api.reportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+        CSApiResponseListProjectCostingReportItem response = api.reportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -190,7 +190,7 @@ public class ReportsApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListJobSeriesReportItem response = api.reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);
+        CSApiResponseListJobSeriesReportItem response = api.reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);
 
         // TODO: test validations
     }

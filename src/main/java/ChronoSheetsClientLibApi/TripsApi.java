@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListTrip;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseTrip;
-import ChronoSheetsClientLibModel.CsApiCreateTripRequest;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListTrip;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseTrip;
+import ChronoSheetsClientLibModel.CSCreateTripRequest;
 import org.threeten.bp.OffsetDateTime;
 
 import java.lang.reflect.Type;
@@ -67,7 +67,7 @@ public class TripsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call tripsCreateTripCall(CsApiCreateTripRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call tripsCreateTripCall(CSCreateTripRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -111,7 +111,7 @@ public class TripsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call tripsCreateTripValidateBeforeCall(CsApiCreateTripRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call tripsCreateTripValidateBeforeCall(CSCreateTripRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -134,11 +134,11 @@ public class TripsApi {
      * 
      * @param request The create trip request (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseInt32
+     * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseInt32 tripsCreateTrip(CsApiCreateTripRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseInt32> resp = tripsCreateTripWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseInt32 tripsCreateTrip(CSCreateTripRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseInt32> resp = tripsCreateTripWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -147,12 +147,12 @@ public class TripsApi {
      * 
      * @param request The create trip request (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseInt32&gt;
+     * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseInt32> tripsCreateTripWithHttpInfo(CsApiCreateTripRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseInt32> tripsCreateTripWithHttpInfo(CSCreateTripRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = tripsCreateTripValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -165,7 +165,7 @@ public class TripsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tripsCreateTripAsync(CsApiCreateTripRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInt32> callback) throws ApiException {
+    public com.squareup.okhttp.Call tripsCreateTripAsync(CSCreateTripRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseInt32> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -187,7 +187,7 @@ public class TripsApi {
         }
 
         com.squareup.okhttp.Call call = tripsCreateTripValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -269,11 +269,11 @@ public class TripsApi {
      * 
      * @param tripId The ID of the trip (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseTrip
+     * @return CSApiResponseTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseTrip tripsGetMyTripById(Integer tripId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseTrip> resp = tripsGetMyTripByIdWithHttpInfo(tripId, xChronosheetsAuth);
+    public CSApiResponseTrip tripsGetMyTripById(Integer tripId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseTrip> resp = tripsGetMyTripByIdWithHttpInfo(tripId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -282,12 +282,12 @@ public class TripsApi {
      * 
      * @param tripId The ID of the trip (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseTrip&gt;
+     * @return ApiResponse&lt;CSApiResponseTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseTrip> tripsGetMyTripByIdWithHttpInfo(Integer tripId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseTrip> tripsGetMyTripByIdWithHttpInfo(Integer tripId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = tripsGetMyTripByIdValidateBeforeCall(tripId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseTrip>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseTrip>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -300,7 +300,7 @@ public class TripsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tripsGetMyTripByIdAsync(Integer tripId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseTrip> callback) throws ApiException {
+    public com.squareup.okhttp.Call tripsGetMyTripByIdAsync(Integer tripId, String xChronosheetsAuth, final ApiCallback<CSApiResponseTrip> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -322,7 +322,7 @@ public class TripsApi {
         }
 
         com.squareup.okhttp.Call call = tripsGetMyTripByIdValidateBeforeCall(tripId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseTrip>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseTrip>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -440,11 +440,11 @@ public class TripsApi {
      * @param take  (required)
      * @param vehicleId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseForPaginatedListTrip
+     * @return CSApiResponseForPaginatedListTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseForPaginatedListTrip tripsGetMyTrips(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseForPaginatedListTrip> resp = tripsGetMyTripsWithHttpInfo(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListTrip tripsGetMyTrips(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListTrip> resp = tripsGetMyTripsWithHttpInfo(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -457,12 +457,12 @@ public class TripsApi {
      * @param take  (required)
      * @param vehicleId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseForPaginatedListTrip&gt;
+     * @return ApiResponse&lt;CSApiResponseForPaginatedListTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseForPaginatedListTrip> tripsGetMyTripsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseForPaginatedListTrip> tripsGetMyTripsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = tripsGetMyTripsValidateBeforeCall(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseForPaginatedListTrip>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListTrip>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -479,7 +479,7 @@ public class TripsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tripsGetMyTripsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseForPaginatedListTrip> callback) throws ApiException {
+    public com.squareup.okhttp.Call tripsGetMyTripsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListTrip> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -501,7 +501,7 @@ public class TripsApi {
         }
 
         com.squareup.okhttp.Call call = tripsGetMyTripsValidateBeforeCall(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseForPaginatedListTrip>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListTrip>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

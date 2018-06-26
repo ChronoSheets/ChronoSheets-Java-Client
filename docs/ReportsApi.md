@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="reportsGetAllChartsDataAdmin"></a>
 # **reportsGetAllChartsDataAdmin**
-> CsApiApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth)
+> CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth)
 
 Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
 
@@ -33,7 +33,7 @@ OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime |
 String userIds = "userIds_example"; // String | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+    CSApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetAllChartsDataAdmin");
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseCombinedReportsData**](CsApiApiResponseCombinedReportsData.md)
+[**CSApiResponseCombinedReportsData**](CSApiResponseCombinedReportsData.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 
 <a name="reportsGetAllChartsDataUser"></a>
 # **reportsGetAllChartsDataUser**
-> CsApiApiResponseCombinedReportsData reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth)
+> CSApiResponseCombinedReportsData reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth)
 
 Get Consolidated User Reports Data (Jobs and Tasks)
 
@@ -81,7 +81,7 @@ OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime |
 OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
+    CSApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetAllChartsDataUser");
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseCombinedReportsData**](CsApiApiResponseCombinedReportsData.md)
+[**CSApiResponseCombinedReportsData**](CSApiResponseCombinedReportsData.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ No authorization required
 
 <a name="reportsGetOrgTripById"></a>
 # **reportsGetOrgTripById**
-> CsApiApiResponseTrip reportsGetOrgTripById(tripId, xChronosheetsAuth)
+> CSApiResponseTrip reportsGetOrgTripById(tripId, xChronosheetsAuth)
 
 Get trip by Id, for reporting purposes
 
@@ -127,7 +127,7 @@ ReportsApi apiInstance = new ReportsApi();
 Integer tripId = 56; // Integer | The ID of the trip
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseTrip result = apiInstance.reportsGetOrgTripById(tripId, xChronosheetsAuth);
+    CSApiResponseTrip result = apiInstance.reportsGetOrgTripById(tripId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetOrgTripById");
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseTrip**](CsApiApiResponseTrip.md)
+[**CSApiResponseTrip**](CSApiResponseTrip.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ No authorization required
 
 <a name="reportsGetOrganisationTimesheetFileAttachments"></a>
 # **reportsGetOrganisationTimesheetFileAttachments**
-> CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth)
+> CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth)
 
 Reports on Organisation timesheet file attachments
 
@@ -176,7 +176,7 @@ Integer take = 56; // Integer |
 String userIds = "userIds_example"; // String | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment result = apiInstance.reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+    CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment result = apiInstance.reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetOrganisationTimesheetFileAttachments");
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment**](CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
+[**CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment**](CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ No authorization required
 
 <a name="reportsGetOrganisationTrips"></a>
 # **reportsGetOrganisationTrips**
-> CsApiApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth)
+> CSApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth)
 
 Reports on Organisation trips (GPS tracking from whole organisation)
 
@@ -229,7 +229,7 @@ Integer take = 56; // Integer |
 String userIds = "userIds_example"; // String | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseForPaginatedListOrgReportTrip result = apiInstance.reportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+    CSApiResponseForPaginatedListOrgReportTrip result = apiInstance.reportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetOrganisationTrips");
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListOrgReportTrip**](CsApiApiResponseForPaginatedListOrgReportTrip.md)
+[**CSApiResponseForPaginatedListOrgReportTrip**](CSApiResponseForPaginatedListOrgReportTrip.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ No authorization required
 
 <a name="reportsGetRawDataAdmin"></a>
 # **reportsGetRawDataAdmin**
-> CsApiApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth)
+> CSApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth)
 
 Get Timesheets Raw Data
 
@@ -284,7 +284,7 @@ Integer skip = 56; // Integer |
 Integer take = 56; // Integer | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseForPaginatedListRawReportItem result = apiInstance.reportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
+    CSApiResponseForPaginatedListRawReportItem result = apiInstance.reportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetRawDataAdmin");
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListRawReportItem**](CsApiApiResponseForPaginatedListRawReportItem.md)
+[**CSApiResponseForPaginatedListRawReportItem**](CSApiResponseForPaginatedListRawReportItem.md)
 
 ### Authorization
 
@@ -320,7 +320,7 @@ No authorization required
 
 <a name="reportsProjectCostingsAdmin"></a>
 # **reportsProjectCostingsAdmin**
-> CsApiApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth)
+> CSApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth)
 
 Gets project cost estimations VS actual cost for date range and users
 
@@ -337,7 +337,7 @@ OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime |
 String userIds = "userIds_example"; // String | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListProjectCostingReportItem result = apiInstance.reportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+    CSApiResponseListProjectCostingReportItem result = apiInstance.reportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsProjectCostingsAdmin");
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListProjectCostingReportItem**](CsApiApiResponseListProjectCostingReportItem.md)
+[**CSApiResponseListProjectCostingReportItem**](CSApiResponseListProjectCostingReportItem.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ No authorization required
 
 <a name="reportsUserJobsOverTime"></a>
 # **reportsUserJobsOverTime**
-> CsApiApiResponseListJobSeriesReportItem reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth)
+> CSApiResponseListJobSeriesReportItem reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth)
 
 Timeseries jobs data for the logged in user
 
@@ -385,7 +385,7 @@ OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime |
 OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListJobSeriesReportItem result = apiInstance.reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);
+    CSApiResponseListJobSeriesReportItem result = apiInstance.reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsUserJobsOverTime");
@@ -403,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListJobSeriesReportItem**](CsApiApiResponseListJobSeriesReportItem.md)
+[**CSApiResponseListJobSeriesReportItem**](CSApiResponseListJobSeriesReportItem.md)
 
 ### Authorization
 

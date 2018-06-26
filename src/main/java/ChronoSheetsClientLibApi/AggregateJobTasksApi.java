@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseListAggregateJobCode;
+import ChronoSheetsClientLibModel.CSApiResponseListAggregateJobCode;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -123,11 +123,11 @@ public class AggregateJobTasksApi {
      * Get jobs and tasks information, aggregated
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListAggregateJobCode
+     * @return CSApiResponseListAggregateJobCode
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListAggregateJobCode aggregateJobTasksGetAggregateJobTasks(String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListAggregateJobCode> resp = aggregateJobTasksGetAggregateJobTasksWithHttpInfo(xChronosheetsAuth);
+    public CSApiResponseListAggregateJobCode aggregateJobTasksGetAggregateJobTasks(String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListAggregateJobCode> resp = aggregateJobTasksGetAggregateJobTasksWithHttpInfo(xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -135,12 +135,12 @@ public class AggregateJobTasksApi {
      * Get jobs and tasks information, aggregated
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListAggregateJobCode&gt;
+     * @return ApiResponse&lt;CSApiResponseListAggregateJobCode&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListAggregateJobCode> aggregateJobTasksGetAggregateJobTasksWithHttpInfo(String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListAggregateJobCode> aggregateJobTasksGetAggregateJobTasksWithHttpInfo(String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = aggregateJobTasksGetAggregateJobTasksValidateBeforeCall(xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListAggregateJobCode>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListAggregateJobCode>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -152,7 +152,7 @@ public class AggregateJobTasksApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call aggregateJobTasksGetAggregateJobTasksAsync(String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListAggregateJobCode> callback) throws ApiException {
+    public com.squareup.okhttp.Call aggregateJobTasksGetAggregateJobTasksAsync(String xChronosheetsAuth, final ApiCallback<CSApiResponseListAggregateJobCode> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -174,7 +174,7 @@ public class AggregateJobTasksApi {
         }
 
         com.squareup.okhttp.Call call = aggregateJobTasksGetAggregateJobTasksValidateBeforeCall(xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListAggregateJobCode>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListAggregateJobCode>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

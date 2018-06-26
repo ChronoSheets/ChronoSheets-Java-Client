@@ -27,12 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseInsertUserResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserForManagement;
-import ChronoSheetsClientLibModel.CsApiApiResponseUpdateUserResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseUserForManagement;
-import ChronoSheetsClientLibModel.CsApiInsertUserRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateUserRequest;
+import ChronoSheetsClientLibModel.CSApiResponseInsertUserResponse;
+import ChronoSheetsClientLibModel.CSApiResponseListUserForManagement;
+import ChronoSheetsClientLibModel.CSApiResponseUpdateUserResponse;
+import ChronoSheetsClientLibModel.CSApiResponseUserForManagement;
+import ChronoSheetsClientLibModel.CSInsertUserRequest;
+import ChronoSheetsClientLibModel.CSUpdateUserRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class UsersApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call usersCreateTimesheetUserCall(CsApiInsertUserRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call usersCreateTimesheetUserCall(CSInsertUserRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -112,7 +112,7 @@ public class UsersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call usersCreateTimesheetUserValidateBeforeCall(CsApiInsertUserRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call usersCreateTimesheetUserValidateBeforeCall(CSInsertUserRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -135,11 +135,11 @@ public class UsersApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseInsertUserResponse
+     * @return CSApiResponseInsertUserResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseInsertUserResponse usersCreateTimesheetUser(CsApiInsertUserRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseInsertUserResponse> resp = usersCreateTimesheetUserWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseInsertUserResponse usersCreateTimesheetUser(CSInsertUserRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseInsertUserResponse> resp = usersCreateTimesheetUserWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -148,12 +148,12 @@ public class UsersApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseInsertUserResponse&gt;
+     * @return ApiResponse&lt;CSApiResponseInsertUserResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseInsertUserResponse> usersCreateTimesheetUserWithHttpInfo(CsApiInsertUserRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseInsertUserResponse> usersCreateTimesheetUserWithHttpInfo(CSInsertUserRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = usersCreateTimesheetUserValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInsertUserResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInsertUserResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -166,7 +166,7 @@ public class UsersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call usersCreateTimesheetUserAsync(CsApiInsertUserRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInsertUserResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call usersCreateTimesheetUserAsync(CSInsertUserRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseInsertUserResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -188,7 +188,7 @@ public class UsersApi {
         }
 
         com.squareup.okhttp.Call call = usersCreateTimesheetUserValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInsertUserResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInsertUserResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -270,11 +270,11 @@ public class UsersApi {
      * 
      * @param userId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseUserForManagement
+     * @return CSApiResponseUserForManagement
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseUserForManagement usersGetTimesheetUser(Integer userId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseUserForManagement> resp = usersGetTimesheetUserWithHttpInfo(userId, xChronosheetsAuth);
+    public CSApiResponseUserForManagement usersGetTimesheetUser(Integer userId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseUserForManagement> resp = usersGetTimesheetUserWithHttpInfo(userId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -283,12 +283,12 @@ public class UsersApi {
      * 
      * @param userId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseUserForManagement&gt;
+     * @return ApiResponse&lt;CSApiResponseUserForManagement&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseUserForManagement> usersGetTimesheetUserWithHttpInfo(Integer userId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseUserForManagement> usersGetTimesheetUserWithHttpInfo(Integer userId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = usersGetTimesheetUserValidateBeforeCall(userId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseUserForManagement>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseUserForManagement>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -301,7 +301,7 @@ public class UsersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call usersGetTimesheetUserAsync(Integer userId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseUserForManagement> callback) throws ApiException {
+    public com.squareup.okhttp.Call usersGetTimesheetUserAsync(Integer userId, String xChronosheetsAuth, final ApiCallback<CSApiResponseUserForManagement> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -323,7 +323,7 @@ public class UsersApi {
         }
 
         com.squareup.okhttp.Call call = usersGetTimesheetUserValidateBeforeCall(userId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseUserForManagement>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseUserForManagement>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -396,11 +396,11 @@ public class UsersApi {
      * Get users for your organisation
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListUserForManagement
+     * @return CSApiResponseListUserForManagement
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListUserForManagement usersGetTimesheetUsers(String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListUserForManagement> resp = usersGetTimesheetUsersWithHttpInfo(xChronosheetsAuth);
+    public CSApiResponseListUserForManagement usersGetTimesheetUsers(String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListUserForManagement> resp = usersGetTimesheetUsersWithHttpInfo(xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -408,12 +408,12 @@ public class UsersApi {
      * Get users for your organisation
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListUserForManagement&gt;
+     * @return ApiResponse&lt;CSApiResponseListUserForManagement&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListUserForManagement> usersGetTimesheetUsersWithHttpInfo(String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListUserForManagement> usersGetTimesheetUsersWithHttpInfo(String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = usersGetTimesheetUsersValidateBeforeCall(xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUserForManagement>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUserForManagement>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -425,7 +425,7 @@ public class UsersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call usersGetTimesheetUsersAsync(String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListUserForManagement> callback) throws ApiException {
+    public com.squareup.okhttp.Call usersGetTimesheetUsersAsync(String xChronosheetsAuth, final ApiCallback<CSApiResponseListUserForManagement> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -447,7 +447,7 @@ public class UsersApi {
         }
 
         com.squareup.okhttp.Call call = usersGetTimesheetUsersValidateBeforeCall(xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUserForManagement>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUserForManagement>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -460,7 +460,7 @@ public class UsersApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call usersUpdateTimesheetUserCall(CsApiUpdateUserRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call usersUpdateTimesheetUserCall(CSUpdateUserRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -504,7 +504,7 @@ public class UsersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call usersUpdateTimesheetUserValidateBeforeCall(CsApiUpdateUserRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call usersUpdateTimesheetUserValidateBeforeCall(CSUpdateUserRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -527,11 +527,11 @@ public class UsersApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseUpdateUserResponse
+     * @return CSApiResponseUpdateUserResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseUpdateUserResponse usersUpdateTimesheetUser(CsApiUpdateUserRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseUpdateUserResponse> resp = usersUpdateTimesheetUserWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseUpdateUserResponse usersUpdateTimesheetUser(CSUpdateUserRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseUpdateUserResponse> resp = usersUpdateTimesheetUserWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -540,12 +540,12 @@ public class UsersApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseUpdateUserResponse&gt;
+     * @return ApiResponse&lt;CSApiResponseUpdateUserResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseUpdateUserResponse> usersUpdateTimesheetUserWithHttpInfo(CsApiUpdateUserRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseUpdateUserResponse> usersUpdateTimesheetUserWithHttpInfo(CSUpdateUserRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = usersUpdateTimesheetUserValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseUpdateUserResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseUpdateUserResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -558,7 +558,7 @@ public class UsersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call usersUpdateTimesheetUserAsync(CsApiUpdateUserRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseUpdateUserResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call usersUpdateTimesheetUserAsync(CSUpdateUserRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseUpdateUserResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -580,7 +580,7 @@ public class UsersApi {
         }
 
         com.squareup.okhttp.Call call = usersUpdateTimesheetUserValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseUpdateUserResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseUpdateUserResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

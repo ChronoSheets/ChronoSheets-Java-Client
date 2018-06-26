@@ -27,12 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseDoLoginResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseSignupResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseUserProfile;
-import ChronoSheetsClientLibModel.CsApiDoLoginRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateMyProfileRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseDoLoginResponse;
+import ChronoSheetsClientLibModel.CSApiResponseSignupResponse;
+import ChronoSheetsClientLibModel.CSApiResponseUserProfile;
+import ChronoSheetsClientLibModel.CSDoLoginRequest;
+import ChronoSheetsClientLibModel.CSUpdateMyProfileRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -67,7 +67,7 @@ public class UserProfileApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call userProfileDoLoginCall(CsApiDoLoginRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call userProfileDoLoginCall(CSDoLoginRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -109,7 +109,7 @@ public class UserProfileApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call userProfileDoLoginValidateBeforeCall(CsApiDoLoginRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call userProfileDoLoginValidateBeforeCall(CSDoLoginRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -126,11 +126,11 @@ public class UserProfileApi {
      * 
      * 
      * @param request  (required)
-     * @return CsApiApiResponseDoLoginResponse
+     * @return CSApiResponseDoLoginResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseDoLoginResponse userProfileDoLogin(CsApiDoLoginRequest request) throws ApiException {
-        ApiResponse<CsApiApiResponseDoLoginResponse> resp = userProfileDoLoginWithHttpInfo(request);
+    public CSApiResponseDoLoginResponse userProfileDoLogin(CSDoLoginRequest request) throws ApiException {
+        ApiResponse<CSApiResponseDoLoginResponse> resp = userProfileDoLoginWithHttpInfo(request);
         return resp.getData();
     }
 
@@ -138,12 +138,12 @@ public class UserProfileApi {
      * 
      * 
      * @param request  (required)
-     * @return ApiResponse&lt;CsApiApiResponseDoLoginResponse&gt;
+     * @return ApiResponse&lt;CSApiResponseDoLoginResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseDoLoginResponse> userProfileDoLoginWithHttpInfo(CsApiDoLoginRequest request) throws ApiException {
+    public ApiResponse<CSApiResponseDoLoginResponse> userProfileDoLoginWithHttpInfo(CSDoLoginRequest request) throws ApiException {
         com.squareup.okhttp.Call call = userProfileDoLoginValidateBeforeCall(request, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseDoLoginResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseDoLoginResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -155,7 +155,7 @@ public class UserProfileApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userProfileDoLoginAsync(CsApiDoLoginRequest request, final ApiCallback<CsApiApiResponseDoLoginResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call userProfileDoLoginAsync(CSDoLoginRequest request, final ApiCallback<CSApiResponseDoLoginResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -177,7 +177,7 @@ public class UserProfileApi {
         }
 
         com.squareup.okhttp.Call call = userProfileDoLoginValidateBeforeCall(request, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseDoLoginResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseDoLoginResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -250,11 +250,11 @@ public class UserProfileApi {
      * 
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean userProfileDoLogout(String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = userProfileDoLogoutWithHttpInfo(xChronosheetsAuth);
+    public CSApiResponseBoolean userProfileDoLogout(String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = userProfileDoLogoutWithHttpInfo(xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -262,12 +262,12 @@ public class UserProfileApi {
      * 
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> userProfileDoLogoutWithHttpInfo(String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> userProfileDoLogoutWithHttpInfo(String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = userProfileDoLogoutValidateBeforeCall(xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -279,7 +279,7 @@ public class UserProfileApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userProfileDoLogoutAsync(String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call userProfileDoLogoutAsync(String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -301,7 +301,7 @@ public class UserProfileApi {
         }
 
         com.squareup.okhttp.Call call = userProfileDoLogoutValidateBeforeCall(xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -374,11 +374,11 @@ public class UserProfileApi {
      * 
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseUserProfile
+     * @return CSApiResponseUserProfile
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseUserProfile userProfileGetMyProfile(String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseUserProfile> resp = userProfileGetMyProfileWithHttpInfo(xChronosheetsAuth);
+    public CSApiResponseUserProfile userProfileGetMyProfile(String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseUserProfile> resp = userProfileGetMyProfileWithHttpInfo(xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -386,12 +386,12 @@ public class UserProfileApi {
      * 
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseUserProfile&gt;
+     * @return ApiResponse&lt;CSApiResponseUserProfile&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseUserProfile> userProfileGetMyProfileWithHttpInfo(String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseUserProfile> userProfileGetMyProfileWithHttpInfo(String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = userProfileGetMyProfileValidateBeforeCall(xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseUserProfile>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseUserProfile>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -403,7 +403,7 @@ public class UserProfileApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userProfileGetMyProfileAsync(String xChronosheetsAuth, final ApiCallback<CsApiApiResponseUserProfile> callback) throws ApiException {
+    public com.squareup.okhttp.Call userProfileGetMyProfileAsync(String xChronosheetsAuth, final ApiCallback<CSApiResponseUserProfile> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -425,7 +425,7 @@ public class UserProfileApi {
         }
 
         com.squareup.okhttp.Call call = userProfileGetMyProfileValidateBeforeCall(xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseUserProfile>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseUserProfile>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -498,11 +498,11 @@ public class UserProfileApi {
      * 
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean userProfileKeepSessionAlive(String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = userProfileKeepSessionAliveWithHttpInfo(xChronosheetsAuth);
+    public CSApiResponseBoolean userProfileKeepSessionAlive(String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = userProfileKeepSessionAliveWithHttpInfo(xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -510,12 +510,12 @@ public class UserProfileApi {
      * 
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> userProfileKeepSessionAliveWithHttpInfo(String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> userProfileKeepSessionAliveWithHttpInfo(String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = userProfileKeepSessionAliveValidateBeforeCall(xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -527,7 +527,7 @@ public class UserProfileApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userProfileKeepSessionAliveAsync(String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call userProfileKeepSessionAliveAsync(String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -549,7 +549,7 @@ public class UserProfileApi {
         }
 
         com.squareup.okhttp.Call call = userProfileKeepSessionAliveValidateBeforeCall(xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -562,7 +562,7 @@ public class UserProfileApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call userProfileUpdateMyProfileCall(CsApiUpdateMyProfileRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call userProfileUpdateMyProfileCall(CSUpdateMyProfileRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -606,7 +606,7 @@ public class UserProfileApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call userProfileUpdateMyProfileValidateBeforeCall(CsApiUpdateMyProfileRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call userProfileUpdateMyProfileValidateBeforeCall(CSUpdateMyProfileRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -629,11 +629,11 @@ public class UserProfileApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseSignupResponse
+     * @return CSApiResponseSignupResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseSignupResponse userProfileUpdateMyProfile(CsApiUpdateMyProfileRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseSignupResponse> resp = userProfileUpdateMyProfileWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseSignupResponse userProfileUpdateMyProfile(CSUpdateMyProfileRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseSignupResponse> resp = userProfileUpdateMyProfileWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -642,12 +642,12 @@ public class UserProfileApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseSignupResponse&gt;
+     * @return ApiResponse&lt;CSApiResponseSignupResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseSignupResponse> userProfileUpdateMyProfileWithHttpInfo(CsApiUpdateMyProfileRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseSignupResponse> userProfileUpdateMyProfileWithHttpInfo(CSUpdateMyProfileRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = userProfileUpdateMyProfileValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseSignupResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseSignupResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -660,7 +660,7 @@ public class UserProfileApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userProfileUpdateMyProfileAsync(CsApiUpdateMyProfileRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseSignupResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call userProfileUpdateMyProfileAsync(CSUpdateMyProfileRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseSignupResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -682,7 +682,7 @@ public class UserProfileApi {
         }
 
         com.squareup.okhttp.Call call = userProfileUpdateMyProfileValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseSignupResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseSignupResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

@@ -27,12 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseJobCode;
-import ChronoSheetsClientLibModel.CsApiApiResponseListJobCode;
-import ChronoSheetsClientLibModel.CsApiInsertJobCodeRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateJobCodeRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseJobCode;
+import ChronoSheetsClientLibModel.CSApiResponseListJobCode;
+import ChronoSheetsClientLibModel.CSInsertJobCodeRequest;
+import ChronoSheetsClientLibModel.CSUpdateJobCodeRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class JobCodesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call jobCodesCreateJobCodeCall(CsApiInsertJobCodeRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call jobCodesCreateJobCodeCall(CSInsertJobCodeRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -112,7 +112,7 @@ public class JobCodesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call jobCodesCreateJobCodeValidateBeforeCall(CsApiInsertJobCodeRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call jobCodesCreateJobCodeValidateBeforeCall(CSInsertJobCodeRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -135,11 +135,11 @@ public class JobCodesApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseInt32
+     * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseInt32 jobCodesCreateJobCode(CsApiInsertJobCodeRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseInt32> resp = jobCodesCreateJobCodeWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseInt32 jobCodesCreateJobCode(CSInsertJobCodeRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseInt32> resp = jobCodesCreateJobCodeWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -148,12 +148,12 @@ public class JobCodesApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseInt32&gt;
+     * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseInt32> jobCodesCreateJobCodeWithHttpInfo(CsApiInsertJobCodeRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseInt32> jobCodesCreateJobCodeWithHttpInfo(CSInsertJobCodeRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = jobCodesCreateJobCodeValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -166,7 +166,7 @@ public class JobCodesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call jobCodesCreateJobCodeAsync(CsApiInsertJobCodeRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInt32> callback) throws ApiException {
+    public com.squareup.okhttp.Call jobCodesCreateJobCodeAsync(CSInsertJobCodeRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseInt32> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -188,7 +188,7 @@ public class JobCodesApi {
         }
 
         com.squareup.okhttp.Call call = jobCodesCreateJobCodeValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -270,11 +270,11 @@ public class JobCodesApi {
      * 
      * @param jobCodeId The ID of the job code your want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean jobCodesDeleteJobCode(Integer jobCodeId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = jobCodesDeleteJobCodeWithHttpInfo(jobCodeId, xChronosheetsAuth);
+    public CSApiResponseBoolean jobCodesDeleteJobCode(Integer jobCodeId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = jobCodesDeleteJobCodeWithHttpInfo(jobCodeId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -283,12 +283,12 @@ public class JobCodesApi {
      * 
      * @param jobCodeId The ID of the job code your want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> jobCodesDeleteJobCodeWithHttpInfo(Integer jobCodeId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> jobCodesDeleteJobCodeWithHttpInfo(Integer jobCodeId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = jobCodesDeleteJobCodeValidateBeforeCall(jobCodeId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -301,7 +301,7 @@ public class JobCodesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call jobCodesDeleteJobCodeAsync(Integer jobCodeId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call jobCodesDeleteJobCodeAsync(Integer jobCodeId, String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -323,7 +323,7 @@ public class JobCodesApi {
         }
 
         com.squareup.okhttp.Call call = jobCodesDeleteJobCodeValidateBeforeCall(jobCodeId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -405,11 +405,11 @@ public class JobCodesApi {
      * 
      * @param jobCodeId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseJobCode
+     * @return CSApiResponseJobCode
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseJobCode jobCodesGetJobCodeById(Integer jobCodeId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseJobCode> resp = jobCodesGetJobCodeByIdWithHttpInfo(jobCodeId, xChronosheetsAuth);
+    public CSApiResponseJobCode jobCodesGetJobCodeById(Integer jobCodeId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseJobCode> resp = jobCodesGetJobCodeByIdWithHttpInfo(jobCodeId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -418,12 +418,12 @@ public class JobCodesApi {
      * 
      * @param jobCodeId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseJobCode&gt;
+     * @return ApiResponse&lt;CSApiResponseJobCode&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseJobCode> jobCodesGetJobCodeByIdWithHttpInfo(Integer jobCodeId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseJobCode> jobCodesGetJobCodeByIdWithHttpInfo(Integer jobCodeId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = jobCodesGetJobCodeByIdValidateBeforeCall(jobCodeId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseJobCode>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseJobCode>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -436,7 +436,7 @@ public class JobCodesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call jobCodesGetJobCodeByIdAsync(Integer jobCodeId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseJobCode> callback) throws ApiException {
+    public com.squareup.okhttp.Call jobCodesGetJobCodeByIdAsync(Integer jobCodeId, String xChronosheetsAuth, final ApiCallback<CSApiResponseJobCode> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -458,7 +458,7 @@ public class JobCodesApi {
         }
 
         com.squareup.okhttp.Call call = jobCodesGetJobCodeByIdValidateBeforeCall(jobCodeId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseJobCode>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseJobCode>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -531,11 +531,11 @@ public class JobCodesApi {
      * Get job codes for your organisation
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListJobCode
+     * @return CSApiResponseListJobCode
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListJobCode jobCodesGetJobCodes(String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListJobCode> resp = jobCodesGetJobCodesWithHttpInfo(xChronosheetsAuth);
+    public CSApiResponseListJobCode jobCodesGetJobCodes(String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListJobCode> resp = jobCodesGetJobCodesWithHttpInfo(xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -543,12 +543,12 @@ public class JobCodesApi {
      * Get job codes for your organisation
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListJobCode&gt;
+     * @return ApiResponse&lt;CSApiResponseListJobCode&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListJobCode> jobCodesGetJobCodesWithHttpInfo(String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListJobCode> jobCodesGetJobCodesWithHttpInfo(String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = jobCodesGetJobCodesValidateBeforeCall(xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListJobCode>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListJobCode>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -560,7 +560,7 @@ public class JobCodesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call jobCodesGetJobCodesAsync(String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListJobCode> callback) throws ApiException {
+    public com.squareup.okhttp.Call jobCodesGetJobCodesAsync(String xChronosheetsAuth, final ApiCallback<CSApiResponseListJobCode> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -582,7 +582,7 @@ public class JobCodesApi {
         }
 
         com.squareup.okhttp.Call call = jobCodesGetJobCodesValidateBeforeCall(xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListJobCode>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListJobCode>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -595,7 +595,7 @@ public class JobCodesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call jobCodesUpdateJobCodeCall(CsApiUpdateJobCodeRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call jobCodesUpdateJobCodeCall(CSUpdateJobCodeRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -639,7 +639,7 @@ public class JobCodesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call jobCodesUpdateJobCodeValidateBeforeCall(CsApiUpdateJobCodeRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call jobCodesUpdateJobCodeValidateBeforeCall(CSUpdateJobCodeRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -662,11 +662,11 @@ public class JobCodesApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean jobCodesUpdateJobCode(CsApiUpdateJobCodeRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = jobCodesUpdateJobCodeWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseBoolean jobCodesUpdateJobCode(CSUpdateJobCodeRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = jobCodesUpdateJobCodeWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -675,12 +675,12 @@ public class JobCodesApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> jobCodesUpdateJobCodeWithHttpInfo(CsApiUpdateJobCodeRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> jobCodesUpdateJobCodeWithHttpInfo(CSUpdateJobCodeRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = jobCodesUpdateJobCodeValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -693,7 +693,7 @@ public class JobCodesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call jobCodesUpdateJobCodeAsync(CsApiUpdateJobCodeRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call jobCodesUpdateJobCodeAsync(CSUpdateJobCodeRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -715,7 +715,7 @@ public class JobCodesApi {
         }
 
         com.squareup.okhttp.Call call = jobCodesUpdateJobCodeValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

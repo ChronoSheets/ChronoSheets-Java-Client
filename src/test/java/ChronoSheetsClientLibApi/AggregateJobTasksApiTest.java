@@ -14,7 +14,7 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseListAggregateJobCode;
+import ChronoSheetsClientLibModel.CSApiResponseListAggregateJobCode;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -43,7 +43,7 @@ public class AggregateJobTasksApiTest {
     @Test
     public void aggregateJobTasksGetAggregateJobTasksTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseListAggregateJobCode response = api.aggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth);
+        CSApiResponseListAggregateJobCode response = api.aggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth);
 
         // TODO: test validations
     }

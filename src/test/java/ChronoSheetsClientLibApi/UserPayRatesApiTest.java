@@ -14,9 +14,9 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserHourlyRate;
-import ChronoSheetsClientLibModel.CsApiInsertUserHourlyRateRequest;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListUserHourlyRate;
+import ChronoSheetsClientLibModel.CSInsertUserHourlyRateRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -44,9 +44,9 @@ public class UserPayRatesApiTest {
      */
     @Test
     public void userPayRatesCreatePayRateTest() throws ApiException {
-        CsApiInsertUserHourlyRateRequest request = null;
+        CSInsertUserHourlyRateRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.userPayRatesCreatePayRate(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.userPayRatesCreatePayRate(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -63,7 +63,7 @@ public class UserPayRatesApiTest {
     public void userPayRatesGetPayRatesTest() throws ApiException {
         Integer userId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListUserHourlyRate response = api.userPayRatesGetPayRates(userId, xChronosheetsAuth);
+        CSApiResponseListUserHourlyRate response = api.userPayRatesGetPayRates(userId, xChronosheetsAuth);
 
         // TODO: test validations
     }

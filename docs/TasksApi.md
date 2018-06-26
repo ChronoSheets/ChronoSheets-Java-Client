@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="tasksCreateTask"></a>
 # **tasksCreateTask**
-> CsApiApiResponseInt32 tasksCreateTask(request, xChronosheetsAuth)
+> CSApiResponseInt32 tasksCreateTask(request, xChronosheetsAuth)
 
 Create a task
 
@@ -26,10 +26,10 @@ Create a task
 
 
 TasksApi apiInstance = new TasksApi();
-CsApiInsertTaskRequest request = new CsApiInsertTaskRequest(); // CsApiInsertTaskRequest | 
+CSInsertTaskRequest request = new CSInsertTaskRequest(); // CSInsertTaskRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseInt32 result = apiInstance.tasksCreateTask(request, xChronosheetsAuth);
+    CSApiResponseInt32 result = apiInstance.tasksCreateTask(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TasksApi#tasksCreateTask");
@@ -41,12 +41,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertTaskRequest**](CsApiInsertTaskRequest.md)|  |
+ **request** | [**CSInsertTaskRequest**](CSInsertTaskRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 
 <a name="tasksDeleteTask"></a>
 # **tasksDeleteTask**
-> CsApiApiResponseBoolean tasksDeleteTask(taskId, xChronosheetsAuth)
+> CSApiResponseBoolean tasksDeleteTask(taskId, xChronosheetsAuth)
 
 Delete a task
 
@@ -74,7 +74,7 @@ TasksApi apiInstance = new TasksApi();
 Integer taskId = 56; // Integer | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.tasksDeleteTask(taskId, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.tasksDeleteTask(taskId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TasksApi#tasksDeleteTask");
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
 
 <a name="tasksGetTaskById"></a>
 # **tasksGetTaskById**
-> CsApiApiResponseTimesheetTask tasksGetTaskById(taskId, xChronosheetsAuth)
+> CSApiResponseTimesheetTask tasksGetTaskById(taskId, xChronosheetsAuth)
 
 Get a particular task by id
 
@@ -119,7 +119,7 @@ TasksApi apiInstance = new TasksApi();
 Integer taskId = 56; // Integer | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseTimesheetTask result = apiInstance.tasksGetTaskById(taskId, xChronosheetsAuth);
+    CSApiResponseTimesheetTask result = apiInstance.tasksGetTaskById(taskId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TasksApi#tasksGetTaskById");
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseTimesheetTask**](CsApiApiResponseTimesheetTask.md)
+[**CSApiResponseTimesheetTask**](CSApiResponseTimesheetTask.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ No authorization required
 
 <a name="tasksGetTasks"></a>
 # **tasksGetTasks**
-> CsApiApiResponseListTimesheetTask tasksGetTasks(xChronosheetsAuth)
+> CSApiResponseListTimesheetTask tasksGetTasks(xChronosheetsAuth)
 
 Get tasks in your organisation
 
@@ -163,7 +163,7 @@ Get tasks in your organisation
 TasksApi apiInstance = new TasksApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListTimesheetTask result = apiInstance.tasksGetTasks(xChronosheetsAuth);
+    CSApiResponseListTimesheetTask result = apiInstance.tasksGetTasks(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TasksApi#tasksGetTasks");
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListTimesheetTask**](CsApiApiResponseListTimesheetTask.md)
+[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 
 <a name="tasksGetTasksForJob"></a>
 # **tasksGetTasksForJob**
-> CsApiApiResponseListTimesheetTask tasksGetTasksForJob(jobId, xChronosheetsAuth)
+> CSApiResponseListTimesheetTask tasksGetTasksForJob(jobId, xChronosheetsAuth)
 
 Get tasks for a particular job
 
@@ -207,7 +207,7 @@ TasksApi apiInstance = new TasksApi();
 Integer jobId = 56; // Integer | The ID of the job
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListTimesheetTask result = apiInstance.tasksGetTasksForJob(jobId, xChronosheetsAuth);
+    CSApiResponseListTimesheetTask result = apiInstance.tasksGetTasksForJob(jobId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TasksApi#tasksGetTasksForJob");
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListTimesheetTask**](CsApiApiResponseListTimesheetTask.md)
+[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -237,7 +237,7 @@ No authorization required
 
 <a name="tasksUpdateTask"></a>
 # **tasksUpdateTask**
-> CsApiApiResponseBoolean tasksUpdateTask(request, xChronosheetsAuth)
+> CSApiResponseBoolean tasksUpdateTask(request, xChronosheetsAuth)
 
 Update a task
 
@@ -249,10 +249,10 @@ Update a task
 
 
 TasksApi apiInstance = new TasksApi();
-CsApiUpdateTaskRequest request = new CsApiUpdateTaskRequest(); // CsApiUpdateTaskRequest | 
+CSUpdateTaskRequest request = new CSUpdateTaskRequest(); // CSUpdateTaskRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.tasksUpdateTask(request, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.tasksUpdateTask(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TasksApi#tasksUpdateTask");
@@ -264,12 +264,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateTaskRequest**](CsApiUpdateTaskRequest.md)|  |
+ **request** | [**CSUpdateTaskRequest**](CSUpdateTaskRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

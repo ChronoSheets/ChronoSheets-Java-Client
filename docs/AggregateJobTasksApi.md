@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="aggregateJobTasksGetAggregateJobTasks"></a>
 # **aggregateJobTasksGetAggregateJobTasks**
-> CsApiApiResponseListAggregateJobCode aggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth)
+> CSApiResponseListAggregateJobCode aggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth)
 
 Get jobs and tasks information, aggregated
 
@@ -23,7 +23,7 @@ Get jobs and tasks information, aggregated
 AggregateJobTasksApi apiInstance = new AggregateJobTasksApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListAggregateJobCode result = apiInstance.aggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth);
+    CSApiResponseListAggregateJobCode result = apiInstance.aggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AggregateJobTasksApi#aggregateJobTasksGetAggregateJobTasks");
@@ -39,7 +39,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListAggregateJobCode**](CsApiApiResponseListAggregateJobCode.md)
+[**CSApiResponseListAggregateJobCode**](CSApiResponseListAggregateJobCode.md)
 
 ### Authorization
 

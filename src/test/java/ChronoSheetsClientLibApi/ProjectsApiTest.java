@@ -14,12 +14,12 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListProject;
-import ChronoSheetsClientLibModel.CsApiApiResponseProject;
-import ChronoSheetsClientLibModel.CsApiInsertProjectRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateProjectRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListProject;
+import ChronoSheetsClientLibModel.CSApiResponseProject;
+import ChronoSheetsClientLibModel.CSInsertProjectRequest;
+import ChronoSheetsClientLibModel.CSUpdateProjectRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -47,9 +47,9 @@ public class ProjectsApiTest {
      */
     @Test
     public void projectsCreateProjectTest() throws ApiException {
-        CsApiInsertProjectRequest request = null;
+        CSInsertProjectRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.projectsCreateProject(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.projectsCreateProject(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -66,7 +66,7 @@ public class ProjectsApiTest {
     public void projectsGetProjectByIdTest() throws ApiException {
         Integer projectId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseProject response = api.projectsGetProjectById(projectId, xChronosheetsAuth);
+        CSApiResponseProject response = api.projectsGetProjectById(projectId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -83,7 +83,7 @@ public class ProjectsApiTest {
     public void projectsGetProjectsForClientTest() throws ApiException {
         Integer clientId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListProject response = api.projectsGetProjectsForClient(clientId, xChronosheetsAuth);
+        CSApiResponseListProject response = api.projectsGetProjectsForClient(clientId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -98,9 +98,9 @@ public class ProjectsApiTest {
      */
     @Test
     public void projectsUpdateProjectTest() throws ApiException {
-        CsApiUpdateProjectRequest request = null;
+        CSUpdateProjectRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.projectsUpdateProject(request, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.projectsUpdateProject(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

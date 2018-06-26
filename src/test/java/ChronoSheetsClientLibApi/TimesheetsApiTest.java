@@ -14,12 +14,12 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListTimesheet;
-import ChronoSheetsClientLibModel.CsApiBatchUpdateTimesheetRequest;
-import ChronoSheetsClientLibModel.CsApiTimesheet;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListTimesheet;
+import ChronoSheetsClientLibModel.CSBatchUpdateTimesheetRequest;
+import ChronoSheetsClientLibModel.CSTimesheet;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -48,9 +48,9 @@ public class TimesheetsApiTest {
      */
     @Test
     public void timesheetsCreateSingleTimesheetTest() throws ApiException {
-        CsApiTimesheet request = null;
+        CSTimesheet request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.timesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.timesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -67,7 +67,7 @@ public class TimesheetsApiTest {
     public void timesheetsDeleteTimesheetTest() throws ApiException {
         Integer timesheetId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -85,7 +85,7 @@ public class TimesheetsApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListTimesheet response = api.timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
+        CSApiResponseListTimesheet response = api.timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -100,9 +100,9 @@ public class TimesheetsApiTest {
      */
     @Test
     public void timesheetsUpdateTimesheetsTest() throws ApiException {
-        CsApiBatchUpdateTimesheetRequest request = null;
+        CSBatchUpdateTimesheetRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListInt32 response = api.timesheetsUpdateTimesheets(request, xChronosheetsAuth);
+        CSApiResponseListInt32 response = api.timesheetsUpdateTimesheets(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

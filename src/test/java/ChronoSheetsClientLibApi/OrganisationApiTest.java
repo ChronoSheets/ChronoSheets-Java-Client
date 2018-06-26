@@ -14,9 +14,9 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseOrganisation;
-import ChronoSheetsClientLibModel.CsApiApiResponseUpdateOrganisationResponse;
-import ChronoSheetsClientLibModel.CsApiUpdateOrganisationRequest;
+import ChronoSheetsClientLibModel.CSApiResponseOrganisation;
+import ChronoSheetsClientLibModel.CSApiResponseUpdateOrganisationResponse;
+import ChronoSheetsClientLibModel.CSUpdateOrganisationRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -45,7 +45,7 @@ public class OrganisationApiTest {
     @Test
     public void organisationGetOrganisationTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseOrganisation response = api.organisationGetOrganisation(xChronosheetsAuth);
+        CSApiResponseOrganisation response = api.organisationGetOrganisation(xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -60,9 +60,9 @@ public class OrganisationApiTest {
      */
     @Test
     public void organisationUpdateOrganisationTest() throws ApiException {
-        CsApiUpdateOrganisationRequest request = null;
+        CSUpdateOrganisationRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseUpdateOrganisationResponse response = api.organisationUpdateOrganisation(request, xChronosheetsAuth);
+        CSApiResponseUpdateOrganisationResponse response = api.organisationUpdateOrganisation(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

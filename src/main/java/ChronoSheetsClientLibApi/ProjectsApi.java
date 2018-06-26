@@ -27,12 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListProject;
-import ChronoSheetsClientLibModel.CsApiApiResponseProject;
-import ChronoSheetsClientLibModel.CsApiInsertProjectRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateProjectRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListProject;
+import ChronoSheetsClientLibModel.CSApiResponseProject;
+import ChronoSheetsClientLibModel.CSInsertProjectRequest;
+import ChronoSheetsClientLibModel.CSUpdateProjectRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class ProjectsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call projectsCreateProjectCall(CsApiInsertProjectRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call projectsCreateProjectCall(CSInsertProjectRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -112,7 +112,7 @@ public class ProjectsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call projectsCreateProjectValidateBeforeCall(CsApiInsertProjectRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call projectsCreateProjectValidateBeforeCall(CSInsertProjectRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -135,11 +135,11 @@ public class ProjectsApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseInt32
+     * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseInt32 projectsCreateProject(CsApiInsertProjectRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseInt32> resp = projectsCreateProjectWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseInt32 projectsCreateProject(CSInsertProjectRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseInt32> resp = projectsCreateProjectWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -148,12 +148,12 @@ public class ProjectsApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseInt32&gt;
+     * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseInt32> projectsCreateProjectWithHttpInfo(CsApiInsertProjectRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseInt32> projectsCreateProjectWithHttpInfo(CSInsertProjectRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = projectsCreateProjectValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -166,7 +166,7 @@ public class ProjectsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call projectsCreateProjectAsync(CsApiInsertProjectRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInt32> callback) throws ApiException {
+    public com.squareup.okhttp.Call projectsCreateProjectAsync(CSInsertProjectRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseInt32> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -188,7 +188,7 @@ public class ProjectsApi {
         }
 
         com.squareup.okhttp.Call call = projectsCreateProjectValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -270,11 +270,11 @@ public class ProjectsApi {
      * 
      * @param projectId The ID of the project (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseProject
+     * @return CSApiResponseProject
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseProject projectsGetProjectById(Integer projectId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseProject> resp = projectsGetProjectByIdWithHttpInfo(projectId, xChronosheetsAuth);
+    public CSApiResponseProject projectsGetProjectById(Integer projectId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseProject> resp = projectsGetProjectByIdWithHttpInfo(projectId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -283,12 +283,12 @@ public class ProjectsApi {
      * 
      * @param projectId The ID of the project (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseProject&gt;
+     * @return ApiResponse&lt;CSApiResponseProject&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseProject> projectsGetProjectByIdWithHttpInfo(Integer projectId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseProject> projectsGetProjectByIdWithHttpInfo(Integer projectId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = projectsGetProjectByIdValidateBeforeCall(projectId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseProject>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseProject>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -301,7 +301,7 @@ public class ProjectsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call projectsGetProjectByIdAsync(Integer projectId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseProject> callback) throws ApiException {
+    public com.squareup.okhttp.Call projectsGetProjectByIdAsync(Integer projectId, String xChronosheetsAuth, final ApiCallback<CSApiResponseProject> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -323,7 +323,7 @@ public class ProjectsApi {
         }
 
         com.squareup.okhttp.Call call = projectsGetProjectByIdValidateBeforeCall(projectId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseProject>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseProject>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -405,11 +405,11 @@ public class ProjectsApi {
      * 
      * @param clientId The ID of the client (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListProject
+     * @return CSApiResponseListProject
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListProject projectsGetProjectsForClient(Integer clientId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListProject> resp = projectsGetProjectsForClientWithHttpInfo(clientId, xChronosheetsAuth);
+    public CSApiResponseListProject projectsGetProjectsForClient(Integer clientId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListProject> resp = projectsGetProjectsForClientWithHttpInfo(clientId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -418,12 +418,12 @@ public class ProjectsApi {
      * 
      * @param clientId The ID of the client (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListProject&gt;
+     * @return ApiResponse&lt;CSApiResponseListProject&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListProject> projectsGetProjectsForClientWithHttpInfo(Integer clientId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListProject> projectsGetProjectsForClientWithHttpInfo(Integer clientId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = projectsGetProjectsForClientValidateBeforeCall(clientId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListProject>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListProject>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -436,7 +436,7 @@ public class ProjectsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call projectsGetProjectsForClientAsync(Integer clientId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListProject> callback) throws ApiException {
+    public com.squareup.okhttp.Call projectsGetProjectsForClientAsync(Integer clientId, String xChronosheetsAuth, final ApiCallback<CSApiResponseListProject> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -458,7 +458,7 @@ public class ProjectsApi {
         }
 
         com.squareup.okhttp.Call call = projectsGetProjectsForClientValidateBeforeCall(clientId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListProject>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListProject>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -471,7 +471,7 @@ public class ProjectsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call projectsUpdateProjectCall(CsApiUpdateProjectRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call projectsUpdateProjectCall(CSUpdateProjectRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -515,7 +515,7 @@ public class ProjectsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call projectsUpdateProjectValidateBeforeCall(CsApiUpdateProjectRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call projectsUpdateProjectValidateBeforeCall(CSUpdateProjectRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -538,11 +538,11 @@ public class ProjectsApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean projectsUpdateProject(CsApiUpdateProjectRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = projectsUpdateProjectWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseBoolean projectsUpdateProject(CSUpdateProjectRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = projectsUpdateProjectWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -551,12 +551,12 @@ public class ProjectsApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> projectsUpdateProjectWithHttpInfo(CsApiUpdateProjectRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> projectsUpdateProjectWithHttpInfo(CSUpdateProjectRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = projectsUpdateProjectValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -569,7 +569,7 @@ public class ProjectsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call projectsUpdateProjectAsync(CsApiUpdateProjectRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call projectsUpdateProjectAsync(CSUpdateProjectRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -591,7 +591,7 @@ public class ProjectsApi {
         }
 
         com.squareup.okhttp.Call call = projectsUpdateProjectValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

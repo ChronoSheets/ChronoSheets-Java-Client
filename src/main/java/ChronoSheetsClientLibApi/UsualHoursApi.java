@@ -27,9 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUsualHoursDay;
-import ChronoSheetsClientLibModel.CsApiSetUsualHoursRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseListUsualHoursDay;
+import ChronoSheetsClientLibModel.CSSetUsualHoursRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -134,11 +134,11 @@ public class UsualHoursApi {
      * 
      * @param userId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListUsualHoursDay
+     * @return CSApiResponseListUsualHoursDay
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListUsualHoursDay usualHoursGetUsualHours(Integer userId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListUsualHoursDay> resp = usualHoursGetUsualHoursWithHttpInfo(userId, xChronosheetsAuth);
+    public CSApiResponseListUsualHoursDay usualHoursGetUsualHours(Integer userId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListUsualHoursDay> resp = usualHoursGetUsualHoursWithHttpInfo(userId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -147,12 +147,12 @@ public class UsualHoursApi {
      * 
      * @param userId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListUsualHoursDay&gt;
+     * @return ApiResponse&lt;CSApiResponseListUsualHoursDay&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListUsualHoursDay> usualHoursGetUsualHoursWithHttpInfo(Integer userId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListUsualHoursDay> usualHoursGetUsualHoursWithHttpInfo(Integer userId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = usualHoursGetUsualHoursValidateBeforeCall(userId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUsualHoursDay>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUsualHoursDay>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -165,7 +165,7 @@ public class UsualHoursApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call usualHoursGetUsualHoursAsync(Integer userId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListUsualHoursDay> callback) throws ApiException {
+    public com.squareup.okhttp.Call usualHoursGetUsualHoursAsync(Integer userId, String xChronosheetsAuth, final ApiCallback<CSApiResponseListUsualHoursDay> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -187,7 +187,7 @@ public class UsualHoursApi {
         }
 
         com.squareup.okhttp.Call call = usualHoursGetUsualHoursValidateBeforeCall(userId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUsualHoursDay>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUsualHoursDay>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -200,7 +200,7 @@ public class UsualHoursApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call usualHoursSetUsualHoursCall(CsApiSetUsualHoursRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call usualHoursSetUsualHoursCall(CSSetUsualHoursRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -244,7 +244,7 @@ public class UsualHoursApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call usualHoursSetUsualHoursValidateBeforeCall(CsApiSetUsualHoursRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call usualHoursSetUsualHoursValidateBeforeCall(CSSetUsualHoursRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -267,11 +267,11 @@ public class UsualHoursApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean usualHoursSetUsualHours(CsApiSetUsualHoursRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = usualHoursSetUsualHoursWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseBoolean usualHoursSetUsualHours(CSSetUsualHoursRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = usualHoursSetUsualHoursWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -280,12 +280,12 @@ public class UsualHoursApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> usualHoursSetUsualHoursWithHttpInfo(CsApiSetUsualHoursRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> usualHoursSetUsualHoursWithHttpInfo(CSSetUsualHoursRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = usualHoursSetUsualHoursValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -298,7 +298,7 @@ public class UsualHoursApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call usualHoursSetUsualHoursAsync(CsApiSetUsualHoursRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call usualHoursSetUsualHoursAsync(CSSetUsualHoursRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -320,7 +320,7 @@ public class UsualHoursApi {
         }
 
         com.squareup.okhttp.Call call = usualHoursSetUsualHoursValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

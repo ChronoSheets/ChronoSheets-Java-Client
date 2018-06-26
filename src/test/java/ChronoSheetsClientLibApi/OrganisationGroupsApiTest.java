@@ -14,12 +14,12 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListOrganisationGroup;
-import ChronoSheetsClientLibModel.CsApiApiResponseOrganisationGroup;
-import ChronoSheetsClientLibModel.CsApiInsertOrganisationGroupRequest;
-import ChronoSheetsClientLibModel.CsApiSaveOrganisationGroupRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListOrganisationGroup;
+import ChronoSheetsClientLibModel.CSApiResponseOrganisationGroup;
+import ChronoSheetsClientLibModel.CSInsertOrganisationGroupRequest;
+import ChronoSheetsClientLibModel.CSSaveOrganisationGroupRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -47,9 +47,9 @@ public class OrganisationGroupsApiTest {
      */
     @Test
     public void organisationGroupsCreateOrganisationGroupTest() throws ApiException {
-        CsApiInsertOrganisationGroupRequest request = null;
+        CSInsertOrganisationGroupRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.organisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.organisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -66,7 +66,7 @@ public class OrganisationGroupsApiTest {
     public void organisationGroupsGetOrganisationGroupTest() throws ApiException {
         Integer organisationGroupId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseOrganisationGroup response = api.organisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth);
+        CSApiResponseOrganisationGroup response = api.organisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -82,7 +82,7 @@ public class OrganisationGroupsApiTest {
     @Test
     public void organisationGroupsGetOrganisationGroupsTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseListOrganisationGroup response = api.organisationGroupsGetOrganisationGroups(xChronosheetsAuth);
+        CSApiResponseListOrganisationGroup response = api.organisationGroupsGetOrganisationGroups(xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -99,7 +99,7 @@ public class OrganisationGroupsApiTest {
     public void organisationGroupsGetOrganisationGroupsForJobTest() throws ApiException {
         Integer jobId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListOrganisationGroup response = api.organisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth);
+        CSApiResponseListOrganisationGroup response = api.organisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -116,7 +116,7 @@ public class OrganisationGroupsApiTest {
     public void organisationGroupsGetOrganisationGroupsForVehicleTest() throws ApiException {
         Integer vehicleId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListOrganisationGroup response = api.organisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth);
+        CSApiResponseListOrganisationGroup response = api.organisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -131,9 +131,9 @@ public class OrganisationGroupsApiTest {
      */
     @Test
     public void organisationGroupsUpdateOrganisationGroupTest() throws ApiException {
-        CsApiSaveOrganisationGroupRequest request = null;
+        CSSaveOrganisationGroupRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.organisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.organisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

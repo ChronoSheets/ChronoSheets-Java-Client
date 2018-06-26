@@ -27,12 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListTimesheet;
-import ChronoSheetsClientLibModel.CsApiBatchUpdateTimesheetRequest;
-import ChronoSheetsClientLibModel.CsApiTimesheet;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListTimesheet;
+import ChronoSheetsClientLibModel.CSBatchUpdateTimesheetRequest;
+import ChronoSheetsClientLibModel.CSTimesheet;
 import org.threeten.bp.OffsetDateTime;
 
 import java.lang.reflect.Type;
@@ -69,7 +69,7 @@ public class TimesheetsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call timesheetsCreateSingleTimesheetCall(CsApiTimesheet request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call timesheetsCreateSingleTimesheetCall(CSTimesheet request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -113,7 +113,7 @@ public class TimesheetsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call timesheetsCreateSingleTimesheetValidateBeforeCall(CsApiTimesheet request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call timesheetsCreateSingleTimesheetValidateBeforeCall(CSTimesheet request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -136,11 +136,11 @@ public class TimesheetsApi {
      * 
      * @param request The timesheet request object (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseInt32
+     * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseInt32 timesheetsCreateSingleTimesheet(CsApiTimesheet request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseInt32> resp = timesheetsCreateSingleTimesheetWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseInt32 timesheetsCreateSingleTimesheet(CSTimesheet request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseInt32> resp = timesheetsCreateSingleTimesheetWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -149,12 +149,12 @@ public class TimesheetsApi {
      * 
      * @param request The timesheet request object (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseInt32&gt;
+     * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseInt32> timesheetsCreateSingleTimesheetWithHttpInfo(CsApiTimesheet request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseInt32> timesheetsCreateSingleTimesheetWithHttpInfo(CSTimesheet request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = timesheetsCreateSingleTimesheetValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -167,7 +167,7 @@ public class TimesheetsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call timesheetsCreateSingleTimesheetAsync(CsApiTimesheet request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInt32> callback) throws ApiException {
+    public com.squareup.okhttp.Call timesheetsCreateSingleTimesheetAsync(CSTimesheet request, String xChronosheetsAuth, final ApiCallback<CSApiResponseInt32> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -189,7 +189,7 @@ public class TimesheetsApi {
         }
 
         com.squareup.okhttp.Call call = timesheetsCreateSingleTimesheetValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -271,11 +271,11 @@ public class TimesheetsApi {
      * 
      * @param timesheetId The ID of the timesheet to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean timesheetsDeleteTimesheet(Integer timesheetId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = timesheetsDeleteTimesheetWithHttpInfo(timesheetId, xChronosheetsAuth);
+    public CSApiResponseBoolean timesheetsDeleteTimesheet(Integer timesheetId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = timesheetsDeleteTimesheetWithHttpInfo(timesheetId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -284,12 +284,12 @@ public class TimesheetsApi {
      * 
      * @param timesheetId The ID of the timesheet to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> timesheetsDeleteTimesheetWithHttpInfo(Integer timesheetId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> timesheetsDeleteTimesheetWithHttpInfo(Integer timesheetId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = timesheetsDeleteTimesheetValidateBeforeCall(timesheetId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -302,7 +302,7 @@ public class TimesheetsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call timesheetsDeleteTimesheetAsync(Integer timesheetId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call timesheetsDeleteTimesheetAsync(Integer timesheetId, String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -324,7 +324,7 @@ public class TimesheetsApi {
         }
 
         com.squareup.okhttp.Call call = timesheetsDeleteTimesheetValidateBeforeCall(timesheetId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -415,11 +415,11 @@ public class TimesheetsApi {
      * @param startDate The start date of the date range (required)
      * @param endDate The end date of the date range (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListTimesheet
+     * @return CSApiResponseListTimesheet
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListTimesheet timesheetsGetTimesheets(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListTimesheet> resp = timesheetsGetTimesheetsWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+    public CSApiResponseListTimesheet timesheetsGetTimesheets(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListTimesheet> resp = timesheetsGetTimesheetsWithHttpInfo(startDate, endDate, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -429,12 +429,12 @@ public class TimesheetsApi {
      * @param startDate The start date of the date range (required)
      * @param endDate The end date of the date range (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListTimesheet&gt;
+     * @return ApiResponse&lt;CSApiResponseListTimesheet&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListTimesheet> timesheetsGetTimesheetsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListTimesheet> timesheetsGetTimesheetsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = timesheetsGetTimesheetsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListTimesheet>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListTimesheet>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -448,7 +448,7 @@ public class TimesheetsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call timesheetsGetTimesheetsAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListTimesheet> callback) throws ApiException {
+    public com.squareup.okhttp.Call timesheetsGetTimesheetsAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, final ApiCallback<CSApiResponseListTimesheet> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -470,7 +470,7 @@ public class TimesheetsApi {
         }
 
         com.squareup.okhttp.Call call = timesheetsGetTimesheetsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListTimesheet>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListTimesheet>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -483,7 +483,7 @@ public class TimesheetsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call timesheetsUpdateTimesheetsCall(CsApiBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call timesheetsUpdateTimesheetsCall(CSBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -527,7 +527,7 @@ public class TimesheetsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call timesheetsUpdateTimesheetsValidateBeforeCall(CsApiBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call timesheetsUpdateTimesheetsValidateBeforeCall(CSBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -550,11 +550,11 @@ public class TimesheetsApi {
      * 
      * @param request The batch update timesheets request (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListInt32
+     * @return CSApiResponseListInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListInt32 timesheetsUpdateTimesheets(CsApiBatchUpdateTimesheetRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListInt32> resp = timesheetsUpdateTimesheetsWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseListInt32 timesheetsUpdateTimesheets(CSBatchUpdateTimesheetRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListInt32> resp = timesheetsUpdateTimesheetsWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -563,12 +563,12 @@ public class TimesheetsApi {
      * 
      * @param request The batch update timesheets request (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListInt32&gt;
+     * @return ApiResponse&lt;CSApiResponseListInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListInt32> timesheetsUpdateTimesheetsWithHttpInfo(CsApiBatchUpdateTimesheetRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListInt32> timesheetsUpdateTimesheetsWithHttpInfo(CSBatchUpdateTimesheetRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = timesheetsUpdateTimesheetsValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListInt32>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -581,7 +581,7 @@ public class TimesheetsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call timesheetsUpdateTimesheetsAsync(CsApiBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListInt32> callback) throws ApiException {
+    public com.squareup.okhttp.Call timesheetsUpdateTimesheetsAsync(CSBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseListInt32> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -603,7 +603,7 @@ public class TimesheetsApi {
         }
 
         com.squareup.okhttp.Call call = timesheetsUpdateTimesheetsValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListInt32>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

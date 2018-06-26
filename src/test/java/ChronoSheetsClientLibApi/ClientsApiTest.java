@@ -14,12 +14,12 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseClient;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListClient;
-import ChronoSheetsClientLibModel.CsApiInsertClientRequest;
-import ChronoSheetsClientLibModel.CsApiSaveClientRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseClient;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListClient;
+import ChronoSheetsClientLibModel.CSInsertClientRequest;
+import ChronoSheetsClientLibModel.CSSaveClientRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -47,9 +47,9 @@ public class ClientsApiTest {
      */
     @Test
     public void clientsCreateClientTest() throws ApiException {
-        CsApiInsertClientRequest request = null;
+        CSInsertClientRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInt32 response = api.clientsCreateClient(request, xChronosheetsAuth);
+        CSApiResponseInt32 response = api.clientsCreateClient(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -66,7 +66,7 @@ public class ClientsApiTest {
     public void clientsGetClientTest() throws ApiException {
         Integer clientId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseClient response = api.clientsGetClient(clientId, xChronosheetsAuth);
+        CSApiResponseClient response = api.clientsGetClient(clientId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -82,7 +82,7 @@ public class ClientsApiTest {
     @Test
     public void clientsGetClientsTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseListClient response = api.clientsGetClients(xChronosheetsAuth);
+        CSApiResponseListClient response = api.clientsGetClients(xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -97,9 +97,9 @@ public class ClientsApiTest {
      */
     @Test
     public void clientsUpdateClientTest() throws ApiException {
-        CsApiSaveClientRequest request = null;
+        CSSaveClientRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.clientsUpdateClient(request, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.clientsUpdateClient(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

@@ -14,9 +14,9 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUsualHoursDay;
-import ChronoSheetsClientLibModel.CsApiSetUsualHoursRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseListUsualHoursDay;
+import ChronoSheetsClientLibModel.CSSetUsualHoursRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -46,7 +46,7 @@ public class UsualHoursApiTest {
     public void usualHoursGetUsualHoursTest() throws ApiException {
         Integer userId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseListUsualHoursDay response = api.usualHoursGetUsualHours(userId, xChronosheetsAuth);
+        CSApiResponseListUsualHoursDay response = api.usualHoursGetUsualHours(userId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -61,9 +61,9 @@ public class UsualHoursApiTest {
      */
     @Test
     public void usualHoursSetUsualHoursTest() throws ApiException {
-        CsApiSetUsualHoursRequest request = null;
+        CSSetUsualHoursRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseBoolean response = api.usualHoursSetUsualHours(request, xChronosheetsAuth);
+        CSApiResponseBoolean response = api.usualHoursSetUsualHours(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

@@ -27,12 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseFleetVehicle;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListFleetVehicle;
-import ChronoSheetsClientLibModel.CsApiInsertVehicleRequest;
-import ChronoSheetsClientLibModel.CsApiSaveVehicleRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseFleetVehicle;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListFleetVehicle;
+import ChronoSheetsClientLibModel.CSInsertVehicleRequest;
+import ChronoSheetsClientLibModel.CSSaveVehicleRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class FleetApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call fleetCreateVehicleCall(CsApiInsertVehicleRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call fleetCreateVehicleCall(CSInsertVehicleRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -112,7 +112,7 @@ public class FleetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call fleetCreateVehicleValidateBeforeCall(CsApiInsertVehicleRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call fleetCreateVehicleValidateBeforeCall(CSInsertVehicleRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -135,11 +135,11 @@ public class FleetApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseInt32
+     * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseInt32 fleetCreateVehicle(CsApiInsertVehicleRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseInt32> resp = fleetCreateVehicleWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseInt32 fleetCreateVehicle(CSInsertVehicleRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseInt32> resp = fleetCreateVehicleWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -148,12 +148,12 @@ public class FleetApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseInt32&gt;
+     * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseInt32> fleetCreateVehicleWithHttpInfo(CsApiInsertVehicleRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseInt32> fleetCreateVehicleWithHttpInfo(CSInsertVehicleRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = fleetCreateVehicleValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -166,7 +166,7 @@ public class FleetApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call fleetCreateVehicleAsync(CsApiInsertVehicleRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInt32> callback) throws ApiException {
+    public com.squareup.okhttp.Call fleetCreateVehicleAsync(CSInsertVehicleRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseInt32> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -188,7 +188,7 @@ public class FleetApi {
         }
 
         com.squareup.okhttp.Call call = fleetCreateVehicleValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -270,11 +270,11 @@ public class FleetApi {
      * 
      * @param vehicleId The ID of the vehicle you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseFleetVehicle
+     * @return CSApiResponseFleetVehicle
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseFleetVehicle fleetGetVehicleById(Integer vehicleId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseFleetVehicle> resp = fleetGetVehicleByIdWithHttpInfo(vehicleId, xChronosheetsAuth);
+    public CSApiResponseFleetVehicle fleetGetVehicleById(Integer vehicleId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseFleetVehicle> resp = fleetGetVehicleByIdWithHttpInfo(vehicleId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -283,12 +283,12 @@ public class FleetApi {
      * 
      * @param vehicleId The ID of the vehicle you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseFleetVehicle&gt;
+     * @return ApiResponse&lt;CSApiResponseFleetVehicle&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseFleetVehicle> fleetGetVehicleByIdWithHttpInfo(Integer vehicleId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseFleetVehicle> fleetGetVehicleByIdWithHttpInfo(Integer vehicleId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = fleetGetVehicleByIdValidateBeforeCall(vehicleId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseFleetVehicle>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseFleetVehicle>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -301,7 +301,7 @@ public class FleetApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call fleetGetVehicleByIdAsync(Integer vehicleId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseFleetVehicle> callback) throws ApiException {
+    public com.squareup.okhttp.Call fleetGetVehicleByIdAsync(Integer vehicleId, String xChronosheetsAuth, final ApiCallback<CSApiResponseFleetVehicle> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -323,7 +323,7 @@ public class FleetApi {
         }
 
         com.squareup.okhttp.Call call = fleetGetVehicleByIdValidateBeforeCall(vehicleId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseFleetVehicle>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseFleetVehicle>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -405,11 +405,11 @@ public class FleetApi {
      * 
      * @param includeDeleted  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListFleetVehicle
+     * @return CSApiResponseListFleetVehicle
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListFleetVehicle fleetGetVehicles(Boolean includeDeleted, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListFleetVehicle> resp = fleetGetVehiclesWithHttpInfo(includeDeleted, xChronosheetsAuth);
+    public CSApiResponseListFleetVehicle fleetGetVehicles(Boolean includeDeleted, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListFleetVehicle> resp = fleetGetVehiclesWithHttpInfo(includeDeleted, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -418,12 +418,12 @@ public class FleetApi {
      * 
      * @param includeDeleted  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListFleetVehicle&gt;
+     * @return ApiResponse&lt;CSApiResponseListFleetVehicle&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListFleetVehicle> fleetGetVehiclesWithHttpInfo(Boolean includeDeleted, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListFleetVehicle> fleetGetVehiclesWithHttpInfo(Boolean includeDeleted, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = fleetGetVehiclesValidateBeforeCall(includeDeleted, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListFleetVehicle>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListFleetVehicle>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -436,7 +436,7 @@ public class FleetApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call fleetGetVehiclesAsync(Boolean includeDeleted, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListFleetVehicle> callback) throws ApiException {
+    public com.squareup.okhttp.Call fleetGetVehiclesAsync(Boolean includeDeleted, String xChronosheetsAuth, final ApiCallback<CSApiResponseListFleetVehicle> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -458,7 +458,7 @@ public class FleetApi {
         }
 
         com.squareup.okhttp.Call call = fleetGetVehiclesValidateBeforeCall(includeDeleted, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListFleetVehicle>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListFleetVehicle>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -471,7 +471,7 @@ public class FleetApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call fleetUpdateVehicleCall(CsApiSaveVehicleRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call fleetUpdateVehicleCall(CSSaveVehicleRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -515,7 +515,7 @@ public class FleetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call fleetUpdateVehicleValidateBeforeCall(CsApiSaveVehicleRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call fleetUpdateVehicleValidateBeforeCall(CSSaveVehicleRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -538,11 +538,11 @@ public class FleetApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseBoolean
+     * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseBoolean fleetUpdateVehicle(CsApiSaveVehicleRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseBoolean> resp = fleetUpdateVehicleWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseBoolean fleetUpdateVehicle(CSSaveVehicleRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseBoolean> resp = fleetUpdateVehicleWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -551,12 +551,12 @@ public class FleetApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseBoolean&gt;
+     * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseBoolean> fleetUpdateVehicleWithHttpInfo(CsApiSaveVehicleRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseBoolean> fleetUpdateVehicleWithHttpInfo(CSSaveVehicleRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = fleetUpdateVehicleValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -569,7 +569,7 @@ public class FleetApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call fleetUpdateVehicleAsync(CsApiSaveVehicleRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseBoolean> callback) throws ApiException {
+    public com.squareup.okhttp.Call fleetUpdateVehicleAsync(CSSaveVehicleRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseBoolean> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -591,7 +591,7 @@ public class FleetApi {
         }
 
         com.squareup.okhttp.Call call = fleetUpdateVehicleValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseBoolean>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

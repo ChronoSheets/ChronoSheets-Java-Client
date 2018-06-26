@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="timesheetsCreateSingleTimesheet"></a>
 # **timesheetsCreateSingleTimesheet**
-> CsApiApiResponseInt32 timesheetsCreateSingleTimesheet(request, xChronosheetsAuth)
+> CSApiResponseInt32 timesheetsCreateSingleTimesheet(request, xChronosheetsAuth)
 
 Inserts a single timesheet record
 
@@ -24,10 +24,10 @@ Inserts a single timesheet record
 
 
 TimesheetsApi apiInstance = new TimesheetsApi();
-CsApiTimesheet request = new CsApiTimesheet(); // CsApiTimesheet | The timesheet request object
+CSTimesheet request = new CSTimesheet(); // CSTimesheet | The timesheet request object
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseInt32 result = apiInstance.timesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
+    CSApiResponseInt32 result = apiInstance.timesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TimesheetsApi#timesheetsCreateSingleTimesheet");
@@ -39,12 +39,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiTimesheet**](CsApiTimesheet.md)| The timesheet request object |
+ **request** | [**CSTimesheet**](CSTimesheet.md)| The timesheet request object |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 
 <a name="timesheetsDeleteTimesheet"></a>
 # **timesheetsDeleteTimesheet**
-> CsApiApiResponseBoolean timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth)
+> CSApiResponseBoolean timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth)
 
 Delete a timesheet
 
@@ -72,7 +72,7 @@ TimesheetsApi apiInstance = new TimesheetsApi();
 Integer timesheetId = 56; // Integer | The ID of the timesheet to delete
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TimesheetsApi#timesheetsDeleteTimesheet");
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
 
 <a name="timesheetsGetTimesheets"></a>
 # **timesheetsGetTimesheets**
-> CsApiApiResponseListTimesheet timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth)
+> CSApiResponseListTimesheet timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth)
 
 Get timesheets between start and end dates
 
@@ -118,7 +118,7 @@ OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start d
 OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date of the date range
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListTimesheet result = apiInstance.timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
+    CSApiResponseListTimesheet result = apiInstance.timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TimesheetsApi#timesheetsGetTimesheets");
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListTimesheet**](CsApiApiResponseListTimesheet.md)
+[**CSApiResponseListTimesheet**](CSApiResponseListTimesheet.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ No authorization required
 
 <a name="timesheetsUpdateTimesheets"></a>
 # **timesheetsUpdateTimesheets**
-> CsApiApiResponseListInt32 timesheetsUpdateTimesheets(request, xChronosheetsAuth)
+> CSApiResponseListInt32 timesheetsUpdateTimesheets(request, xChronosheetsAuth)
 
 Batch update timesheets
 
@@ -161,10 +161,10 @@ Batch update timesheets
 
 
 TimesheetsApi apiInstance = new TimesheetsApi();
-CsApiBatchUpdateTimesheetRequest request = new CsApiBatchUpdateTimesheetRequest(); // CsApiBatchUpdateTimesheetRequest | The batch update timesheets request
+CSBatchUpdateTimesheetRequest request = new CSBatchUpdateTimesheetRequest(); // CSBatchUpdateTimesheetRequest | The batch update timesheets request
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListInt32 result = apiInstance.timesheetsUpdateTimesheets(request, xChronosheetsAuth);
+    CSApiResponseListInt32 result = apiInstance.timesheetsUpdateTimesheets(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TimesheetsApi#timesheetsUpdateTimesheets");
@@ -176,12 +176,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiBatchUpdateTimesheetRequest**](CsApiBatchUpdateTimesheetRequest.md)| The batch update timesheets request |
+ **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| The batch update timesheets request |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseListInt32**](CsApiApiResponseListInt32.md)
+[**CSApiResponseListInt32**](CSApiResponseListInt32.md)
 
 ### Authorization
 

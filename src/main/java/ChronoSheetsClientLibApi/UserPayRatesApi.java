@@ -27,9 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserHourlyRate;
-import ChronoSheetsClientLibModel.CsApiInsertUserHourlyRateRequest;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListUserHourlyRate;
+import ChronoSheetsClientLibModel.CSInsertUserHourlyRateRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -65,7 +65,7 @@ public class UserPayRatesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call userPayRatesCreatePayRateCall(CsApiInsertUserHourlyRateRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call userPayRatesCreatePayRateCall(CSInsertUserHourlyRateRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -109,7 +109,7 @@ public class UserPayRatesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call userPayRatesCreatePayRateValidateBeforeCall(CsApiInsertUserHourlyRateRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call userPayRatesCreatePayRateValidateBeforeCall(CSInsertUserHourlyRateRequest request, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
@@ -132,11 +132,11 @@ public class UserPayRatesApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseInt32
+     * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseInt32 userPayRatesCreatePayRate(CsApiInsertUserHourlyRateRequest request, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseInt32> resp = userPayRatesCreatePayRateWithHttpInfo(request, xChronosheetsAuth);
+    public CSApiResponseInt32 userPayRatesCreatePayRate(CSInsertUserHourlyRateRequest request, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseInt32> resp = userPayRatesCreatePayRateWithHttpInfo(request, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -145,12 +145,12 @@ public class UserPayRatesApi {
      * 
      * @param request  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseInt32&gt;
+     * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseInt32> userPayRatesCreatePayRateWithHttpInfo(CsApiInsertUserHourlyRateRequest request, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseInt32> userPayRatesCreatePayRateWithHttpInfo(CSInsertUserHourlyRateRequest request, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = userPayRatesCreatePayRateValidateBeforeCall(request, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -163,7 +163,7 @@ public class UserPayRatesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userPayRatesCreatePayRateAsync(CsApiInsertUserHourlyRateRequest request, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseInt32> callback) throws ApiException {
+    public com.squareup.okhttp.Call userPayRatesCreatePayRateAsync(CSInsertUserHourlyRateRequest request, String xChronosheetsAuth, final ApiCallback<CSApiResponseInt32> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -185,7 +185,7 @@ public class UserPayRatesApi {
         }
 
         com.squareup.okhttp.Call call = userPayRatesCreatePayRateValidateBeforeCall(request, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseInt32>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseInt32>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -267,11 +267,11 @@ public class UserPayRatesApi {
      * 
      * @param userId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CsApiApiResponseListUserHourlyRate
+     * @return CSApiResponseListUserHourlyRate
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseListUserHourlyRate userPayRatesGetPayRates(Integer userId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CsApiApiResponseListUserHourlyRate> resp = userPayRatesGetPayRatesWithHttpInfo(userId, xChronosheetsAuth);
+    public CSApiResponseListUserHourlyRate userPayRatesGetPayRates(Integer userId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListUserHourlyRate> resp = userPayRatesGetPayRatesWithHttpInfo(userId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -280,12 +280,12 @@ public class UserPayRatesApi {
      * 
      * @param userId  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CsApiApiResponseListUserHourlyRate&gt;
+     * @return ApiResponse&lt;CSApiResponseListUserHourlyRate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseListUserHourlyRate> userPayRatesGetPayRatesWithHttpInfo(Integer userId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseListUserHourlyRate> userPayRatesGetPayRatesWithHttpInfo(Integer userId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = userPayRatesGetPayRatesValidateBeforeCall(userId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUserHourlyRate>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUserHourlyRate>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -298,7 +298,7 @@ public class UserPayRatesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call userPayRatesGetPayRatesAsync(Integer userId, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseListUserHourlyRate> callback) throws ApiException {
+    public com.squareup.okhttp.Call userPayRatesGetPayRatesAsync(Integer userId, String xChronosheetsAuth, final ApiCallback<CSApiResponseListUserHourlyRate> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -320,7 +320,7 @@ public class UserPayRatesApi {
         }
 
         com.squareup.okhttp.Call call = userPayRatesGetPayRatesValidateBeforeCall(userId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CsApiApiResponseListUserHourlyRate>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseListUserHourlyRate>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

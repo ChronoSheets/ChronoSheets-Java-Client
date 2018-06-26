@@ -14,12 +14,12 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
-import ChronoSheetsClientLibModel.CsApiApiResponseInsertUserResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserForManagement;
-import ChronoSheetsClientLibModel.CsApiApiResponseUpdateUserResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseUserForManagement;
-import ChronoSheetsClientLibModel.CsApiInsertUserRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateUserRequest;
+import ChronoSheetsClientLibModel.CSApiResponseInsertUserResponse;
+import ChronoSheetsClientLibModel.CSApiResponseListUserForManagement;
+import ChronoSheetsClientLibModel.CSApiResponseUpdateUserResponse;
+import ChronoSheetsClientLibModel.CSApiResponseUserForManagement;
+import ChronoSheetsClientLibModel.CSInsertUserRequest;
+import ChronoSheetsClientLibModel.CSUpdateUserRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -47,9 +47,9 @@ public class UsersApiTest {
      */
     @Test
     public void usersCreateTimesheetUserTest() throws ApiException {
-        CsApiInsertUserRequest request = null;
+        CSInsertUserRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseInsertUserResponse response = api.usersCreateTimesheetUser(request, xChronosheetsAuth);
+        CSApiResponseInsertUserResponse response = api.usersCreateTimesheetUser(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -66,7 +66,7 @@ public class UsersApiTest {
     public void usersGetTimesheetUserTest() throws ApiException {
         Integer userId = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseUserForManagement response = api.usersGetTimesheetUser(userId, xChronosheetsAuth);
+        CSApiResponseUserForManagement response = api.usersGetTimesheetUser(userId, xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -82,7 +82,7 @@ public class UsersApiTest {
     @Test
     public void usersGetTimesheetUsersTest() throws ApiException {
         String xChronosheetsAuth = null;
-        CsApiApiResponseListUserForManagement response = api.usersGetTimesheetUsers(xChronosheetsAuth);
+        CSApiResponseListUserForManagement response = api.usersGetTimesheetUsers(xChronosheetsAuth);
 
         // TODO: test validations
     }
@@ -97,9 +97,9 @@ public class UsersApiTest {
      */
     @Test
     public void usersUpdateTimesheetUserTest() throws ApiException {
-        CsApiUpdateUserRequest request = null;
+        CSUpdateUserRequest request = null;
         String xChronosheetsAuth = null;
-        CsApiApiResponseUpdateUserResponse response = api.usersUpdateTimesheetUser(request, xChronosheetsAuth);
+        CSApiResponseUpdateUserResponse response = api.usersUpdateTimesheetUser(request, xChronosheetsAuth);
 
         // TODO: test validations
     }
