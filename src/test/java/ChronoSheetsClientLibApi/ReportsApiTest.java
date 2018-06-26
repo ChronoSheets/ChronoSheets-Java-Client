@@ -148,8 +148,8 @@ public class ReportsApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String userIds = null;
-        Integer sort = null;
-        Integer order = null;
+        String sort = null;
+        String order = null;
         Integer skip = null;
         Integer take = null;
         String xChronosheetsAuth = null;

@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CsApiInsertUserHourlyRateRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T02:33:30.704+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-26T22:52:18.488+10:00")
 public class CsApiInsertUserHourlyRateRequest {
   @SerializedName("UserId")
   private Integer userId = null;

@@ -862,8 +862,8 @@ public class ReportsApi {
      * @param startDate  (required)
      * @param endDate  (required)
      * @param userIds  (required)
-     * @param sort 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters (required)
-     * @param order 0 &#x3D; Ascending, 1 &#x3D; Descending (required)
+     * @param sort  (required)
+     * @param order  (required)
      * @param skip  (required)
      * @param take  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -872,7 +872,7 @@ public class ReportsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call reportsGetRawDataAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, Integer sort, Integer order, Integer skip, Integer take, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetRawDataAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -930,7 +930,7 @@ public class ReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call reportsGetRawDataAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, Integer sort, Integer order, Integer skip, Integer take, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportsGetRawDataAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -984,15 +984,15 @@ public class ReportsApi {
      * @param startDate  (required)
      * @param endDate  (required)
      * @param userIds  (required)
-     * @param sort 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters (required)
-     * @param order 0 &#x3D; Ascending, 1 &#x3D; Descending (required)
+     * @param sort  (required)
+     * @param order  (required)
      * @param skip  (required)
      * @param take  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CsApiApiResponseForPaginatedListRawReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CsApiApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, Integer sort, Integer order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
+    public CsApiApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
         ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> resp = reportsGetRawDataAdminWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
         return resp.getData();
     }
@@ -1003,15 +1003,15 @@ public class ReportsApi {
      * @param startDate  (required)
      * @param endDate  (required)
      * @param userIds  (required)
-     * @param sort 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters (required)
-     * @param order 0 &#x3D; Ascending, 1 &#x3D; Descending (required)
+     * @param sort  (required)
+     * @param order  (required)
      * @param skip  (required)
      * @param take  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CsApiApiResponseForPaginatedListRawReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> reportsGetRawDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, Integer sort, Integer order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> reportsGetRawDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = reportsGetRawDataAdminValidateBeforeCall(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth, null, null);
         Type localVarReturnType = new TypeToken<CsApiApiResponseForPaginatedListRawReportItem>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1023,8 +1023,8 @@ public class ReportsApi {
      * @param startDate  (required)
      * @param endDate  (required)
      * @param userIds  (required)
-     * @param sort 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters (required)
-     * @param order 0 &#x3D; Ascending, 1 &#x3D; Descending (required)
+     * @param sort  (required)
+     * @param order  (required)
      * @param skip  (required)
      * @param take  (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -1032,7 +1032,7 @@ public class ReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetRawDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, Integer sort, Integer order, Integer skip, Integer take, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseForPaginatedListRawReportItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetRawDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final ApiCallback<CsApiApiResponseForPaginatedListRawReportItem> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CsApiUpdateUserRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T02:33:30.704+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-26T22:52:18.488+10:00")
 public class CsApiUpdateUserRequest {
   @SerializedName("UserId")
   private Integer userId = null;

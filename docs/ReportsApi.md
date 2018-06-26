@@ -278,8 +278,8 @@ ReportsApi apiInstance = new ReportsApi();
 OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | 
 OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | 
 String userIds = "userIds_example"; // String | 
-Integer sort = 56; // Integer | 0 = Username, 1 = EmailAddress, 2 = JobCode, 3 = TaskName, 4 = ClientName, 5 = ProjectName, 6 = StartDate, 7 = EndDate, 8 = SpanSeconds, 9 = Description, 10 = PayAmount, 11 = PayOvertimeAmount, 12 = TripCost, 13 = TripDistanceMeters
-Integer order = 56; // Integer | 0 = Ascending, 1 = Descending
+String sort = "sort_example"; // String | 
+String order = "order_example"; // String | 
 Integer skip = 56; // Integer | 
 Integer take = 56; // Integer | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
@@ -299,8 +299,8 @@ Name | Type | Description  | Notes
  **startDate** | **OffsetDateTime**|  |
  **endDate** | **OffsetDateTime**|  |
  **userIds** | **String**|  |
- **sort** | **Integer**| 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters | [enum: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
- **order** | **Integer**| 0 &#x3D; Ascending, 1 &#x3D; Descending | [enum: 0, 1]
+ **sort** | **String**|  | [enum: EmailAddress, JobCode, TaskName, ClientName, ProjectName, StartDate, EndDate, SpanSeconds, Description, PayAmount, PayOvertimeAmount, TripCost, TripDistanceMeters, Username]
+ **order** | **String**|  | [enum: Ascending, Descending]
  **skip** | **Integer**|  |
  **take** | **Integer**|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |

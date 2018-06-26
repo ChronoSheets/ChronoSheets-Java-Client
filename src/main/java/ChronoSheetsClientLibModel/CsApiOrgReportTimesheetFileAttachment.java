@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CsApiOrgReportTimesheetFileAttachment
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T02:33:30.704+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-26T22:52:18.488+10:00")
 public class CsApiOrgReportTimesheetFileAttachment {
   @SerializedName("Username")
   private String username = null;
@@ -72,23 +72,23 @@ public class CsApiOrgReportTimesheetFileAttachment {
   private Integer orgId = null;
 
   /**
-   * 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
+   * Gets or Sets mobilePlatform
    */
   @JsonAdapter(MobilePlatformEnum.Adapter.class)
   public enum MobilePlatformEnum {
-    NUMBER_0(0),
+    UNKNOWN("Unknown"),
     
-    NUMBER_1(1),
+    IOS("iOS"),
     
-    NUMBER_2(2);
+    ANDROID("Android");
 
-    private Integer value;
+    private String value;
 
-    MobilePlatformEnum(Integer value) {
+    MobilePlatformEnum(String value) {
       this.value = value;
     }
 
-    public Integer getValue() {
+    public String getValue() {
       return value;
     }
 
@@ -114,7 +114,7 @@ public class CsApiOrgReportTimesheetFileAttachment {
 
       @Override
       public MobilePlatformEnum read(final JsonReader jsonReader) throws IOException {
-        Integer value = jsonReader.nextInt();
+        String value = jsonReader.nextString();
         return MobilePlatformEnum.fromValue(String.valueOf(value));
       }
     }
@@ -124,33 +124,33 @@ public class CsApiOrgReportTimesheetFileAttachment {
   private MobilePlatformEnum mobilePlatform = null;
 
   /**
-   * 1 &#x3D; Image, 30 &#x3D; WordDoc, 31 &#x3D; Pdf, 32 &#x3D; MSSpreadSheet, 33 &#x3D; MSPowerPoint, 34 &#x3D; RichTextFormat, 35 &#x3D; ZipFile, 100 &#x3D; Other
+   * Gets or Sets attachmentType
    */
   @JsonAdapter(AttachmentTypeEnum.Adapter.class)
   public enum AttachmentTypeEnum {
-    NUMBER_1(1),
+    IMAGE("Image"),
     
-    NUMBER_30(30),
+    WORDDOC("WordDoc"),
     
-    NUMBER_31(31),
+    PDF("Pdf"),
     
-    NUMBER_32(32),
+    MSSPREADSHEET("MSSpreadSheet"),
     
-    NUMBER_33(33),
+    MSPOWERPOINT("MSPowerPoint"),
     
-    NUMBER_34(34),
+    RICHTEXTFORMAT("RichTextFormat"),
     
-    NUMBER_35(35),
+    ZIPFILE("ZipFile"),
     
-    NUMBER_100(100);
+    OTHER("Other");
 
-    private Integer value;
+    private String value;
 
-    AttachmentTypeEnum(Integer value) {
+    AttachmentTypeEnum(String value) {
       this.value = value;
     }
 
-    public Integer getValue() {
+    public String getValue() {
       return value;
     }
 
@@ -176,7 +176,7 @@ public class CsApiOrgReportTimesheetFileAttachment {
 
       @Override
       public AttachmentTypeEnum read(final JsonReader jsonReader) throws IOException {
-        Integer value = jsonReader.nextInt();
+        String value = jsonReader.nextString();
         return AttachmentTypeEnum.fromValue(String.valueOf(value));
       }
     }
@@ -476,10 +476,10 @@ public class CsApiOrgReportTimesheetFileAttachment {
   }
 
    /**
-   * 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
+   * Get mobilePlatform
    * @return mobilePlatform
   **/
-  @ApiModelProperty(value = "0 = Unknown, 1 = iOS, 2 = Android")
+  @ApiModelProperty(value = "")
   public MobilePlatformEnum getMobilePlatform() {
     return mobilePlatform;
   }
@@ -494,10 +494,10 @@ public class CsApiOrgReportTimesheetFileAttachment {
   }
 
    /**
-   * 1 &#x3D; Image, 30 &#x3D; WordDoc, 31 &#x3D; Pdf, 32 &#x3D; MSSpreadSheet, 33 &#x3D; MSPowerPoint, 34 &#x3D; RichTextFormat, 35 &#x3D; ZipFile, 100 &#x3D; Other
+   * Get attachmentType
    * @return attachmentType
   **/
-  @ApiModelProperty(value = "1 = Image, 30 = WordDoc, 31 = Pdf, 32 = MSSpreadSheet, 33 = MSPowerPoint, 34 = RichTextFormat, 35 = ZipFile, 100 = Other")
+  @ApiModelProperty(value = "")
   public AttachmentTypeEnum getAttachmentType() {
     return attachmentType;
   }

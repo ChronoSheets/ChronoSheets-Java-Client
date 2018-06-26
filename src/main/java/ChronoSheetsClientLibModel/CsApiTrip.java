@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CsApiTrip
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T02:33:30.704+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-26T22:52:18.488+10:00")
 public class CsApiTrip {
   @SerializedName("TripId")
   private Integer tripId = null;
@@ -48,23 +48,23 @@ public class CsApiTrip {
   private Integer orgId = null;
 
   /**
-   * 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
+   * Gets or Sets mobilePlatform
    */
   @JsonAdapter(MobilePlatformEnum.Adapter.class)
   public enum MobilePlatformEnum {
-    NUMBER_0(0),
+    UNKNOWN("Unknown"),
     
-    NUMBER_1(1),
+    IOS("iOS"),
     
-    NUMBER_2(2);
+    ANDROID("Android");
 
-    private Integer value;
+    private String value;
 
-    MobilePlatformEnum(Integer value) {
+    MobilePlatformEnum(String value) {
       this.value = value;
     }
 
-    public Integer getValue() {
+    public String getValue() {
       return value;
     }
 
@@ -90,7 +90,7 @@ public class CsApiTrip {
 
       @Override
       public MobilePlatformEnum read(final JsonReader jsonReader) throws IOException {
-        Integer value = jsonReader.nextInt();
+        String value = jsonReader.nextString();
         return MobilePlatformEnum.fromValue(String.valueOf(value));
       }
     }
@@ -234,10 +234,10 @@ public class CsApiTrip {
   }
 
    /**
-   * 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
+   * Get mobilePlatform
    * @return mobilePlatform
   **/
-  @ApiModelProperty(value = "0 = Unknown, 1 = iOS, 2 = Android")
+  @ApiModelProperty(value = "")
   public MobilePlatformEnum getMobilePlatform() {
     return mobilePlatform;
   }

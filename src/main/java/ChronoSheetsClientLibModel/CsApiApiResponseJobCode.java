@@ -27,35 +27,35 @@ import java.io.IOException;
 /**
  * CsApiApiResponseJobCode
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-24T02:33:30.704+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-26T22:52:18.488+10:00")
 public class CsApiApiResponseJobCode {
   @SerializedName("Data")
   private CsApiJobCode data = null;
 
   /**
-   * 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
+   * Gets or Sets status
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
-    NUMBER_0(0),
+    SUCCEEDED("Succeeded"),
     
-    NUMBER_1(1),
+    FATALEXCEPTION("FatalException"),
     
-    NUMBER_2(2),
+    GENERALERROR("GeneralError"),
     
-    NUMBER_3(3),
+    VALIDATIONERROR("ValidationError"),
     
-    NUMBER_4(4),
+    UNAUTHORIZED("UnAuthorized"),
     
-    NUMBER_5(5);
+    SESSIONEXPIRED("SessionExpired");
 
-    private Integer value;
+    private String value;
 
-    StatusEnum(Integer value) {
+    StatusEnum(String value) {
       this.value = value;
     }
 
-    public Integer getValue() {
+    public String getValue() {
       return value;
     }
 
@@ -81,7 +81,7 @@ public class CsApiApiResponseJobCode {
 
       @Override
       public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        Integer value = jsonReader.nextInt();
+        String value = jsonReader.nextString();
         return StatusEnum.fromValue(String.valueOf(value));
       }
     }
@@ -117,10 +117,10 @@ public class CsApiApiResponseJobCode {
   }
 
    /**
-   * 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
+   * Get status
    * @return status
   **/
-  @ApiModelProperty(value = "0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired")
+  @ApiModelProperty(value = "")
   public StatusEnum getStatus() {
     return status;
   }
