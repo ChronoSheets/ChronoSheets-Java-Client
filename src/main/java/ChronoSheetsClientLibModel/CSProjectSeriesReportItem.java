@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSProjectSeriesReportItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T22:31:51.082+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T22:38:51.867+10:00")
 public class CSProjectSeriesReportItem {
   @SerializedName("StartDate")
   private OffsetDateTime startDate = null;
