@@ -61,7 +61,7 @@ public class JobCodesApi {
 
     /**
      * Build call for jobCodesCreateJobCode
-     * @param request  (required)
+     * @param request An Insert JobCode Request object containing values for the new JobCode to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -131,9 +131,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Create a job code
+     * Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert JobCode Request object containing values for the new JobCode to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -144,9 +144,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Create a job code
+     * Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert JobCode Request object containing values for the new JobCode to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -158,9 +158,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Create a job code (asynchronously)
+     * Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Insert JobCode Request object containing values for the new JobCode to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -194,7 +194,7 @@ public class JobCodesApi {
     }
     /**
      * Build call for jobCodesDeleteJobCode
-     * @param jobCodeId The ID of the job code your want to delete (required)
+     * @param jobCodeId The ID of the job code you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -266,9 +266,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Delete a job code
+     * Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param jobCodeId The ID of the job code your want to delete (required)
+     * @param jobCodeId The ID of the job code you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -279,9 +279,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Delete a job code
+     * Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param jobCodeId The ID of the job code your want to delete (required)
+     * @param jobCodeId The ID of the job code you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -293,9 +293,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Delete a job code (asynchronously)
+     * Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. (asynchronously)
      * 
-     * @param jobCodeId The ID of the job code your want to delete (required)
+     * @param jobCodeId The ID of the job code you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -329,7 +329,7 @@ public class JobCodesApi {
     }
     /**
      * Build call for jobCodesGetJobCodeById
-     * @param jobCodeId  (required)
+     * @param jobCodeId The ID of the JobCode you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -401,9 +401,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Get a particular job code by job code id
+     * Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
      * 
-     * @param jobCodeId  (required)
+     * @param jobCodeId The ID of the JobCode you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseJobCode
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -414,9 +414,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Get a particular job code by job code id
+     * Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
      * 
-     * @param jobCodeId  (required)
+     * @param jobCodeId The ID of the JobCode you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseJobCode&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -428,9 +428,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Get a particular job code by job code id (asynchronously)
+     * Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. (asynchronously)
      * 
-     * @param jobCodeId  (required)
+     * @param jobCodeId The ID of the JobCode you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -528,7 +528,7 @@ public class JobCodesApi {
     }
 
     /**
-     * Get job codes for your organisation
+     * Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListJobCode
@@ -540,7 +540,7 @@ public class JobCodesApi {
     }
 
     /**
-     * Get job codes for your organisation
+     * Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListJobCode&gt;
@@ -553,7 +553,7 @@ public class JobCodesApi {
     }
 
     /**
-     * Get job codes for your organisation (asynchronously)
+     * Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -588,7 +588,7 @@ public class JobCodesApi {
     }
     /**
      * Build call for jobCodesUpdateJobCode
-     * @param request  (required)
+     * @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -658,9 +658,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Update a job code
+     * Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param request  (required)
+     * @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -671,9 +671,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Update a job code
+     * Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param request  (required)
+     * @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -685,9 +685,9 @@ public class JobCodesApi {
     }
 
     /**
-     * Update a job code (asynchronously)
+     * Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

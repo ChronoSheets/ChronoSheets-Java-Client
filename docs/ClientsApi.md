@@ -4,17 +4,17 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clientsCreateClient**](ClientsApi.md#clientsCreateClient) | **PUT** /api/Clients/CreateClient | Create a client
-[**clientsGetClient**](ClientsApi.md#clientsGetClient) | **GET** /api/Clients/GetClient | Get a particular client
-[**clientsGetClients**](ClientsApi.md#clientsGetClients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation
-[**clientsUpdateClient**](ClientsApi.md#clientsUpdateClient) | **POST** /api/Clients/UpdateClient | Update a client
+[**clientsCreateClient**](ClientsApi.md#clientsCreateClient) | **PUT** /api/Clients/CreateClient | Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**clientsGetClient**](ClientsApi.md#clientsGetClient) | **GET** /api/Clients/GetClient | Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**clientsGetClients**](ClientsApi.md#clientsGetClients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**clientsUpdateClient**](ClientsApi.md#clientsUpdateClient) | **POST** /api/Clients/UpdateClient | Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
 <a name="clientsCreateClient"></a>
 # **clientsCreateClient**
 > CSApiResponseInt32 clientsCreateClient(request, xChronosheetsAuth)
 
-Create a client
+Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 ### Example
 ```java
@@ -24,7 +24,7 @@ Create a client
 
 
 ClientsApi apiInstance = new ClientsApi();
-CSInsertClientRequest request = new CSInsertClientRequest(); // CSInsertClientRequest | 
+CSInsertClientRequest request = new CSInsertClientRequest(); // CSInsertClientRequest | An Insert Client Request object containing values for the new Client to create
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
     CSApiResponseInt32 result = apiInstance.clientsCreateClient(request, xChronosheetsAuth);
@@ -39,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertClientRequest**](CSInsertClientRequest.md)|  |
+ **request** | [**CSInsertClientRequest**](CSInsertClientRequest.md)| An Insert Client Request object containing values for the new Client to create |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
@@ -59,7 +59,7 @@ No authorization required
 # **clientsGetClient**
 > CSApiResponseClient clientsGetClient(clientId, xChronosheetsAuth)
 
-Get a particular client
+Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 ### Example
 ```java
@@ -69,7 +69,7 @@ Get a particular client
 
 
 ClientsApi apiInstance = new ClientsApi();
-Integer clientId = 56; // Integer | The ID of the client you want to get
+Integer clientId = 56; // Integer | The ID of the Client you want to get
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
     CSApiResponseClient result = apiInstance.clientsGetClient(clientId, xChronosheetsAuth);
@@ -84,7 +84,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **Integer**| The ID of the client you want to get |
+ **clientId** | **Integer**| The ID of the Client you want to get |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
@@ -104,7 +104,7 @@ No authorization required
 # **clientsGetClients**
 > CSApiResponseListClient clientsGetClients(xChronosheetsAuth)
 
-Get a collection of clients that are under your organisation
+Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 ### Example
 ```java
@@ -147,7 +147,7 @@ No authorization required
 # **clientsUpdateClient**
 > CSApiResponseBoolean clientsUpdateClient(request, xChronosheetsAuth)
 
-Update a client
+Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 ### Example
 ```java
@@ -157,7 +157,7 @@ Update a client
 
 
 ClientsApi apiInstance = new ClientsApi();
-CSSaveClientRequest request = new CSSaveClientRequest(); // CSSaveClientRequest | 
+CSSaveClientRequest request = new CSSaveClientRequest(); // CSSaveClientRequest | A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
     CSApiResponseBoolean result = apiInstance.clientsUpdateClient(request, xChronosheetsAuth);
@@ -172,7 +172,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSaveClientRequest**](CSSaveClientRequest.md)|  |
+ **request** | [**CSSaveClientRequest**](CSSaveClientRequest.md)| A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type

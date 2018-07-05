@@ -38,7 +38,7 @@ public class FleetApiTest {
 
     
     /**
-     * Create a vehicle
+     * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
      *
      * 
      *
@@ -89,7 +89,7 @@ public class FleetApiTest {
     }
     
     /**
-     * Update a vehicle
+     * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
      *
      * 
      *

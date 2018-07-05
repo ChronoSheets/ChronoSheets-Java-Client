@@ -38,7 +38,7 @@ public class ClientsApiTest {
 
     
     /**
-     * Create a client
+     * Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      *
      * 
      *
@@ -55,7 +55,7 @@ public class ClientsApiTest {
     }
     
     /**
-     * Get a particular client
+     * Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      *
      * 
      *
@@ -72,7 +72,7 @@ public class ClientsApiTest {
     }
     
     /**
-     * Get a collection of clients that are under your organisation
+     * Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      *
      * 
      *
@@ -88,7 +88,7 @@ public class ClientsApiTest {
     }
     
     /**
-     * Update a client
+     * Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      *
      * 
      *

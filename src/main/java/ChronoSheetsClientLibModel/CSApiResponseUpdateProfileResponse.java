@@ -14,7 +14,7 @@
 package ChronoSheetsClientLibModel;
 
 import java.util.Objects;
-import ChronoSheetsClientLibModel.CSSignupResponse;
+import ChronoSheetsClientLibModel.CSUpdateProfileResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -25,12 +25,12 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * CSApiResponseSignupResponse
+ * CSApiResponseUpdateProfileResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-27T20:00:37.222+10:00")
-public class CSApiResponseSignupResponse {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T21:12:18.606+10:00")
+public class CSApiResponseUpdateProfileResponse {
   @SerializedName("Data")
-  private CSSignupResponse data = null;
+  private CSUpdateProfileResponse data = null;
 
   /**
    * Gets or Sets status
@@ -93,7 +93,7 @@ public class CSApiResponseSignupResponse {
   @SerializedName("Message")
   private String message = null;
 
-  public CSApiResponseSignupResponse data(CSSignupResponse data) {
+  public CSApiResponseUpdateProfileResponse data(CSUpdateProfileResponse data) {
     this.data = data;
     return this;
   }
@@ -103,15 +103,15 @@ public class CSApiResponseSignupResponse {
    * @return data
   **/
   @ApiModelProperty(value = "")
-  public CSSignupResponse getData() {
+  public CSUpdateProfileResponse getData() {
     return data;
   }
 
-  public void setData(CSSignupResponse data) {
+  public void setData(CSUpdateProfileResponse data) {
     this.data = data;
   }
 
-  public CSApiResponseSignupResponse status(StatusEnum status) {
+  public CSApiResponseUpdateProfileResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -129,7 +129,7 @@ public class CSApiResponseSignupResponse {
     this.status = status;
   }
 
-  public CSApiResponseSignupResponse message(String message) {
+  public CSApiResponseUpdateProfileResponse message(String message) {
     this.message = message;
     return this;
   }
@@ -156,10 +156,10 @@ public class CSApiResponseSignupResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSApiResponseSignupResponse apiResponseSignupResponse = (CSApiResponseSignupResponse) o;
-    return Objects.equals(this.data, apiResponseSignupResponse.data) &&
-        Objects.equals(this.status, apiResponseSignupResponse.status) &&
-        Objects.equals(this.message, apiResponseSignupResponse.message);
+    CSApiResponseUpdateProfileResponse apiResponseUpdateProfileResponse = (CSApiResponseUpdateProfileResponse) o;
+    return Objects.equals(this.data, apiResponseUpdateProfileResponse.data) &&
+        Objects.equals(this.status, apiResponseUpdateProfileResponse.status) &&
+        Objects.equals(this.message, apiResponseUpdateProfileResponse.message);
   }
 
   @Override
@@ -171,7 +171,7 @@ public class CSApiResponseSignupResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSApiResponseSignupResponse {\n");
+    sb.append("class CSApiResponseUpdateProfileResponse {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");

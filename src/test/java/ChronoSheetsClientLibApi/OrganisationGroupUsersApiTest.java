@@ -35,7 +35,7 @@ public class OrganisationGroupUsersApiTest {
 
     
     /**
-     * Get a collection of organisation group users that belong to an organisation group
+     * Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      *
      * 
      *

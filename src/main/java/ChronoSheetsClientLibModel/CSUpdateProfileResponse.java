@@ -26,10 +26,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * CSSignupResponse
+ * CSUpdateProfileResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-06-27T20:00:37.222+10:00")
-public class CSSignupResponse {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T21:12:18.606+10:00")
+public class CSUpdateProfileResponse {
   @SerializedName("OrganisationId")
   private Integer organisationId = null;
 
@@ -39,7 +39,7 @@ public class CSSignupResponse {
   @SerializedName("ValidationErrors")
   private List<String> validationErrors = null;
 
-  public CSSignupResponse organisationId(Integer organisationId) {
+  public CSUpdateProfileResponse organisationId(Integer organisationId) {
     this.organisationId = organisationId;
     return this;
   }
@@ -57,7 +57,7 @@ public class CSSignupResponse {
     this.organisationId = organisationId;
   }
 
-  public CSSignupResponse userId(Integer userId) {
+  public CSUpdateProfileResponse userId(Integer userId) {
     this.userId = userId;
     return this;
   }
@@ -75,12 +75,12 @@ public class CSSignupResponse {
     this.userId = userId;
   }
 
-  public CSSignupResponse validationErrors(List<String> validationErrors) {
+  public CSUpdateProfileResponse validationErrors(List<String> validationErrors) {
     this.validationErrors = validationErrors;
     return this;
   }
 
-  public CSSignupResponse addValidationErrorsItem(String validationErrorsItem) {
+  public CSUpdateProfileResponse addValidationErrorsItem(String validationErrorsItem) {
     if (this.validationErrors == null) {
       this.validationErrors = new ArrayList<String>();
     }
@@ -110,10 +110,10 @@ public class CSSignupResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSSignupResponse signupResponse = (CSSignupResponse) o;
-    return Objects.equals(this.organisationId, signupResponse.organisationId) &&
-        Objects.equals(this.userId, signupResponse.userId) &&
-        Objects.equals(this.validationErrors, signupResponse.validationErrors);
+    CSUpdateProfileResponse updateProfileResponse = (CSUpdateProfileResponse) o;
+    return Objects.equals(this.organisationId, updateProfileResponse.organisationId) &&
+        Objects.equals(this.userId, updateProfileResponse.userId) &&
+        Objects.equals(this.validationErrors, updateProfileResponse.validationErrors);
   }
 
   @Override
@@ -125,7 +125,7 @@ public class CSSignupResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSSignupResponse {\n");
+    sb.append("class CSUpdateProfileResponse {\n");
     
     sb.append("    organisationId: ").append(toIndentedString(organisationId)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");

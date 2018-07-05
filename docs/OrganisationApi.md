@@ -65,7 +65,7 @@ Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
 
 
 OrganisationApi apiInstance = new OrganisationApi();
-CSUpdateOrganisationRequest request = new CSUpdateOrganisationRequest(); // CSUpdateOrganisationRequest | 
+CSUpdateOrganisationRequest request = new CSUpdateOrganisationRequest(); // CSUpdateOrganisationRequest | An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
     CSApiResponseUpdateOrganisationResponse result = apiInstance.organisationUpdateOrganisation(request, xChronosheetsAuth);
@@ -80,7 +80,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateOrganisationRequest**](CSUpdateOrganisationRequest.md)|  |
+ **request** | [**CSUpdateOrganisationRequest**](CSUpdateOrganisationRequest.md)| An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type

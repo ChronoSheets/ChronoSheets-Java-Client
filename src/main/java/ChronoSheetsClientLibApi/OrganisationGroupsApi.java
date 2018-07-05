@@ -61,7 +61,7 @@ public class OrganisationGroupsApi {
 
     /**
      * Build call for organisationGroupsCreateOrganisationGroup
-     * @param request  (required)
+     * @param request An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -131,9 +131,9 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Create an organisation group
+     * Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
      * 
-     * @param request  (required)
+     * @param request An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -144,9 +144,9 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Create an organisation group
+     * Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
      * 
-     * @param request  (required)
+     * @param request An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -158,9 +158,9 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Create an organisation group (asynchronously)
+     * Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -194,7 +194,7 @@ public class OrganisationGroupsApi {
     }
     /**
      * Build call for organisationGroupsGetOrganisationGroup
-     * @param organisationGroupId The ID of the organisation group you want to get (required)
+     * @param organisationGroupId The ID of the OrganisationGroup you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -266,9 +266,9 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get a particular organisation group
+     * Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
-     * @param organisationGroupId The ID of the organisation group you want to get (required)
+     * @param organisationGroupId The ID of the OrganisationGroup you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseOrganisationGroup
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -279,9 +279,9 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get a particular organisation group
+     * Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
-     * @param organisationGroupId The ID of the organisation group you want to get (required)
+     * @param organisationGroupId The ID of the OrganisationGroup you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseOrganisationGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -293,9 +293,9 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get a particular organisation group (asynchronously)
+     * Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. (asynchronously)
      * 
-     * @param organisationGroupId The ID of the organisation group you want to get (required)
+     * @param organisationGroupId The ID of the OrganisationGroup you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -393,7 +393,7 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get a collection of organisation groups that are under your organisation
+     * Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListOrganisationGroup
@@ -405,7 +405,7 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get a collection of organisation groups that are under your organisation
+     * Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListOrganisationGroup&gt;
@@ -418,7 +418,7 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get a collection of organisation groups that are under your organisation (asynchronously)
+     * Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -525,7 +525,7 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get org groups for a particular job
+     * Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
      * @param jobId The ID of the job (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -538,7 +538,7 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get org groups for a particular job
+     * Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
      * @param jobId The ID of the job (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -552,7 +552,7 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get org groups for a particular job (asynchronously)
+     * Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. (asynchronously)
      * 
      * @param jobId The ID of the job (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -660,7 +660,7 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get org groups for a particular vehicle
+     * Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
      * @param vehicleId The ID of the vehicle (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -673,7 +673,7 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get org groups for a particular vehicle
+     * Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
      * @param vehicleId The ID of the vehicle (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -687,7 +687,7 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Get org groups for a particular vehicle (asynchronously)
+     * Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions. (asynchronously)
      * 
      * @param vehicleId The ID of the vehicle (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -723,7 +723,7 @@ public class OrganisationGroupsApi {
     }
     /**
      * Build call for organisationGroupsUpdateOrganisationGroup
-     * @param request  (required)
+     * @param request A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -793,9 +793,9 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Update an organisation group
+     * Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
      * 
-     * @param request  (required)
+     * @param request A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -806,9 +806,9 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Update an organisation group
+     * Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
      * 
-     * @param request  (required)
+     * @param request A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -820,9 +820,9 @@ public class OrganisationGroupsApi {
     }
 
     /**
-     * Update an organisation group (asynchronously)
+     * Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

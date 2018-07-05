@@ -185,7 +185,7 @@ No authorization required
 
 <a name="userProfileUpdateMyProfile"></a>
 # **userProfileUpdateMyProfile**
-> CSApiResponseSignupResponse userProfileUpdateMyProfile(request, xChronosheetsAuth)
+> CSApiResponseUpdateProfileResponse userProfileUpdateMyProfile(request, xChronosheetsAuth)
 
 
 
@@ -200,7 +200,7 @@ UserProfileApi apiInstance = new UserProfileApi();
 CSUpdateMyProfileRequest request = new CSUpdateMyProfileRequest(); // CSUpdateMyProfileRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseSignupResponse result = apiInstance.userProfileUpdateMyProfile(request, xChronosheetsAuth);
+    CSApiResponseUpdateProfileResponse result = apiInstance.userProfileUpdateMyProfile(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileUpdateMyProfile");
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseSignupResponse**](CSApiResponseSignupResponse.md)
+[**CSApiResponseUpdateProfileResponse**](CSApiResponseUpdateProfileResponse.md)
 
 ### Authorization
 

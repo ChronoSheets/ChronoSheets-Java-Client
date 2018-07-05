@@ -182,7 +182,7 @@ public class OrganisationApi {
     }
     /**
      * Build call for organisationUpdateOrganisation
-     * @param request  (required)
+     * @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -254,7 +254,7 @@ public class OrganisationApi {
     /**
      * Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseUpdateOrganisationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -267,7 +267,7 @@ public class OrganisationApi {
     /**
      * Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseUpdateOrganisationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -281,7 +281,7 @@ public class OrganisationApi {
     /**
      * Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

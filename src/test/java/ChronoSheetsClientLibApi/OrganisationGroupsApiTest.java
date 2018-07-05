@@ -38,7 +38,7 @@ public class OrganisationGroupsApiTest {
 
     
     /**
-     * Create an organisation group
+     * Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
      *
      * 
      *
@@ -55,7 +55,7 @@ public class OrganisationGroupsApiTest {
     }
     
     /**
-     * Get a particular organisation group
+     * Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      *
      * 
      *
@@ -72,7 +72,7 @@ public class OrganisationGroupsApiTest {
     }
     
     /**
-     * Get a collection of organisation groups that are under your organisation
+     * Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      *
      * 
      *
@@ -88,7 +88,7 @@ public class OrganisationGroupsApiTest {
     }
     
     /**
-     * Get org groups for a particular job
+     * Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      *
      * 
      *
@@ -105,7 +105,7 @@ public class OrganisationGroupsApiTest {
     }
     
     /**
-     * Get org groups for a particular vehicle
+     * Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      *
      * 
      *
@@ -122,7 +122,7 @@ public class OrganisationGroupsApiTest {
     }
     
     /**
-     * Update an organisation group
+     * Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
      *
      * 
      *

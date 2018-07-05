@@ -61,7 +61,7 @@ public class ClientsApi {
 
     /**
      * Build call for clientsCreateClient
-     * @param request  (required)
+     * @param request An Insert Client Request object containing values for the new Client to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -131,9 +131,9 @@ public class ClientsApi {
     }
 
     /**
-     * Create a client
+     * Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert Client Request object containing values for the new Client to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -144,9 +144,9 @@ public class ClientsApi {
     }
 
     /**
-     * Create a client
+     * Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert Client Request object containing values for the new Client to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -158,9 +158,9 @@ public class ClientsApi {
     }
 
     /**
-     * Create a client (asynchronously)
+     * Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Insert Client Request object containing values for the new Client to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -194,7 +194,7 @@ public class ClientsApi {
     }
     /**
      * Build call for clientsGetClient
-     * @param clientId The ID of the client you want to get (required)
+     * @param clientId The ID of the Client you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -266,9 +266,9 @@ public class ClientsApi {
     }
 
     /**
-     * Get a particular client
+     * Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
-     * @param clientId The ID of the client you want to get (required)
+     * @param clientId The ID of the Client you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseClient
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -279,9 +279,9 @@ public class ClientsApi {
     }
 
     /**
-     * Get a particular client
+     * Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
-     * @param clientId The ID of the client you want to get (required)
+     * @param clientId The ID of the Client you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseClient&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -293,9 +293,9 @@ public class ClientsApi {
     }
 
     /**
-     * Get a particular client (asynchronously)
+     * Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
-     * @param clientId The ID of the client you want to get (required)
+     * @param clientId The ID of the Client you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -393,7 +393,7 @@ public class ClientsApi {
     }
 
     /**
-     * Get a collection of clients that are under your organisation
+     * Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListClient
@@ -405,7 +405,7 @@ public class ClientsApi {
     }
 
     /**
-     * Get a collection of clients that are under your organisation
+     * Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListClient&gt;
@@ -418,7 +418,7 @@ public class ClientsApi {
     }
 
     /**
-     * Get a collection of clients that are under your organisation (asynchronously)
+     * Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -453,7 +453,7 @@ public class ClientsApi {
     }
     /**
      * Build call for clientsUpdateClient
-     * @param request  (required)
+     * @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -523,9 +523,9 @@ public class ClientsApi {
     }
 
     /**
-     * Update a client
+     * Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request  (required)
+     * @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -536,9 +536,9 @@ public class ClientsApi {
     }
 
     /**
-     * Update a client
+     * Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request  (required)
+     * @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -550,9 +550,9 @@ public class ClientsApi {
     }
 
     /**
-     * Update a client (asynchronously)
+     * Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

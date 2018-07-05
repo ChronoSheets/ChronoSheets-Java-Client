@@ -16,7 +16,7 @@ package ChronoSheetsClientLibApi;
 import ChronoSheetsClient.ApiException;
 import ChronoSheetsClientLibModel.CSApiResponseBoolean;
 import ChronoSheetsClientLibModel.CSApiResponseDoLoginResponse;
-import ChronoSheetsClientLibModel.CSApiResponseSignupResponse;
+import ChronoSheetsClientLibModel.CSApiResponseUpdateProfileResponse;
 import ChronoSheetsClientLibModel.CSApiResponseUserProfile;
 import ChronoSheetsClientLibModel.CSDoLoginRequest;
 import ChronoSheetsClientLibModel.CSUpdateMyProfileRequest;
@@ -113,7 +113,7 @@ public class UserProfileApiTest {
     public void userProfileUpdateMyProfileTest() throws ApiException {
         CSUpdateMyProfileRequest request = null;
         String xChronosheetsAuth = null;
-        CSApiResponseSignupResponse response = api.userProfileUpdateMyProfile(request, xChronosheetsAuth);
+        CSApiResponseUpdateProfileResponse response = api.userProfileUpdateMyProfile(request, xChronosheetsAuth);
 
         // TODO: test validations
     }

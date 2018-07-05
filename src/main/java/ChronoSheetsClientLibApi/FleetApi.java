@@ -61,7 +61,7 @@ public class FleetApi {
 
     /**
      * Build call for fleetCreateVehicle
-     * @param request  (required)
+     * @param request An Insert Vehicle Request object containing values for the new Vehicle to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -131,9 +131,9 @@ public class FleetApi {
     }
 
     /**
-     * Create a vehicle
+     * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert Vehicle Request object containing values for the new Vehicle to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -144,9 +144,9 @@ public class FleetApi {
     }
 
     /**
-     * Create a vehicle
+     * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert Vehicle Request object containing values for the new Vehicle to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -158,9 +158,9 @@ public class FleetApi {
     }
 
     /**
-     * Create a vehicle (asynchronously)
+     * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Insert Vehicle Request object containing values for the new Vehicle to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -194,7 +194,7 @@ public class FleetApi {
     }
     /**
      * Build call for fleetGetVehicleById
-     * @param vehicleId The ID of the vehicle you want to get (required)
+     * @param vehicleId The ID of the Vehicle you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -268,7 +268,7 @@ public class FleetApi {
     /**
      * Get a particular vehicle
      * 
-     * @param vehicleId The ID of the vehicle you want to get (required)
+     * @param vehicleId The ID of the Vehicle you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseFleetVehicle
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -281,7 +281,7 @@ public class FleetApi {
     /**
      * Get a particular vehicle
      * 
-     * @param vehicleId The ID of the vehicle you want to get (required)
+     * @param vehicleId The ID of the Vehicle you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseFleetVehicle&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -295,7 +295,7 @@ public class FleetApi {
     /**
      * Get a particular vehicle (asynchronously)
      * 
-     * @param vehicleId The ID of the vehicle you want to get (required)
+     * @param vehicleId The ID of the Vehicle you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -329,7 +329,7 @@ public class FleetApi {
     }
     /**
      * Build call for fleetGetVehicles
-     * @param includeDeleted  (required)
+     * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -403,7 +403,7 @@ public class FleetApi {
     /**
      * Get a collection of vehicles that are under your organisation
      * 
-     * @param includeDeleted  (required)
+     * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListFleetVehicle
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -416,7 +416,7 @@ public class FleetApi {
     /**
      * Get a collection of vehicles that are under your organisation
      * 
-     * @param includeDeleted  (required)
+     * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListFleetVehicle&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -430,7 +430,7 @@ public class FleetApi {
     /**
      * Get a collection of vehicles that are under your organisation (asynchronously)
      * 
-     * @param includeDeleted  (required)
+     * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -464,7 +464,7 @@ public class FleetApi {
     }
     /**
      * Build call for fleetUpdateVehicle
-     * @param request  (required)
+     * @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -534,9 +534,9 @@ public class FleetApi {
     }
 
     /**
-     * Update a vehicle
+     * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
      * 
-     * @param request  (required)
+     * @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -547,9 +547,9 @@ public class FleetApi {
     }
 
     /**
-     * Update a vehicle
+     * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
      * 
-     * @param request  (required)
+     * @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -561,9 +561,9 @@ public class FleetApi {
     }
 
     /**
-     * Update a vehicle (asynchronously)
+     * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

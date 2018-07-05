@@ -1,5 +1,5 @@
 
-# CSSignupResponse
+# CSUpdateProfileResponse
 
 ## Properties
 Name | Type | Description | Notes
