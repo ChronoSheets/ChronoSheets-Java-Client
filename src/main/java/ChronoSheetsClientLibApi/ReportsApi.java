@@ -65,7 +65,7 @@ public class ReportsApi {
      * Build call for reportsGetAllChartsDataAdmin
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -155,7 +155,7 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseCombinedReportsData
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -170,7 +170,7 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseCombinedReportsData&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -186,7 +186,7 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -505,7 +505,7 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param skip Skip this many items (required)
      * @param take Take this many items (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -611,7 +611,7 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param skip Skip this many items (required)
      * @param take Take this many items (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -628,7 +628,7 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param skip Skip this many items (required)
      * @param take Take this many items (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -646,7 +646,7 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param skip Skip this many items (required)
      * @param take Take this many items (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -684,7 +684,7 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param skip Skip this many items (required)
      * @param take Take this many items (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -790,7 +790,7 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param skip Skip this many items (required)
      * @param take Take this many items (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseForPaginatedListOrgReportTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -807,7 +807,7 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param skip Skip this many items (required)
      * @param take Take this many items (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -825,7 +825,7 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param skip Skip this many items (required)
      * @param take Take this many items (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -861,7 +861,7 @@ public class ReportsApi {
      * Build call for reportsGetRawDataAdmin
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param sort Decide which column to sort on (required)
      * @param order Decide which direction to sort the column (required)
      * @param skip Skip this many rows (required)
@@ -983,7 +983,7 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param sort Decide which column to sort on (required)
      * @param order Decide which direction to sort the column (required)
      * @param skip Skip this many rows (required)
@@ -1002,7 +1002,7 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param sort Decide which column to sort on (required)
      * @param order Decide which direction to sort the column (required)
      * @param skip Skip this many rows (required)
@@ -1022,7 +1022,7 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param sort Decide which column to sort on (required)
      * @param order Decide which direction to sort the column (required)
      * @param skip Skip this many rows (required)
@@ -1062,7 +1062,7 @@ public class ReportsApi {
      * Build call for reportsProjectCostingsAdmin
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1152,7 +1152,7 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListProjectCostingReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1167,7 +1167,7 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListProjectCostingReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1183,7 +1183,7 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-seperated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
