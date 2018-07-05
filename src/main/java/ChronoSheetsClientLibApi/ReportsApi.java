@@ -63,9 +63,9 @@ public class ReportsApi {
 
     /**
      * Build call for reportsGetAllChartsDataAdmin
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -151,11 +151,11 @@ public class ReportsApi {
     }
 
     /**
-     * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
+     * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseCombinedReportsData
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -166,11 +166,11 @@ public class ReportsApi {
     }
 
     /**
-     * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
+     * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseCombinedReportsData&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -182,11 +182,11 @@ public class ReportsApi {
     }
 
     /**
-     * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects) (asynchronously)
+     * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -220,8 +220,8 @@ public class ReportsApi {
     }
     /**
      * Build call for reportsGetAllChartsDataUser
-     * @param startDate  (required)
-     * @param endDate  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -300,10 +300,10 @@ public class ReportsApi {
     }
 
     /**
-     * Get Consolidated User Reports Data (Jobs and Tasks)
+     * Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseCombinedReportsData
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -314,10 +314,10 @@ public class ReportsApi {
     }
 
     /**
-     * Get Consolidated User Reports Data (Jobs and Tasks)
+     * Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseCombinedReportsData&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -329,10 +329,10 @@ public class ReportsApi {
     }
 
     /**
-     * Get Consolidated User Reports Data (Jobs and Tasks) (asynchronously)
+     * Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission. (asynchronously)
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -366,7 +366,7 @@ public class ReportsApi {
     }
     /**
      * Build call for reportsGetOrgTripById
-     * @param tripId The ID of the trip (required)
+     * @param tripId The ID of the Trip you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -438,9 +438,9 @@ public class ReportsApi {
     }
 
     /**
-     * Get trip by Id, for reporting purposes
+     * Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param tripId The ID of the trip (required)
+     * @param tripId The ID of the Trip you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -451,9 +451,9 @@ public class ReportsApi {
     }
 
     /**
-     * Get trip by Id, for reporting purposes
+     * Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param tripId The ID of the trip (required)
+     * @param tripId The ID of the Trip you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -465,9 +465,9 @@ public class ReportsApi {
     }
 
     /**
-     * Get trip by Id, for reporting purposes (asynchronously)
+     * Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
      * 
-     * @param tripId The ID of the trip (required)
+     * @param tripId The ID of the Trip you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -501,11 +501,11 @@ public class ReportsApi {
     }
     /**
      * Build call for reportsGetOrganisationTimesheetFileAttachments
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -605,13 +605,13 @@ public class ReportsApi {
     }
 
     /**
-     * Reports on Organisation timesheet file attachments
+     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -622,13 +622,13 @@ public class ReportsApi {
     }
 
     /**
-     * Reports on Organisation timesheet file attachments
+     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -640,13 +640,13 @@ public class ReportsApi {
     }
 
     /**
-     * Reports on Organisation timesheet file attachments (asynchronously)
+     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -680,11 +680,11 @@ public class ReportsApi {
     }
     /**
      * Build call for reportsGetOrganisationTrips
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -784,13 +784,13 @@ public class ReportsApi {
     }
 
     /**
-     * Reports on Organisation trips (GPS tracking from whole organisation)
+     * Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseForPaginatedListOrgReportTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -801,13 +801,13 @@ public class ReportsApi {
     }
 
     /**
-     * Reports on Organisation trips (GPS tracking from whole organisation)
+     * Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -819,13 +819,13 @@ public class ReportsApi {
     }
 
     /**
-     * Reports on Organisation trips (GPS tracking from whole organisation) (asynchronously)
+     * Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -859,13 +859,13 @@ public class ReportsApi {
     }
     /**
      * Build call for reportsGetRawDataAdmin
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
-     * @param sort  (required)
-     * @param order  (required)
-     * @param skip  (required)
-     * @param take  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
+     * @param sort Decide which column to sort on (required)
+     * @param order Decide which direction to sort the column (required)
+     * @param skip Skip this many rows (required)
+     * @param take Take this many rows (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -979,15 +979,15 @@ public class ReportsApi {
     }
 
     /**
-     * Get Timesheets Raw Data
+     * Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
-     * @param sort  (required)
-     * @param order  (required)
-     * @param skip  (required)
-     * @param take  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
+     * @param sort Decide which column to sort on (required)
+     * @param order Decide which direction to sort the column (required)
+     * @param skip Skip this many rows (required)
+     * @param take Take this many rows (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseForPaginatedListRawReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -998,15 +998,15 @@ public class ReportsApi {
     }
 
     /**
-     * Get Timesheets Raw Data
+     * Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
-     * @param sort  (required)
-     * @param order  (required)
-     * @param skip  (required)
-     * @param take  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
+     * @param sort Decide which column to sort on (required)
+     * @param order Decide which direction to sort the column (required)
+     * @param skip Skip this many rows (required)
+     * @param take Take this many rows (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListRawReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1018,15 +1018,15 @@ public class ReportsApi {
     }
 
     /**
-     * Get Timesheets Raw Data (asynchronously)
+     * Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
-     * @param sort  (required)
-     * @param order  (required)
-     * @param skip  (required)
-     * @param take  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
+     * @param sort Decide which column to sort on (required)
+     * @param order Decide which direction to sort the column (required)
+     * @param skip Skip this many rows (required)
+     * @param take Take this many rows (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1060,9 +1060,9 @@ public class ReportsApi {
     }
     /**
      * Build call for reportsProjectCostingsAdmin
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1148,11 +1148,11 @@ public class ReportsApi {
     }
 
     /**
-     * Gets project cost estimations VS actual cost for date range and users
+     * Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListProjectCostingReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1163,11 +1163,11 @@ public class ReportsApi {
     }
 
     /**
-     * Gets project cost estimations VS actual cost for date range and users
+     * Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListProjectCostingReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1179,11 +1179,11 @@ public class ReportsApi {
     }
 
     /**
-     * Gets project cost estimations VS actual cost for date range and users (asynchronously)
+     * Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param userIds  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds The Ids of the users, if you want to filter the report data to particular users (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1217,8 +1217,8 @@ public class ReportsApi {
     }
     /**
      * Build call for reportsUserJobsOverTime
-     * @param startDate  (required)
-     * @param endDate  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1297,10 +1297,10 @@ public class ReportsApi {
     }
 
     /**
-     * Timeseries jobs data for the logged in user
+     * Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListJobSeriesReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1311,10 +1311,10 @@ public class ReportsApi {
     }
 
     /**
-     * Timeseries jobs data for the logged in user
+     * Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListJobSeriesReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1326,10 +1326,10 @@ public class ReportsApi {
     }
 
     /**
-     * Timeseries jobs data for the logged in user (asynchronously)
+     * Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;. (asynchronously)
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

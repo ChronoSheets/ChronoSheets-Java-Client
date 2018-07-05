@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * CSApiResponseListJobCode
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T21:12:18.606+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T22:31:51.082+10:00")
 public class CSApiResponseListJobCode {
   @SerializedName("Data")
   private List<CSJobCode> data = null;

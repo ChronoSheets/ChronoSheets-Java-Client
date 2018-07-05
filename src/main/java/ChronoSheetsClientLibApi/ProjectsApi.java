@@ -61,7 +61,7 @@ public class ProjectsApi {
 
     /**
      * Build call for projectsCreateProject
-     * @param request  (required)
+     * @param request An Insert Project Request object containing values for the new Project to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -131,9 +131,9 @@ public class ProjectsApi {
     }
 
     /**
-     * Create a project
+     * Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert Project Request object containing values for the new Project to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -144,9 +144,9 @@ public class ProjectsApi {
     }
 
     /**
-     * Create a project
+     * Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert Project Request object containing values for the new Project to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -158,9 +158,9 @@ public class ProjectsApi {
     }
 
     /**
-     * Create a project (asynchronously)
+     * Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Insert Project Request object containing values for the new Project to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -194,7 +194,7 @@ public class ProjectsApi {
     }
     /**
      * Build call for projectsGetProjectById
-     * @param projectId The ID of the project (required)
+     * @param projectId The ID of the Project you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -266,9 +266,9 @@ public class ProjectsApi {
     }
 
     /**
-     * Get project by Id
+     * Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
-     * @param projectId The ID of the project (required)
+     * @param projectId The ID of the Project you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseProject
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -279,9 +279,9 @@ public class ProjectsApi {
     }
 
     /**
-     * Get project by Id
+     * Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
-     * @param projectId The ID of the project (required)
+     * @param projectId The ID of the Project you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseProject&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -293,9 +293,9 @@ public class ProjectsApi {
     }
 
     /**
-     * Get project by Id (asynchronously)
+     * Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
-     * @param projectId The ID of the project (required)
+     * @param projectId The ID of the Project you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -401,7 +401,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Get projects for a particular client
+     * Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param clientId The ID of the client (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -414,7 +414,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Get projects for a particular client
+     * Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param clientId The ID of the client (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -428,7 +428,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Get projects for a particular client (asynchronously)
+     * Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
      * @param clientId The ID of the client (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -464,7 +464,7 @@ public class ProjectsApi {
     }
     /**
      * Build call for projectsUpdateProject
-     * @param request  (required)
+     * @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -534,9 +534,9 @@ public class ProjectsApi {
     }
 
     /**
-     * Update a project
+     * Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -547,9 +547,9 @@ public class ProjectsApi {
     }
 
     /**
-     * Update a project
+     * Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -561,9 +561,9 @@ public class ProjectsApi {
     }
 
     /**
-     * Update a project (asynchronously)
+     * Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

@@ -13,7 +13,7 @@
 
 package ChronoSheetsClient;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T21:12:18.606+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T22:31:51.082+10:00")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).

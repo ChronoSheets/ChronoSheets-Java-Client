@@ -40,7 +40,7 @@ public class ReportsApiTest {
 
     
     /**
-     * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
+     * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
      *
      * 
      *
@@ -59,7 +59,7 @@ public class ReportsApiTest {
     }
     
     /**
-     * Get Consolidated User Reports Data (Jobs and Tasks)
+     * Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
      *
      * 
      *
@@ -77,7 +77,7 @@ public class ReportsApiTest {
     }
     
     /**
-     * Get trip by Id, for reporting purposes
+     * Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
      *
      * 
      *
@@ -94,7 +94,7 @@ public class ReportsApiTest {
     }
     
     /**
-     * Reports on Organisation timesheet file attachments
+     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
      *
      * 
      *
@@ -115,7 +115,7 @@ public class ReportsApiTest {
     }
     
     /**
-     * Reports on Organisation trips (GPS tracking from whole organisation)
+     * Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
      *
      * 
      *
@@ -136,7 +136,7 @@ public class ReportsApiTest {
     }
     
     /**
-     * Get Timesheets Raw Data
+     * Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
      *
      * 
      *
@@ -159,7 +159,7 @@ public class ReportsApiTest {
     }
     
     /**
-     * Gets project cost estimations VS actual cost for date range and users
+     * Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
      *
      * 
      *
@@ -178,7 +178,7 @@ public class ReportsApiTest {
     }
     
     /**
-     * Timeseries jobs data for the logged in user
+     * Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
      *
      * 
      *

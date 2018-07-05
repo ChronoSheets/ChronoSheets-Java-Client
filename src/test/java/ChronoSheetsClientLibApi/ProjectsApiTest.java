@@ -38,7 +38,7 @@ public class ProjectsApiTest {
 
     
     /**
-     * Create a project
+     * Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      *
      * 
      *
@@ -55,7 +55,7 @@ public class ProjectsApiTest {
     }
     
     /**
-     * Get project by Id
+     * Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      *
      * 
      *
@@ -72,7 +72,7 @@ public class ProjectsApiTest {
     }
     
     /**
-     * Get projects for a particular client
+     * Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      *
      * 
      *
@@ -89,7 +89,7 @@ public class ProjectsApiTest {
     }
     
     /**
-     * Update a project
+     * Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
      *
      * 
      *
