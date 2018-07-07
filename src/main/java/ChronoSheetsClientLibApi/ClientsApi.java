@@ -131,7 +131,7 @@ public class ClientsApi {
     }
 
     /**
-     * Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+     * Create a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
      * @param request An Insert Client Request object containing values for the new Client to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -144,7 +144,7 @@ public class ClientsApi {
     }
 
     /**
-     * Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+     * Create a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
      * @param request An Insert Client Request object containing values for the new Client to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -158,7 +158,7 @@ public class ClientsApi {
     }
 
     /**
-     * Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
+     * Create a client.    Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
      * 
      * @param request An Insert Client Request object containing values for the new Client to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -266,7 +266,7 @@ public class ClientsApi {
     }
 
     /**
-     * Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+     * Get a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param clientId The ID of the Client you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -279,7 +279,7 @@ public class ClientsApi {
     }
 
     /**
-     * Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+     * Get a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param clientId The ID of the Client you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -293,7 +293,7 @@ public class ClientsApi {
     }
 
     /**
-     * Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
+     * Get a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
      * @param clientId The ID of the Client you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -393,7 +393,7 @@ public class ClientsApi {
     }
 
     /**
-     * Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+     * Get a collection of clients that are under your organisation.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListClient
@@ -405,7 +405,7 @@ public class ClientsApi {
     }
 
     /**
-     * Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+     * Get a collection of clients that are under your organisation.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListClient&gt;
@@ -418,7 +418,7 @@ public class ClientsApi {
     }
 
     /**
-     * Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
+     * Get a collection of clients that are under your organisation.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -523,7 +523,7 @@ public class ClientsApi {
     }
 
     /**
-     * Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+     * Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
      * @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -536,7 +536,7 @@ public class ClientsApi {
     }
 
     /**
-     * Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+     * Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
      * @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -550,7 +550,7 @@ public class ClientsApi {
     }
 
     /**
-     * Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
+     * Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
      * 
      * @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)

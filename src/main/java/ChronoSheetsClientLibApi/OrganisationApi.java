@@ -122,7 +122,7 @@ public class OrganisationApi {
     }
 
     /**
-     * Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+     * Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseOrganisation
@@ -134,7 +134,7 @@ public class OrganisationApi {
     }
 
     /**
-     * Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+     * Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseOrganisation&gt;
@@ -147,7 +147,7 @@ public class OrganisationApi {
     }
 
     /**
-     * Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission. (asynchronously)
+     * Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -252,7 +252,7 @@ public class OrganisationApi {
     }
 
     /**
-     * Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+     * Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
      * 
      * @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -265,7 +265,7 @@ public class OrganisationApi {
     }
 
     /**
-     * Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+     * Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
      * 
      * @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -279,7 +279,7 @@ public class OrganisationApi {
     }
 
     /**
-     * Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. (asynchronously)
+     * Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission. (asynchronously)
      * 
      * @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)

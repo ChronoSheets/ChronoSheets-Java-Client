@@ -4,15 +4,15 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**organisationGetOrganisation**](OrganisationApi.md#organisationGetOrganisation) | **GET** /api/Organisation/GetOrganisation | Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
-[**organisationUpdateOrganisation**](OrganisationApi.md#organisationUpdateOrganisation) | **POST** /api/Organisation/UpdateOrganisation | Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+[**organisationGetOrganisation**](OrganisationApi.md#organisationGetOrganisation) | **GET** /api/Organisation/GetOrganisation | Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
+[**organisationUpdateOrganisation**](OrganisationApi.md#organisationUpdateOrganisation) | **POST** /api/Organisation/UpdateOrganisation | Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
 
 
 <a name="organisationGetOrganisation"></a>
 # **organisationGetOrganisation**
 > CSApiResponseOrganisation organisationGetOrganisation(xChronosheetsAuth)
 
-Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
 
 ### Example
 ```java
@@ -55,7 +55,7 @@ No authorization required
 # **organisationUpdateOrganisation**
 > CSApiResponseUpdateOrganisationResponse organisationUpdateOrganisation(request, xChronosheetsAuth)
 
-Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
 
 ### Example
 ```java

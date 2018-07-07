@@ -4,18 +4,18 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userProfileDoLogin**](UserProfileApi.md#userProfileDoLogin) | **POST** /api/UserProfile/DoLogin | 
-[**userProfileDoLogout**](UserProfileApi.md#userProfileDoLogout) | **DELETE** /api/UserProfile/DoLogout | 
-[**userProfileGetMyProfile**](UserProfileApi.md#userProfileGetMyProfile) | **GET** /api/UserProfile/GetMyProfile | 
-[**userProfileKeepSessionAlive**](UserProfileApi.md#userProfileKeepSessionAlive) | **GET** /api/UserProfile/KeepSessionAlive | 
-[**userProfileUpdateMyProfile**](UserProfileApi.md#userProfileUpdateMyProfile) | **POST** /api/UserProfile/UpdateMyProfile | 
+[**userProfileDoLogin**](UserProfileApi.md#userProfileDoLogin) | **POST** /api/UserProfile/DoLogin | Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
+[**userProfileDoLogout**](UserProfileApi.md#userProfileDoLogout) | **DELETE** /api/UserProfile/DoLogout | Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
+[**userProfileGetMyProfile**](UserProfileApi.md#userProfileGetMyProfile) | **GET** /api/UserProfile/GetMyProfile | Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
+[**userProfileKeepSessionAlive**](UserProfileApi.md#userProfileKeepSessionAlive) | **GET** /api/UserProfile/KeepSessionAlive | Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
+[**userProfileUpdateMyProfile**](UserProfileApi.md#userProfileUpdateMyProfile) | **POST** /api/UserProfile/UpdateMyProfile | Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
 
 
 <a name="userProfileDoLogin"></a>
 # **userProfileDoLogin**
 > CSApiResponseDoLoginResponse userProfileDoLogin(request)
 
-
+Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
 
 ### Example
 ```java
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 
 UserProfileApi apiInstance = new UserProfileApi();
-CSDoLoginRequest request = new CSDoLoginRequest(); // CSDoLoginRequest | 
+CSDoLoginRequest request = new CSDoLoginRequest(); // CSDoLoginRequest | A request object containing your username/email and password.
 try {
     CSApiResponseDoLoginResponse result = apiInstance.userProfileDoLogin(request);
     System.out.println(result);
@@ -39,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSDoLoginRequest**](CSDoLoginRequest.md)|  |
+ **request** | [**CSDoLoginRequest**](CSDoLoginRequest.md)| A request object containing your username/email and password. |
 
 ### Return type
 
@@ -58,7 +58,7 @@ No authorization required
 # **userProfileDoLogout**
 > CSApiResponseBoolean userProfileDoLogout(xChronosheetsAuth)
 
-
+Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
 
 ### Example
 ```java
@@ -101,7 +101,7 @@ No authorization required
 # **userProfileGetMyProfile**
 > CSApiResponseUserProfile userProfileGetMyProfile(xChronosheetsAuth)
 
-
+Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
 
 ### Example
 ```java
@@ -144,7 +144,7 @@ No authorization required
 # **userProfileKeepSessionAlive**
 > CSApiResponseBoolean userProfileKeepSessionAlive(xChronosheetsAuth)
 
-
+Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
 
 ### Example
 ```java
@@ -187,7 +187,7 @@ No authorization required
 # **userProfileUpdateMyProfile**
 > CSApiResponseUpdateProfileResponse userProfileUpdateMyProfile(request, xChronosheetsAuth)
 
-
+Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
 
 ### Example
 ```java
@@ -197,7 +197,7 @@ No authorization required
 
 
 UserProfileApi apiInstance = new UserProfileApi();
-CSUpdateMyProfileRequest request = new CSUpdateMyProfileRequest(); // CSUpdateMyProfileRequest | 
+CSUpdateMyProfileRequest request = new CSUpdateMyProfileRequest(); // CSUpdateMyProfileRequest | An Update MyProfile Request object containing updated fields.
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
     CSApiResponseUpdateProfileResponse result = apiInstance.userProfileUpdateMyProfile(request, xChronosheetsAuth);
@@ -212,7 +212,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateMyProfileRequest**](CSUpdateMyProfileRequest.md)|  |
+ **request** | [**CSUpdateMyProfileRequest**](CSUpdateMyProfileRequest.md)| An Update MyProfile Request object containing updated fields. |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type

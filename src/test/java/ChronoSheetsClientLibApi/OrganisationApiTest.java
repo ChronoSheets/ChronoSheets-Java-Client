@@ -35,7 +35,7 @@ public class OrganisationApiTest {
 
     
     /**
-     * Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+     * Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
      *
      * 
      *
@@ -51,7 +51,7 @@ public class OrganisationApiTest {
     }
     
     /**
-     * Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+     * Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
      *
      * 
      *

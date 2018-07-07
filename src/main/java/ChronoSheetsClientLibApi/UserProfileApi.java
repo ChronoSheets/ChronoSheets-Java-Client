@@ -61,7 +61,7 @@ public class UserProfileApi {
 
     /**
      * Build call for userProfileDoLogin
-     * @param request  (required)
+     * @param request A request object containing your username/email and password. (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -123,9 +123,9 @@ public class UserProfileApi {
     }
 
     /**
+     * Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
      * 
-     * 
-     * @param request  (required)
+     * @param request A request object containing your username/email and password. (required)
      * @return CSApiResponseDoLoginResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -135,9 +135,9 @@ public class UserProfileApi {
     }
 
     /**
+     * Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
      * 
-     * 
-     * @param request  (required)
+     * @param request A request object containing your username/email and password. (required)
      * @return ApiResponse&lt;CSApiResponseDoLoginResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -148,9 +148,9 @@ public class UserProfileApi {
     }
 
     /**
-     *  (asynchronously)
+     * Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request A request object containing your username/email and password. (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -247,7 +247,7 @@ public class UserProfileApi {
     }
 
     /**
-     * 
+     * Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
@@ -259,7 +259,7 @@ public class UserProfileApi {
     }
 
     /**
-     * 
+     * Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
@@ -272,7 +272,7 @@ public class UserProfileApi {
     }
 
     /**
-     *  (asynchronously)
+     * Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -371,7 +371,7 @@ public class UserProfileApi {
     }
 
     /**
-     * 
+     * Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseUserProfile
@@ -383,7 +383,7 @@ public class UserProfileApi {
     }
 
     /**
-     * 
+     * Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseUserProfile&gt;
@@ -396,7 +396,7 @@ public class UserProfileApi {
     }
 
     /**
-     *  (asynchronously)
+     * Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -495,7 +495,7 @@ public class UserProfileApi {
     }
 
     /**
-     * 
+     * Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
@@ -507,7 +507,7 @@ public class UserProfileApi {
     }
 
     /**
-     * 
+     * Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
@@ -520,7 +520,7 @@ public class UserProfileApi {
     }
 
     /**
-     *  (asynchronously)
+     * Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -555,7 +555,7 @@ public class UserProfileApi {
     }
     /**
      * Build call for userProfileUpdateMyProfile
-     * @param request  (required)
+     * @param request An Update MyProfile Request object containing updated fields. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -625,9 +625,9 @@ public class UserProfileApi {
     }
 
     /**
+     * Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
      * 
-     * 
-     * @param request  (required)
+     * @param request An Update MyProfile Request object containing updated fields. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseUpdateProfileResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -638,9 +638,9 @@ public class UserProfileApi {
     }
 
     /**
+     * Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
      * 
-     * 
-     * @param request  (required)
+     * @param request An Update MyProfile Request object containing updated fields. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseUpdateProfileResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -652,9 +652,9 @@ public class UserProfileApi {
     }
 
     /**
-     *  (asynchronously)
+     * Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Update MyProfile Request object containing updated fields. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

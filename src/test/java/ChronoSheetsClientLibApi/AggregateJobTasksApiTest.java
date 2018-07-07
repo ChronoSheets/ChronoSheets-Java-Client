@@ -33,7 +33,7 @@ public class AggregateJobTasksApiTest {
 
     
     /**
-     * Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
+     * Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      *
      * 
      *

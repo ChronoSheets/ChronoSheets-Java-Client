@@ -4,18 +4,18 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**jobCodesCreateJobCode**](JobCodesApi.md#jobCodesCreateJobCode) | **PUT** /api/JobCodes/CreateJobCode | Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
-[**jobCodesDeleteJobCode**](JobCodesApi.md#jobCodesDeleteJobCode) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
-[**jobCodesGetJobCodeById**](JobCodesApi.md#jobCodesGetJobCodeById) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
-[**jobCodesGetJobCodes**](JobCodesApi.md#jobCodesGetJobCodes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
-[**jobCodesUpdateJobCode**](JobCodesApi.md#jobCodesUpdateJobCode) | **POST** /api/JobCodes/UpdateJobCode | Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+[**jobCodesCreateJobCode**](JobCodesApi.md#jobCodesCreateJobCode) | **PUT** /api/JobCodes/CreateJobCode | Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
+[**jobCodesDeleteJobCode**](JobCodesApi.md#jobCodesDeleteJobCode) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
+[**jobCodesGetJobCodeById**](JobCodesApi.md#jobCodesGetJobCodeById) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+[**jobCodesGetJobCodes**](JobCodesApi.md#jobCodesGetJobCodes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+[**jobCodesUpdateJobCode**](JobCodesApi.md#jobCodesUpdateJobCode) | **POST** /api/JobCodes/UpdateJobCode | Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 
 <a name="jobCodesCreateJobCode"></a>
 # **jobCodesCreateJobCode**
 > CSApiResponseInt32 jobCodesCreateJobCode(request, xChronosheetsAuth)
 
-Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 ### Example
 ```java
@@ -60,7 +60,7 @@ No authorization required
 # **jobCodesDeleteJobCode**
 > CSApiResponseBoolean jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth)
 
-Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 ### Example
 ```java
@@ -105,7 +105,7 @@ No authorization required
 # **jobCodesGetJobCodeById**
 > CSApiResponseJobCode jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth)
 
-Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
 
 ### Example
 ```java
@@ -150,7 +150,7 @@ No authorization required
 # **jobCodesGetJobCodes**
 > CSApiResponseListJobCode jobCodesGetJobCodes(xChronosheetsAuth)
 
-Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
 
 ### Example
 ```java
@@ -193,7 +193,7 @@ No authorization required
 # **jobCodesUpdateJobCode**
 > CSApiResponseBoolean jobCodesUpdateJobCode(request, xChronosheetsAuth)
 
-Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 ### Example
 ```java

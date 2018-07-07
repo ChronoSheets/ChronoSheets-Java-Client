@@ -131,7 +131,7 @@ public class FleetApi {
     }
 
     /**
-     * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+     * Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
      * 
      * @param request An Insert Vehicle Request object containing values for the new Vehicle to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -144,7 +144,7 @@ public class FleetApi {
     }
 
     /**
-     * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+     * Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
      * 
      * @param request An Insert Vehicle Request object containing values for the new Vehicle to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -158,7 +158,7 @@ public class FleetApi {
     }
 
     /**
-     * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. (asynchronously)
+     * Create a vehicle.    Requires the &#39;ManageFleet&#39; permission. (asynchronously)
      * 
      * @param request An Insert Vehicle Request object containing values for the new Vehicle to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -266,7 +266,7 @@ public class FleetApi {
     }
 
     /**
-     * Get a particular vehicle
+     * Get a particular vehicle.  Does not require any special permission.
      * 
      * @param vehicleId The ID of the Vehicle you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -279,7 +279,7 @@ public class FleetApi {
     }
 
     /**
-     * Get a particular vehicle
+     * Get a particular vehicle.  Does not require any special permission.
      * 
      * @param vehicleId The ID of the Vehicle you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -293,7 +293,7 @@ public class FleetApi {
     }
 
     /**
-     * Get a particular vehicle (asynchronously)
+     * Get a particular vehicle.  Does not require any special permission. (asynchronously)
      * 
      * @param vehicleId The ID of the Vehicle you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -401,7 +401,7 @@ public class FleetApi {
     }
 
     /**
-     * Get a collection of vehicles that are under your organisation
+     * Get a collection of vehicles that are under your organisation.    Does not require any special permission.
      * 
      * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -414,7 +414,7 @@ public class FleetApi {
     }
 
     /**
-     * Get a collection of vehicles that are under your organisation
+     * Get a collection of vehicles that are under your organisation.    Does not require any special permission.
      * 
      * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -428,7 +428,7 @@ public class FleetApi {
     }
 
     /**
-     * Get a collection of vehicles that are under your organisation (asynchronously)
+     * Get a collection of vehicles that are under your organisation.    Does not require any special permission. (asynchronously)
      * 
      * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -534,7 +534,7 @@ public class FleetApi {
     }
 
     /**
-     * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+     * Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
      * 
      * @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -547,7 +547,7 @@ public class FleetApi {
     }
 
     /**
-     * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+     * Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
      * 
      * @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -561,7 +561,7 @@ public class FleetApi {
     }
 
     /**
-     * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. (asynchronously)
+     * Update a vehicle.    Requires the &#39;ManageFleet&#39; permission. (asynchronously)
      * 
      * @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)

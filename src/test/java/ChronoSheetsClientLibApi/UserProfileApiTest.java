@@ -38,7 +38,7 @@ public class UserProfileApiTest {
 
     
     /**
-     * 
+     * Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
      *
      * 
      *
@@ -54,7 +54,7 @@ public class UserProfileApiTest {
     }
     
     /**
-     * 
+     * Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
      *
      * 
      *
@@ -70,7 +70,7 @@ public class UserProfileApiTest {
     }
     
     /**
-     * 
+     * Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
      *
      * 
      *
@@ -86,7 +86,7 @@ public class UserProfileApiTest {
     }
     
     /**
-     * 
+     * Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
      *
      * 
      *
@@ -102,7 +102,7 @@ public class UserProfileApiTest {
     }
     
     /**
-     * 
+     * Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
      *
      * 
      *

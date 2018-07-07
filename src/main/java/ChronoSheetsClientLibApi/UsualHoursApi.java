@@ -58,7 +58,7 @@ public class UsualHoursApi {
 
     /**
      * Build call for usualHoursGetUsualHours
-     * @param userId  (required)
+     * @param userId The ID of the User for which you want to get UsualHours for (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -130,9 +130,9 @@ public class UsualHoursApi {
     }
 
     /**
-     * Get usual hours (rostered hours) for an employee
+     * Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
-     * @param userId  (required)
+     * @param userId The ID of the User for which you want to get UsualHours for (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListUsualHoursDay
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -143,9 +143,9 @@ public class UsualHoursApi {
     }
 
     /**
-     * Get usual hours (rostered hours) for an employee
+     * Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
-     * @param userId  (required)
+     * @param userId The ID of the User for which you want to get UsualHours for (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListUsualHoursDay&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -157,9 +157,9 @@ public class UsualHoursApi {
     }
 
     /**
-     * Get usual hours (rostered hours) for an employee (asynchronously)
+     * Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions. (asynchronously)
      * 
-     * @param userId  (required)
+     * @param userId The ID of the User for which you want to get UsualHours for (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -193,7 +193,7 @@ public class UsualHoursApi {
     }
     /**
      * Build call for usualHoursSetUsualHours
-     * @param request  (required)
+     * @param request A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -263,9 +263,9 @@ public class UsualHoursApi {
     }
 
     /**
-     * Set usual hours (rostered hours) for an employee
+     * Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
-     * @param request  (required)
+     * @param request A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -276,9 +276,9 @@ public class UsualHoursApi {
     }
 
     /**
-     * Set usual hours (rostered hours) for an employee
+     * Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
-     * @param request  (required)
+     * @param request A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -290,9 +290,9 @@ public class UsualHoursApi {
     }
 
     /**
-     * Set usual hours (rostered hours) for an employee (asynchronously)
+     * Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

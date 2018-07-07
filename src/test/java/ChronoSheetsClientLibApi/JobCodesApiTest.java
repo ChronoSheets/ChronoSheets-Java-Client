@@ -38,7 +38,7 @@ public class JobCodesApiTest {
 
     
     /**
-     * Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+     * Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
      *
      * 
      *
@@ -55,7 +55,7 @@ public class JobCodesApiTest {
     }
     
     /**
-     * Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+     * Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
      *
      * 
      *
@@ -72,7 +72,7 @@ public class JobCodesApiTest {
     }
     
     /**
-     * Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+     * Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
      *
      * 
      *
@@ -89,7 +89,7 @@ public class JobCodesApiTest {
     }
     
     /**
-     * Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+     * Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
      *
      * 
      *
@@ -105,7 +105,7 @@ public class JobCodesApiTest {
     }
     
     /**
-     * Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+     * Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
      *
      * 
      *

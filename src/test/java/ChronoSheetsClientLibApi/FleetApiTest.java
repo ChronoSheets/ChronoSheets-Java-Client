@@ -38,7 +38,7 @@ public class FleetApiTest {
 
     
     /**
-     * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+     * Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
      *
      * 
      *
@@ -55,7 +55,7 @@ public class FleetApiTest {
     }
     
     /**
-     * Get a particular vehicle
+     * Get a particular vehicle.  Does not require any special permission.
      *
      * 
      *
@@ -72,7 +72,7 @@ public class FleetApiTest {
     }
     
     /**
-     * Get a collection of vehicles that are under your organisation
+     * Get a collection of vehicles that are under your organisation.    Does not require any special permission.
      *
      * 
      *
@@ -89,7 +89,7 @@ public class FleetApiTest {
     }
     
     /**
-     * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+     * Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
      *
      * 
      *

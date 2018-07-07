@@ -59,7 +59,7 @@ public class UserJobFavouritesApi {
 
     /**
      * Build call for userJobFavouritesCreateJobFavourite
-     * @param request  (required)
+     * @param request An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -129,9 +129,9 @@ public class UserJobFavouritesApi {
     }
 
     /**
-     * Create a job favourite
+     * Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -142,9 +142,9 @@ public class UserJobFavouritesApi {
     }
 
     /**
-     * Create a job favourite
+     * Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -156,9 +156,9 @@ public class UserJobFavouritesApi {
     }
 
     /**
-     * Create a job favourite (asynchronously)
+     * Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -192,7 +192,7 @@ public class UserJobFavouritesApi {
     }
     /**
      * Build call for userJobFavouritesDeleteJobFavourite
-     * @param jobId The ID of the Job (required)
+     * @param jobId The ID of the Job for the Job Favourite you want to delete. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -264,9 +264,9 @@ public class UserJobFavouritesApi {
     }
 
     /**
-     * Delete a job favourite
+     * Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param jobId The ID of the Job (required)
+     * @param jobId The ID of the Job for the Job Favourite you want to delete. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -277,9 +277,9 @@ public class UserJobFavouritesApi {
     }
 
     /**
-     * Delete a job favourite
+     * Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param jobId The ID of the Job (required)
+     * @param jobId The ID of the Job for the Job Favourite you want to delete. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -291,9 +291,9 @@ public class UserJobFavouritesApi {
     }
 
     /**
-     * Delete a job favourite (asynchronously)
+     * Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. (asynchronously)
      * 
-     * @param jobId The ID of the Job (required)
+     * @param jobId The ID of the Job for the Job Favourite you want to delete. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -391,7 +391,7 @@ public class UserJobFavouritesApi {
     }
 
     /**
-     * Get your job favourites
+     * Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListUserJobFavourite
@@ -403,7 +403,7 @@ public class UserJobFavouritesApi {
     }
 
     /**
-     * Get your job favourites
+     * Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListUserJobFavourite&gt;
@@ -416,7 +416,7 @@ public class UserJobFavouritesApi {
     }
 
     /**
-     * Get your job favourites (asynchronously)
+     * Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes

@@ -35,7 +35,7 @@ public class UserPayRatesApiTest {
 
     
     /**
-     * Create a new pay rate for a particular user, archiving the previous pay rate
+     * Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
      *
      * 
      *
@@ -52,7 +52,7 @@ public class UserPayRatesApiTest {
     }
     
     /**
-     * Get a collection of pay rates for a particular user, specified by user id
+     * Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
      *
      * 
      *

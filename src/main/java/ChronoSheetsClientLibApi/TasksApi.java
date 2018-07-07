@@ -61,7 +61,7 @@ public class TasksApi {
 
     /**
      * Build call for tasksCreateTask
-     * @param request  (required)
+     * @param request An Insert Task Request object containing values for the new Task to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -131,9 +131,9 @@ public class TasksApi {
     }
 
     /**
-     * Create a task
+     * Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert Task Request object containing values for the new Task to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -144,9 +144,9 @@ public class TasksApi {
     }
 
     /**
-     * Create a task
+     * Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert Task Request object containing values for the new Task to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -158,9 +158,9 @@ public class TasksApi {
     }
 
     /**
-     * Create a task (asynchronously)
+     * Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Insert Task Request object containing values for the new Task to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -194,7 +194,7 @@ public class TasksApi {
     }
     /**
      * Build call for tasksDeleteTask
-     * @param taskId  (required)
+     * @param taskId The ID of the Task you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -266,9 +266,9 @@ public class TasksApi {
     }
 
     /**
-     * Delete a task
+     * Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param taskId  (required)
+     * @param taskId The ID of the Task you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -279,9 +279,9 @@ public class TasksApi {
     }
 
     /**
-     * Delete a task
+     * Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param taskId  (required)
+     * @param taskId The ID of the Task you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -293,9 +293,9 @@ public class TasksApi {
     }
 
     /**
-     * Delete a task (asynchronously)
+     * Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission. (asynchronously)
      * 
-     * @param taskId  (required)
+     * @param taskId The ID of the Task you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -329,7 +329,7 @@ public class TasksApi {
     }
     /**
      * Build call for tasksGetTaskById
-     * @param taskId  (required)
+     * @param taskId The ID of the TimesheetTask you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -401,9 +401,9 @@ public class TasksApi {
     }
 
     /**
-     * Get a particular task by id
+     * Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
-     * @param taskId  (required)
+     * @param taskId The ID of the TimesheetTask you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseTimesheetTask
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -414,9 +414,9 @@ public class TasksApi {
     }
 
     /**
-     * Get a particular task by id
+     * Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
-     * @param taskId  (required)
+     * @param taskId The ID of the TimesheetTask you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseTimesheetTask&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -428,9 +428,9 @@ public class TasksApi {
     }
 
     /**
-     * Get a particular task by id (asynchronously)
+     * Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
-     * @param taskId  (required)
+     * @param taskId The ID of the TimesheetTask you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -528,7 +528,7 @@ public class TasksApi {
     }
 
     /**
-     * Get tasks in your organisation
+     * Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListTimesheetTask
@@ -540,7 +540,7 @@ public class TasksApi {
     }
 
     /**
-     * Get tasks in your organisation
+     * Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListTimesheetTask&gt;
@@ -553,7 +553,7 @@ public class TasksApi {
     }
 
     /**
-     * Get tasks in your organisation (asynchronously)
+     * Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -660,7 +660,7 @@ public class TasksApi {
     }
 
     /**
-     * Get tasks for a particular job
+     * Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param jobId The ID of the job (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -673,7 +673,7 @@ public class TasksApi {
     }
 
     /**
-     * Get tasks for a particular job
+     * Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param jobId The ID of the job (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -687,7 +687,7 @@ public class TasksApi {
     }
 
     /**
-     * Get tasks for a particular job (asynchronously)
+     * Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
      * @param jobId The ID of the job (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -723,7 +723,7 @@ public class TasksApi {
     }
     /**
      * Build call for tasksUpdateTask
-     * @param request  (required)
+     * @param request An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -793,9 +793,9 @@ public class TasksApi {
     }
 
     /**
-     * Update a task
+     * Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -806,9 +806,9 @@ public class TasksApi {
     }
 
     /**
-     * Update a task
+     * Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -820,9 +820,9 @@ public class TasksApi {
     }
 
     /**
-     * Update a task (asynchronously)
+     * Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

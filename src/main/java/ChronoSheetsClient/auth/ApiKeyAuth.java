@@ -18,7 +18,7 @@ import ChronoSheetsClient.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T22:42:00.485+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T14:17:00.368+10:00")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

@@ -60,7 +60,7 @@ public class TripsApi {
 
     /**
      * Build call for tripsCreateTrip
-     * @param request The create trip request (required)
+     * @param request A Create Trip Request object containing values for the new Trip to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -130,9 +130,9 @@ public class TripsApi {
     }
 
     /**
-     * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+     * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request The create trip request (required)
+     * @param request A Create Trip Request object containing values for the new Trip to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -143,9 +143,9 @@ public class TripsApi {
     }
 
     /**
-     * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+     * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request The create trip request (required)
+     * @param request A Create Trip Request object containing values for the new Trip to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -157,9 +157,9 @@ public class TripsApi {
     }
 
     /**
-     * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference. (asynchronously)
+     * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission. (asynchronously)
      * 
-     * @param request The create trip request (required)
+     * @param request A Create Trip Request object containing values for the new Trip to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -193,7 +193,7 @@ public class TripsApi {
     }
     /**
      * Build call for tripsGetMyTripById
-     * @param tripId The ID of the trip (required)
+     * @param tripId The ID of the Trip you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -265,9 +265,9 @@ public class TripsApi {
     }
 
     /**
-     * Get trip by Id
+     * Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
      * 
-     * @param tripId The ID of the trip (required)
+     * @param tripId The ID of the Trip you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -278,9 +278,9 @@ public class TripsApi {
     }
 
     /**
-     * Get trip by Id
+     * Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
      * 
-     * @param tripId The ID of the trip (required)
+     * @param tripId The ID of the Trip you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -292,9 +292,9 @@ public class TripsApi {
     }
 
     /**
-     * Get trip by Id (asynchronously)
+     * Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission. (asynchronously)
      * 
-     * @param tripId The ID of the trip (required)
+     * @param tripId The ID of the Trip you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -328,11 +328,11 @@ public class TripsApi {
     }
     /**
      * Build call for tripsGetMyTrips
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param vehicleId  (required)
+     * @param startDate The Start date of the date range.  Trips after this date will be obtained. (required)
+     * @param endDate The End date of the date range.  Trips before this date will be obtained. (required)
+     * @param skip Skip this many Trips (required)
+     * @param take Take this many Trips (required)
+     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -432,13 +432,13 @@ public class TripsApi {
     }
 
     /**
-     * Get my trips
+     * Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param vehicleId  (required)
+     * @param startDate The Start date of the date range.  Trips after this date will be obtained. (required)
+     * @param endDate The End date of the date range.  Trips before this date will be obtained. (required)
+     * @param skip Skip this many Trips (required)
+     * @param take Take this many Trips (required)
+     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseForPaginatedListTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -449,13 +449,13 @@ public class TripsApi {
     }
 
     /**
-     * Get my trips
+     * Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param vehicleId  (required)
+     * @param startDate The Start date of the date range.  Trips after this date will be obtained. (required)
+     * @param endDate The End date of the date range.  Trips before this date will be obtained. (required)
+     * @param skip Skip this many Trips (required)
+     * @param take Take this many Trips (required)
+     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -467,13 +467,13 @@ public class TripsApi {
     }
 
     /**
-     * Get my trips (asynchronously)
+     * Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission. (asynchronously)
      * 
-     * @param startDate  (required)
-     * @param endDate  (required)
-     * @param skip  (required)
-     * @param take  (required)
-     * @param vehicleId  (required)
+     * @param startDate The Start date of the date range.  Trips after this date will be obtained. (required)
+     * @param endDate The End date of the date range.  Trips before this date will be obtained. (required)
+     * @param skip Skip this many Trips (required)
+     * @param take Take this many Trips (required)
+     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

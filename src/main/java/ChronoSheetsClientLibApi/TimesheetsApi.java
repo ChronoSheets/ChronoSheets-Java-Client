@@ -62,7 +62,7 @@ public class TimesheetsApi {
 
     /**
      * Build call for timesheetsCreateSingleTimesheet
-     * @param request The timesheet request object (required)
+     * @param request A Timesheet Request object containing values for the new Timesheet to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -132,9 +132,9 @@ public class TimesheetsApi {
     }
 
     /**
-     * Inserts a single timesheet record
+     * Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request The timesheet request object (required)
+     * @param request A Timesheet Request object containing values for the new Timesheet to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -145,9 +145,9 @@ public class TimesheetsApi {
     }
 
     /**
-     * Inserts a single timesheet record
+     * Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request The timesheet request object (required)
+     * @param request A Timesheet Request object containing values for the new Timesheet to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -159,9 +159,9 @@ public class TimesheetsApi {
     }
 
     /**
-     * Inserts a single timesheet record (asynchronously)
+     * Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission. (asynchronously)
      * 
-     * @param request The timesheet request object (required)
+     * @param request A Timesheet Request object containing values for the new Timesheet to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -195,7 +195,7 @@ public class TimesheetsApi {
     }
     /**
      * Build call for timesheetsDeleteTimesheet
-     * @param timesheetId The ID of the timesheet to delete (required)
+     * @param timesheetId The ID of the Timesheet you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -267,9 +267,9 @@ public class TimesheetsApi {
     }
 
     /**
-     * Delete a timesheet
+     * Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param timesheetId The ID of the timesheet to delete (required)
+     * @param timesheetId The ID of the Timesheet you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseBoolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -280,9 +280,9 @@ public class TimesheetsApi {
     }
 
     /**
-     * Delete a timesheet
+     * Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param timesheetId The ID of the timesheet to delete (required)
+     * @param timesheetId The ID of the Timesheet you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseBoolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -294,9 +294,9 @@ public class TimesheetsApi {
     }
 
     /**
-     * Delete a timesheet (asynchronously)
+     * Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission. (asynchronously)
      * 
-     * @param timesheetId The ID of the timesheet to delete (required)
+     * @param timesheetId The ID of the Timesheet you want to delete (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -410,7 +410,7 @@ public class TimesheetsApi {
     }
 
     /**
-     * Get timesheets between start and end dates
+     * Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
      * @param startDate The start date of the date range (required)
      * @param endDate The end date of the date range (required)
@@ -424,7 +424,7 @@ public class TimesheetsApi {
     }
 
     /**
-     * Get timesheets between start and end dates
+     * Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
      * @param startDate The start date of the date range (required)
      * @param endDate The end date of the date range (required)
@@ -439,7 +439,7 @@ public class TimesheetsApi {
     }
 
     /**
-     * Get timesheets between start and end dates (asynchronously)
+     * Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission. (asynchronously)
      * 
      * @param startDate The start date of the date range (required)
      * @param endDate The end date of the date range (required)
@@ -476,7 +476,7 @@ public class TimesheetsApi {
     }
     /**
      * Build call for timesheetsUpdateTimesheets
-     * @param request The batch update timesheets request (required)
+     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -546,9 +546,9 @@ public class TimesheetsApi {
     }
 
     /**
-     * Batch update timesheets
+     * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request The batch update timesheets request (required)
+     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -559,9 +559,9 @@ public class TimesheetsApi {
     }
 
     /**
-     * Batch update timesheets
+     * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request The batch update timesheets request (required)
+     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -573,9 +573,9 @@ public class TimesheetsApi {
     }
 
     /**
-     * Batch update timesheets (asynchronously)
+     * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. (asynchronously)
      * 
-     * @param request The batch update timesheets request (required)
+     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

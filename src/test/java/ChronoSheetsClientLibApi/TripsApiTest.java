@@ -37,7 +37,7 @@ public class TripsApiTest {
 
     
     /**
-     * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+     * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
      *
      * 
      *
@@ -54,7 +54,7 @@ public class TripsApiTest {
     }
     
     /**
-     * Get trip by Id
+     * Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
      *
      * 
      *
@@ -71,7 +71,7 @@ public class TripsApiTest {
     }
     
     /**
-     * Get my trips
+     * Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
      *
      * 
      *

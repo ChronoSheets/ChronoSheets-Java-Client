@@ -131,7 +131,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+     * Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
      * @param request An Insert Project Request object containing values for the new Project to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -144,7 +144,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+     * Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
      * @param request An Insert Project Request object containing values for the new Project to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -158,7 +158,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
+     * Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
      * 
      * @param request An Insert Project Request object containing values for the new Project to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -266,7 +266,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+     * Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param projectId The ID of the Project you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -279,7 +279,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+     * Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param projectId The ID of the Project you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -293,7 +293,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
+     * Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
      * @param projectId The ID of the Project you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -401,7 +401,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+     * Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param clientId The ID of the client (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -414,7 +414,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+     * Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
      * 
      * @param clientId The ID of the client (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -428,7 +428,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
+     * Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. (asynchronously)
      * 
      * @param clientId The ID of the client (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -534,7 +534,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+     * Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
      * @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -547,7 +547,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+     * Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
      * @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -561,7 +561,7 @@ public class ProjectsApi {
     }
 
     /**
-     * Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
+     * Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
      * 
      * @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)

@@ -35,7 +35,7 @@ public class UsualHoursApiTest {
 
     
     /**
-     * Get usual hours (rostered hours) for an employee
+     * Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      *
      * 
      *
@@ -52,7 +52,7 @@ public class UsualHoursApiTest {
     }
     
     /**
-     * Set usual hours (rostered hours) for an employee
+     * Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      *
      * 
      *

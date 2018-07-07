@@ -38,7 +38,7 @@ public class TasksApiTest {
 
     
     /**
-     * Create a task
+     * Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
      *
      * 
      *
@@ -55,7 +55,7 @@ public class TasksApiTest {
     }
     
     /**
-     * Delete a task
+     * Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
      *
      * 
      *
@@ -72,7 +72,7 @@ public class TasksApiTest {
     }
     
     /**
-     * Get a particular task by id
+     * Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      *
      * 
      *
@@ -89,7 +89,7 @@ public class TasksApiTest {
     }
     
     /**
-     * Get tasks in your organisation
+     * Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      *
      * 
      *
@@ -105,7 +105,7 @@ public class TasksApiTest {
     }
     
     /**
-     * Get tasks for a particular job
+     * Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
      *
      * 
      *
@@ -122,7 +122,7 @@ public class TasksApiTest {
     }
     
     /**
-     * Update a task
+     * Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
      *
      * 
      *

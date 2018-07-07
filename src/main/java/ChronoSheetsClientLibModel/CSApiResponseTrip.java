@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CSApiResponseTrip
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-05T22:42:00.485+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T14:17:00.368+10:00")
 public class CSApiResponseTrip {
   @SerializedName("Data")
   private CSTrip data = null;

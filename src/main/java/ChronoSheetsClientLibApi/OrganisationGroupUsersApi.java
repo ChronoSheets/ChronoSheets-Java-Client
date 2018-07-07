@@ -130,7 +130,7 @@ public class OrganisationGroupUsersApi {
     }
 
     /**
-     * Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+     * Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
      * @param orgGroupId An OrganisatioGroup Id (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -143,7 +143,7 @@ public class OrganisationGroupUsersApi {
     }
 
     /**
-     * Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+     * Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
      * 
      * @param orgGroupId An OrganisatioGroup Id (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -157,7 +157,7 @@ public class OrganisationGroupUsersApi {
     }
 
     /**
-     * Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. (asynchronously)
+     * Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. (asynchronously)
      * 
      * @param orgGroupId An OrganisatioGroup Id (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -263,7 +263,7 @@ public class OrganisationGroupUsersApi {
     }
 
     /**
-     * Set the users who belong to an organisation group
+     * Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
      * 
      * @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -276,7 +276,7 @@ public class OrganisationGroupUsersApi {
     }
 
     /**
-     * Set the users who belong to an organisation group
+     * Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
      * 
      * @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -290,7 +290,7 @@ public class OrganisationGroupUsersApi {
     }
 
     /**
-     * Set the users who belong to an organisation group (asynchronously)
+     * Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. (asynchronously)
      * 
      * @param request A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)

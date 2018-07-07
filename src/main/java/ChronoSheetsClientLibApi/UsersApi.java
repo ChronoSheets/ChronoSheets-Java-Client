@@ -61,7 +61,7 @@ public class UsersApi {
 
     /**
      * Build call for usersCreateTimesheetUser
-     * @param request  (required)
+     * @param request An Insert User Request object containing values for the new User to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -131,9 +131,9 @@ public class UsersApi {
     }
 
     /**
-     * Create a user in your organisation
+     * Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert User Request object containing values for the new User to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInsertUserResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -144,9 +144,9 @@ public class UsersApi {
     }
 
     /**
-     * Create a user in your organisation
+     * Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert User Request object containing values for the new User to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInsertUserResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -158,9 +158,9 @@ public class UsersApi {
     }
 
     /**
-     * Create a user in your organisation (asynchronously)
+     * Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Insert User Request object containing values for the new User to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -194,7 +194,7 @@ public class UsersApi {
     }
     /**
      * Build call for usersGetTimesheetUser
-     * @param userId  (required)
+     * @param userId The User ID of the UserForManagement you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -266,9 +266,9 @@ public class UsersApi {
     }
 
     /**
-     * Get a particular user in your organisation
+     * Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
      * 
-     * @param userId  (required)
+     * @param userId The User ID of the UserForManagement you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseUserForManagement
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -279,9 +279,9 @@ public class UsersApi {
     }
 
     /**
-     * Get a particular user in your organisation
+     * Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
      * 
-     * @param userId  (required)
+     * @param userId The User ID of the UserForManagement you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseUserForManagement&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -293,9 +293,9 @@ public class UsersApi {
     }
 
     /**
-     * Get a particular user in your organisation (asynchronously)
+     * Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. (asynchronously)
      * 
-     * @param userId  (required)
+     * @param userId The User ID of the UserForManagement you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -393,7 +393,7 @@ public class UsersApi {
     }
 
     /**
-     * Get users for your organisation
+     * Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListUserForManagement
@@ -405,7 +405,7 @@ public class UsersApi {
     }
 
     /**
-     * Get users for your organisation
+     * Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListUserForManagement&gt;
@@ -418,7 +418,7 @@ public class UsersApi {
     }
 
     /**
-     * Get users for your organisation (asynchronously)
+     * Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. (asynchronously)
      * 
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
@@ -453,7 +453,7 @@ public class UsersApi {
     }
     /**
      * Build call for usersUpdateTimesheetUser
-     * @param request  (required)
+     * @param request A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -523,9 +523,9 @@ public class UsersApi {
     }
 
     /**
-     * Update a user
+     * Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
      * 
-     * @param request  (required)
+     * @param request A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseUpdateUserResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -536,9 +536,9 @@ public class UsersApi {
     }
 
     /**
-     * Update a user
+     * Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
      * 
-     * @param request  (required)
+     * @param request A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseUpdateUserResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -550,9 +550,9 @@ public class UsersApi {
     }
 
     /**
-     * Update a user (asynchronously)
+     * Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

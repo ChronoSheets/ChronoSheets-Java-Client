@@ -36,7 +36,7 @@ public class UserJobFavouritesApiTest {
 
     
     /**
-     * Create a job favourite
+     * Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
      *
      * 
      *
@@ -53,7 +53,7 @@ public class UserJobFavouritesApiTest {
     }
     
     /**
-     * Delete a job favourite
+     * Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
      *
      * 
      *
@@ -70,7 +70,7 @@ public class UserJobFavouritesApiTest {
     }
     
     /**
-     * Get your job favourites
+     * Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
      *
      * 
      *

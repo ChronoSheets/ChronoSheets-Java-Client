@@ -4,17 +4,17 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fleetCreateVehicle**](FleetApi.md#fleetCreateVehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
-[**fleetGetVehicleById**](FleetApi.md#fleetGetVehicleById) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle
-[**fleetGetVehicles**](FleetApi.md#fleetGetVehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation
-[**fleetUpdateVehicle**](FleetApi.md#fleetUpdateVehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+[**fleetCreateVehicle**](FleetApi.md#fleetCreateVehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
+[**fleetGetVehicleById**](FleetApi.md#fleetGetVehicleById) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
+[**fleetGetVehicles**](FleetApi.md#fleetGetVehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
+[**fleetUpdateVehicle**](FleetApi.md#fleetUpdateVehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 
 <a name="fleetCreateVehicle"></a>
 # **fleetCreateVehicle**
 > CSApiResponseInt32 fleetCreateVehicle(request, xChronosheetsAuth)
 
-Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 ### Example
 ```java
@@ -59,7 +59,7 @@ No authorization required
 # **fleetGetVehicleById**
 > CSApiResponseFleetVehicle fleetGetVehicleById(vehicleId, xChronosheetsAuth)
 
-Get a particular vehicle
+Get a particular vehicle.  Does not require any special permission.
 
 ### Example
 ```java
@@ -104,7 +104,7 @@ No authorization required
 # **fleetGetVehicles**
 > CSApiResponseListFleetVehicle fleetGetVehicles(includeDeleted, xChronosheetsAuth)
 
-Get a collection of vehicles that are under your organisation
+Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 
 ### Example
 ```java
@@ -149,7 +149,7 @@ No authorization required
 # **fleetUpdateVehicle**
 > CSApiResponseBoolean fleetUpdateVehicle(request, xChronosheetsAuth)
 
-Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 ### Example
 ```java

@@ -58,7 +58,7 @@ public class UserPayRatesApi {
 
     /**
      * Build call for userPayRatesCreatePayRate
-     * @param request  (required)
+     * @param request An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -128,9 +128,9 @@ public class UserPayRatesApi {
     }
 
     /**
-     * Create a new pay rate for a particular user, archiving the previous pay rate
+     * Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -141,9 +141,9 @@ public class UserPayRatesApi {
     }
 
     /**
-     * Create a new pay rate for a particular user, archiving the previous pay rate
+     * Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
      * 
-     * @param request  (required)
+     * @param request An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -155,9 +155,9 @@ public class UserPayRatesApi {
     }
 
     /**
-     * Create a new pay rate for a particular user, archiving the previous pay rate (asynchronously)
+     * Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission. (asynchronously)
      * 
-     * @param request  (required)
+     * @param request An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -191,7 +191,7 @@ public class UserPayRatesApi {
     }
     /**
      * Build call for userPayRatesGetPayRates
-     * @param userId  (required)
+     * @param userId The ID of the User for which you want to get UserHourlyRate objects (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -263,9 +263,9 @@ public class UserPayRatesApi {
     }
 
     /**
-     * Get a collection of pay rates for a particular user, specified by user id
+     * Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
      * 
-     * @param userId  (required)
+     * @param userId The ID of the User for which you want to get UserHourlyRate objects (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListUserHourlyRate
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -276,9 +276,9 @@ public class UserPayRatesApi {
     }
 
     /**
-     * Get a collection of pay rates for a particular user, specified by user id
+     * Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
      * 
-     * @param userId  (required)
+     * @param userId The ID of the User for which you want to get UserHourlyRate objects (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListUserHourlyRate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -290,9 +290,9 @@ public class UserPayRatesApi {
     }
 
     /**
-     * Get a collection of pay rates for a particular user, specified by user id (asynchronously)
+     * Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission. (asynchronously)
      * 
-     * @param userId  (required)
+     * @param userId The ID of the User for which you want to get UserHourlyRate objects (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

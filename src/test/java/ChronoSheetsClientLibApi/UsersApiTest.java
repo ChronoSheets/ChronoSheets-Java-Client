@@ -38,7 +38,7 @@ public class UsersApiTest {
 
     
     /**
-     * Create a user in your organisation
+     * Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
      *
      * 
      *
@@ -55,7 +55,7 @@ public class UsersApiTest {
     }
     
     /**
-     * Get a particular user in your organisation
+     * Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
      *
      * 
      *
@@ -72,7 +72,7 @@ public class UsersApiTest {
     }
     
     /**
-     * Get users for your organisation
+     * Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
      *
      * 
      *
@@ -88,7 +88,7 @@ public class UsersApiTest {
     }
     
     /**
-     * Update a user
+     * Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
      *
      * 
      *

@@ -39,7 +39,7 @@ public class TimesheetsApiTest {
 
     
     /**
-     * Inserts a single timesheet record
+     * Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
      *
      * 
      *
@@ -56,7 +56,7 @@ public class TimesheetsApiTest {
     }
     
     /**
-     * Delete a timesheet
+     * Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
      *
      * 
      *
@@ -73,7 +73,7 @@ public class TimesheetsApiTest {
     }
     
     /**
-     * Get timesheets between start and end dates
+     * Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
      *
      * 
      *
@@ -91,7 +91,7 @@ public class TimesheetsApiTest {
     }
     
     /**
-     * Batch update timesheets
+     * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
      *
      * 
      *
