@@ -1,5 +1,5 @@
 /*
- * The ChronoSheets API
+ * ChronoSheets API
  * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fields for inserting a new set of Pay Rates for a user.  Archiving of the previous Pay Rate is done for you automatically
  */
 @ApiModel(description = "Fields for inserting a new set of Pay Rates for a user.  Archiving of the previous Pay Rate is done for you automatically")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T19:20:40.221+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T19:28:27.850+10:00")
 public class CSInsertUserHourlyRateRequest {
   @SerializedName("UserId")
   private Integer userId = null;
