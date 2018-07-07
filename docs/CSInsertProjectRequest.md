@@ -4,11 +4,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**clientId** | **Integer** |  |  [optional]
-**projectName** | **String** |  |  [optional]
-**costEstimation** | **Double** |  |  [optional]
-**startDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**endDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**clientId** | **Integer** | The Id of the Client that is associated with the new project |  [optional]
+**projectName** | **String** | The name of the new Project |  [optional]
+**costEstimation** | **Double** | The estimated cost of work to complete the project.  This value is used in the Organisation Reports view &#39;Project Costs&#39; |  [optional]
+**startDate** | [**OffsetDateTime**](OffsetDateTime.md) | The start date of the project.  When the project is due to start |  [optional]
+**endDate** | [**OffsetDateTime**](OffsetDateTime.md) | The end date of the project.  When the project is due to end |  [optional]
 
 
 

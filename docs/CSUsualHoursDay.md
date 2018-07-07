@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dayType** | [**DayTypeEnum**](#DayTypeEnum) |  |  [optional]
-**timeSlots** | [**List&lt;CSTimeSlot&gt;**](CSTimeSlot.md) |  |  [optional]
-**deleteUsualHours** | **List&lt;Integer&gt;** |  |  [optional]
+**dayType** | [**DayTypeEnum**](#DayTypeEnum) | Specify which day this collection of Roster timeslots is for (Monday-Sunday) |  [optional]
+**timeSlots** | [**List&lt;CSTimeSlot&gt;**](CSTimeSlot.md) | A collection of TimeSlots within this day |  [optional]
+**deleteUsualHours** | **List&lt;Integer&gt;** | Mark here which existing UsualHours are to be deleted |  [optional]
 
 
 <a name="DayTypeEnum"></a>
