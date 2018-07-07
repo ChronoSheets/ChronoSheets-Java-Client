@@ -30,7 +30,7 @@ import java.util.List;
  * An object that can be used to set the Usual Hours (Rostered Hours) of an employee user account
  */
 @ApiModel(description = "An object that can be used to set the Usual Hours (Rostered Hours) of an employee user account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T18:53:03.376+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T19:20:40.221+10:00")
 public class CSSetUsualHoursRequest {
   @SerializedName("UsualHoursData")
   private List<CSUsualHoursDay> usualHoursData = null;

@@ -29,7 +29,7 @@ import java.util.List;
  * Fields for saving an existing Vehicle
  */
 @ApiModel(description = "Fields for saving an existing Vehicle")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T18:53:03.376+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T19:20:40.221+10:00")
 public class CSSaveVehicleRequest {
   @SerializedName("Id")
   private Integer id = null;

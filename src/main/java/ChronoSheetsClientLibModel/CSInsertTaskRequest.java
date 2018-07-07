@@ -27,7 +27,7 @@ import java.io.IOException;
  * Fields for inserting a new Task
  */
 @ApiModel(description = "Fields for inserting a new Task")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T18:53:03.376+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T19:20:40.221+10:00")
 public class CSInsertTaskRequest {
   @SerializedName("TaskName")
   private String taskName = null;
