@@ -27,7 +27,7 @@ import java.io.IOException;
  * Fields used to save a Client
  */
 @ApiModel(description = "Fields used to save a Client")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-07T19:28:27.850+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-12T20:58:58.273+10:00")
 public class CSSaveClientRequest {
   @SerializedName("Id")
   private Integer id = null;
