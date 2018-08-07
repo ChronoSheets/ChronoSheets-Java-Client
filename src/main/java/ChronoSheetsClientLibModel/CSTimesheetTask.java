@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CSTimesheetTask
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-12T20:58:58.273+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T01:15:39.652+10:00")
 public class CSTimesheetTask {
   @SerializedName("Id")
   private Integer id = null;

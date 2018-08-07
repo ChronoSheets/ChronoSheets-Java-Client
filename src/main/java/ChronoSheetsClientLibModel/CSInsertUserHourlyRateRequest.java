@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fields for inserting a new set of Pay Rates for a user.  Archiving of the previous Pay Rate is done for you automatically
  */
 @ApiModel(description = "Fields for inserting a new set of Pay Rates for a user.  Archiving of the previous Pay Rate is done for you automatically")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-12T20:58:58.273+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T01:15:39.652+10:00")
 public class CSInsertUserHourlyRateRequest {
   @SerializedName("UserId")
   private Integer userId = null;

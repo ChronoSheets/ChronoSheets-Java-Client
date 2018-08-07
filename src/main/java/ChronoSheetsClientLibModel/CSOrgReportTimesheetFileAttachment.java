@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSOrgReportTimesheetFileAttachment
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-12T20:58:58.273+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T01:15:39.652+10:00")
 public class CSOrgReportTimesheetFileAttachment {
   @SerializedName("Username")
   private String username = null;
@@ -40,12 +40,6 @@ public class CSOrgReportTimesheetFileAttachment {
 
   @SerializedName("LastName")
   private String lastName = null;
-
-  @SerializedName("TimesheetStart")
-  private OffsetDateTime timesheetStart = null;
-
-  @SerializedName("TimesheetEnd")
-  private OffsetDateTime timesheetEnd = null;
 
   @SerializedName("TimesheetId")
   private Integer timesheetId = null;
@@ -61,6 +55,12 @@ public class CSOrgReportTimesheetFileAttachment {
 
   @SerializedName("ImageSmallS3SignedUrl")
   private String imageSmallS3SignedUrl = null;
+
+  @SerializedName("TimesheetStart")
+  private OffsetDateTime timesheetStart = null;
+
+  @SerializedName("TimesheetEnd")
+  private OffsetDateTime timesheetEnd = null;
 
   @SerializedName("FileAttachmentId")
   private Integer fileAttachmentId = null;
@@ -142,7 +142,9 @@ public class CSOrgReportTimesheetFileAttachment {
     
     ZIPFILE("ZipFile"),
     
-    OTHER("Other");
+    OTHER("Other"),
+    
+    AUDIO("Audio");
 
     private String value;
 
@@ -290,42 +292,6 @@ public class CSOrgReportTimesheetFileAttachment {
     this.lastName = lastName;
   }
 
-  public CSOrgReportTimesheetFileAttachment timesheetStart(OffsetDateTime timesheetStart) {
-    this.timesheetStart = timesheetStart;
-    return this;
-  }
-
-   /**
-   * Get timesheetStart
-   * @return timesheetStart
-  **/
-  @ApiModelProperty(value = "")
-  public OffsetDateTime getTimesheetStart() {
-    return timesheetStart;
-  }
-
-  public void setTimesheetStart(OffsetDateTime timesheetStart) {
-    this.timesheetStart = timesheetStart;
-  }
-
-  public CSOrgReportTimesheetFileAttachment timesheetEnd(OffsetDateTime timesheetEnd) {
-    this.timesheetEnd = timesheetEnd;
-    return this;
-  }
-
-   /**
-   * Get timesheetEnd
-   * @return timesheetEnd
-  **/
-  @ApiModelProperty(value = "")
-  public OffsetDateTime getTimesheetEnd() {
-    return timesheetEnd;
-  }
-
-  public void setTimesheetEnd(OffsetDateTime timesheetEnd) {
-    this.timesheetEnd = timesheetEnd;
-  }
-
   public CSOrgReportTimesheetFileAttachment timesheetId(Integer timesheetId) {
     this.timesheetId = timesheetId;
     return this;
@@ -414,6 +380,42 @@ public class CSOrgReportTimesheetFileAttachment {
 
   public void setImageSmallS3SignedUrl(String imageSmallS3SignedUrl) {
     this.imageSmallS3SignedUrl = imageSmallS3SignedUrl;
+  }
+
+  public CSOrgReportTimesheetFileAttachment timesheetStart(OffsetDateTime timesheetStart) {
+    this.timesheetStart = timesheetStart;
+    return this;
+  }
+
+   /**
+   * Get timesheetStart
+   * @return timesheetStart
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getTimesheetStart() {
+    return timesheetStart;
+  }
+
+  public void setTimesheetStart(OffsetDateTime timesheetStart) {
+    this.timesheetStart = timesheetStart;
+  }
+
+  public CSOrgReportTimesheetFileAttachment timesheetEnd(OffsetDateTime timesheetEnd) {
+    this.timesheetEnd = timesheetEnd;
+    return this;
+  }
+
+   /**
+   * Get timesheetEnd
+   * @return timesheetEnd
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getTimesheetEnd() {
+    return timesheetEnd;
+  }
+
+  public void setTimesheetEnd(OffsetDateTime timesheetEnd) {
+    this.timesheetEnd = timesheetEnd;
   }
 
   public CSOrgReportTimesheetFileAttachment fileAttachmentId(Integer fileAttachmentId) {
@@ -718,13 +720,13 @@ public class CSOrgReportTimesheetFileAttachment {
         Objects.equals(this.emailAddress, orgReportTimesheetFileAttachment.emailAddress) &&
         Objects.equals(this.firstName, orgReportTimesheetFileAttachment.firstName) &&
         Objects.equals(this.lastName, orgReportTimesheetFileAttachment.lastName) &&
-        Objects.equals(this.timesheetStart, orgReportTimesheetFileAttachment.timesheetStart) &&
-        Objects.equals(this.timesheetEnd, orgReportTimesheetFileAttachment.timesheetEnd) &&
         Objects.equals(this.timesheetId, orgReportTimesheetFileAttachment.timesheetId) &&
         Objects.equals(this.documentS3SignedUrl, orgReportTimesheetFileAttachment.documentS3SignedUrl) &&
         Objects.equals(this.imageLargeS3SignedUrl, orgReportTimesheetFileAttachment.imageLargeS3SignedUrl) &&
         Objects.equals(this.imageMediumS3SignedUrl, orgReportTimesheetFileAttachment.imageMediumS3SignedUrl) &&
         Objects.equals(this.imageSmallS3SignedUrl, orgReportTimesheetFileAttachment.imageSmallS3SignedUrl) &&
+        Objects.equals(this.timesheetStart, orgReportTimesheetFileAttachment.timesheetStart) &&
+        Objects.equals(this.timesheetEnd, orgReportTimesheetFileAttachment.timesheetEnd) &&
         Objects.equals(this.fileAttachmentId, orgReportTimesheetFileAttachment.fileAttachmentId) &&
         Objects.equals(this.userId, orgReportTimesheetFileAttachment.userId) &&
         Objects.equals(this.orgId, orgReportTimesheetFileAttachment.orgId) &&
@@ -745,7 +747,7 @@ public class CSOrgReportTimesheetFileAttachment {
 
   @Override
   public int hashCode() {
-    return Objects.hash(username, emailAddress, firstName, lastName, timesheetStart, timesheetEnd, timesheetId, documentS3SignedUrl, imageLargeS3SignedUrl, imageMediumS3SignedUrl, imageSmallS3SignedUrl, fileAttachmentId, userId, orgId, mobilePlatform, attachmentType, notes, nonImageFilePath, imageLargeFilePath, imageMediumFilePath, imageSmallFilePath, originalFileName, latitude, longitude, dateUploaded, dateImageCaptured, storageAllocationBytes);
+    return Objects.hash(username, emailAddress, firstName, lastName, timesheetId, documentS3SignedUrl, imageLargeS3SignedUrl, imageMediumS3SignedUrl, imageSmallS3SignedUrl, timesheetStart, timesheetEnd, fileAttachmentId, userId, orgId, mobilePlatform, attachmentType, notes, nonImageFilePath, imageLargeFilePath, imageMediumFilePath, imageSmallFilePath, originalFileName, latitude, longitude, dateUploaded, dateImageCaptured, storageAllocationBytes);
   }
 
 
@@ -758,13 +760,13 @@ public class CSOrgReportTimesheetFileAttachment {
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
-    sb.append("    timesheetStart: ").append(toIndentedString(timesheetStart)).append("\n");
-    sb.append("    timesheetEnd: ").append(toIndentedString(timesheetEnd)).append("\n");
     sb.append("    timesheetId: ").append(toIndentedString(timesheetId)).append("\n");
     sb.append("    documentS3SignedUrl: ").append(toIndentedString(documentS3SignedUrl)).append("\n");
     sb.append("    imageLargeS3SignedUrl: ").append(toIndentedString(imageLargeS3SignedUrl)).append("\n");
     sb.append("    imageMediumS3SignedUrl: ").append(toIndentedString(imageMediumS3SignedUrl)).append("\n");
     sb.append("    imageSmallS3SignedUrl: ").append(toIndentedString(imageSmallS3SignedUrl)).append("\n");
+    sb.append("    timesheetStart: ").append(toIndentedString(timesheetStart)).append("\n");
+    sb.append("    timesheetEnd: ").append(toIndentedString(timesheetEnd)).append("\n");
     sb.append("    fileAttachmentId: ").append(toIndentedString(fileAttachmentId)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");

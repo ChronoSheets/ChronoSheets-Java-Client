@@ -16,8 +16,10 @@ package ChronoSheetsClientLibApi;
 import ChronoSheetsClient.ApiException;
 import ChronoSheetsClientLibModel.CSApiResponseCombinedReportsData;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTranscript;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTrip;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListRawReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseListFleetSummaryReportItem;
 import ChronoSheetsClientLibModel.CSApiResponseListJobSeriesReportItem;
 import ChronoSheetsClientLibModel.CSApiResponseListProjectCostingReportItem;
 import ChronoSheetsClientLibModel.CSApiResponseTrip;
@@ -77,6 +79,25 @@ public class ReportsApiTest {
     }
     
     /**
+     * Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void reportsGetFleetSummaryAdminTest() throws ApiException {
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String userIds = null;
+        String xChronosheetsAuth = null;
+        CSApiResponseListFleetSummaryReportItem response = api.reportsGetFleetSummaryAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
      *
      * 
@@ -94,7 +115,7 @@ public class ReportsApiTest {
     }
     
     /**
-     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
      *
      * 
      *
@@ -110,6 +131,28 @@ public class ReportsApiTest {
         String userIds = null;
         String xChronosheetsAuth = null;
         CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment response = api.reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void reportsGetOrganisationTranscriptsTest() throws ApiException {
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        Integer skip = null;
+        Integer take = null;
+        String userIds = null;
+        String keywords = null;
+        String xChronosheetsAuth = null;
+        CSApiResponseForPaginatedListOrgReportTranscript response = api.reportsGetOrganisationTranscripts(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth);
 
         // TODO: test validations
     }

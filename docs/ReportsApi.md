@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**reportsGetAllChartsDataAdmin**](ReportsApi.md#reportsGetAllChartsDataAdmin) | **GET** /api/Reports/GetAllChartsDataAdmin | Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
 [**reportsGetAllChartsDataUser**](ReportsApi.md#reportsGetAllChartsDataUser) | **GET** /api/Reports/GetAllChartsDataUser | Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
+[**reportsGetFleetSummaryAdmin**](ReportsApi.md#reportsGetFleetSummaryAdmin) | **GET** /api/Reports/GetFleetSummaryAdmin | Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
 [**reportsGetOrgTripById**](ReportsApi.md#reportsGetOrgTripById) | **GET** /api/Reports/GetOrgTripById | Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
-[**reportsGetOrganisationTimesheetFileAttachments**](ReportsApi.md#reportsGetOrganisationTimesheetFileAttachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+[**reportsGetOrganisationTimesheetFileAttachments**](ReportsApi.md#reportsGetOrganisationTimesheetFileAttachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
+[**reportsGetOrganisationTranscripts**](ReportsApi.md#reportsGetOrganisationTranscripts) | **GET** /api/Reports/GetOrganisationTranscripts | Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
 [**reportsGetOrganisationTrips**](ReportsApi.md#reportsGetOrganisationTrips) | **GET** /api/Reports/GetOrganisationTrips | Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
 [**reportsGetRawDataAdmin**](ReportsApi.md#reportsGetRawDataAdmin) | **GET** /api/Reports/GetRawDataAdmin | Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
 [**reportsProjectCostingsAdmin**](ReportsApi.md#reportsProjectCostingsAdmin) | **GET** /api/Reports/ProjectCostingsAdmin | Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
@@ -110,6 +112,55 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+<a name="reportsGetFleetSummaryAdmin"></a>
+# **reportsGetFleetSummaryAdmin**
+> CSApiResponseListFleetSummaryReportItem reportsGetFleetSummaryAdmin(startDate, endDate, userIds, xChronosheetsAuth)
+
+Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+
+### Example
+```java
+// Import classes:
+//import ChronoSheetsClient.ApiException;
+//import ChronoSheetsClientLibApi.ReportsApi;
+
+
+ReportsApi apiInstance = new ReportsApi();
+OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+try {
+    CSApiResponseListFleetSummaryReportItem result = apiInstance.reportsGetFleetSummaryAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ReportsApi#reportsGetFleetSummaryAdmin");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startDate** | **OffsetDateTime**| The start date for the date range.  Report data in the response is after this date |
+ **endDate** | **OffsetDateTime**| The end date for the date range.  Report data in the response is before this date |
+ **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+
+### Return type
+
+[**CSApiResponseListFleetSummaryReportItem**](CSApiResponseListFleetSummaryReportItem.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
 <a name="reportsGetOrgTripById"></a>
 # **reportsGetOrgTripById**
 > CSApiResponseTrip reportsGetOrgTripById(tripId, xChronosheetsAuth)
@@ -159,7 +210,7 @@ No authorization required
 # **reportsGetOrganisationTimesheetFileAttachments**
 > CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth)
 
-Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
 
 ### Example
 ```java
@@ -198,6 +249,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment**](CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+<a name="reportsGetOrganisationTranscripts"></a>
+# **reportsGetOrganisationTranscripts**
+> CSApiResponseForPaginatedListOrgReportTranscript reportsGetOrganisationTranscripts(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth)
+
+Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+
+### Example
+```java
+// Import classes:
+//import ChronoSheetsClient.ApiException;
+//import ChronoSheetsClientLibApi.ReportsApi;
+
+
+ReportsApi apiInstance = new ReportsApi();
+OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+Integer skip = 56; // Integer | Skip this many items
+Integer take = 56; // Integer | Take this many items
+String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+String keywords = "keywords_example"; // String | Search the transcripts by keyword(s)
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+try {
+    CSApiResponseForPaginatedListOrgReportTranscript result = apiInstance.reportsGetOrganisationTranscripts(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ReportsApi#reportsGetOrganisationTranscripts");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startDate** | **OffsetDateTime**| The start date for the date range.  Report data in the response is after this date |
+ **endDate** | **OffsetDateTime**| The end date for the date range.  Report data in the response is before this date |
+ **skip** | **Integer**| Skip this many items |
+ **take** | **Integer**| Take this many items |
+ **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. |
+ **keywords** | **String**| Search the transcripts by keyword(s) |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+
+### Return type
+
+[**CSApiResponseForPaginatedListOrgReportTranscript**](CSApiResponseForPaginatedListOrgReportTranscript.md)
 
 ### Authorization
 

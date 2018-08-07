@@ -61,22 +61,22 @@ Please follow the [installation](#installation) instruction and execute the foll
 import ChronoSheetsClient.*;
 import ChronoSheetsClient.auth.*;
 import ChronoSheetsClientLibModel.*;
-import ChronoSheetsClientLibApi.AggregateJobTasksApi;
+import ChronoSheetsClientLibApi.AggregateClientProjectsApi;
 
 import java.io.File;
 import java.util.*;
 
-public class AggregateJobTasksApiExample {
+public class AggregateClientProjectsApiExample {
 
     public static void main(String[] args) {
         
-        AggregateJobTasksApi apiInstance = new AggregateJobTasksApi();
+        AggregateClientProjectsApi apiInstance = new AggregateClientProjectsApi();
         String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
         try {
-            CSApiResponseListAggregateJobCode result = apiInstance.aggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth);
+            CSApiResponseListAggregateClient result = apiInstance.aggregateClientProjectsGetAggregateClientProjects(xChronosheetsAuth);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AggregateJobTasksApi#aggregateJobTasksGetAggregateJobTasks");
+            System.err.println("Exception when calling AggregateClientProjectsApi#aggregateClientProjectsGetAggregateClientProjects");
             e.printStackTrace();
         }
     }
@@ -90,11 +90,13 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AggregateClientProjectsApi* | [**aggregateClientProjectsGetAggregateClientProjects**](docs/AggregateClientProjectsApi.md#aggregateClientProjectsGetAggregateClientProjects) | **GET** /api/AggregateClientProjects/GetAggregateClientProjects | Get client and project information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageClientsAndProjects&#39; permissions.
 *AggregateJobTasksApi* | [**aggregateJobTasksGetAggregateJobTasks**](docs/AggregateJobTasksApi.md#aggregateJobTasksGetAggregateJobTasks) | **GET** /api/AggregateJobTasks/GetAggregateJobTasks | Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
 *ClientsApi* | [**clientsCreateClient**](docs/ClientsApi.md#clientsCreateClient) | **POST** /api/Clients/CreateClient | Create a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 *ClientsApi* | [**clientsGetClient**](docs/ClientsApi.md#clientsGetClient) | **GET** /api/Clients/GetClient | Get a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 *ClientsApi* | [**clientsGetClients**](docs/ClientsApi.md#clientsGetClients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 *ClientsApi* | [**clientsUpdateClient**](docs/ClientsApi.md#clientsUpdateClient) | **PUT** /api/Clients/UpdateClient | Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
+*FileAttachmentsApi* | [**fileAttachmentsGetMyFileAttachments**](docs/FileAttachmentsApi.md#fileAttachmentsGetMyFileAttachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 *FleetApi* | [**fleetCreateVehicle**](docs/FleetApi.md#fleetCreateVehicle) | **POST** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 *FleetApi* | [**fleetGetVehicleById**](docs/FleetApi.md#fleetGetVehicleById) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
 *FleetApi* | [**fleetGetVehicles**](docs/FleetApi.md#fleetGetVehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
@@ -120,8 +122,10 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**projectsUpdateProject**](docs/ProjectsApi.md#projectsUpdateProject) | **PUT** /api/Projects/UpdateProject | Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 *ReportsApi* | [**reportsGetAllChartsDataAdmin**](docs/ReportsApi.md#reportsGetAllChartsDataAdmin) | **GET** /api/Reports/GetAllChartsDataAdmin | Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
 *ReportsApi* | [**reportsGetAllChartsDataUser**](docs/ReportsApi.md#reportsGetAllChartsDataUser) | **GET** /api/Reports/GetAllChartsDataUser | Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
+*ReportsApi* | [**reportsGetFleetSummaryAdmin**](docs/ReportsApi.md#reportsGetFleetSummaryAdmin) | **GET** /api/Reports/GetFleetSummaryAdmin | Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
 *ReportsApi* | [**reportsGetOrgTripById**](docs/ReportsApi.md#reportsGetOrgTripById) | **GET** /api/Reports/GetOrgTripById | Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
-*ReportsApi* | [**reportsGetOrganisationTimesheetFileAttachments**](docs/ReportsApi.md#reportsGetOrganisationTimesheetFileAttachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+*ReportsApi* | [**reportsGetOrganisationTimesheetFileAttachments**](docs/ReportsApi.md#reportsGetOrganisationTimesheetFileAttachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
+*ReportsApi* | [**reportsGetOrganisationTranscripts**](docs/ReportsApi.md#reportsGetOrganisationTranscripts) | **GET** /api/Reports/GetOrganisationTranscripts | Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
 *ReportsApi* | [**reportsGetOrganisationTrips**](docs/ReportsApi.md#reportsGetOrganisationTrips) | **GET** /api/Reports/GetOrganisationTrips | Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
 *ReportsApi* | [**reportsGetRawDataAdmin**](docs/ReportsApi.md#reportsGetRawDataAdmin) | **GET** /api/Reports/GetRawDataAdmin | Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
 *ReportsApi* | [**reportsProjectCostingsAdmin**](docs/ReportsApi.md#reportsProjectCostingsAdmin) | **GET** /api/Reports/ProjectCostingsAdmin | Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
@@ -136,7 +140,8 @@ Class | Method | HTTP request | Description
 *TimesheetsApi* | [**timesheetsDeleteTimesheet**](docs/TimesheetsApi.md#timesheetsDeleteTimesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
 *TimesheetsApi* | [**timesheetsGetTimesheets**](docs/TimesheetsApi.md#timesheetsGetTimesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
 *TimesheetsApi* | [**timesheetsUpdateTimesheets**](docs/TimesheetsApi.md#timesheetsUpdateTimesheets) | **PUT** /api/Timesheets/UpdateTimesheets | Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
-*TripsApi* | [**tripsCreateTrip**](docs/TripsApi.md#tripsCreateTrip) | **PUT** /api/Trips/CreateTrip | Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
+*TranscriptsApi* | [**transcriptsGetMyTranscripts**](docs/TranscriptsApi.md#transcriptsGetMyTranscripts) | **GET** /api/Transcripts/GetMyTranscripts | Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
+*TripsApi* | [**tripsCreateTrip**](docs/TripsApi.md#tripsCreateTrip) | **POST** /api/Trips/CreateTrip | Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
 *TripsApi* | [**tripsGetMyTripById**](docs/TripsApi.md#tripsGetMyTripById) | **GET** /api/Trips/GetMyTripById | Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
 *TripsApi* | [**tripsGetMyTrips**](docs/TripsApi.md#tripsGetMyTrips) | **GET** /api/Trips/GetMyTrips | Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
 *UserJobFavouritesApi* | [**userJobFavouritesCreateJobFavourite**](docs/UserJobFavouritesApi.md#userJobFavouritesCreateJobFavourite) | **POST** /api/UserJobFavourites/CreateJobFavourite | Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -159,22 +164,28 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [CSAggregateClient](docs/CSAggregateClient.md)
  - [CSAggregateJobCode](docs/CSAggregateJobCode.md)
  - [CSAggregateJobTask](docs/CSAggregateJobTask.md)
+ - [CSAggregateProject](docs/CSAggregateProject.md)
  - [CSApiResponseBoolean](docs/CSApiResponseBoolean.md)
  - [CSApiResponseClient](docs/CSApiResponseClient.md)
  - [CSApiResponseCombinedReportsData](docs/CSApiResponseCombinedReportsData.md)
  - [CSApiResponseDoLoginResponse](docs/CSApiResponseDoLoginResponse.md)
  - [CSApiResponseFleetVehicle](docs/CSApiResponseFleetVehicle.md)
  - [CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment](docs/CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
+ - [CSApiResponseForPaginatedListOrgReportTranscript](docs/CSApiResponseForPaginatedListOrgReportTranscript.md)
  - [CSApiResponseForPaginatedListOrgReportTrip](docs/CSApiResponseForPaginatedListOrgReportTrip.md)
  - [CSApiResponseForPaginatedListRawReportItem](docs/CSApiResponseForPaginatedListRawReportItem.md)
+ - [CSApiResponseForPaginatedListTimesheetFileAttachment](docs/CSApiResponseForPaginatedListTimesheetFileAttachment.md)
  - [CSApiResponseForPaginatedListTrip](docs/CSApiResponseForPaginatedListTrip.md)
  - [CSApiResponseInsertUserResponse](docs/CSApiResponseInsertUserResponse.md)
  - [CSApiResponseInt32](docs/CSApiResponseInt32.md)
  - [CSApiResponseJobCode](docs/CSApiResponseJobCode.md)
+ - [CSApiResponseListAggregateClient](docs/CSApiResponseListAggregateClient.md)
  - [CSApiResponseListAggregateJobCode](docs/CSApiResponseListAggregateJobCode.md)
  - [CSApiResponseListClient](docs/CSApiResponseListClient.md)
+ - [CSApiResponseListFleetSummaryReportItem](docs/CSApiResponseListFleetSummaryReportItem.md)
  - [CSApiResponseListFleetVehicle](docs/CSApiResponseListFleetVehicle.md)
  - [CSApiResponseListInt32](docs/CSApiResponseListInt32.md)
  - [CSApiResponseListJobCode](docs/CSApiResponseListJobCode.md)
@@ -207,6 +218,7 @@ Class | Method | HTTP request | Description
  - [CSCreateTripRequest](docs/CSCreateTripRequest.md)
  - [CSDoLoginRequest](docs/CSDoLoginRequest.md)
  - [CSDoLoginResponse](docs/CSDoLoginResponse.md)
+ - [CSFleetSummaryReportItem](docs/CSFleetSummaryReportItem.md)
  - [CSFleetVehicle](docs/CSFleetVehicle.md)
  - [CSInsertClientRequest](docs/CSInsertClientRequest.md)
  - [CSInsertJobCodeRequest](docs/CSInsertJobCodeRequest.md)
@@ -222,6 +234,7 @@ Class | Method | HTTP request | Description
  - [CSJobSeriesReportItem](docs/CSJobSeriesReportItem.md)
  - [CSJobTotalsReportItem](docs/CSJobTotalsReportItem.md)
  - [CSOrgReportTimesheetFileAttachment](docs/CSOrgReportTimesheetFileAttachment.md)
+ - [CSOrgReportTranscript](docs/CSOrgReportTranscript.md)
  - [CSOrgReportTrip](docs/CSOrgReportTrip.md)
  - [CSOrganisation](docs/CSOrganisation.md)
  - [CSOrganisationGroup](docs/CSOrganisationGroup.md)
@@ -239,6 +252,7 @@ Class | Method | HTTP request | Description
  - [CSTaskTotalsReportItem](docs/CSTaskTotalsReportItem.md)
  - [CSTimeSlot](docs/CSTimeSlot.md)
  - [CSTimesheet](docs/CSTimesheet.md)
+ - [CSTimesheetFileAttachment](docs/CSTimesheetFileAttachment.md)
  - [CSTimesheetTask](docs/CSTimesheetTask.md)
  - [CSTrip](docs/CSTrip.md)
  - [CSTripCoordinate](docs/CSTripCoordinate.md)

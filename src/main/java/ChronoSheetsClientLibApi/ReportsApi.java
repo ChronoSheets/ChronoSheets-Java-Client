@@ -29,8 +29,10 @@ import java.io.IOException;
 
 import ChronoSheetsClientLibModel.CSApiResponseCombinedReportsData;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTranscript;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTrip;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListRawReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseListFleetSummaryReportItem;
 import ChronoSheetsClientLibModel.CSApiResponseListJobSeriesReportItem;
 import ChronoSheetsClientLibModel.CSApiResponseListProjectCostingReportItem;
 import ChronoSheetsClientLibModel.CSApiResponseTrip;
@@ -365,6 +367,163 @@ public class ReportsApi {
         return call;
     }
     /**
+     * Build call for reportsGetFleetSummaryAdmin
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call reportsGetFleetSummaryAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/Reports/GetFleetSummaryAdmin";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (startDate != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("StartDate", startDate));
+        if (endDate != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EndDate", endDate));
+        if (userIds != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("UserIds", userIds));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (xChronosheetsAuth != null)
+        localVarHeaderParams.put("x-chronosheets-auth", apiClient.parameterToString(xChronosheetsAuth));
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml", "multipart/form-data"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call reportsGetFleetSummaryAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'startDate' is set
+        if (startDate == null) {
+            throw new ApiException("Missing the required parameter 'startDate' when calling reportsGetFleetSummaryAdmin(Async)");
+        }
+        
+        // verify the required parameter 'endDate' is set
+        if (endDate == null) {
+            throw new ApiException("Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin(Async)");
+        }
+        
+        // verify the required parameter 'userIds' is set
+        if (userIds == null) {
+            throw new ApiException("Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin(Async)");
+        }
+        
+        // verify the required parameter 'xChronosheetsAuth' is set
+        if (xChronosheetsAuth == null) {
+            throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetFleetSummaryAdmin(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = reportsGetFleetSummaryAdminCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+     * 
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @return CSApiResponseListFleetSummaryReportItem
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public CSApiResponseListFleetSummaryReportItem reportsGetFleetSummaryAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseListFleetSummaryReportItem> resp = reportsGetFleetSummaryAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+        return resp.getData();
+    }
+
+    /**
+     * Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+     * 
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @return ApiResponse&lt;CSApiResponseListFleetSummaryReportItem&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<CSApiResponseListFleetSummaryReportItem> reportsGetFleetSummaryAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
+        com.squareup.okhttp.Call call = reportsGetFleetSummaryAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, null, null);
+        Type localVarReturnType = new TypeToken<CSApiResponseListFleetSummaryReportItem>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
+     * 
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call reportsGetFleetSummaryAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseListFleetSummaryReportItem> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = reportsGetFleetSummaryAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<CSApiResponseListFleetSummaryReportItem>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for reportsGetOrgTripById
      * @param tripId The ID of the Trip you want to get (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
@@ -605,7 +764,7 @@ public class ReportsApi {
     }
 
     /**
-     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
@@ -622,7 +781,7 @@ public class ReportsApi {
     }
 
     /**
-     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
@@ -640,7 +799,7 @@ public class ReportsApi {
     }
 
     /**
-     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
+     * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
@@ -675,6 +834,196 @@ public class ReportsApi {
 
         com.squareup.okhttp.Call call = reportsGetOrganisationTimesheetFileAttachmentsValidateBeforeCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for reportsGetOrganisationTranscripts
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param keywords Search the transcripts by keyword(s) (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call reportsGetOrganisationTranscriptsCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/Reports/GetOrganisationTranscripts";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (startDate != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("StartDate", startDate));
+        if (endDate != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EndDate", endDate));
+        if (skip != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Skip", skip));
+        if (take != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Take", take));
+        if (userIds != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("UserIds", userIds));
+        if (keywords != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Keywords", keywords));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (xChronosheetsAuth != null)
+        localVarHeaderParams.put("x-chronosheets-auth", apiClient.parameterToString(xChronosheetsAuth));
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml", "multipart/form-data"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call reportsGetOrganisationTranscriptsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'startDate' is set
+        if (startDate == null) {
+            throw new ApiException("Missing the required parameter 'startDate' when calling reportsGetOrganisationTranscripts(Async)");
+        }
+        
+        // verify the required parameter 'endDate' is set
+        if (endDate == null) {
+            throw new ApiException("Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts(Async)");
+        }
+        
+        // verify the required parameter 'skip' is set
+        if (skip == null) {
+            throw new ApiException("Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts(Async)");
+        }
+        
+        // verify the required parameter 'take' is set
+        if (take == null) {
+            throw new ApiException("Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts(Async)");
+        }
+        
+        // verify the required parameter 'userIds' is set
+        if (userIds == null) {
+            throw new ApiException("Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts(Async)");
+        }
+        
+        // verify the required parameter 'keywords' is set
+        if (keywords == null) {
+            throw new ApiException("Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts(Async)");
+        }
+        
+        // verify the required parameter 'xChronosheetsAuth' is set
+        if (xChronosheetsAuth == null) {
+            throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetOrganisationTranscripts(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = reportsGetOrganisationTranscriptsCall(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+     * 
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param keywords Search the transcripts by keyword(s) (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @return CSApiResponseForPaginatedListOrgReportTranscript
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public CSApiResponseForPaginatedListOrgReportTranscript reportsGetOrganisationTranscripts(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> resp = reportsGetOrganisationTranscriptsWithHttpInfo(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth);
+        return resp.getData();
+    }
+
+    /**
+     * Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+     * 
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param keywords Search the transcripts by keyword(s) (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTranscript&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> reportsGetOrganisationTranscriptsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth) throws ApiException {
+        com.squareup.okhttp.Call call = reportsGetOrganisationTranscriptsValidateBeforeCall(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth, null, null);
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTranscript>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission. (asynchronously)
+     * 
+     * @param startDate The start date for the date range.  Report data in the response is after this date (required)
+     * @param endDate The end date for the date range.  Report data in the response is before this date (required)
+     * @param skip Skip this many items (required)
+     * @param take Take this many items (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
+     * @param keywords Search the transcripts by keyword(s) (required)
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call reportsGetOrganisationTranscriptsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListOrgReportTranscript> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = reportsGetOrganisationTranscriptsValidateBeforeCall(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTranscript>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

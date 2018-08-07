@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CSProjectCostingReportItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-12T20:58:58.273+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T01:15:39.652+10:00")
 public class CSProjectCostingReportItem {
   @SerializedName("ProjectId")
   private Integer projectId = null;
@@ -45,6 +45,9 @@ public class CSProjectCostingReportItem {
 
   @SerializedName("EstimatedCost")
   private Double estimatedCost = null;
+
+  @SerializedName("ActualCostFiltered")
+  private Double actualCostFiltered = null;
 
   @SerializedName("ActualCost")
   private Double actualCost = null;
@@ -157,6 +160,24 @@ public class CSProjectCostingReportItem {
     this.estimatedCost = estimatedCost;
   }
 
+  public CSProjectCostingReportItem actualCostFiltered(Double actualCostFiltered) {
+    this.actualCostFiltered = actualCostFiltered;
+    return this;
+  }
+
+   /**
+   * Get actualCostFiltered
+   * @return actualCostFiltered
+  **/
+  @ApiModelProperty(value = "")
+  public Double getActualCostFiltered() {
+    return actualCostFiltered;
+  }
+
+  public void setActualCostFiltered(Double actualCostFiltered) {
+    this.actualCostFiltered = actualCostFiltered;
+  }
+
   public CSProjectCostingReportItem actualCost(Double actualCost) {
     this.actualCost = actualCost;
     return this;
@@ -191,12 +212,13 @@ public class CSProjectCostingReportItem {
         Objects.equals(this.organisationId, projectCostingReportItem.organisationId) &&
         Objects.equals(this.clientName, projectCostingReportItem.clientName) &&
         Objects.equals(this.estimatedCost, projectCostingReportItem.estimatedCost) &&
+        Objects.equals(this.actualCostFiltered, projectCostingReportItem.actualCostFiltered) &&
         Objects.equals(this.actualCost, projectCostingReportItem.actualCost);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(projectId, projectName, clientId, organisationId, clientName, estimatedCost, actualCost);
+    return Objects.hash(projectId, projectName, clientId, organisationId, clientName, estimatedCost, actualCostFiltered, actualCost);
   }
 
 
@@ -211,6 +233,7 @@ public class CSProjectCostingReportItem {
     sb.append("    organisationId: ").append(toIndentedString(organisationId)).append("\n");
     sb.append("    clientName: ").append(toIndentedString(clientName)).append("\n");
     sb.append("    estimatedCost: ").append(toIndentedString(estimatedCost)).append("\n");
+    sb.append("    actualCostFiltered: ").append(toIndentedString(actualCostFiltered)).append("\n");
     sb.append("    actualCost: ").append(toIndentedString(actualCost)).append("\n");
     sb.append("}");
     return sb.toString();

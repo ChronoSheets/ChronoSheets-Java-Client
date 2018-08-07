@@ -29,7 +29,7 @@ import java.util.List;
  * Fields for inserting a new Organisation Group
  */
 @ApiModel(description = "Fields for inserting a new Organisation Group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-07-12T20:58:58.273+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T01:15:39.652+10:00")
 public class CSInsertOrganisationGroupRequest {
   @SerializedName("OrganisationGroupName")
   private String organisationGroupName = null;

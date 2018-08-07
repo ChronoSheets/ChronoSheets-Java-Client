@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **emailAddress** | **String** |  |  [optional]
 **firstName** | **String** |  |  [optional]
 **lastName** | **String** |  |  [optional]
-**timesheetStart** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**timesheetEnd** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **timesheetId** | **Integer** |  |  [optional]
 **documentS3SignedUrl** | **String** |  |  [optional]
 **imageLargeS3SignedUrl** | **String** |  |  [optional]
 **imageMediumS3SignedUrl** | **String** |  |  [optional]
 **imageSmallS3SignedUrl** | **String** |  |  [optional]
+**timesheetStart** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**timesheetEnd** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **fileAttachmentId** | **Integer** |  |  [optional]
 **userId** | **Integer** |  |  [optional]
 **orgId** | **Integer** |  |  [optional]
@@ -54,6 +54,7 @@ MSPOWERPOINT | &quot;MSPowerPoint&quot;
 RICHTEXTFORMAT | &quot;RichTextFormat&quot;
 ZIPFILE | &quot;ZipFile&quot;
 OTHER | &quot;Other&quot;
+AUDIO | &quot;Audio&quot;
 
 
 

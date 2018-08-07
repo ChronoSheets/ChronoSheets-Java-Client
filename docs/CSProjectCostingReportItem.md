@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **organisationId** | **Integer** |  |  [optional]
 **clientName** | **String** |  |  [optional]
 **estimatedCost** | **Double** |  |  [optional]
+**actualCostFiltered** | **Double** |  |  [optional]
 **actualCost** | **Double** |  |  [optional]
 
 
