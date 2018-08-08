@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CSApiResponseDoLoginResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T01:15:39.652+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:20:15.013+10:00")
 public class CSApiResponseDoLoginResponse {
   @SerializedName("Data")
   private CSDoLoginResponse data = null;

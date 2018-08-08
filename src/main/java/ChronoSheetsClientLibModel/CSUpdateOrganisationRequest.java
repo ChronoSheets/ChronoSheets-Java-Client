@@ -27,7 +27,7 @@ import java.io.IOException;
  * Field for updating your Organisation
  */
 @ApiModel(description = "Field for updating your Organisation")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T01:15:39.652+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:20:15.013+10:00")
 public class CSUpdateOrganisationRequest {
   @SerializedName("OrgansationId")
   private Integer organsationId = null;

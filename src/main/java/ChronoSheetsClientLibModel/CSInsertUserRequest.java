@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fields for Inserting a new User account (employee) under your Organisation in ChronoSheets
  */
 @ApiModel(description = "Fields for Inserting a new User account (employee) under your Organisation in ChronoSheets")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T01:15:39.652+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:20:15.013+10:00")
 public class CSInsertUserRequest {
   @SerializedName("EmailAddress")
   private String emailAddress = null;

@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T01:15:39.652+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:20:15.013+10:00")
 public class CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment {
   @SerializedName("TotalSetCount")
   private Integer totalSetCount = null;
