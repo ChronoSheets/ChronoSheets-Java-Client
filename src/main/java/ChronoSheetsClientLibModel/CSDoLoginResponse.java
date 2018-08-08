@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Response object containing important information that can be used after the user has logged in
  */
 @ApiModel(description = "A Response object containing important information that can be used after the user has logged in")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:29:53.876+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:37:08.519+10:00")
 public class CSDoLoginResponse {
   @SerializedName("CSAuthToken")
   private String csAuthToken = null;
