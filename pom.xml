@@ -7,7 +7,7 @@
     <name>ChronoSheetsAPI</name>
     <version>1.0.0</version>
     <url>http://tsheets.xyz/api</url>
-    <description>Java API Client for ChronoSheets</description>
+    <description>ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available. Use the ChronoSheets API to create your own custom integrations. Before starting, sign up for a ChronoSheets account at http://tsheets.xyz/signup.</description>
     <scm>
         <connection>scm:git:git@github.com:swagger-api/swagger-codegen.git</connection>
         <developerConnection>scm:git:git@github.com:swagger-api/swagger-codegen.git</developerConnection>

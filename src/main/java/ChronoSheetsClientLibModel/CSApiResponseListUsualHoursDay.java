@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * CSApiResponseListUsualHoursDay
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:20:15.013+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:29:53.876+10:00")
 public class CSApiResponseListUsualHoursDay {
   @SerializedName("Data")
   private List<CSUsualHoursDay> data = null;
