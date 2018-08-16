@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSOrgReportTimesheetFileAttachment
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:37:08.519+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-16T22:53:08.640+10:00")
 public class CSOrgReportTimesheetFileAttachment {
   @SerializedName("Username")
   private String username = null;
@@ -219,6 +219,9 @@ public class CSOrgReportTimesheetFileAttachment {
 
   @SerializedName("StorageAllocationBytes")
   private Long storageAllocationBytes = null;
+
+  @SerializedName("AudioDurationSeconds")
+  private Integer audioDurationSeconds = null;
 
   public CSOrgReportTimesheetFileAttachment username(String username) {
     this.username = username;
@@ -706,6 +709,24 @@ public class CSOrgReportTimesheetFileAttachment {
     this.storageAllocationBytes = storageAllocationBytes;
   }
 
+  public CSOrgReportTimesheetFileAttachment audioDurationSeconds(Integer audioDurationSeconds) {
+    this.audioDurationSeconds = audioDurationSeconds;
+    return this;
+  }
+
+   /**
+   * Get audioDurationSeconds
+   * @return audioDurationSeconds
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getAudioDurationSeconds() {
+    return audioDurationSeconds;
+  }
+
+  public void setAudioDurationSeconds(Integer audioDurationSeconds) {
+    this.audioDurationSeconds = audioDurationSeconds;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -742,12 +763,13 @@ public class CSOrgReportTimesheetFileAttachment {
         Objects.equals(this.longitude, orgReportTimesheetFileAttachment.longitude) &&
         Objects.equals(this.dateUploaded, orgReportTimesheetFileAttachment.dateUploaded) &&
         Objects.equals(this.dateImageCaptured, orgReportTimesheetFileAttachment.dateImageCaptured) &&
-        Objects.equals(this.storageAllocationBytes, orgReportTimesheetFileAttachment.storageAllocationBytes);
+        Objects.equals(this.storageAllocationBytes, orgReportTimesheetFileAttachment.storageAllocationBytes) &&
+        Objects.equals(this.audioDurationSeconds, orgReportTimesheetFileAttachment.audioDurationSeconds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(username, emailAddress, firstName, lastName, timesheetId, documentS3SignedUrl, imageLargeS3SignedUrl, imageMediumS3SignedUrl, imageSmallS3SignedUrl, timesheetStart, timesheetEnd, fileAttachmentId, userId, orgId, mobilePlatform, attachmentType, notes, nonImageFilePath, imageLargeFilePath, imageMediumFilePath, imageSmallFilePath, originalFileName, latitude, longitude, dateUploaded, dateImageCaptured, storageAllocationBytes);
+    return Objects.hash(username, emailAddress, firstName, lastName, timesheetId, documentS3SignedUrl, imageLargeS3SignedUrl, imageMediumS3SignedUrl, imageSmallS3SignedUrl, timesheetStart, timesheetEnd, fileAttachmentId, userId, orgId, mobilePlatform, attachmentType, notes, nonImageFilePath, imageLargeFilePath, imageMediumFilePath, imageSmallFilePath, originalFileName, latitude, longitude, dateUploaded, dateImageCaptured, storageAllocationBytes, audioDurationSeconds);
   }
 
 
@@ -783,6 +805,7 @@ public class CSOrgReportTimesheetFileAttachment {
     sb.append("    dateUploaded: ").append(toIndentedString(dateUploaded)).append("\n");
     sb.append("    dateImageCaptured: ").append(toIndentedString(dateImageCaptured)).append("\n");
     sb.append("    storageAllocationBytes: ").append(toIndentedString(storageAllocationBytes)).append("\n");
+    sb.append("    audioDurationSeconds: ").append(toIndentedString(audioDurationSeconds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

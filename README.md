@@ -96,6 +96,7 @@ Class | Method | HTTP request | Description
 *ClientsApi* | [**clientsGetClient**](docs/ClientsApi.md#clientsGetClient) | **GET** /api/Clients/GetClient | Get a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 *ClientsApi* | [**clientsGetClients**](docs/ClientsApi.md#clientsGetClients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 *ClientsApi* | [**clientsUpdateClient**](docs/ClientsApi.md#clientsUpdateClient) | **PUT** /api/Clients/UpdateClient | Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
+*FileAttachmentsApi* | [**fileAttachmentsDeleteTimesheetFileAttachment**](docs/FileAttachmentsApi.md#fileAttachmentsDeleteTimesheetFileAttachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment
 *FileAttachmentsApi* | [**fileAttachmentsGetMyFileAttachments**](docs/FileAttachmentsApi.md#fileAttachmentsGetMyFileAttachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 *FleetApi* | [**fleetCreateVehicle**](docs/FleetApi.md#fleetCreateVehicle) | **POST** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 *FleetApi* | [**fleetGetVehicleById**](docs/FleetApi.md#fleetGetVehicleById) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
@@ -238,6 +239,7 @@ Class | Method | HTTP request | Description
  - [CSOrgReportTrip](docs/CSOrgReportTrip.md)
  - [CSOrganisation](docs/CSOrganisation.md)
  - [CSOrganisationGroup](docs/CSOrganisationGroup.md)
+ - [CSOrganisationPricingPlan](docs/CSOrganisationPricingPlan.md)
  - [CSProject](docs/CSProject.md)
  - [CSProjectCostingReportItem](docs/CSProjectCostingReportItem.md)
  - [CSProjectSeriesReportItem](docs/CSProjectSeriesReportItem.md)

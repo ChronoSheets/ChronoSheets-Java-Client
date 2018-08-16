@@ -4,8 +4,54 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**fileAttachmentsDeleteTimesheetFileAttachment**](FileAttachmentsApi.md#fileAttachmentsDeleteTimesheetFileAttachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment
 [**fileAttachmentsGetMyFileAttachments**](FileAttachmentsApi.md#fileAttachmentsGetMyFileAttachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
+
+<a name="fileAttachmentsDeleteTimesheetFileAttachment"></a>
+# **fileAttachmentsDeleteTimesheetFileAttachment**
+> CSApiResponseBoolean fileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth)
+
+Delete a particular timesheet file attachment
+
+### Example
+```java
+// Import classes:
+//import ChronoSheetsClient.ApiException;
+//import ChronoSheetsClientLibApi.FileAttachmentsApi;
+
+
+FileAttachmentsApi apiInstance = new FileAttachmentsApi();
+Integer fileAttachmentId = 56; // Integer | The Id of the file attachment to delete
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+try {
+    CSApiResponseBoolean result = apiInstance.fileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling FileAttachmentsApi#fileAttachmentsDeleteTimesheetFileAttachment");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileAttachmentId** | **Integer**| The Id of the file attachment to delete |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+
+### Return type
+
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 <a name="fileAttachmentsGetMyFileAttachments"></a>
 # **fileAttachmentsGetMyFileAttachments**

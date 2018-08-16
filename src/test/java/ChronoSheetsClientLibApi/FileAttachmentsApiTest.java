@@ -14,6 +14,7 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListTimesheetFileAttachment;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Test;
@@ -32,6 +33,23 @@ public class FileAttachmentsApiTest {
 
     private final FileAttachmentsApi api = new FileAttachmentsApi();
 
+    
+    /**
+     * Delete a particular timesheet file attachment
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void fileAttachmentsDeleteTimesheetFileAttachmentTest() throws ApiException {
+        Integer fileAttachmentId = null;
+        String xChronosheetsAuth = null;
+        CSApiResponseBoolean response = api.fileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth);
+
+        // TODO: test validations
+    }
     
     /**
      * Get my file attachments.  Get files you&#39;ve attached to timesheets.

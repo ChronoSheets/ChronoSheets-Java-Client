@@ -14,6 +14,7 @@
 package ChronoSheetsClientLibModel;
 
 import java.util.Objects;
+import ChronoSheetsClientLibModel.CSOrganisationPricingPlan;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,11 +23,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * CSOrganisation
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:37:08.519+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-16T22:53:08.640+10:00")
 public class CSOrganisation {
   @SerializedName("Id")
   private Integer id = null;
@@ -64,14 +68,17 @@ public class CSOrganisation {
   @SerializedName("SubscriptionCustomerId")
   private String subscriptionCustomerId = null;
 
-  @SerializedName("SubscriptionPlanId")
-  private String subscriptionPlanId = null;
-
   @SerializedName("SignupToken")
   private String signupToken = null;
 
-  @SerializedName("NumberSeatsAvailable")
-  private Integer numberSeatsAvailable = null;
+  @SerializedName("SubscriptionCycleStart")
+  private OffsetDateTime subscriptionCycleStart = null;
+
+  @SerializedName("SubscriptionCycleEnd")
+  private OffsetDateTime subscriptionCycleEnd = null;
+
+  @SerializedName("PricingPlans")
+  private List<CSOrganisationPricingPlan> pricingPlans = null;
 
   public CSOrganisation id(Integer id) {
     this.id = id;
@@ -289,24 +296,6 @@ public class CSOrganisation {
     this.subscriptionCustomerId = subscriptionCustomerId;
   }
 
-  public CSOrganisation subscriptionPlanId(String subscriptionPlanId) {
-    this.subscriptionPlanId = subscriptionPlanId;
-    return this;
-  }
-
-   /**
-   * Get subscriptionPlanId
-   * @return subscriptionPlanId
-  **/
-  @ApiModelProperty(value = "")
-  public String getSubscriptionPlanId() {
-    return subscriptionPlanId;
-  }
-
-  public void setSubscriptionPlanId(String subscriptionPlanId) {
-    this.subscriptionPlanId = subscriptionPlanId;
-  }
-
   public CSOrganisation signupToken(String signupToken) {
     this.signupToken = signupToken;
     return this;
@@ -325,22 +314,66 @@ public class CSOrganisation {
     this.signupToken = signupToken;
   }
 
-  public CSOrganisation numberSeatsAvailable(Integer numberSeatsAvailable) {
-    this.numberSeatsAvailable = numberSeatsAvailable;
+  public CSOrganisation subscriptionCycleStart(OffsetDateTime subscriptionCycleStart) {
+    this.subscriptionCycleStart = subscriptionCycleStart;
     return this;
   }
 
    /**
-   * Get numberSeatsAvailable
-   * @return numberSeatsAvailable
+   * Get subscriptionCycleStart
+   * @return subscriptionCycleStart
   **/
   @ApiModelProperty(value = "")
-  public Integer getNumberSeatsAvailable() {
-    return numberSeatsAvailable;
+  public OffsetDateTime getSubscriptionCycleStart() {
+    return subscriptionCycleStart;
   }
 
-  public void setNumberSeatsAvailable(Integer numberSeatsAvailable) {
-    this.numberSeatsAvailable = numberSeatsAvailable;
+  public void setSubscriptionCycleStart(OffsetDateTime subscriptionCycleStart) {
+    this.subscriptionCycleStart = subscriptionCycleStart;
+  }
+
+  public CSOrganisation subscriptionCycleEnd(OffsetDateTime subscriptionCycleEnd) {
+    this.subscriptionCycleEnd = subscriptionCycleEnd;
+    return this;
+  }
+
+   /**
+   * Get subscriptionCycleEnd
+   * @return subscriptionCycleEnd
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getSubscriptionCycleEnd() {
+    return subscriptionCycleEnd;
+  }
+
+  public void setSubscriptionCycleEnd(OffsetDateTime subscriptionCycleEnd) {
+    this.subscriptionCycleEnd = subscriptionCycleEnd;
+  }
+
+  public CSOrganisation pricingPlans(List<CSOrganisationPricingPlan> pricingPlans) {
+    this.pricingPlans = pricingPlans;
+    return this;
+  }
+
+  public CSOrganisation addPricingPlansItem(CSOrganisationPricingPlan pricingPlansItem) {
+    if (this.pricingPlans == null) {
+      this.pricingPlans = new ArrayList<CSOrganisationPricingPlan>();
+    }
+    this.pricingPlans.add(pricingPlansItem);
+    return this;
+  }
+
+   /**
+   * Get pricingPlans
+   * @return pricingPlans
+  **/
+  @ApiModelProperty(value = "")
+  public List<CSOrganisationPricingPlan> getPricingPlans() {
+    return pricingPlans;
+  }
+
+  public void setPricingPlans(List<CSOrganisationPricingPlan> pricingPlans) {
+    this.pricingPlans = pricingPlans;
   }
 
 
@@ -365,14 +398,15 @@ public class CSOrganisation {
         Objects.equals(this.emailAddress, organisation.emailAddress) &&
         Objects.equals(this.timezone, organisation.timezone) &&
         Objects.equals(this.subscriptionCustomerId, organisation.subscriptionCustomerId) &&
-        Objects.equals(this.subscriptionPlanId, organisation.subscriptionPlanId) &&
         Objects.equals(this.signupToken, organisation.signupToken) &&
-        Objects.equals(this.numberSeatsAvailable, organisation.numberSeatsAvailable);
+        Objects.equals(this.subscriptionCycleStart, organisation.subscriptionCycleStart) &&
+        Objects.equals(this.subscriptionCycleEnd, organisation.subscriptionCycleEnd) &&
+        Objects.equals(this.pricingPlans, organisation.pricingPlans);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, addressLine01, addressLine02, suburb, state, postcode, country, phone, emailAddress, timezone, subscriptionCustomerId, subscriptionPlanId, signupToken, numberSeatsAvailable);
+    return Objects.hash(id, name, addressLine01, addressLine02, suburb, state, postcode, country, phone, emailAddress, timezone, subscriptionCustomerId, signupToken, subscriptionCycleStart, subscriptionCycleEnd, pricingPlans);
   }
 
 
@@ -393,9 +427,10 @@ public class CSOrganisation {
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    timezone: ").append(toIndentedString(timezone)).append("\n");
     sb.append("    subscriptionCustomerId: ").append(toIndentedString(subscriptionCustomerId)).append("\n");
-    sb.append("    subscriptionPlanId: ").append(toIndentedString(subscriptionPlanId)).append("\n");
     sb.append("    signupToken: ").append(toIndentedString(signupToken)).append("\n");
-    sb.append("    numberSeatsAvailable: ").append(toIndentedString(numberSeatsAvailable)).append("\n");
+    sb.append("    subscriptionCycleStart: ").append(toIndentedString(subscriptionCycleStart)).append("\n");
+    sb.append("    subscriptionCycleEnd: ").append(toIndentedString(subscriptionCycleEnd)).append("\n");
+    sb.append("    pricingPlans: ").append(toIndentedString(pricingPlans)).append("\n");
     sb.append("}");
     return sb.toString();
   }

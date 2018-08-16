@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CSUpdateMyProfileRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:37:08.519+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-16T22:53:08.640+10:00")
 public class CSUpdateMyProfileRequest {
   @SerializedName("EmailAddress")
   private String emailAddress = null;

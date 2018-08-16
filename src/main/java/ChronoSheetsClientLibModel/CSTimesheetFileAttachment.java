@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSTimesheetFileAttachment
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-08T20:37:08.519+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-16T22:53:08.640+10:00")
 public class CSTimesheetFileAttachment {
   @SerializedName("TimesheetId")
   private Integer timesheetId = null;
@@ -207,6 +207,9 @@ public class CSTimesheetFileAttachment {
 
   @SerializedName("StorageAllocationBytes")
   private Long storageAllocationBytes = null;
+
+  @SerializedName("AudioDurationSeconds")
+  private Integer audioDurationSeconds = null;
 
   public CSTimesheetFileAttachment timesheetId(Integer timesheetId) {
     this.timesheetId = timesheetId;
@@ -622,6 +625,24 @@ public class CSTimesheetFileAttachment {
     this.storageAllocationBytes = storageAllocationBytes;
   }
 
+  public CSTimesheetFileAttachment audioDurationSeconds(Integer audioDurationSeconds) {
+    this.audioDurationSeconds = audioDurationSeconds;
+    return this;
+  }
+
+   /**
+   * Get audioDurationSeconds
+   * @return audioDurationSeconds
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getAudioDurationSeconds() {
+    return audioDurationSeconds;
+  }
+
+  public void setAudioDurationSeconds(Integer audioDurationSeconds) {
+    this.audioDurationSeconds = audioDurationSeconds;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -654,12 +675,13 @@ public class CSTimesheetFileAttachment {
         Objects.equals(this.longitude, timesheetFileAttachment.longitude) &&
         Objects.equals(this.dateUploaded, timesheetFileAttachment.dateUploaded) &&
         Objects.equals(this.dateImageCaptured, timesheetFileAttachment.dateImageCaptured) &&
-        Objects.equals(this.storageAllocationBytes, timesheetFileAttachment.storageAllocationBytes);
+        Objects.equals(this.storageAllocationBytes, timesheetFileAttachment.storageAllocationBytes) &&
+        Objects.equals(this.audioDurationSeconds, timesheetFileAttachment.audioDurationSeconds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(timesheetId, documentS3SignedUrl, imageLargeS3SignedUrl, imageMediumS3SignedUrl, imageSmallS3SignedUrl, timesheetStart, timesheetEnd, fileAttachmentId, userId, orgId, mobilePlatform, attachmentType, notes, nonImageFilePath, imageLargeFilePath, imageMediumFilePath, imageSmallFilePath, originalFileName, latitude, longitude, dateUploaded, dateImageCaptured, storageAllocationBytes);
+    return Objects.hash(timesheetId, documentS3SignedUrl, imageLargeS3SignedUrl, imageMediumS3SignedUrl, imageSmallS3SignedUrl, timesheetStart, timesheetEnd, fileAttachmentId, userId, orgId, mobilePlatform, attachmentType, notes, nonImageFilePath, imageLargeFilePath, imageMediumFilePath, imageSmallFilePath, originalFileName, latitude, longitude, dateUploaded, dateImageCaptured, storageAllocationBytes, audioDurationSeconds);
   }
 
 
@@ -691,6 +713,7 @@ public class CSTimesheetFileAttachment {
     sb.append("    dateUploaded: ").append(toIndentedString(dateUploaded)).append("\n");
     sb.append("    dateImageCaptured: ").append(toIndentedString(dateImageCaptured)).append("\n");
     sb.append("    storageAllocationBytes: ").append(toIndentedString(storageAllocationBytes)).append("\n");
+    sb.append("    audioDurationSeconds: ").append(toIndentedString(audioDurationSeconds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

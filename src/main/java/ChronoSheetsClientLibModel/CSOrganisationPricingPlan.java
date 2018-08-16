@@ -24,71 +24,50 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * CSAggregateJobTask
+ * CSOrganisationPricingPlan
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-16T22:53:08.640+10:00")
-public class CSAggregateJobTask {
-  @SerializedName("Id")
-  private Integer id = null;
+public class CSOrganisationPricingPlan {
+  @SerializedName("PlanId")
+  private String planId = null;
 
-  @SerializedName("Label")
-  private String label = null;
+  @SerializedName("Quantity")
+  private Integer quantity = null;
 
-  @SerializedName("IsDeleted")
-  private Boolean isDeleted = null;
-
-  public CSAggregateJobTask id(Integer id) {
-    this.id = id;
+  public CSOrganisationPricingPlan planId(String planId) {
+    this.planId = planId;
     return this;
   }
 
    /**
-   * Get id
-   * @return id
+   * Get planId
+   * @return planId
   **/
   @ApiModelProperty(value = "")
-  public Integer getId() {
-    return id;
+  public String getPlanId() {
+    return planId;
   }
 
-  public void setId(Integer id) {
-    this.id = id;
+  public void setPlanId(String planId) {
+    this.planId = planId;
   }
 
-  public CSAggregateJobTask label(String label) {
-    this.label = label;
+  public CSOrganisationPricingPlan quantity(Integer quantity) {
+    this.quantity = quantity;
     return this;
   }
 
    /**
-   * Get label
-   * @return label
+   * Get quantity
+   * @return quantity
   **/
   @ApiModelProperty(value = "")
-  public String getLabel() {
-    return label;
+  public Integer getQuantity() {
+    return quantity;
   }
 
-  public void setLabel(String label) {
-    this.label = label;
-  }
-
-  public CSAggregateJobTask isDeleted(Boolean isDeleted) {
-    this.isDeleted = isDeleted;
-    return this;
-  }
-
-   /**
-   * Get isDeleted
-   * @return isDeleted
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isIsDeleted() {
-    return isDeleted;
-  }
-
-  public void setIsDeleted(Boolean isDeleted) {
-    this.isDeleted = isDeleted;
+  public void setQuantity(Integer quantity) {
+    this.quantity = quantity;
   }
 
 
@@ -100,26 +79,24 @@ public class CSAggregateJobTask {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSAggregateJobTask aggregateJobTask = (CSAggregateJobTask) o;
-    return Objects.equals(this.id, aggregateJobTask.id) &&
-        Objects.equals(this.label, aggregateJobTask.label) &&
-        Objects.equals(this.isDeleted, aggregateJobTask.isDeleted);
+    CSOrganisationPricingPlan organisationPricingPlan = (CSOrganisationPricingPlan) o;
+    return Objects.equals(this.planId, organisationPricingPlan.planId) &&
+        Objects.equals(this.quantity, organisationPricingPlan.quantity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, label, isDeleted);
+    return Objects.hash(planId, quantity);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSAggregateJobTask {\n");
+    sb.append("class CSOrganisationPricingPlan {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    label: ").append(toIndentedString(label)).append("\n");
-    sb.append("    isDeleted: ").append(toIndentedString(isDeleted)).append("\n");
+    sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
+    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("}");
     return sb.toString();
   }
