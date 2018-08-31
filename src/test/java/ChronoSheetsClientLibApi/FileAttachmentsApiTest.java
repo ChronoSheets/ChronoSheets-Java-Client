@@ -63,10 +63,10 @@ public class FileAttachmentsApiTest {
     public void fileAttachmentsGetMyFileAttachmentsTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
+        String xChronosheetsAuth = null;
         Integer skip = null;
         Integer take = null;
-        String xChronosheetsAuth = null;
-        CSApiResponseForPaginatedListTimesheetFileAttachment response = api.fileAttachmentsGetMyFileAttachments(startDate, endDate, skip, take, xChronosheetsAuth);
+        CSApiResponseForPaginatedListTimesheetFileAttachment response = api.fileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take);
 
         // TODO: test validations
     }

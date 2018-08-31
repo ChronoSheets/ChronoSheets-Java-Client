@@ -55,7 +55,7 @@ No authorization required
 
 <a name="fileAttachmentsGetMyFileAttachments"></a>
 # **fileAttachmentsGetMyFileAttachments**
-> CSApiResponseForPaginatedListTimesheetFileAttachment fileAttachmentsGetMyFileAttachments(startDate, endDate, skip, take, xChronosheetsAuth)
+> CSApiResponseForPaginatedListTimesheetFileAttachment fileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take)
 
 Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
@@ -69,11 +69,11 @@ Get my file attachments.  Get files you&#39;ve attached to timesheets.
 FileAttachmentsApi apiInstance = new FileAttachmentsApi();
 OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The Start date of the date range.  File attachments after this date will be obtained.
 OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The End date of the date range.  File attachments before this date will be obtained.
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 Integer skip = 56; // Integer | Skip this many File attachments
 Integer take = 56; // Integer | Take this many File attachments
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseForPaginatedListTimesheetFileAttachment result = apiInstance.fileAttachmentsGetMyFileAttachments(startDate, endDate, skip, take, xChronosheetsAuth);
+    CSApiResponseForPaginatedListTimesheetFileAttachment result = apiInstance.fileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FileAttachmentsApi#fileAttachmentsGetMyFileAttachments");
@@ -87,9 +87,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startDate** | **OffsetDateTime**| The Start date of the date range.  File attachments after this date will be obtained. |
  **endDate** | **OffsetDateTime**| The End date of the date range.  File attachments before this date will be obtained. |
- **skip** | **Integer**| Skip this many File attachments |
- **take** | **Integer**| Take this many File attachments |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **skip** | **Integer**| Skip this many File attachments | [optional]
+ **take** | **Integer**| Take this many File attachments | [optional]
 
 ### Return type
 

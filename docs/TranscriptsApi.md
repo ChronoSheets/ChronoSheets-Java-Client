@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="transcriptsGetMyTranscripts"></a>
 # **transcriptsGetMyTranscripts**
-> CSApiResponseForPaginatedListOrgReportTranscript transcriptsGetMyTranscripts(startDate, endDate, skip, take, keyword, xChronosheetsAuth)
+> CSApiResponseForPaginatedListOrgReportTranscript transcriptsGetMyTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, keyword)
 
 Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
 
@@ -23,12 +23,12 @@ Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
 TranscriptsApi apiInstance = new TranscriptsApi();
 OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The Start date of the date range.  Transcripts after this date will be obtained.
 OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The End date of the date range.  Transcripts before this date will be obtained.
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 Integer skip = 56; // Integer | Skip this many transcripts
 Integer take = 56; // Integer | Take this many transcripts
 String keyword = "keyword_example"; // String | Search the text content of the transcript keywords
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseForPaginatedListOrgReportTranscript result = apiInstance.transcriptsGetMyTranscripts(startDate, endDate, skip, take, keyword, xChronosheetsAuth);
+    CSApiResponseForPaginatedListOrgReportTranscript result = apiInstance.transcriptsGetMyTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, keyword);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TranscriptsApi#transcriptsGetMyTranscripts");
@@ -42,10 +42,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startDate** | **OffsetDateTime**| The Start date of the date range.  Transcripts after this date will be obtained. |
  **endDate** | **OffsetDateTime**| The End date of the date range.  Transcripts before this date will be obtained. |
- **skip** | **Integer**| Skip this many transcripts |
- **take** | **Integer**| Take this many transcripts |
- **keyword** | **String**| Search the text content of the transcript keywords |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **skip** | **Integer**| Skip this many transcripts | [optional]
+ **take** | **Integer**| Take this many transcripts | [optional]
+ **keyword** | **String**| Search the text content of the transcript keywords | [optional]
 
 ### Return type
 

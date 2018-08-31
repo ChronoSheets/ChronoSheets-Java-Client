@@ -67,14 +67,14 @@ public class ReportsApi {
      * Build call for reportsGetAllChartsDataAdmin
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -124,7 +124,7 @@ public class ReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call reportsGetAllChartsDataAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportsGetAllChartsDataAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -136,18 +136,13 @@ public class ReportsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling reportsGetAllChartsDataAdmin(Async)");
         }
         
-        // verify the required parameter 'userIds' is set
-        if (userIds == null) {
-            throw new ApiException("Missing the required parameter 'userIds' when calling reportsGetAllChartsDataAdmin(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetAllChartsDataAdmin(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminCall(startDate, endDate, xChronosheetsAuth, userIds, progressListener, progressRequestListener);
         return call;
 
     }
@@ -157,13 +152,13 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return CSApiResponseCombinedReportsData
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseCombinedReportsData> resp = reportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+    public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds) throws ApiException {
+        ApiResponse<CSApiResponseCombinedReportsData> resp = reportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds);
         return resp.getData();
     }
 
@@ -172,13 +167,13 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return ApiResponse&lt;CSApiResponseCombinedReportsData&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseCombinedReportsData> reportsGetAllChartsDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseCombinedReportsData> reportsGetAllChartsDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds) throws ApiException {
+        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseCombinedReportsData>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -188,13 +183,13 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseCombinedReportsData> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ApiCallback<CSApiResponseCombinedReportsData> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -215,7 +210,7 @@ public class ReportsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseCombinedReportsData>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -370,14 +365,14 @@ public class ReportsApi {
      * Build call for reportsGetFleetSummaryAdmin
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call reportsGetFleetSummaryAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetFleetSummaryAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -427,7 +422,7 @@ public class ReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call reportsGetFleetSummaryAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportsGetFleetSummaryAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -439,18 +434,13 @@ public class ReportsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin(Async)");
         }
         
-        // verify the required parameter 'userIds' is set
-        if (userIds == null) {
-            throw new ApiException("Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetFleetSummaryAdmin(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = reportsGetFleetSummaryAdminCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetFleetSummaryAdminCall(startDate, endDate, xChronosheetsAuth, userIds, progressListener, progressRequestListener);
         return call;
 
     }
@@ -460,13 +450,13 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return CSApiResponseListFleetSummaryReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseListFleetSummaryReportItem reportsGetFleetSummaryAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseListFleetSummaryReportItem> resp = reportsGetFleetSummaryAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+    public CSApiResponseListFleetSummaryReportItem reportsGetFleetSummaryAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds) throws ApiException {
+        ApiResponse<CSApiResponseListFleetSummaryReportItem> resp = reportsGetFleetSummaryAdminWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds);
         return resp.getData();
     }
 
@@ -475,13 +465,13 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return ApiResponse&lt;CSApiResponseListFleetSummaryReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseListFleetSummaryReportItem> reportsGetFleetSummaryAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = reportsGetFleetSummaryAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseListFleetSummaryReportItem> reportsGetFleetSummaryAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds) throws ApiException {
+        com.squareup.okhttp.Call call = reportsGetFleetSummaryAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseListFleetSummaryReportItem>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -491,13 +481,13 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetFleetSummaryAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseListFleetSummaryReportItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetFleetSummaryAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ApiCallback<CSApiResponseListFleetSummaryReportItem> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -518,7 +508,7 @@ public class ReportsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = reportsGetFleetSummaryAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetFleetSummaryAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseListFleetSummaryReportItem>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -662,16 +652,16 @@ public class ReportsApi {
      * Build call for reportsGetOrganisationTimesheetFileAttachments
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call reportsGetOrganisationTimesheetFileAttachmentsCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetOrganisationTimesheetFileAttachmentsCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -725,7 +715,7 @@ public class ReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call reportsGetOrganisationTimesheetFileAttachmentsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportsGetOrganisationTimesheetFileAttachmentsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -737,28 +727,13 @@ public class ReportsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling reportsGetOrganisationTimesheetFileAttachments(Async)");
         }
         
-        // verify the required parameter 'skip' is set
-        if (skip == null) {
-            throw new ApiException("Missing the required parameter 'skip' when calling reportsGetOrganisationTimesheetFileAttachments(Async)");
-        }
-        
-        // verify the required parameter 'take' is set
-        if (take == null) {
-            throw new ApiException("Missing the required parameter 'take' when calling reportsGetOrganisationTimesheetFileAttachments(Async)");
-        }
-        
-        // verify the required parameter 'userIds' is set
-        if (userIds == null) {
-            throw new ApiException("Missing the required parameter 'userIds' when calling reportsGetOrganisationTimesheetFileAttachments(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetOrganisationTimesheetFileAttachments(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = reportsGetOrganisationTimesheetFileAttachmentsCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetOrganisationTimesheetFileAttachmentsCall(startDate, endDate, xChronosheetsAuth, skip, take, userIds, progressListener, progressRequestListener);
         return call;
 
     }
@@ -768,15 +743,15 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> resp = reportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> resp = reportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
         return resp.getData();
     }
 
@@ -785,15 +760,15 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> reportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = reportsGetOrganisationTimesheetFileAttachmentsValidateBeforeCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> reportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds) throws ApiException {
+        com.squareup.okhttp.Call call = reportsGetOrganisationTimesheetFileAttachmentsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, userIds, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -803,15 +778,15 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetOrganisationTimesheetFileAttachmentsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetOrganisationTimesheetFileAttachmentsAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, final ApiCallback<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -832,7 +807,7 @@ public class ReportsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = reportsGetOrganisationTimesheetFileAttachmentsValidateBeforeCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetOrganisationTimesheetFileAttachmentsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, userIds, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -841,17 +816,17 @@ public class ReportsApi {
      * Build call for reportsGetOrganisationTranscripts
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
-     * @param keywords Search the transcripts by keyword(s) (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param keywords Search the transcripts by keyword(s) (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call reportsGetOrganisationTranscriptsCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetOrganisationTranscriptsCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, String keywords, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -907,7 +882,7 @@ public class ReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call reportsGetOrganisationTranscriptsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportsGetOrganisationTranscriptsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, String keywords, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -919,33 +894,13 @@ public class ReportsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts(Async)");
         }
         
-        // verify the required parameter 'skip' is set
-        if (skip == null) {
-            throw new ApiException("Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts(Async)");
-        }
-        
-        // verify the required parameter 'take' is set
-        if (take == null) {
-            throw new ApiException("Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts(Async)");
-        }
-        
-        // verify the required parameter 'userIds' is set
-        if (userIds == null) {
-            throw new ApiException("Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts(Async)");
-        }
-        
-        // verify the required parameter 'keywords' is set
-        if (keywords == null) {
-            throw new ApiException("Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetOrganisationTranscripts(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = reportsGetOrganisationTranscriptsCall(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetOrganisationTranscriptsCall(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords, progressListener, progressRequestListener);
         return call;
 
     }
@@ -955,16 +910,16 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
-     * @param keywords Search the transcripts by keyword(s) (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param keywords Search the transcripts by keyword(s) (optional)
      * @return CSApiResponseForPaginatedListOrgReportTranscript
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseForPaginatedListOrgReportTranscript reportsGetOrganisationTranscripts(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> resp = reportsGetOrganisationTranscriptsWithHttpInfo(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListOrgReportTranscript reportsGetOrganisationTranscripts(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, String keywords) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> resp = reportsGetOrganisationTranscriptsWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords);
         return resp.getData();
     }
 
@@ -973,16 +928,16 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
-     * @param keywords Search the transcripts by keyword(s) (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param keywords Search the transcripts by keyword(s) (optional)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTranscript&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> reportsGetOrganisationTranscriptsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = reportsGetOrganisationTranscriptsValidateBeforeCall(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> reportsGetOrganisationTranscriptsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, String keywords) throws ApiException {
+        com.squareup.okhttp.Call call = reportsGetOrganisationTranscriptsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTranscript>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -992,16 +947,16 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
-     * @param keywords Search the transcripts by keyword(s) (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param keywords Search the transcripts by keyword(s) (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetOrganisationTranscriptsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListOrgReportTranscript> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetOrganisationTranscriptsAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, String keywords, final ApiCallback<CSApiResponseForPaginatedListOrgReportTranscript> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1022,7 +977,7 @@ public class ReportsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = reportsGetOrganisationTranscriptsValidateBeforeCall(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetOrganisationTranscriptsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTranscript>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1031,16 +986,16 @@ public class ReportsApi {
      * Build call for reportsGetOrganisationTrips
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call reportsGetOrganisationTripsCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetOrganisationTripsCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1094,7 +1049,7 @@ public class ReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call reportsGetOrganisationTripsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportsGetOrganisationTripsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -1106,28 +1061,13 @@ public class ReportsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling reportsGetOrganisationTrips(Async)");
         }
         
-        // verify the required parameter 'skip' is set
-        if (skip == null) {
-            throw new ApiException("Missing the required parameter 'skip' when calling reportsGetOrganisationTrips(Async)");
-        }
-        
-        // verify the required parameter 'take' is set
-        if (take == null) {
-            throw new ApiException("Missing the required parameter 'take' when calling reportsGetOrganisationTrips(Async)");
-        }
-        
-        // verify the required parameter 'userIds' is set
-        if (userIds == null) {
-            throw new ApiException("Missing the required parameter 'userIds' when calling reportsGetOrganisationTrips(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetOrganisationTrips(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = reportsGetOrganisationTripsCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetOrganisationTripsCall(startDate, endDate, xChronosheetsAuth, skip, take, userIds, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1137,15 +1077,15 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return CSApiResponseForPaginatedListOrgReportTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> resp = reportsGetOrganisationTripsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> resp = reportsGetOrganisationTripsWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
         return resp.getData();
     }
 
@@ -1154,15 +1094,15 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> reportsGetOrganisationTripsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = reportsGetOrganisationTripsValidateBeforeCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> reportsGetOrganisationTripsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds) throws ApiException {
+        com.squareup.okhttp.Call call = reportsGetOrganisationTripsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, userIds, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTrip>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1172,15 +1112,15 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param skip Skip this many items (required)
-     * @param take Take this many items (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many items (optional)
+     * @param take Take this many items (optional)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetOrganisationTripsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListOrgReportTrip> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetOrganisationTripsAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, final ApiCallback<CSApiResponseForPaginatedListOrgReportTrip> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1201,7 +1141,7 @@ public class ReportsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = reportsGetOrganisationTripsValidateBeforeCall(startDate, endDate, skip, take, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetOrganisationTripsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, userIds, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTrip>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1210,18 +1150,18 @@ public class ReportsApi {
      * Build call for reportsGetRawDataAdmin
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
-     * @param sort Decide which column to sort on (required)
-     * @param order Decide which direction to sort the column (required)
-     * @param skip Skip this many rows (required)
-     * @param take Take this many rows (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param sort Decide which column to sort on (optional)
+     * @param order Decide which direction to sort the column (optional)
+     * @param skip Skip this many rows (optional)
+     * @param take Take this many rows (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call reportsGetRawDataAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetRawDataAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String sort, String order, Integer skip, Integer take, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1279,7 +1219,7 @@ public class ReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call reportsGetRawDataAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportsGetRawDataAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String sort, String order, Integer skip, Integer take, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -1291,38 +1231,13 @@ public class ReportsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling reportsGetRawDataAdmin(Async)");
         }
         
-        // verify the required parameter 'userIds' is set
-        if (userIds == null) {
-            throw new ApiException("Missing the required parameter 'userIds' when calling reportsGetRawDataAdmin(Async)");
-        }
-        
-        // verify the required parameter 'sort' is set
-        if (sort == null) {
-            throw new ApiException("Missing the required parameter 'sort' when calling reportsGetRawDataAdmin(Async)");
-        }
-        
-        // verify the required parameter 'order' is set
-        if (order == null) {
-            throw new ApiException("Missing the required parameter 'order' when calling reportsGetRawDataAdmin(Async)");
-        }
-        
-        // verify the required parameter 'skip' is set
-        if (skip == null) {
-            throw new ApiException("Missing the required parameter 'skip' when calling reportsGetRawDataAdmin(Async)");
-        }
-        
-        // verify the required parameter 'take' is set
-        if (take == null) {
-            throw new ApiException("Missing the required parameter 'take' when calling reportsGetRawDataAdmin(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetRawDataAdmin(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = reportsGetRawDataAdminCall(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetRawDataAdminCall(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1332,17 +1247,17 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
-     * @param sort Decide which column to sort on (required)
-     * @param order Decide which direction to sort the column (required)
-     * @param skip Skip this many rows (required)
-     * @param take Take this many rows (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param sort Decide which column to sort on (optional)
+     * @param order Decide which direction to sort the column (optional)
+     * @param skip Skip this many rows (optional)
+     * @param take Take this many rows (optional)
      * @return CSApiResponseForPaginatedListRawReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseForPaginatedListRawReportItem> resp = reportsGetRawDataAdminWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String sort, String order, Integer skip, Integer take) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListRawReportItem> resp = reportsGetRawDataAdminWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take);
         return resp.getData();
     }
 
@@ -1351,17 +1266,17 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
-     * @param sort Decide which column to sort on (required)
-     * @param order Decide which direction to sort the column (required)
-     * @param skip Skip this many rows (required)
-     * @param take Take this many rows (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param sort Decide which column to sort on (optional)
+     * @param order Decide which direction to sort the column (optional)
+     * @param skip Skip this many rows (optional)
+     * @param take Take this many rows (optional)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListRawReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseForPaginatedListRawReportItem> reportsGetRawDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = reportsGetRawDataAdminValidateBeforeCall(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseForPaginatedListRawReportItem> reportsGetRawDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String sort, String order, Integer skip, Integer take) throws ApiException {
+        com.squareup.okhttp.Call call = reportsGetRawDataAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListRawReportItem>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1371,17 +1286,17 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
-     * @param sort Decide which column to sort on (required)
-     * @param order Decide which direction to sort the column (required)
-     * @param skip Skip this many rows (required)
-     * @param take Take this many rows (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param sort Decide which column to sort on (optional)
+     * @param order Decide which direction to sort the column (optional)
+     * @param skip Skip this many rows (optional)
+     * @param take Take this many rows (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetRawDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListRawReportItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetRawDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String sort, String order, Integer skip, Integer take, final ApiCallback<CSApiResponseForPaginatedListRawReportItem> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1402,7 +1317,7 @@ public class ReportsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = reportsGetRawDataAdminValidateBeforeCall(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetRawDataAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListRawReportItem>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1411,14 +1326,14 @@ public class ReportsApi {
      * Build call for reportsProjectCostingsAdmin
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call reportsProjectCostingsAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportsProjectCostingsAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1468,7 +1383,7 @@ public class ReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call reportsProjectCostingsAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportsProjectCostingsAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -1480,18 +1395,13 @@ public class ReportsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling reportsProjectCostingsAdmin(Async)");
         }
         
-        // verify the required parameter 'userIds' is set
-        if (userIds == null) {
-            throw new ApiException("Missing the required parameter 'userIds' when calling reportsProjectCostingsAdmin(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling reportsProjectCostingsAdmin(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = reportsProjectCostingsAdminCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsProjectCostingsAdminCall(startDate, endDate, xChronosheetsAuth, userIds, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1501,13 +1411,13 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return CSApiResponseListProjectCostingReportItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseListProjectCostingReportItem> resp = reportsProjectCostingsAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+    public CSApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds) throws ApiException {
+        ApiResponse<CSApiResponseListProjectCostingReportItem> resp = reportsProjectCostingsAdminWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds);
         return resp.getData();
     }
 
@@ -1516,13 +1426,13 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @return ApiResponse&lt;CSApiResponseListProjectCostingReportItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseListProjectCostingReportItem> reportsProjectCostingsAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = reportsProjectCostingsAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseListProjectCostingReportItem> reportsProjectCostingsAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds) throws ApiException {
+        com.squareup.okhttp.Call call = reportsProjectCostingsAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseListProjectCostingReportItem>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1532,13 +1442,13 @@ public class ReportsApi {
      * 
      * @param startDate The start date for the date range.  Report data in the response is after this date (required)
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
-     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsProjectCostingsAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String userIds, String xChronosheetsAuth, final ApiCallback<CSApiResponseListProjectCostingReportItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsProjectCostingsAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ApiCallback<CSApiResponseListProjectCostingReportItem> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1559,7 +1469,7 @@ public class ReportsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = reportsProjectCostingsAdminValidateBeforeCall(startDate, endDate, userIds, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsProjectCostingsAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseListProjectCostingReportItem>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -330,16 +330,16 @@ public class TripsApi {
      * Build call for tripsGetMyTrips
      * @param startDate The Start date of the date range.  Trips after this date will be obtained. (required)
      * @param endDate The End date of the date range.  Trips before this date will be obtained. (required)
-     * @param skip Skip this many Trips (required)
-     * @param take Take this many Trips (required)
-     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many Trips (optional)
+     * @param take Take this many Trips (optional)
+     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call tripsGetMyTripsCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call tripsGetMyTripsCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, Integer vehicleId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -393,7 +393,7 @@ public class TripsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call tripsGetMyTripsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call tripsGetMyTripsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, Integer vehicleId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -405,28 +405,13 @@ public class TripsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling tripsGetMyTrips(Async)");
         }
         
-        // verify the required parameter 'skip' is set
-        if (skip == null) {
-            throw new ApiException("Missing the required parameter 'skip' when calling tripsGetMyTrips(Async)");
-        }
-        
-        // verify the required parameter 'take' is set
-        if (take == null) {
-            throw new ApiException("Missing the required parameter 'take' when calling tripsGetMyTrips(Async)");
-        }
-        
-        // verify the required parameter 'vehicleId' is set
-        if (vehicleId == null) {
-            throw new ApiException("Missing the required parameter 'vehicleId' when calling tripsGetMyTrips(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling tripsGetMyTrips(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = tripsGetMyTripsCall(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = tripsGetMyTripsCall(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -436,15 +421,15 @@ public class TripsApi {
      * 
      * @param startDate The Start date of the date range.  Trips after this date will be obtained. (required)
      * @param endDate The End date of the date range.  Trips before this date will be obtained. (required)
-     * @param skip Skip this many Trips (required)
-     * @param take Take this many Trips (required)
-     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many Trips (optional)
+     * @param take Take this many Trips (optional)
+     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)
      * @return CSApiResponseForPaginatedListTrip
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseForPaginatedListTrip tripsGetMyTrips(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseForPaginatedListTrip> resp = tripsGetMyTripsWithHttpInfo(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListTrip tripsGetMyTrips(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, Integer vehicleId) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListTrip> resp = tripsGetMyTripsWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
         return resp.getData();
     }
 
@@ -453,15 +438,15 @@ public class TripsApi {
      * 
      * @param startDate The Start date of the date range.  Trips after this date will be obtained. (required)
      * @param endDate The End date of the date range.  Trips before this date will be obtained. (required)
-     * @param skip Skip this many Trips (required)
-     * @param take Take this many Trips (required)
-     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many Trips (optional)
+     * @param take Take this many Trips (optional)
+     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListTrip&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseForPaginatedListTrip> tripsGetMyTripsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = tripsGetMyTripsValidateBeforeCall(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseForPaginatedListTrip> tripsGetMyTripsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, Integer vehicleId) throws ApiException {
+        com.squareup.okhttp.Call call = tripsGetMyTripsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListTrip>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -471,15 +456,15 @@ public class TripsApi {
      * 
      * @param startDate The Start date of the date range.  Trips after this date will be obtained. (required)
      * @param endDate The End date of the date range.  Trips before this date will be obtained. (required)
-     * @param skip Skip this many Trips (required)
-     * @param take Take this many Trips (required)
-     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many Trips (optional)
+     * @param take Take this many Trips (optional)
+     * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tripsGetMyTripsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListTrip> callback) throws ApiException {
+    public com.squareup.okhttp.Call tripsGetMyTripsAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, Integer vehicleId, final ApiCallback<CSApiResponseForPaginatedListTrip> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -500,7 +485,7 @@ public class TripsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = tripsGetMyTripsValidateBeforeCall(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = tripsGetMyTripsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListTrip>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

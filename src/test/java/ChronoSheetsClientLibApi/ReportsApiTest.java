@@ -53,9 +53,9 @@ public class ReportsApiTest {
     public void reportsGetAllChartsDataAdminTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        String userIds = null;
         String xChronosheetsAuth = null;
-        CSApiResponseCombinedReportsData response = api.reportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+        String userIds = null;
+        CSApiResponseCombinedReportsData response = api.reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds);
 
         // TODO: test validations
     }
@@ -90,9 +90,9 @@ public class ReportsApiTest {
     public void reportsGetFleetSummaryAdminTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        String userIds = null;
         String xChronosheetsAuth = null;
-        CSApiResponseListFleetSummaryReportItem response = api.reportsGetFleetSummaryAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+        String userIds = null;
+        CSApiResponseListFleetSummaryReportItem response = api.reportsGetFleetSummaryAdmin(startDate, endDate, xChronosheetsAuth, userIds);
 
         // TODO: test validations
     }
@@ -126,11 +126,11 @@ public class ReportsApiTest {
     public void reportsGetOrganisationTimesheetFileAttachmentsTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
+        String xChronosheetsAuth = null;
         Integer skip = null;
         Integer take = null;
         String userIds = null;
-        String xChronosheetsAuth = null;
-        CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment response = api.reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+        CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment response = api.reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
 
         // TODO: test validations
     }
@@ -147,12 +147,12 @@ public class ReportsApiTest {
     public void reportsGetOrganisationTranscriptsTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
+        String xChronosheetsAuth = null;
         Integer skip = null;
         Integer take = null;
         String userIds = null;
         String keywords = null;
-        String xChronosheetsAuth = null;
-        CSApiResponseForPaginatedListOrgReportTranscript response = api.reportsGetOrganisationTranscripts(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth);
+        CSApiResponseForPaginatedListOrgReportTranscript response = api.reportsGetOrganisationTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords);
 
         // TODO: test validations
     }
@@ -169,11 +169,11 @@ public class ReportsApiTest {
     public void reportsGetOrganisationTripsTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
+        String xChronosheetsAuth = null;
         Integer skip = null;
         Integer take = null;
         String userIds = null;
-        String xChronosheetsAuth = null;
-        CSApiResponseForPaginatedListOrgReportTrip response = api.reportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+        CSApiResponseForPaginatedListOrgReportTrip response = api.reportsGetOrganisationTrips(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
 
         // TODO: test validations
     }
@@ -190,13 +190,13 @@ public class ReportsApiTest {
     public void reportsGetRawDataAdminTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
+        String xChronosheetsAuth = null;
         String userIds = null;
         String sort = null;
         String order = null;
         Integer skip = null;
         Integer take = null;
-        String xChronosheetsAuth = null;
-        CSApiResponseForPaginatedListRawReportItem response = api.reportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
+        CSApiResponseForPaginatedListRawReportItem response = api.reportsGetRawDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take);
 
         // TODO: test validations
     }
@@ -213,9 +213,9 @@ public class ReportsApiTest {
     public void reportsProjectCostingsAdminTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        String userIds = null;
         String xChronosheetsAuth = null;
-        CSApiResponseListProjectCostingReportItem response = api.reportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+        String userIds = null;
+        CSApiResponseListProjectCostingReportItem response = api.reportsProjectCostingsAdmin(startDate, endDate, xChronosheetsAuth, userIds);
 
         // TODO: test validations
     }

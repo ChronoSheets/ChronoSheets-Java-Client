@@ -195,15 +195,15 @@ public class FileAttachmentsApi {
      * Build call for fileAttachmentsGetMyFileAttachments
      * @param startDate The Start date of the date range.  File attachments after this date will be obtained. (required)
      * @param endDate The End date of the date range.  File attachments before this date will be obtained. (required)
-     * @param skip Skip this many File attachments (required)
-     * @param take Take this many File attachments (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many File attachments (optional)
+     * @param take Take this many File attachments (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call fileAttachmentsGetMyFileAttachmentsCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call fileAttachmentsGetMyFileAttachmentsCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -255,7 +255,7 @@ public class FileAttachmentsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call fileAttachmentsGetMyFileAttachmentsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call fileAttachmentsGetMyFileAttachmentsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -267,23 +267,13 @@ public class FileAttachmentsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling fileAttachmentsGetMyFileAttachments(Async)");
         }
         
-        // verify the required parameter 'skip' is set
-        if (skip == null) {
-            throw new ApiException("Missing the required parameter 'skip' when calling fileAttachmentsGetMyFileAttachments(Async)");
-        }
-        
-        // verify the required parameter 'take' is set
-        if (take == null) {
-            throw new ApiException("Missing the required parameter 'take' when calling fileAttachmentsGetMyFileAttachments(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling fileAttachmentsGetMyFileAttachments(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = fileAttachmentsGetMyFileAttachmentsCall(startDate, endDate, skip, take, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = fileAttachmentsGetMyFileAttachmentsCall(startDate, endDate, xChronosheetsAuth, skip, take, progressListener, progressRequestListener);
         return call;
 
     }
@@ -293,14 +283,14 @@ public class FileAttachmentsApi {
      * 
      * @param startDate The Start date of the date range.  File attachments after this date will be obtained. (required)
      * @param endDate The End date of the date range.  File attachments before this date will be obtained. (required)
-     * @param skip Skip this many File attachments (required)
-     * @param take Take this many File attachments (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many File attachments (optional)
+     * @param take Take this many File attachments (optional)
      * @return CSApiResponseForPaginatedListTimesheetFileAttachment
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseForPaginatedListTimesheetFileAttachment fileAttachmentsGetMyFileAttachments(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> resp = fileAttachmentsGetMyFileAttachmentsWithHttpInfo(startDate, endDate, skip, take, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListTimesheetFileAttachment fileAttachmentsGetMyFileAttachments(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> resp = fileAttachmentsGetMyFileAttachmentsWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take);
         return resp.getData();
     }
 
@@ -309,14 +299,14 @@ public class FileAttachmentsApi {
      * 
      * @param startDate The Start date of the date range.  File attachments after this date will be obtained. (required)
      * @param endDate The End date of the date range.  File attachments before this date will be obtained. (required)
-     * @param skip Skip this many File attachments (required)
-     * @param take Take this many File attachments (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many File attachments (optional)
+     * @param take Take this many File attachments (optional)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListTimesheetFileAttachment&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> fileAttachmentsGetMyFileAttachmentsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = fileAttachmentsGetMyFileAttachmentsValidateBeforeCall(startDate, endDate, skip, take, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> fileAttachmentsGetMyFileAttachmentsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take) throws ApiException {
+        com.squareup.okhttp.Call call = fileAttachmentsGetMyFileAttachmentsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListTimesheetFileAttachment>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -326,14 +316,14 @@ public class FileAttachmentsApi {
      * 
      * @param startDate The Start date of the date range.  File attachments after this date will be obtained. (required)
      * @param endDate The End date of the date range.  File attachments before this date will be obtained. (required)
-     * @param skip Skip this many File attachments (required)
-     * @param take Take this many File attachments (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many File attachments (optional)
+     * @param take Take this many File attachments (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call fileAttachmentsGetMyFileAttachmentsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListTimesheetFileAttachment> callback) throws ApiException {
+    public com.squareup.okhttp.Call fileAttachmentsGetMyFileAttachmentsAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, final ApiCallback<CSApiResponseForPaginatedListTimesheetFileAttachment> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -354,7 +344,7 @@ public class FileAttachmentsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = fileAttachmentsGetMyFileAttachmentsValidateBeforeCall(startDate, endDate, skip, take, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = fileAttachmentsGetMyFileAttachmentsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListTimesheetFileAttachment>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

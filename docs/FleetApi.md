@@ -102,7 +102,7 @@ No authorization required
 
 <a name="fleetGetVehicles"></a>
 # **fleetGetVehicles**
-> CSApiResponseListFleetVehicle fleetGetVehicles(includeDeleted, xChronosheetsAuth)
+> CSApiResponseListFleetVehicle fleetGetVehicles(xChronosheetsAuth, includeDeleted)
 
 Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 
@@ -114,10 +114,10 @@ Get a collection of vehicles that are under your organisation.    Does not requi
 
 
 FleetApi apiInstance = new FleetApi();
-Boolean includeDeleted = true; // Boolean | Whether or not to include deleted vehicles
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Boolean includeDeleted = true; // Boolean | Whether or not to include deleted vehicles
 try {
-    CSApiResponseListFleetVehicle result = apiInstance.fleetGetVehicles(includeDeleted, xChronosheetsAuth);
+    CSApiResponseListFleetVehicle result = apiInstance.fleetGetVehicles(xChronosheetsAuth, includeDeleted);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetApi#fleetGetVehicles");
@@ -129,8 +129,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **includeDeleted** | **Boolean**| Whether or not to include deleted vehicles |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **includeDeleted** | **Boolean**| Whether or not to include deleted vehicles | [optional]
 
 ### Return type
 

@@ -82,11 +82,11 @@ public class TripsApiTest {
     public void tripsGetMyTripsTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
+        String xChronosheetsAuth = null;
         Integer skip = null;
         Integer take = null;
         Integer vehicleId = null;
-        String xChronosheetsAuth = null;
-        CSApiResponseForPaginatedListTrip response = api.tripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+        CSApiResponseForPaginatedListTrip response = api.tripsGetMyTrips(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
 
         // TODO: test validations
     }

@@ -29,7 +29,7 @@ import java.util.List;
  * Fields for inserting a new Vehicle
  */
 @ApiModel(description = "Fields for inserting a new Vehicle")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-16T22:53:08.640+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-31T20:36:12.993+10:00")
 public class CSInsertVehicleRequest {
   @SerializedName("Name")
   private String name = null;

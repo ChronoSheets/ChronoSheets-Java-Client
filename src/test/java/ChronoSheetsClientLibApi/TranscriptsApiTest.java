@@ -45,11 +45,11 @@ public class TranscriptsApiTest {
     public void transcriptsGetMyTranscriptsTest() throws ApiException {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
+        String xChronosheetsAuth = null;
         Integer skip = null;
         Integer take = null;
         String keyword = null;
-        String xChronosheetsAuth = null;
-        CSApiResponseForPaginatedListOrgReportTranscript response = api.transcriptsGetMyTranscripts(startDate, endDate, skip, take, keyword, xChronosheetsAuth);
+        CSApiResponseForPaginatedListOrgReportTranscript response = api.transcriptsGetMyTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, keyword);
 
         // TODO: test validations
     }

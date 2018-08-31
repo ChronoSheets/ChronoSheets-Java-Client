@@ -59,16 +59,16 @@ public class TranscriptsApi {
      * Build call for transcriptsGetMyTranscripts
      * @param startDate The Start date of the date range.  Transcripts after this date will be obtained. (required)
      * @param endDate The End date of the date range.  Transcripts before this date will be obtained. (required)
-     * @param skip Skip this many transcripts (required)
-     * @param take Take this many transcripts (required)
-     * @param keyword Search the text content of the transcript keywords (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many transcripts (optional)
+     * @param take Take this many transcripts (optional)
+     * @param keyword Search the text content of the transcript keywords (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call transcriptsGetMyTranscriptsCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String keyword, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call transcriptsGetMyTranscriptsCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String keyword, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -122,7 +122,7 @@ public class TranscriptsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call transcriptsGetMyTranscriptsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String keyword, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call transcriptsGetMyTranscriptsValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String keyword, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -134,28 +134,13 @@ public class TranscriptsApi {
             throw new ApiException("Missing the required parameter 'endDate' when calling transcriptsGetMyTranscripts(Async)");
         }
         
-        // verify the required parameter 'skip' is set
-        if (skip == null) {
-            throw new ApiException("Missing the required parameter 'skip' when calling transcriptsGetMyTranscripts(Async)");
-        }
-        
-        // verify the required parameter 'take' is set
-        if (take == null) {
-            throw new ApiException("Missing the required parameter 'take' when calling transcriptsGetMyTranscripts(Async)");
-        }
-        
-        // verify the required parameter 'keyword' is set
-        if (keyword == null) {
-            throw new ApiException("Missing the required parameter 'keyword' when calling transcriptsGetMyTranscripts(Async)");
-        }
-        
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
             throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling transcriptsGetMyTranscripts(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = transcriptsGetMyTranscriptsCall(startDate, endDate, skip, take, keyword, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = transcriptsGetMyTranscriptsCall(startDate, endDate, xChronosheetsAuth, skip, take, keyword, progressListener, progressRequestListener);
         return call;
 
     }
@@ -165,15 +150,15 @@ public class TranscriptsApi {
      * 
      * @param startDate The Start date of the date range.  Transcripts after this date will be obtained. (required)
      * @param endDate The End date of the date range.  Transcripts before this date will be obtained. (required)
-     * @param skip Skip this many transcripts (required)
-     * @param take Take this many transcripts (required)
-     * @param keyword Search the text content of the transcript keywords (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many transcripts (optional)
+     * @param take Take this many transcripts (optional)
+     * @param keyword Search the text content of the transcript keywords (optional)
      * @return CSApiResponseForPaginatedListOrgReportTranscript
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseForPaginatedListOrgReportTranscript transcriptsGetMyTranscripts(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String keyword, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> resp = transcriptsGetMyTranscriptsWithHttpInfo(startDate, endDate, skip, take, keyword, xChronosheetsAuth);
+    public CSApiResponseForPaginatedListOrgReportTranscript transcriptsGetMyTranscripts(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String keyword) throws ApiException {
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> resp = transcriptsGetMyTranscriptsWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, keyword);
         return resp.getData();
     }
 
@@ -182,15 +167,15 @@ public class TranscriptsApi {
      * 
      * @param startDate The Start date of the date range.  Transcripts after this date will be obtained. (required)
      * @param endDate The End date of the date range.  Transcripts before this date will be obtained. (required)
-     * @param skip Skip this many transcripts (required)
-     * @param take Take this many transcripts (required)
-     * @param keyword Search the text content of the transcript keywords (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many transcripts (optional)
+     * @param take Take this many transcripts (optional)
+     * @param keyword Search the text content of the transcript keywords (optional)
      * @return ApiResponse&lt;CSApiResponseForPaginatedListOrgReportTranscript&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> transcriptsGetMyTranscriptsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String keyword, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = transcriptsGetMyTranscriptsValidateBeforeCall(startDate, endDate, skip, take, keyword, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> transcriptsGetMyTranscriptsWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String keyword) throws ApiException {
+        com.squareup.okhttp.Call call = transcriptsGetMyTranscriptsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, keyword, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTranscript>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -200,15 +185,15 @@ public class TranscriptsApi {
      * 
      * @param startDate The Start date of the date range.  Transcripts after this date will be obtained. (required)
      * @param endDate The End date of the date range.  Transcripts before this date will be obtained. (required)
-     * @param skip Skip this many transcripts (required)
-     * @param take Take this many transcripts (required)
-     * @param keyword Search the text content of the transcript keywords (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param skip Skip this many transcripts (optional)
+     * @param take Take this many transcripts (optional)
+     * @param keyword Search the text content of the transcript keywords (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call transcriptsGetMyTranscriptsAsync(OffsetDateTime startDate, OffsetDateTime endDate, Integer skip, Integer take, String keyword, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedListOrgReportTranscript> callback) throws ApiException {
+    public com.squareup.okhttp.Call transcriptsGetMyTranscriptsAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, Integer skip, Integer take, String keyword, final ApiCallback<CSApiResponseForPaginatedListOrgReportTranscript> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -229,7 +214,7 @@ public class TranscriptsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = transcriptsGetMyTranscriptsValidateBeforeCall(startDate, endDate, skip, take, keyword, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = transcriptsGetMyTranscriptsValidateBeforeCall(startDate, endDate, xChronosheetsAuth, skip, take, keyword, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedListOrgReportTranscript>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSProject
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-16T22:53:08.640+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-31T20:36:12.993+10:00")
 public class CSProject {
   @SerializedName("Id")
   private Integer id = null;
@@ -43,6 +43,9 @@ public class CSProject {
 
   @SerializedName("CostEstimation")
   private Double costEstimation = null;
+
+  @SerializedName("CostActual")
+  private Double costActual = null;
 
   @SerializedName("StartDate")
   private OffsetDateTime startDate = null;
@@ -140,6 +143,24 @@ public class CSProject {
     this.costEstimation = costEstimation;
   }
 
+  public CSProject costActual(Double costActual) {
+    this.costActual = costActual;
+    return this;
+  }
+
+   /**
+   * Get costActual
+   * @return costActual
+  **/
+  @ApiModelProperty(value = "")
+  public Double getCostActual() {
+    return costActual;
+  }
+
+  public void setCostActual(Double costActual) {
+    this.costActual = costActual;
+  }
+
   public CSProject startDate(OffsetDateTime startDate) {
     this.startDate = startDate;
     return this;
@@ -191,13 +212,14 @@ public class CSProject {
         Objects.equals(this.organisationId, project.organisationId) &&
         Objects.equals(this.projectName, project.projectName) &&
         Objects.equals(this.costEstimation, project.costEstimation) &&
+        Objects.equals(this.costActual, project.costActual) &&
         Objects.equals(this.startDate, project.startDate) &&
         Objects.equals(this.endDate, project.endDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, clientId, organisationId, projectName, costEstimation, startDate, endDate);
+    return Objects.hash(id, clientId, organisationId, projectName, costEstimation, costActual, startDate, endDate);
   }
 
 
@@ -211,6 +233,7 @@ public class CSProject {
     sb.append("    organisationId: ").append(toIndentedString(organisationId)).append("\n");
     sb.append("    projectName: ").append(toIndentedString(projectName)).append("\n");
     sb.append("    costEstimation: ").append(toIndentedString(costEstimation)).append("\n");
+    sb.append("    costActual: ").append(toIndentedString(costActual)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("}");

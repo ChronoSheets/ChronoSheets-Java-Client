@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **organisationId** | **Integer** |  |  [optional]
 **projectName** | **String** |  |  [optional]
 **costEstimation** | **Double** |  |  [optional]
+**costActual** | **Double** |  |  [optional]
 **startDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **endDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 

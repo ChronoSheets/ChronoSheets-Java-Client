@@ -101,7 +101,7 @@ No authorization required
 
 <a name="tripsGetMyTrips"></a>
 # **tripsGetMyTrips**
-> CSApiResponseForPaginatedListTrip tripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth)
+> CSApiResponseForPaginatedListTrip tripsGetMyTrips(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId)
 
 Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
 
@@ -115,12 +115,12 @@ Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires 
 TripsApi apiInstance = new TripsApi();
 OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The Start date of the date range.  Trips after this date will be obtained.
 OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The End date of the date range.  Trips before this date will be obtained.
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 Integer skip = 56; // Integer | Skip this many Trips
 Integer take = 56; // Integer | Take this many Trips
 Integer vehicleId = 56; // Integer | Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseForPaginatedListTrip result = apiInstance.tripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+    CSApiResponseForPaginatedListTrip result = apiInstance.tripsGetMyTrips(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TripsApi#tripsGetMyTrips");
@@ -134,10 +134,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startDate** | **OffsetDateTime**| The Start date of the date range.  Trips after this date will be obtained. |
  **endDate** | **OffsetDateTime**| The End date of the date range.  Trips before this date will be obtained. |
- **skip** | **Integer**| Skip this many Trips |
- **take** | **Integer**| Take this many Trips |
- **vehicleId** | **Integer**| Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **skip** | **Integer**| Skip this many Trips | [optional]
+ **take** | **Integer**| Take this many Trips | [optional]
+ **vehicleId** | **Integer**| Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId | [optional]
 
 ### Return type
 

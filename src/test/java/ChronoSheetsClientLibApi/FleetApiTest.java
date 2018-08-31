@@ -81,9 +81,9 @@ public class FleetApiTest {
      */
     @Test
     public void fleetGetVehiclesTest() throws ApiException {
-        Boolean includeDeleted = null;
         String xChronosheetsAuth = null;
-        CSApiResponseListFleetVehicle response = api.fleetGetVehicles(includeDeleted, xChronosheetsAuth);
+        Boolean includeDeleted = null;
+        CSApiResponseListFleetVehicle response = api.fleetGetVehicles(xChronosheetsAuth, includeDeleted);
 
         // TODO: test validations
     }

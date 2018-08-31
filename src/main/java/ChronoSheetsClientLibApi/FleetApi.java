@@ -329,14 +329,14 @@ public class FleetApi {
     }
     /**
      * Build call for fleetGetVehicles
-     * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param includeDeleted Whether or not to include deleted vehicles (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call fleetGetVehiclesCall(Boolean includeDeleted, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call fleetGetVehiclesCall(String xChronosheetsAuth, Boolean includeDeleted, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -382,12 +382,7 @@ public class FleetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call fleetGetVehiclesValidateBeforeCall(Boolean includeDeleted, String xChronosheetsAuth, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'includeDeleted' is set
-        if (includeDeleted == null) {
-            throw new ApiException("Missing the required parameter 'includeDeleted' when calling fleetGetVehicles(Async)");
-        }
+    private com.squareup.okhttp.Call fleetGetVehiclesValidateBeforeCall(String xChronosheetsAuth, Boolean includeDeleted, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'xChronosheetsAuth' is set
         if (xChronosheetsAuth == null) {
@@ -395,7 +390,7 @@ public class FleetApi {
         }
         
 
-        com.squareup.okhttp.Call call = fleetGetVehiclesCall(includeDeleted, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = fleetGetVehiclesCall(xChronosheetsAuth, includeDeleted, progressListener, progressRequestListener);
         return call;
 
     }
@@ -403,26 +398,26 @@ public class FleetApi {
     /**
      * Get a collection of vehicles that are under your organisation.    Does not require any special permission.
      * 
-     * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param includeDeleted Whether or not to include deleted vehicles (optional)
      * @return CSApiResponseListFleetVehicle
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseListFleetVehicle fleetGetVehicles(Boolean includeDeleted, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseListFleetVehicle> resp = fleetGetVehiclesWithHttpInfo(includeDeleted, xChronosheetsAuth);
+    public CSApiResponseListFleetVehicle fleetGetVehicles(String xChronosheetsAuth, Boolean includeDeleted) throws ApiException {
+        ApiResponse<CSApiResponseListFleetVehicle> resp = fleetGetVehiclesWithHttpInfo(xChronosheetsAuth, includeDeleted);
         return resp.getData();
     }
 
     /**
      * Get a collection of vehicles that are under your organisation.    Does not require any special permission.
      * 
-     * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param includeDeleted Whether or not to include deleted vehicles (optional)
      * @return ApiResponse&lt;CSApiResponseListFleetVehicle&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseListFleetVehicle> fleetGetVehiclesWithHttpInfo(Boolean includeDeleted, String xChronosheetsAuth) throws ApiException {
-        com.squareup.okhttp.Call call = fleetGetVehiclesValidateBeforeCall(includeDeleted, xChronosheetsAuth, null, null);
+    public ApiResponse<CSApiResponseListFleetVehicle> fleetGetVehiclesWithHttpInfo(String xChronosheetsAuth, Boolean includeDeleted) throws ApiException {
+        com.squareup.okhttp.Call call = fleetGetVehiclesValidateBeforeCall(xChronosheetsAuth, includeDeleted, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseListFleetVehicle>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -430,13 +425,13 @@ public class FleetApi {
     /**
      * Get a collection of vehicles that are under your organisation.    Does not require any special permission. (asynchronously)
      * 
-     * @param includeDeleted Whether or not to include deleted vehicles (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param includeDeleted Whether or not to include deleted vehicles (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call fleetGetVehiclesAsync(Boolean includeDeleted, String xChronosheetsAuth, final ApiCallback<CSApiResponseListFleetVehicle> callback) throws ApiException {
+    public com.squareup.okhttp.Call fleetGetVehiclesAsync(String xChronosheetsAuth, Boolean includeDeleted, final ApiCallback<CSApiResponseListFleetVehicle> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -457,7 +452,7 @@ public class FleetApi {
             };
         }
 
-        com.squareup.okhttp.Call call = fleetGetVehiclesValidateBeforeCall(includeDeleted, xChronosheetsAuth, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = fleetGetVehiclesValidateBeforeCall(xChronosheetsAuth, includeDeleted, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseListFleetVehicle>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
