@@ -27,7 +27,7 @@ import java.io.IOException;
  * An API Request object for logging into ChronoSheets
  */
 @ApiModel(description = "An API Request object for logging into ChronoSheets")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-31T20:36:12.993+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-04T19:12:08.464+10:00")
 public class CSDoLoginRequest {
   @SerializedName("UsernameOrEmail")
   private String usernameOrEmail = null;

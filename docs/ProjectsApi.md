@@ -24,7 +24,7 @@ Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
 ProjectsApi apiInstance = new ProjectsApi();
-CSInsertProjectRequest request = new CSInsertProjectRequest(); // CSInsertProjectRequest | An Insert Project Request object containing values for the new Project to create
+CSInsertProjectRequest request = new CSInsertProjectRequest(); // CSInsertProjectRequest | An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
     CSApiResponseInt32 result = apiInstance.projectsCreateProject(request, xChronosheetsAuth);
@@ -39,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create |
+ **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type

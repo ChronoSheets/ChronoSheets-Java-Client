@@ -476,7 +476,7 @@ public class TimesheetsApi {
     }
     /**
      * Build call for timesheetsUpdateTimesheets
-     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create (required)
+     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -548,7 +548,7 @@ public class TimesheetsApi {
     /**
      * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create (required)
+     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseListInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -561,7 +561,7 @@ public class TimesheetsApi {
     /**
      * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
      * 
-     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create (required)
+     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseListInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -575,7 +575,7 @@ public class TimesheetsApi {
     /**
      * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. (asynchronously)
      * 
-     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create (required)
+     * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

@@ -61,7 +61,7 @@ public class ProjectsApi {
 
     /**
      * Build call for projectsCreateProject
-     * @param request An Insert Project Request object containing values for the new Project to create (required)
+     * @param request An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -133,7 +133,7 @@ public class ProjectsApi {
     /**
      * Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request An Insert Project Request object containing values for the new Project to create (required)
+     * @param request An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return CSApiResponseInt32
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -146,7 +146,7 @@ public class ProjectsApi {
     /**
      * Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
      * 
-     * @param request An Insert Project Request object containing values for the new Project to create (required)
+     * @param request An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @return ApiResponse&lt;CSApiResponseInt32&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -160,7 +160,7 @@ public class ProjectsApi {
     /**
      * Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission. (asynchronously)
      * 
-     * @param request An Insert Project Request object containing values for the new Project to create (required)
+     * @param request An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

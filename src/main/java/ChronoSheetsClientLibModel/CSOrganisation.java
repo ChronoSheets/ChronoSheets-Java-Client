@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSOrganisation
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-08-31T20:36:12.993+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-04T19:12:08.464+10:00")
 public class CSOrganisation {
   @SerializedName("Id")
   private Integer id = null;
@@ -70,6 +70,9 @@ public class CSOrganisation {
 
   @SerializedName("SignupToken")
   private String signupToken = null;
+
+  @SerializedName("IsActive")
+  private Boolean isActive = null;
 
   @SerializedName("SubscriptionCycleStart")
   private OffsetDateTime subscriptionCycleStart = null;
@@ -314,6 +317,24 @@ public class CSOrganisation {
     this.signupToken = signupToken;
   }
 
+  public CSOrganisation isActive(Boolean isActive) {
+    this.isActive = isActive;
+    return this;
+  }
+
+   /**
+   * Get isActive
+   * @return isActive
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsActive() {
+    return isActive;
+  }
+
+  public void setIsActive(Boolean isActive) {
+    this.isActive = isActive;
+  }
+
   public CSOrganisation subscriptionCycleStart(OffsetDateTime subscriptionCycleStart) {
     this.subscriptionCycleStart = subscriptionCycleStart;
     return this;
@@ -399,6 +420,7 @@ public class CSOrganisation {
         Objects.equals(this.timezone, organisation.timezone) &&
         Objects.equals(this.subscriptionCustomerId, organisation.subscriptionCustomerId) &&
         Objects.equals(this.signupToken, organisation.signupToken) &&
+        Objects.equals(this.isActive, organisation.isActive) &&
         Objects.equals(this.subscriptionCycleStart, organisation.subscriptionCycleStart) &&
         Objects.equals(this.subscriptionCycleEnd, organisation.subscriptionCycleEnd) &&
         Objects.equals(this.pricingPlans, organisation.pricingPlans);
@@ -406,7 +428,7 @@ public class CSOrganisation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, addressLine01, addressLine02, suburb, state, postcode, country, phone, emailAddress, timezone, subscriptionCustomerId, signupToken, subscriptionCycleStart, subscriptionCycleEnd, pricingPlans);
+    return Objects.hash(id, name, addressLine01, addressLine02, suburb, state, postcode, country, phone, emailAddress, timezone, subscriptionCustomerId, signupToken, isActive, subscriptionCycleStart, subscriptionCycleEnd, pricingPlans);
   }
 
 
@@ -428,6 +450,7 @@ public class CSOrganisation {
     sb.append("    timezone: ").append(toIndentedString(timezone)).append("\n");
     sb.append("    subscriptionCustomerId: ").append(toIndentedString(subscriptionCustomerId)).append("\n");
     sb.append("    signupToken: ").append(toIndentedString(signupToken)).append("\n");
+    sb.append("    isActive: ").append(toIndentedString(isActive)).append("\n");
     sb.append("    subscriptionCycleStart: ").append(toIndentedString(subscriptionCycleStart)).append("\n");
     sb.append("    subscriptionCycleEnd: ").append(toIndentedString(subscriptionCycleEnd)).append("\n");
     sb.append("    pricingPlans: ").append(toIndentedString(pricingPlans)).append("\n");
