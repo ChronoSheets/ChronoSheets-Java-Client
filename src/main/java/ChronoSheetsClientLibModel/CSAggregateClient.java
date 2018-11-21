@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * CSAggregateClient
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T22:54:32.605+11:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T23:48:25.710+11:00")
 public class CSAggregateClient {
   @SerializedName("ClientProjects")
   private List<CSAggregateProject> clientProjects = null;
@@ -90,10 +90,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientProjects
+   * A list of projects that are under this client
    * @return clientProjects
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A list of projects that are under this client")
   public List<CSAggregateProject> getClientProjects() {
     return clientProjects;
   }
@@ -108,10 +108,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get id
+   * The ID of the client
    * @return id
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the client")
   public Integer getId() {
     return id;
   }
@@ -126,10 +126,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get organisationId
+   * The ID of your organisation
    * @return organisationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of your organisation")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -144,10 +144,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientName
+   * The name of the client
    * @return clientName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the client")
   public String getClientName() {
     return clientName;
   }
@@ -162,10 +162,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientAddressLine1
+   * The address line 1 of the client
    * @return clientAddressLine1
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The address line 1 of the client")
   public String getClientAddressLine1() {
     return clientAddressLine1;
   }
@@ -180,10 +180,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientAddressLine2
+   * The address line 2 of the client
    * @return clientAddressLine2
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The address line 2 of the client")
   public String getClientAddressLine2() {
     return clientAddressLine2;
   }
@@ -198,10 +198,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientSuburb
+   * The address suburb of the client
    * @return clientSuburb
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The address suburb of the client")
   public String getClientSuburb() {
     return clientSuburb;
   }
@@ -216,10 +216,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientState
+   * The address state of the client
    * @return clientState
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The address state of the client")
   public String getClientState() {
     return clientState;
   }
@@ -234,10 +234,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientPostCode
+   * The postcode of the client
    * @return clientPostCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The postcode of the client")
   public String getClientPostCode() {
     return clientPostCode;
   }
@@ -252,10 +252,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get personOfContact
+   * The contact person working under the client
    * @return personOfContact
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The contact person working under the client")
   public String getPersonOfContact() {
     return personOfContact;
   }
@@ -270,10 +270,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientPhoneNumber
+   * The phone number of the client
    * @return clientPhoneNumber
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The phone number of the client")
   public String getClientPhoneNumber() {
     return clientPhoneNumber;
   }
@@ -288,10 +288,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientMobileNumber
+   * The mobile phone number of the client
    * @return clientMobileNumber
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The mobile phone number of the client")
   public String getClientMobileNumber() {
     return clientMobileNumber;
   }
@@ -306,10 +306,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientEmailAddress
+   * The email address of the client
    * @return clientEmailAddress
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The email address of the client")
   public String getClientEmailAddress() {
     return clientEmailAddress;
   }
@@ -324,10 +324,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get clientWebURL
+   * The website URL of the client
    * @return clientWebURL
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The website URL of the client")
   public String getClientWebURL() {
     return clientWebURL;
   }
@@ -342,10 +342,10 @@ public class CSAggregateClient {
   }
 
    /**
-   * Get projectCount
+   * The number of projects under the client
    * @return projectCount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The number of projects under the client")
   public Integer getProjectCount() {
     return projectCount;
   }

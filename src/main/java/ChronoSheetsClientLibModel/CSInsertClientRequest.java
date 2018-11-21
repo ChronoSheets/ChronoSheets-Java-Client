@@ -27,7 +27,7 @@ import java.io.IOException;
  * Fields for inserting a new Client
  */
 @ApiModel(description = "Fields for inserting a new Client")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T22:54:32.605+11:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T23:48:25.710+11:00")
 public class CSInsertClientRequest {
   @SerializedName("ClientName")
   private String clientName = null;

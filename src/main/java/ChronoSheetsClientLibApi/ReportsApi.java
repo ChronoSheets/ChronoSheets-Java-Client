@@ -69,12 +69,13 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param forceOnlyThisChart A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String forceOnlyThisChart, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -88,6 +89,8 @@ public class ReportsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("EndDate", endDate));
         if (userIds != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("UserIds", userIds));
+        if (forceOnlyThisChart != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ForceOnlyThisChart", forceOnlyThisChart));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (xChronosheetsAuth != null)
@@ -124,7 +127,7 @@ public class ReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call reportsGetAllChartsDataAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportsGetAllChartsDataAdminValidateBeforeCall(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String forceOnlyThisChart, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'startDate' is set
         if (startDate == null) {
@@ -142,7 +145,7 @@ public class ReportsApi {
         }
         
 
-        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminCall(startDate, endDate, xChronosheetsAuth, userIds, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminCall(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart, progressListener, progressRequestListener);
         return call;
 
     }
@@ -154,11 +157,12 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param forceOnlyThisChart A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)
      * @return CSApiResponseCombinedReportsData
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds) throws ApiException {
-        ApiResponse<CSApiResponseCombinedReportsData> resp = reportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds);
+    public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String forceOnlyThisChart) throws ApiException {
+        ApiResponse<CSApiResponseCombinedReportsData> resp = reportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
         return resp.getData();
     }
 
@@ -169,11 +173,12 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param forceOnlyThisChart A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)
      * @return ApiResponse&lt;CSApiResponseCombinedReportsData&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseCombinedReportsData> reportsGetAllChartsDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds) throws ApiException {
-        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, null, null);
+    public ApiResponse<CSApiResponseCombinedReportsData> reportsGetAllChartsDataAdminWithHttpInfo(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String forceOnlyThisChart) throws ApiException {
+        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart, null, null);
         Type localVarReturnType = new TypeToken<CSApiResponseCombinedReportsData>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -185,11 +190,12 @@ public class ReportsApi {
      * @param endDate The end date for the date range.  Report data in the response is before this date (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
      * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)
+     * @param forceOnlyThisChart A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, final ApiCallback<CSApiResponseCombinedReportsData> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportsGetAllChartsDataAdminAsync(OffsetDateTime startDate, OffsetDateTime endDate, String xChronosheetsAuth, String userIds, String forceOnlyThisChart, final ApiCallback<CSApiResponseCombinedReportsData> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -210,7 +216,7 @@ public class ReportsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportsGetAllChartsDataAdminValidateBeforeCall(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<CSApiResponseCombinedReportsData>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

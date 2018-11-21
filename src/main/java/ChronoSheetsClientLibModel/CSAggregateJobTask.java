@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CSAggregateJobTask
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T22:54:32.605+11:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T23:48:25.710+11:00")
 public class CSAggregateJobTask {
   @SerializedName("Id")
   private Integer id = null;
@@ -43,10 +43,10 @@ public class CSAggregateJobTask {
   }
 
    /**
-   * Get id
+   * The Id of the task
    * @return id
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The Id of the task")
   public Integer getId() {
     return id;
   }
@@ -61,10 +61,10 @@ public class CSAggregateJobTask {
   }
 
    /**
-   * Get label
+   * The label of the task
    * @return label
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The label of the task")
   public String getLabel() {
     return label;
   }
@@ -79,10 +79,10 @@ public class CSAggregateJobTask {
   }
 
    /**
-   * Get isDeleted
+   * A flag indicating that this task has been marked as deleted
    * @return isDeleted
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A flag indicating that this task has been marked as deleted")
   public Boolean isIsDeleted() {
     return isDeleted;
   }

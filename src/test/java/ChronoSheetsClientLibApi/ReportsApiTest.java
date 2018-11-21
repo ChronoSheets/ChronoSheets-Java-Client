@@ -55,7 +55,8 @@ public class ReportsApiTest {
         OffsetDateTime endDate = null;
         String xChronosheetsAuth = null;
         String userIds = null;
-        CSApiResponseCombinedReportsData response = api.reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds);
+        String forceOnlyThisChart = null;
+        CSApiResponseCombinedReportsData response = api.reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
 
         // TODO: test validations
     }

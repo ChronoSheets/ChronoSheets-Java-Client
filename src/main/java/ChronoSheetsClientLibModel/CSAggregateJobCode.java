@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * CSAggregateJobCode
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T22:54:32.605+11:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T23:48:25.710+11:00")
 public class CSAggregateJobCode {
   @SerializedName("AvailableTasks")
   private List<CSAggregateJobTask> availableTasks = null;
@@ -75,10 +75,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get availableTasks
+   * The list of available tasks under this job code
    * @return availableTasks
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The list of available tasks under this job code")
   public List<CSAggregateJobTask> getAvailableTasks() {
     return availableTasks;
   }
@@ -101,10 +101,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get permittedEmployees
+   * The list of employee IDs that are permitted to record timesheets with this job code (empty means everyone)
    * @return permittedEmployees
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The list of employee IDs that are permitted to record timesheets with this job code (empty means everyone)")
   public List<Integer> getPermittedEmployees() {
     return permittedEmployees;
   }
@@ -119,10 +119,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get id
+   * The ID of the job code (not the code itself)
    * @return id
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the job code (not the code itself)")
   public Integer getId() {
     return id;
   }
@@ -137,10 +137,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get code
+   * The job code itself
    * @return code
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The job code itself")
   public String getCode() {
     return code;
   }
@@ -155,10 +155,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get client
+   * The name of the client
    * @return client
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the client")
   public String getClient() {
     return client;
   }
@@ -173,10 +173,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get clientId
+   * The ID of the client
    * @return clientId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the client")
   public Integer getClientId() {
     return clientId;
   }
@@ -191,10 +191,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get project
+   * The name of the project
    * @return project
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the project")
   public String getProject() {
     return project;
   }
@@ -209,10 +209,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get projectId
+   * The ID of the project
    * @return projectId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the project")
   public Integer getProjectId() {
     return projectId;
   }
@@ -227,10 +227,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get organisationId
+   * Your organisation ID
    * @return organisationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Your organisation ID")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -245,10 +245,10 @@ public class CSAggregateJobCode {
   }
 
    /**
-   * Get isDeleted
+   * A flag indicating whether or not the job code has been marked as deleted
    * @return isDeleted
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A flag indicating whether or not the job code has been marked as deleted")
   public Boolean isIsDeleted() {
     return isDeleted;
   }

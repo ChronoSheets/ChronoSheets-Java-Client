@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSAggregateProject
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T22:54:32.605+11:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T23:48:25.710+11:00")
 public class CSAggregateProject {
   @SerializedName("Id")
   private Integer id = null;
@@ -56,10 +56,10 @@ public class CSAggregateProject {
   }
 
    /**
-   * Get id
+   * The ID of the project
    * @return id
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the project")
   public Integer getId() {
     return id;
   }
@@ -74,10 +74,10 @@ public class CSAggregateProject {
   }
 
    /**
-   * Get clientId
+   * The ID of the client that this project is assigned to
    * @return clientId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the client that this project is assigned to")
   public Integer getClientId() {
     return clientId;
   }
@@ -92,10 +92,10 @@ public class CSAggregateProject {
   }
 
    /**
-   * Get organisationId
+   * The ID of your organisation
    * @return organisationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of your organisation")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -110,10 +110,10 @@ public class CSAggregateProject {
   }
 
    /**
-   * Get projectName
+   * The name of the project (can be viewed in PROJECT TIMELINES)
    * @return projectName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the project (can be viewed in PROJECT TIMELINES)")
   public String getProjectName() {
     return projectName;
   }
@@ -128,10 +128,10 @@ public class CSAggregateProject {
   }
 
    /**
-   * Get costEstimation
+   * The estimated cost of the project (can be viewed in PROJECT TIMELINES)
    * @return costEstimation
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The estimated cost of the project (can be viewed in PROJECT TIMELINES)")
   public Double getCostEstimation() {
     return costEstimation;
   }
@@ -146,10 +146,10 @@ public class CSAggregateProject {
   }
 
    /**
-   * Get startDate
+   * The start date of the project (can be viewed in PROJECT TIMELINES)
    * @return startDate
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The start date of the project (can be viewed in PROJECT TIMELINES)")
   public OffsetDateTime getStartDate() {
     return startDate;
   }
@@ -164,10 +164,10 @@ public class CSAggregateProject {
   }
 
    /**
-   * Get endDate
+   * The end date of the project (can be viewed in PROJECT TIMELINES)
    * @return endDate
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The end date of the project (can be viewed in PROJECT TIMELINES)")
   public OffsetDateTime getEndDate() {
     return endDate;
   }
