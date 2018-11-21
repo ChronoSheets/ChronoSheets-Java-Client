@@ -27,7 +27,7 @@ import java.io.IOException;
  * Used to mark a JobCode as a Favourite.  Favourites can be used in the Mobile app and on the ChronoSheets website
  */
 @ApiModel(description = "Used to mark a JobCode as a Favourite.  Favourites can be used in the Mobile app and on the ChronoSheets website")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-04T19:12:08.464+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T22:54:32.605+11:00")
 public class CSInsertUserJobFavouriteRequest {
   @SerializedName("JobId")
   private Integer jobId = null;
