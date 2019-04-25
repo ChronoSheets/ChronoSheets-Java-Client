@@ -18,9 +18,32 @@ Name | Type | Description | Notes
 **subscriptionCustomerId** | **String** |  |  [optional]
 **signupToken** | **String** |  |  [optional]
 **isActive** | **Boolean** |  |  [optional]
+**stripeCouponCode** | **String** |  |  [optional]
+**subscriptionSource** | [**SubscriptionSourceEnum**](#SubscriptionSourceEnum) |  |  [optional]
+**signUpSource** | [**SignUpSourceEnum**](#SignUpSourceEnum) |  |  [optional]
+**mobileSignUpCode** | **String** |  |  [optional]
 **subscriptionCycleStart** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **subscriptionCycleEnd** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **pricingPlans** | [**List&lt;CSOrganisationPricingPlan&gt;**](CSOrganisationPricingPlan.md) |  |  [optional]
+
+
+<a name="SubscriptionSourceEnum"></a>
+## Enum: SubscriptionSourceEnum
+Name | Value
+---- | -----
+NONE | &quot;None&quot;
+STRIPE | &quot;Stripe&quot;
+APPLEINAPP | &quot;AppleInApp&quot;
+GOOGLEINAPP | &quot;GoogleInApp&quot;
+
+
+<a name="SignUpSourceEnum"></a>
+## Enum: SignUpSourceEnum
+Name | Value
+---- | -----
+DESKTOP | &quot;Desktop&quot;
+MOBILEIOS | &quot;MobileiOS&quot;
+MOBILEANDROID | &quot;MobileAndroid&quot;
 
 
 

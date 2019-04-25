@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CSUserForManagement
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T23:48:25.710+11:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-26T06:04:00.760+10:00")
 public class CSUserForManagement {
   @SerializedName("IsAccountActive")
   private Boolean isAccountActive = null;
@@ -64,6 +64,9 @@ public class CSUserForManagement {
 
   @SerializedName("Organisation")
   private CSOrganisation organisation = null;
+
+  @SerializedName("IsPrimaryAccount")
+  private Boolean isPrimaryAccount = null;
 
   public CSUserForManagement isAccountActive(Boolean isAccountActive) {
     this.isAccountActive = isAccountActive;
@@ -281,6 +284,24 @@ public class CSUserForManagement {
     this.organisation = organisation;
   }
 
+  public CSUserForManagement isPrimaryAccount(Boolean isPrimaryAccount) {
+    this.isPrimaryAccount = isPrimaryAccount;
+    return this;
+  }
+
+   /**
+   * Get isPrimaryAccount
+   * @return isPrimaryAccount
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsPrimaryAccount() {
+    return isPrimaryAccount;
+  }
+
+  public void setIsPrimaryAccount(Boolean isPrimaryAccount) {
+    this.isPrimaryAccount = isPrimaryAccount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -302,12 +323,13 @@ public class CSUserForManagement {
         Objects.equals(this.alertSettings, userForManagement.alertSettings) &&
         Objects.equals(this.setupWizardRequired, userForManagement.setupWizardRequired) &&
         Objects.equals(this.isSubscribedToNewsletter, userForManagement.isSubscribedToNewsletter) &&
-        Objects.equals(this.organisation, userForManagement.organisation);
+        Objects.equals(this.organisation, userForManagement.organisation) &&
+        Objects.equals(this.isPrimaryAccount, userForManagement.isPrimaryAccount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isAccountActive, id, organisationId, userName, firstName, lastName, emailAddress, roles, alertSettings, setupWizardRequired, isSubscribedToNewsletter, organisation);
+    return Objects.hash(isAccountActive, id, organisationId, userName, firstName, lastName, emailAddress, roles, alertSettings, setupWizardRequired, isSubscribedToNewsletter, organisation, isPrimaryAccount);
   }
 
 
@@ -328,6 +350,7 @@ public class CSUserForManagement {
     sb.append("    setupWizardRequired: ").append(toIndentedString(setupWizardRequired)).append("\n");
     sb.append("    isSubscribedToNewsletter: ").append(toIndentedString(isSubscribedToNewsletter)).append("\n");
     sb.append("    organisation: ").append(toIndentedString(organisation)).append("\n");
+    sb.append("    isPrimaryAccount: ").append(toIndentedString(isPrimaryAccount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

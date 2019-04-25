@@ -4,8 +4,54 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**transcriptsGetMyTranscript**](TranscriptsApi.md#transcriptsGetMyTranscript) | **GET** /api/Transcripts/GetMyTranscript | Get an audio to text transcript for a particular audio file attachment
 [**transcriptsGetMyTranscripts**](TranscriptsApi.md#transcriptsGetMyTranscripts) | **GET** /api/Transcripts/GetMyTranscripts | Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
 
+
+<a name="transcriptsGetMyTranscript"></a>
+# **transcriptsGetMyTranscript**
+> CSApiResponseForPaginatedTranscription transcriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth)
+
+Get an audio to text transcript for a particular audio file attachment
+
+### Example
+```java
+// Import classes:
+//import ChronoSheetsClient.ApiException;
+//import ChronoSheetsClientLibApi.TranscriptsApi;
+
+
+TranscriptsApi apiInstance = new TranscriptsApi();
+Integer fileAttachmentId = 56; // Integer | The ID of the file attachment that has a transcript.  It should be an audio file attachment.
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+try {
+    CSApiResponseForPaginatedTranscription result = apiInstance.transcriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TranscriptsApi#transcriptsGetMyTranscript");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileAttachmentId** | **Integer**| The ID of the file attachment that has a transcript.  It should be an audio file attachment. |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+
+### Return type
+
+[**CSApiResponseForPaginatedTranscription**](CSApiResponseForPaginatedTranscription.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
 <a name="transcriptsGetMyTranscripts"></a>
 # **transcriptsGetMyTranscripts**

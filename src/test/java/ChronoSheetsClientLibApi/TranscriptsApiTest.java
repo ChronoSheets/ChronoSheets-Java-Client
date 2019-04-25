@@ -15,6 +15,7 @@ package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTranscript;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedTranscription;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -32,6 +33,23 @@ public class TranscriptsApiTest {
 
     private final TranscriptsApi api = new TranscriptsApi();
 
+    
+    /**
+     * Get an audio to text transcript for a particular audio file attachment
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void transcriptsGetMyTranscriptTest() throws ApiException {
+        Integer fileAttachmentId = null;
+        String xChronosheetsAuth = null;
+        CSApiResponseForPaginatedTranscription response = api.transcriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
+
+        // TODO: test validations
+    }
     
     /**
      * Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.

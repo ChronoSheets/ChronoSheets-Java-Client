@@ -14,7 +14,7 @@
 package ChronoSheetsClientLibModel;
 
 import java.util.Objects;
-import ChronoSheetsClientLibModel.CSTimesheetTask;
+import ChronoSheetsClientLibModel.CSTranscription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,16 +23,17 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * CSApiResponseListTimesheetTask
+ * CSApiResponseForPaginatedTranscription
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-26T06:04:00.760+10:00")
-public class CSApiResponseListTimesheetTask {
+public class CSApiResponseForPaginatedTranscription {
+  @SerializedName("TotalSetCount")
+  private Integer totalSetCount = null;
+
   @SerializedName("Data")
-  private List<CSTimesheetTask> data = null;
+  private CSTranscription data = null;
 
   /**
    * Gets or Sets status
@@ -95,16 +96,26 @@ public class CSApiResponseListTimesheetTask {
   @SerializedName("Message")
   private String message = null;
 
-  public CSApiResponseListTimesheetTask data(List<CSTimesheetTask> data) {
-    this.data = data;
+  public CSApiResponseForPaginatedTranscription totalSetCount(Integer totalSetCount) {
+    this.totalSetCount = totalSetCount;
     return this;
   }
 
-  public CSApiResponseListTimesheetTask addDataItem(CSTimesheetTask dataItem) {
-    if (this.data == null) {
-      this.data = new ArrayList<CSTimesheetTask>();
-    }
-    this.data.add(dataItem);
+   /**
+   * Get totalSetCount
+   * @return totalSetCount
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getTotalSetCount() {
+    return totalSetCount;
+  }
+
+  public void setTotalSetCount(Integer totalSetCount) {
+    this.totalSetCount = totalSetCount;
+  }
+
+  public CSApiResponseForPaginatedTranscription data(CSTranscription data) {
+    this.data = data;
     return this;
   }
 
@@ -113,15 +124,15 @@ public class CSApiResponseListTimesheetTask {
    * @return data
   **/
   @ApiModelProperty(value = "")
-  public List<CSTimesheetTask> getData() {
+  public CSTranscription getData() {
     return data;
   }
 
-  public void setData(List<CSTimesheetTask> data) {
+  public void setData(CSTranscription data) {
     this.data = data;
   }
 
-  public CSApiResponseListTimesheetTask status(StatusEnum status) {
+  public CSApiResponseForPaginatedTranscription status(StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -139,7 +150,7 @@ public class CSApiResponseListTimesheetTask {
     this.status = status;
   }
 
-  public CSApiResponseListTimesheetTask message(String message) {
+  public CSApiResponseForPaginatedTranscription message(String message) {
     this.message = message;
     return this;
   }
@@ -166,23 +177,25 @@ public class CSApiResponseListTimesheetTask {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSApiResponseListTimesheetTask apiResponseListTimesheetTask = (CSApiResponseListTimesheetTask) o;
-    return Objects.equals(this.data, apiResponseListTimesheetTask.data) &&
-        Objects.equals(this.status, apiResponseListTimesheetTask.status) &&
-        Objects.equals(this.message, apiResponseListTimesheetTask.message);
+    CSApiResponseForPaginatedTranscription apiResponseForPaginatedTranscription = (CSApiResponseForPaginatedTranscription) o;
+    return Objects.equals(this.totalSetCount, apiResponseForPaginatedTranscription.totalSetCount) &&
+        Objects.equals(this.data, apiResponseForPaginatedTranscription.data) &&
+        Objects.equals(this.status, apiResponseForPaginatedTranscription.status) &&
+        Objects.equals(this.message, apiResponseForPaginatedTranscription.message);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, status, message);
+    return Objects.hash(totalSetCount, data, status, message);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSApiResponseListTimesheetTask {\n");
+    sb.append("class CSApiResponseForPaginatedTranscription {\n");
     
+    sb.append("    totalSetCount: ").append(toIndentedString(totalSetCount)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");

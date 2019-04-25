@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSOrganisation
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T23:48:25.710+11:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-26T06:04:00.760+10:00")
 public class CSOrganisation {
   @SerializedName("Id")
   private Integer id = null;
@@ -73,6 +73,118 @@ public class CSOrganisation {
 
   @SerializedName("IsActive")
   private Boolean isActive = null;
+
+  @SerializedName("StripeCouponCode")
+  private String stripeCouponCode = null;
+
+  /**
+   * Gets or Sets subscriptionSource
+   */
+  @JsonAdapter(SubscriptionSourceEnum.Adapter.class)
+  public enum SubscriptionSourceEnum {
+    NONE("None"),
+    
+    STRIPE("Stripe"),
+    
+    APPLEINAPP("AppleInApp"),
+    
+    GOOGLEINAPP("GoogleInApp");
+
+    private String value;
+
+    SubscriptionSourceEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static SubscriptionSourceEnum fromValue(String text) {
+      for (SubscriptionSourceEnum b : SubscriptionSourceEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<SubscriptionSourceEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final SubscriptionSourceEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public SubscriptionSourceEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return SubscriptionSourceEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("SubscriptionSource")
+  private SubscriptionSourceEnum subscriptionSource = null;
+
+  /**
+   * Gets or Sets signUpSource
+   */
+  @JsonAdapter(SignUpSourceEnum.Adapter.class)
+  public enum SignUpSourceEnum {
+    DESKTOP("Desktop"),
+    
+    MOBILEIOS("MobileiOS"),
+    
+    MOBILEANDROID("MobileAndroid");
+
+    private String value;
+
+    SignUpSourceEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static SignUpSourceEnum fromValue(String text) {
+      for (SignUpSourceEnum b : SignUpSourceEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<SignUpSourceEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final SignUpSourceEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public SignUpSourceEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return SignUpSourceEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("SignUpSource")
+  private SignUpSourceEnum signUpSource = null;
+
+  @SerializedName("MobileSignUpCode")
+  private String mobileSignUpCode = null;
 
   @SerializedName("SubscriptionCycleStart")
   private OffsetDateTime subscriptionCycleStart = null;
@@ -335,6 +447,78 @@ public class CSOrganisation {
     this.isActive = isActive;
   }
 
+  public CSOrganisation stripeCouponCode(String stripeCouponCode) {
+    this.stripeCouponCode = stripeCouponCode;
+    return this;
+  }
+
+   /**
+   * Get stripeCouponCode
+   * @return stripeCouponCode
+  **/
+  @ApiModelProperty(value = "")
+  public String getStripeCouponCode() {
+    return stripeCouponCode;
+  }
+
+  public void setStripeCouponCode(String stripeCouponCode) {
+    this.stripeCouponCode = stripeCouponCode;
+  }
+
+  public CSOrganisation subscriptionSource(SubscriptionSourceEnum subscriptionSource) {
+    this.subscriptionSource = subscriptionSource;
+    return this;
+  }
+
+   /**
+   * Get subscriptionSource
+   * @return subscriptionSource
+  **/
+  @ApiModelProperty(value = "")
+  public SubscriptionSourceEnum getSubscriptionSource() {
+    return subscriptionSource;
+  }
+
+  public void setSubscriptionSource(SubscriptionSourceEnum subscriptionSource) {
+    this.subscriptionSource = subscriptionSource;
+  }
+
+  public CSOrganisation signUpSource(SignUpSourceEnum signUpSource) {
+    this.signUpSource = signUpSource;
+    return this;
+  }
+
+   /**
+   * Get signUpSource
+   * @return signUpSource
+  **/
+  @ApiModelProperty(value = "")
+  public SignUpSourceEnum getSignUpSource() {
+    return signUpSource;
+  }
+
+  public void setSignUpSource(SignUpSourceEnum signUpSource) {
+    this.signUpSource = signUpSource;
+  }
+
+  public CSOrganisation mobileSignUpCode(String mobileSignUpCode) {
+    this.mobileSignUpCode = mobileSignUpCode;
+    return this;
+  }
+
+   /**
+   * Get mobileSignUpCode
+   * @return mobileSignUpCode
+  **/
+  @ApiModelProperty(value = "")
+  public String getMobileSignUpCode() {
+    return mobileSignUpCode;
+  }
+
+  public void setMobileSignUpCode(String mobileSignUpCode) {
+    this.mobileSignUpCode = mobileSignUpCode;
+  }
+
   public CSOrganisation subscriptionCycleStart(OffsetDateTime subscriptionCycleStart) {
     this.subscriptionCycleStart = subscriptionCycleStart;
     return this;
@@ -421,6 +605,10 @@ public class CSOrganisation {
         Objects.equals(this.subscriptionCustomerId, organisation.subscriptionCustomerId) &&
         Objects.equals(this.signupToken, organisation.signupToken) &&
         Objects.equals(this.isActive, organisation.isActive) &&
+        Objects.equals(this.stripeCouponCode, organisation.stripeCouponCode) &&
+        Objects.equals(this.subscriptionSource, organisation.subscriptionSource) &&
+        Objects.equals(this.signUpSource, organisation.signUpSource) &&
+        Objects.equals(this.mobileSignUpCode, organisation.mobileSignUpCode) &&
         Objects.equals(this.subscriptionCycleStart, organisation.subscriptionCycleStart) &&
         Objects.equals(this.subscriptionCycleEnd, organisation.subscriptionCycleEnd) &&
         Objects.equals(this.pricingPlans, organisation.pricingPlans);
@@ -428,7 +616,7 @@ public class CSOrganisation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, addressLine01, addressLine02, suburb, state, postcode, country, phone, emailAddress, timezone, subscriptionCustomerId, signupToken, isActive, subscriptionCycleStart, subscriptionCycleEnd, pricingPlans);
+    return Objects.hash(id, name, addressLine01, addressLine02, suburb, state, postcode, country, phone, emailAddress, timezone, subscriptionCustomerId, signupToken, isActive, stripeCouponCode, subscriptionSource, signUpSource, mobileSignUpCode, subscriptionCycleStart, subscriptionCycleEnd, pricingPlans);
   }
 
 
@@ -451,6 +639,10 @@ public class CSOrganisation {
     sb.append("    subscriptionCustomerId: ").append(toIndentedString(subscriptionCustomerId)).append("\n");
     sb.append("    signupToken: ").append(toIndentedString(signupToken)).append("\n");
     sb.append("    isActive: ").append(toIndentedString(isActive)).append("\n");
+    sb.append("    stripeCouponCode: ").append(toIndentedString(stripeCouponCode)).append("\n");
+    sb.append("    subscriptionSource: ").append(toIndentedString(subscriptionSource)).append("\n");
+    sb.append("    signUpSource: ").append(toIndentedString(signUpSource)).append("\n");
+    sb.append("    mobileSignUpCode: ").append(toIndentedString(mobileSignUpCode)).append("\n");
     sb.append("    subscriptionCycleStart: ").append(toIndentedString(subscriptionCycleStart)).append("\n");
     sb.append("    subscriptionCycleEnd: ").append(toIndentedString(subscriptionCycleEnd)).append("\n");
     sb.append("    pricingPlans: ").append(toIndentedString(pricingPlans)).append("\n");

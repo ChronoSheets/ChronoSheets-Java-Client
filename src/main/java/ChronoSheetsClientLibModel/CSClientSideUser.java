@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CSClientSideUser
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-21T23:48:25.710+11:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-26T06:04:00.760+10:00")
 public class CSClientSideUser {
   @SerializedName("Id")
   private Integer id = null;
@@ -61,6 +61,9 @@ public class CSClientSideUser {
 
   @SerializedName("Organisation")
   private CSOrganisation organisation = null;
+
+  @SerializedName("IsPrimaryAccount")
+  private Boolean isPrimaryAccount = null;
 
   public CSClientSideUser id(Integer id) {
     this.id = id;
@@ -260,6 +263,24 @@ public class CSClientSideUser {
     this.organisation = organisation;
   }
 
+  public CSClientSideUser isPrimaryAccount(Boolean isPrimaryAccount) {
+    this.isPrimaryAccount = isPrimaryAccount;
+    return this;
+  }
+
+   /**
+   * Get isPrimaryAccount
+   * @return isPrimaryAccount
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsPrimaryAccount() {
+    return isPrimaryAccount;
+  }
+
+  public void setIsPrimaryAccount(Boolean isPrimaryAccount) {
+    this.isPrimaryAccount = isPrimaryAccount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -280,12 +301,13 @@ public class CSClientSideUser {
         Objects.equals(this.alertSettings, clientSideUser.alertSettings) &&
         Objects.equals(this.setupWizardRequired, clientSideUser.setupWizardRequired) &&
         Objects.equals(this.isSubscribedToNewsletter, clientSideUser.isSubscribedToNewsletter) &&
-        Objects.equals(this.organisation, clientSideUser.organisation);
+        Objects.equals(this.organisation, clientSideUser.organisation) &&
+        Objects.equals(this.isPrimaryAccount, clientSideUser.isPrimaryAccount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, organisationId, userName, firstName, lastName, emailAddress, roles, alertSettings, setupWizardRequired, isSubscribedToNewsletter, organisation);
+    return Objects.hash(id, organisationId, userName, firstName, lastName, emailAddress, roles, alertSettings, setupWizardRequired, isSubscribedToNewsletter, organisation, isPrimaryAccount);
   }
 
 
@@ -305,6 +327,7 @@ public class CSClientSideUser {
     sb.append("    setupWizardRequired: ").append(toIndentedString(setupWizardRequired)).append("\n");
     sb.append("    isSubscribedToNewsletter: ").append(toIndentedString(isSubscribedToNewsletter)).append("\n");
     sb.append("    organisation: ").append(toIndentedString(organisation)).append("\n");
+    sb.append("    isPrimaryAccount: ").append(toIndentedString(isPrimaryAccount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

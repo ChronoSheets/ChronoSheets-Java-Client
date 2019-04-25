@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **setupWizardRequired** | **Boolean** |  |  [optional]
 **isSubscribedToNewsletter** | **Boolean** |  |  [optional]
 **organisation** | [**CSOrganisation**](CSOrganisation.md) |  |  [optional]
+**isPrimaryAccount** | **Boolean** |  |  [optional]
 
 
 
