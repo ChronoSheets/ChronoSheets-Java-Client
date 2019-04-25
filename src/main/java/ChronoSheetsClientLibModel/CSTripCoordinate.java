@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CSTripCoordinate
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-26T06:04:00.760+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-26T06:09:13.673+10:00")
 public class CSTripCoordinate {
   @SerializedName("Latitude")
   private Double latitude = null;
