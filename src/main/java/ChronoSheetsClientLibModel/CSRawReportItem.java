@@ -1,6 +1,6 @@
 /*
  * ChronoSheets API
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -14,6 +14,7 @@
 package ChronoSheetsClientLibModel;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -27,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSRawReportItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-26T06:09:13.673+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-04-28T23:19:15.777+10:00")
 public class CSRawReportItem {
   @SerializedName("OrganisationId")
   private Integer organisationId = null;
@@ -76,6 +77,12 @@ public class CSRawReportItem {
 
   @SerializedName("TripDistanceMeters")
   private Double tripDistanceMeters = null;
+
+  @SerializedName("SpanSecondsNormalTime")
+  private Integer spanSecondsNormalTime = null;
+
+  @SerializedName("SpanSecondsOvertime")
+  private Integer spanSecondsOvertime = null;
 
   public CSRawReportItem organisationId(Integer organisationId) {
     this.organisationId = organisationId;
@@ -365,6 +372,42 @@ public class CSRawReportItem {
     this.tripDistanceMeters = tripDistanceMeters;
   }
 
+  public CSRawReportItem spanSecondsNormalTime(Integer spanSecondsNormalTime) {
+    this.spanSecondsNormalTime = spanSecondsNormalTime;
+    return this;
+  }
+
+   /**
+   * Get spanSecondsNormalTime
+   * @return spanSecondsNormalTime
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getSpanSecondsNormalTime() {
+    return spanSecondsNormalTime;
+  }
+
+  public void setSpanSecondsNormalTime(Integer spanSecondsNormalTime) {
+    this.spanSecondsNormalTime = spanSecondsNormalTime;
+  }
+
+  public CSRawReportItem spanSecondsOvertime(Integer spanSecondsOvertime) {
+    this.spanSecondsOvertime = spanSecondsOvertime;
+    return this;
+  }
+
+   /**
+   * Get spanSecondsOvertime
+   * @return spanSecondsOvertime
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getSpanSecondsOvertime() {
+    return spanSecondsOvertime;
+  }
+
+  public void setSpanSecondsOvertime(Integer spanSecondsOvertime) {
+    this.spanSecondsOvertime = spanSecondsOvertime;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -390,12 +433,14 @@ public class CSRawReportItem {
         Objects.equals(this.payAmount, rawReportItem.payAmount) &&
         Objects.equals(this.payOvertimeAmount, rawReportItem.payOvertimeAmount) &&
         Objects.equals(this.tripCost, rawReportItem.tripCost) &&
-        Objects.equals(this.tripDistanceMeters, rawReportItem.tripDistanceMeters);
+        Objects.equals(this.tripDistanceMeters, rawReportItem.tripDistanceMeters) &&
+        Objects.equals(this.spanSecondsNormalTime, rawReportItem.spanSecondsNormalTime) &&
+        Objects.equals(this.spanSecondsOvertime, rawReportItem.spanSecondsOvertime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(organisationId, userId, username, emailAddress, jobCode, taskName, clientName, projectName, startDate, endDate, spanSeconds, description, payAmount, payOvertimeAmount, tripCost, tripDistanceMeters);
+    return Objects.hash(organisationId, userId, username, emailAddress, jobCode, taskName, clientName, projectName, startDate, endDate, spanSeconds, description, payAmount, payOvertimeAmount, tripCost, tripDistanceMeters, spanSecondsNormalTime, spanSecondsOvertime);
   }
 
 
@@ -420,6 +465,8 @@ public class CSRawReportItem {
     sb.append("    payOvertimeAmount: ").append(toIndentedString(payOvertimeAmount)).append("\n");
     sb.append("    tripCost: ").append(toIndentedString(tripCost)).append("\n");
     sb.append("    tripDistanceMeters: ").append(toIndentedString(tripDistanceMeters)).append("\n");
+    sb.append("    spanSecondsNormalTime: ").append(toIndentedString(spanSecondsNormalTime)).append("\n");
+    sb.append("    spanSecondsOvertime: ").append(toIndentedString(spanSecondsOvertime)).append("\n");
     sb.append("}");
     return sb.toString();
   }

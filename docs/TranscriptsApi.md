@@ -67,8 +67,8 @@ Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
 
 
 TranscriptsApi apiInstance = new TranscriptsApi();
-OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The Start date of the date range.  Transcripts after this date will be obtained.
-OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The End date of the date range.  Transcripts before this date will be obtained.
+OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The Start date of the date range.  Transcripts after this date will be obtained.
+OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The End date of the date range.  Transcripts before this date will be obtained.
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 Integer skip = 56; // Integer | Skip this many transcripts
 Integer take = 56; // Integer | Take this many transcripts

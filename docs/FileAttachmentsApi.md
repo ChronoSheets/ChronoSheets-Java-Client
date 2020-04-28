@@ -4,7 +4,8 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fileAttachmentsDeleteTimesheetFileAttachment**](FileAttachmentsApi.md#fileAttachmentsDeleteTimesheetFileAttachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment
+[**fileAttachmentsDeleteTimesheetFileAttachment**](FileAttachmentsApi.md#fileAttachmentsDeleteTimesheetFileAttachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
+[**fileAttachmentsGetFileAttachmentById**](FileAttachmentsApi.md#fileAttachmentsGetFileAttachmentById) | **GET** /api/FileAttachments/GetFileAttachmentById | Get a particular file attachment by ID.  User must own the file attachment for access.
 [**fileAttachmentsGetMyFileAttachments**](FileAttachmentsApi.md#fileAttachmentsGetMyFileAttachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
 
@@ -12,7 +13,7 @@ Method | HTTP request | Description
 # **fileAttachmentsDeleteTimesheetFileAttachment**
 > CSApiResponseBoolean fileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth)
 
-Delete a particular timesheet file attachment
+Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
 ```java
@@ -53,6 +54,51 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+<a name="fileAttachmentsGetFileAttachmentById"></a>
+# **fileAttachmentsGetFileAttachmentById**
+> CSApiResponseTimesheetFileAttachment fileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth)
+
+Get a particular file attachment by ID.  User must own the file attachment for access.
+
+### Example
+```java
+// Import classes:
+//import ChronoSheetsClient.ApiException;
+//import ChronoSheetsClientLibApi.FileAttachmentsApi;
+
+
+FileAttachmentsApi apiInstance = new FileAttachmentsApi();
+Integer fileAttachmentId = 56; // Integer | The ID of the file attachment
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+try {
+    CSApiResponseTimesheetFileAttachment result = apiInstance.fileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling FileAttachmentsApi#fileAttachmentsGetFileAttachmentById");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileAttachmentId** | **Integer**| The ID of the file attachment |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+
+### Return type
+
+[**CSApiResponseTimesheetFileAttachment**](CSApiResponseTimesheetFileAttachment.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
 <a name="fileAttachmentsGetMyFileAttachments"></a>
 # **fileAttachmentsGetMyFileAttachments**
 > CSApiResponseForPaginatedListTimesheetFileAttachment fileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take)
@@ -67,8 +113,8 @@ Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
 
 FileAttachmentsApi apiInstance = new FileAttachmentsApi();
-OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The Start date of the date range.  File attachments after this date will be obtained.
-OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The End date of the date range.  File attachments before this date will be obtained.
+OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The Start date of the date range.  File attachments after this date will be obtained.
+OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The End date of the date range.  File attachments before this date will be obtained.
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 Integer skip = 56; // Integer | Skip this many File attachments
 Integer take = 56; // Integer | Take this many File attachments

@@ -114,8 +114,8 @@ Get timesheets between start and end dates.  Note: the date range cannot exceed 
 
 
 TimesheetsApi apiInstance = new TimesheetsApi();
-OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date of the date range
-OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date of the date range
+OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of the date range
+OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of the date range
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
     CSApiResponseListTimesheet result = apiInstance.timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);

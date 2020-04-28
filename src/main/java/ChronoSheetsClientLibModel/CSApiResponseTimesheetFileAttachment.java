@@ -15,7 +15,7 @@ package ChronoSheetsClientLibModel;
 
 import java.util.Objects;
 import java.util.Arrays;
-import ChronoSheetsClientLibModel.CSUserForManagement;
+import ChronoSheetsClientLibModel.CSTimesheetFileAttachment;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -26,12 +26,12 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * CSApiResponseUserForManagement
+ * CSApiResponseTimesheetFileAttachment
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-04-28T23:19:15.777+10:00")
-public class CSApiResponseUserForManagement {
+public class CSApiResponseTimesheetFileAttachment {
   @SerializedName("Data")
-  private CSUserForManagement data = null;
+  private CSTimesheetFileAttachment data = null;
 
   /**
    * Gets or Sets status
@@ -94,7 +94,7 @@ public class CSApiResponseUserForManagement {
   @SerializedName("Message")
   private String message = null;
 
-  public CSApiResponseUserForManagement data(CSUserForManagement data) {
+  public CSApiResponseTimesheetFileAttachment data(CSTimesheetFileAttachment data) {
     this.data = data;
     return this;
   }
@@ -104,15 +104,15 @@ public class CSApiResponseUserForManagement {
    * @return data
   **/
   @ApiModelProperty(value = "")
-  public CSUserForManagement getData() {
+  public CSTimesheetFileAttachment getData() {
     return data;
   }
 
-  public void setData(CSUserForManagement data) {
+  public void setData(CSTimesheetFileAttachment data) {
     this.data = data;
   }
 
-  public CSApiResponseUserForManagement status(StatusEnum status) {
+  public CSApiResponseTimesheetFileAttachment status(StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -130,7 +130,7 @@ public class CSApiResponseUserForManagement {
     this.status = status;
   }
 
-  public CSApiResponseUserForManagement message(String message) {
+  public CSApiResponseTimesheetFileAttachment message(String message) {
     this.message = message;
     return this;
   }
@@ -157,10 +157,10 @@ public class CSApiResponseUserForManagement {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSApiResponseUserForManagement apiResponseUserForManagement = (CSApiResponseUserForManagement) o;
-    return Objects.equals(this.data, apiResponseUserForManagement.data) &&
-        Objects.equals(this.status, apiResponseUserForManagement.status) &&
-        Objects.equals(this.message, apiResponseUserForManagement.message);
+    CSApiResponseTimesheetFileAttachment apiResponseTimesheetFileAttachment = (CSApiResponseTimesheetFileAttachment) o;
+    return Objects.equals(this.data, apiResponseTimesheetFileAttachment.data) &&
+        Objects.equals(this.status, apiResponseTimesheetFileAttachment.status) &&
+        Objects.equals(this.message, apiResponseTimesheetFileAttachment.message);
   }
 
   @Override
@@ -172,7 +172,7 @@ public class CSApiResponseUserForManagement {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSApiResponseUserForManagement {\n");
+    sb.append("class CSApiResponseTimesheetFileAttachment {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");

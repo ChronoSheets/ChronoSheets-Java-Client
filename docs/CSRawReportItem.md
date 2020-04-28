@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **payOvertimeAmount** | **Double** |  |  [optional]
 **tripCost** | **Double** |  |  [optional]
 **tripDistanceMeters** | **Double** |  |  [optional]
+**spanSecondsNormalTime** | **Integer** |  |  [optional]
+**spanSecondsOvertime** | **Integer** |  |  [optional]
 
 
 
