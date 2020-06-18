@@ -31,7 +31,7 @@ import java.util.List;
  * A standard API response
  */
 @ApiModel(description = "A standard API response")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T19:20:43.284+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T19:40:56.212+10:00")
 public class CSApiResponseListUserHourlyRate {
   @SerializedName("Data")
   private List<CSUserHourlyRate> data = null;

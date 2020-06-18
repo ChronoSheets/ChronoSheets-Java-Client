@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSTimesheet
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T19:20:43.284+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T19:40:56.212+10:00")
 public class CSTimesheet {
   @SerializedName("TimesheetId")
   private Integer timesheetId = null;
