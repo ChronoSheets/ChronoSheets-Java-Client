@@ -2,7 +2,7 @@
 
 ChronoSheets API
 - API version: v1
-  - Build date: 2020-04-28T23:19:15.777+10:00
+  - Build date: 2020-06-18T19:20:43.284+10:00
 
 <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
 
@@ -118,6 +118,11 @@ Class | Method | HTTP request | Description
 *FleetApi* | [**fleetGetVehicleById**](docs/FleetApi.md#fleetGetVehicleById) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
 *FleetApi* | [**fleetGetVehicles**](docs/FleetApi.md#fleetGetVehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 *FleetApi* | [**fleetUpdateVehicle**](docs/FleetApi.md#fleetUpdateVehicle) | **PUT** /api/Fleet/UpdateVehicle | Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
+*GeoFencingApi* | [**geoFencingCreateGeofence**](docs/GeoFencingApi.md#geoFencingCreateGeofence) | **POST** /api/GeoFencing/CreateGeofence | Create a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
+*GeoFencingApi* | [**geoFencingDeleteGeofence**](docs/GeoFencingApi.md#geoFencingDeleteGeofence) | **DELETE** /api/GeoFencing/DeleteGeofence | Deletes a geofence.  Requires the &#39;ManageGeofencing&#39; permission.
+*GeoFencingApi* | [**geoFencingGetGeofenceById**](docs/GeoFencingApi.md#geoFencingGetGeofenceById) | **GET** /api/GeoFencing/GetGeofenceById | Get a geofence by ID  Requires the &#39;SubmitTimesheets&#39; permission.
+*GeoFencingApi* | [**geoFencingGetGeofences**](docs/GeoFencingApi.md#geoFencingGetGeofences) | **GET** /api/GeoFencing/GetGeofences | Get geofences belonging to your organisation  Requires the &#39;SubmitTimesheets&#39; permission.
+*GeoFencingApi* | [**geoFencingUpdateGeofence**](docs/GeoFencingApi.md#geoFencingUpdateGeofence) | **PUT** /api/GeoFencing/UpdateGeofence | Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
 *JobCodesApi* | [**jobCodesCreateJobCode**](docs/JobCodesApi.md#jobCodesCreateJobCode) | **POST** /api/JobCodes/CreateJobCode | Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 *JobCodesApi* | [**jobCodesDeleteJobCode**](docs/JobCodesApi.md#jobCodesDeleteJobCode) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 *JobCodesApi* | [**jobCodesGetJobCodeById**](docs/JobCodesApi.md#jobCodesGetJobCodeById) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
@@ -154,6 +159,7 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**tasksGetTasks**](docs/TasksApi.md#tasksGetTasks) | **GET** /api/Tasks/GetTasks | Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
 *TasksApi* | [**tasksGetTasksForJob**](docs/TasksApi.md#tasksGetTasksForJob) | **GET** /api/Tasks/GetTasksForJob | Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
 *TasksApi* | [**tasksUpdateTask**](docs/TasksApi.md#tasksUpdateTask) | **PUT** /api/Tasks/UpdateTask | Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
+*TimesheetAutomationApi* | [**timesheetAutomationCreateAutomationStep**](docs/TimesheetAutomationApi.md#timesheetAutomationCreateAutomationStep) | **POST** /api/TimesheetAutomation/CreateAutomationStep | Creates an automation step.  Timesheet automation is determined by looking at steps taken by the user.  Create a step to log some automation action, such as entering a geofence or tapping on an NFC badge.  Requires the &#39;SubmitTimesheets&#39; permission.
 *TimesheetsApi* | [**timesheetsCreateSingleTimesheet**](docs/TimesheetsApi.md#timesheetsCreateSingleTimesheet) | **POST** /api/Timesheets/CreateSingleTimesheet | Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
 *TimesheetsApi* | [**timesheetsDeleteTimesheet**](docs/TimesheetsApi.md#timesheetsDeleteTimesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
 *TimesheetsApi* | [**timesheetsGetTimesheets**](docs/TimesheetsApi.md#timesheetsGetTimesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -192,13 +198,14 @@ Class | Method | HTTP request | Description
  - [CSApiResponseCombinedReportsData](docs/CSApiResponseCombinedReportsData.md)
  - [CSApiResponseDoLoginResponse](docs/CSApiResponseDoLoginResponse.md)
  - [CSApiResponseFleetVehicle](docs/CSApiResponseFleetVehicle.md)
+ - [CSApiResponseForPaginatedListExtendedGeofence](docs/CSApiResponseForPaginatedListExtendedGeofence.md)
  - [CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment](docs/CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
  - [CSApiResponseForPaginatedListOrgReportTranscript](docs/CSApiResponseForPaginatedListOrgReportTranscript.md)
  - [CSApiResponseForPaginatedListOrgReportTrip](docs/CSApiResponseForPaginatedListOrgReportTrip.md)
  - [CSApiResponseForPaginatedListRawReportItem](docs/CSApiResponseForPaginatedListRawReportItem.md)
  - [CSApiResponseForPaginatedListTimesheetFileAttachment](docs/CSApiResponseForPaginatedListTimesheetFileAttachment.md)
  - [CSApiResponseForPaginatedListTrip](docs/CSApiResponseForPaginatedListTrip.md)
- - [CSApiResponseForPaginatedTranscription](docs/CSApiResponseForPaginatedTranscription.md)
+ - [CSApiResponseGeofence](docs/CSApiResponseGeofence.md)
  - [CSApiResponseInsertUserResponse](docs/CSApiResponseInsertUserResponse.md)
  - [CSApiResponseInt32](docs/CSApiResponseInt32.md)
  - [CSApiResponseJobCode](docs/CSApiResponseJobCode.md)
@@ -224,23 +231,29 @@ Class | Method | HTTP request | Description
  - [CSApiResponseProject](docs/CSApiResponseProject.md)
  - [CSApiResponseTimesheetFileAttachment](docs/CSApiResponseTimesheetFileAttachment.md)
  - [CSApiResponseTimesheetTask](docs/CSApiResponseTimesheetTask.md)
+ - [CSApiResponseTranscription](docs/CSApiResponseTranscription.md)
  - [CSApiResponseTrip](docs/CSApiResponseTrip.md)
  - [CSApiResponseUpdateOrganisationResponse](docs/CSApiResponseUpdateOrganisationResponse.md)
  - [CSApiResponseUpdateProfileResponse](docs/CSApiResponseUpdateProfileResponse.md)
  - [CSApiResponseUpdateUserResponse](docs/CSApiResponseUpdateUserResponse.md)
  - [CSApiResponseUserForManagement](docs/CSApiResponseUserForManagement.md)
  - [CSApiResponseUserProfile](docs/CSApiResponseUserProfile.md)
+ - [CSBasicCoordinate](docs/CSBasicCoordinate.md)
  - [CSBatchUpdateTimesheetRequest](docs/CSBatchUpdateTimesheetRequest.md)
  - [CSClient](docs/CSClient.md)
  - [CSClientSeriesReportItem](docs/CSClientSeriesReportItem.md)
  - [CSClientSideUser](docs/CSClientSideUser.md)
  - [CSClientTotalsReportItem](docs/CSClientTotalsReportItem.md)
  - [CSCombinedReportsData](docs/CSCombinedReportsData.md)
+ - [CSCreateAutomationStepRequest](docs/CSCreateAutomationStepRequest.md)
+ - [CSCreateGeoFenceRequest](docs/CSCreateGeoFenceRequest.md)
  - [CSCreateTripRequest](docs/CSCreateTripRequest.md)
  - [CSDoLoginRequest](docs/CSDoLoginRequest.md)
  - [CSDoLoginResponse](docs/CSDoLoginResponse.md)
+ - [CSExtendedGeofence](docs/CSExtendedGeofence.md)
  - [CSFleetSummaryReportItem](docs/CSFleetSummaryReportItem.md)
  - [CSFleetVehicle](docs/CSFleetVehicle.md)
+ - [CSGeofence](docs/CSGeofence.md)
  - [CSInsertClientRequest](docs/CSInsertClientRequest.md)
  - [CSInsertJobCodeRequest](docs/CSInsertJobCodeRequest.md)
  - [CSInsertOrganisationGroupRequest](docs/CSInsertOrganisationGroupRequest.md)
@@ -279,6 +292,7 @@ Class | Method | HTTP request | Description
  - [CSTranscription](docs/CSTranscription.md)
  - [CSTrip](docs/CSTrip.md)
  - [CSTripCoordinate](docs/CSTripCoordinate.md)
+ - [CSUpdateGeoFenceRequest](docs/CSUpdateGeoFenceRequest.md)
  - [CSUpdateJobCodeRequest](docs/CSUpdateJobCodeRequest.md)
  - [CSUpdateMyProfileRequest](docs/CSUpdateMyProfileRequest.md)
  - [CSUpdateOrganisationRequest](docs/CSUpdateOrganisationRequest.md)

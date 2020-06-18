@@ -15,7 +15,7 @@ package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTranscript;
-import ChronoSheetsClientLibModel.CSApiResponseForPaginatedTranscription;
+import ChronoSheetsClientLibModel.CSApiResponseTranscription;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -46,7 +46,7 @@ public class TranscriptsApiTest {
     public void transcriptsGetMyTranscriptTest() throws ApiException {
         Integer fileAttachmentId = null;
         String xChronosheetsAuth = null;
-        CSApiResponseForPaginatedTranscription response = api.transcriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
+        CSApiResponseTranscription response = api.transcriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
 
         // TODO: test validations
     }

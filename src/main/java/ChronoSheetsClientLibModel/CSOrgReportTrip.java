@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CSOrgReportTrip
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-04-28T23:19:15.777+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T19:20:43.284+10:00")
 public class CSOrgReportTrip {
   @SerializedName("Username")
   private String username = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
 
 
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTranscript;
-import ChronoSheetsClientLibModel.CSApiResponseForPaginatedTranscription;
+import ChronoSheetsClientLibModel.CSApiResponseTranscription;
 import org.threeten.bp.OffsetDateTime;
 
 import java.lang.reflect.Type;
@@ -134,11 +134,11 @@ public class TranscriptsApi {
      * 
      * @param fileAttachmentId The ID of the file attachment that has a transcript.  It should be an audio file attachment. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return CSApiResponseForPaginatedTranscription
+     * @return CSApiResponseTranscription
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CSApiResponseForPaginatedTranscription transcriptsGetMyTranscript(Integer fileAttachmentId, String xChronosheetsAuth) throws ApiException {
-        ApiResponse<CSApiResponseForPaginatedTranscription> resp = transcriptsGetMyTranscriptWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+    public CSApiResponseTranscription transcriptsGetMyTranscript(Integer fileAttachmentId, String xChronosheetsAuth) throws ApiException {
+        ApiResponse<CSApiResponseTranscription> resp = transcriptsGetMyTranscriptWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
         return resp.getData();
     }
 
@@ -147,12 +147,12 @@ public class TranscriptsApi {
      * 
      * @param fileAttachmentId The ID of the file attachment that has a transcript.  It should be an audio file attachment. (required)
      * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
-     * @return ApiResponse&lt;CSApiResponseForPaginatedTranscription&gt;
+     * @return ApiResponse&lt;CSApiResponseTranscription&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CSApiResponseForPaginatedTranscription> transcriptsGetMyTranscriptWithHttpInfo(Integer fileAttachmentId, String xChronosheetsAuth) throws ApiException {
+    public ApiResponse<CSApiResponseTranscription> transcriptsGetMyTranscriptWithHttpInfo(Integer fileAttachmentId, String xChronosheetsAuth) throws ApiException {
         com.squareup.okhttp.Call call = transcriptsGetMyTranscriptValidateBeforeCall(fileAttachmentId, xChronosheetsAuth, null, null);
-        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedTranscription>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseTranscription>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -165,7 +165,7 @@ public class TranscriptsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call transcriptsGetMyTranscriptAsync(Integer fileAttachmentId, String xChronosheetsAuth, final ApiCallback<CSApiResponseForPaginatedTranscription> callback) throws ApiException {
+    public com.squareup.okhttp.Call transcriptsGetMyTranscriptAsync(Integer fileAttachmentId, String xChronosheetsAuth, final ApiCallback<CSApiResponseTranscription> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -187,7 +187,7 @@ public class TranscriptsApi {
         }
 
         com.squareup.okhttp.Call call = transcriptsGetMyTranscriptValidateBeforeCall(fileAttachmentId, xChronosheetsAuth, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CSApiResponseForPaginatedTranscription>(){}.getType();
+        Type localVarReturnType = new TypeToken<CSApiResponseTranscription>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

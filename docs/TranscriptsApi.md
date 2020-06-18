@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="transcriptsGetMyTranscript"></a>
 # **transcriptsGetMyTranscript**
-> CSApiResponseForPaginatedTranscription transcriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth)
+> CSApiResponseTranscription transcriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth)
 
 Get an audio to text transcript for a particular audio file attachment
 
@@ -25,7 +25,7 @@ TranscriptsApi apiInstance = new TranscriptsApi();
 Integer fileAttachmentId = 56; // Integer | The ID of the file attachment that has a transcript.  It should be an audio file attachment.
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseForPaginatedTranscription result = apiInstance.transcriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
+    CSApiResponseTranscription result = apiInstance.transcriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TranscriptsApi#transcriptsGetMyTranscript");
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseForPaginatedTranscription**](CSApiResponseForPaginatedTranscription.md)
+[**CSApiResponseTranscription**](CSApiResponseTranscription.md)
 
 ### Authorization
 

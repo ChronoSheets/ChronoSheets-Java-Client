@@ -26,15 +26,16 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * CSApiResponseTimesheetTask
+ * A standard API response
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-04-28T23:19:15.777+10:00")
+@ApiModel(description = "A standard API response")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T19:20:43.284+10:00")
 public class CSApiResponseTimesheetTask {
   @SerializedName("Data")
   private CSTimesheetTask data = null;
 
   /**
-   * Gets or Sets status
+   * The API response status. Indicates if the request was successful, failed or was unauthorised.
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
@@ -100,10 +101,10 @@ public class CSApiResponseTimesheetTask {
   }
 
    /**
-   * Get data
+   * The main Data of the response
    * @return data
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The main Data of the response")
   public CSTimesheetTask getData() {
     return data;
   }
@@ -118,10 +119,10 @@ public class CSApiResponseTimesheetTask {
   }
 
    /**
-   * Get status
+   * The API response status. Indicates if the request was successful, failed or was unauthorised.
    * @return status
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The API response status. Indicates if the request was successful, failed or was unauthorised.")
   public StatusEnum getStatus() {
     return status;
   }
@@ -136,10 +137,10 @@ public class CSApiResponseTimesheetTask {
   }
 
    /**
-   * Get message
+   * A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.
    * @return message
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.")
   public String getMessage() {
     return message;
   }

@@ -15,7 +15,7 @@ package ChronoSheetsClientLibModel;
 
 import java.util.Objects;
 import java.util.Arrays;
-import ChronoSheetsClientLibModel.CSTranscription;
+import ChronoSheetsClientLibModel.CSExtendedGeofence;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -24,20 +24,23 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * CSApiResponseForPaginatedTranscription
+ * A paginated API repsonse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-04-28T23:19:15.777+10:00")
-public class CSApiResponseForPaginatedTranscription {
+@ApiModel(description = "A paginated API repsonse")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T19:20:43.284+10:00")
+public class CSApiResponseForPaginatedListExtendedGeofence {
   @SerializedName("TotalSetCount")
   private Integer totalSetCount = null;
 
   @SerializedName("Data")
-  private CSTranscription data = null;
+  private List<CSExtendedGeofence> data = null;
 
   /**
-   * Gets or Sets status
+   * The API response status. Indicates if the request was successful, failed or was unauthorised.
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
@@ -97,16 +100,16 @@ public class CSApiResponseForPaginatedTranscription {
   @SerializedName("Message")
   private String message = null;
 
-  public CSApiResponseForPaginatedTranscription totalSetCount(Integer totalSetCount) {
+  public CSApiResponseForPaginatedListExtendedGeofence totalSetCount(Integer totalSetCount) {
     this.totalSetCount = totalSetCount;
     return this;
   }
 
    /**
-   * Get totalSetCount
+   * The count of total records that are being paginated
    * @return totalSetCount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The count of total records that are being paginated")
   public Integer getTotalSetCount() {
     return totalSetCount;
   }
@@ -115,34 +118,42 @@ public class CSApiResponseForPaginatedTranscription {
     this.totalSetCount = totalSetCount;
   }
 
-  public CSApiResponseForPaginatedTranscription data(CSTranscription data) {
+  public CSApiResponseForPaginatedListExtendedGeofence data(List<CSExtendedGeofence> data) {
     this.data = data;
     return this;
   }
 
+  public CSApiResponseForPaginatedListExtendedGeofence addDataItem(CSExtendedGeofence dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<CSExtendedGeofence>();
+    }
+    this.data.add(dataItem);
+    return this;
+  }
+
    /**
-   * Get data
+   * The main Data of the response
    * @return data
   **/
-  @ApiModelProperty(value = "")
-  public CSTranscription getData() {
+  @ApiModelProperty(value = "The main Data of the response")
+  public List<CSExtendedGeofence> getData() {
     return data;
   }
 
-  public void setData(CSTranscription data) {
+  public void setData(List<CSExtendedGeofence> data) {
     this.data = data;
   }
 
-  public CSApiResponseForPaginatedTranscription status(StatusEnum status) {
+  public CSApiResponseForPaginatedListExtendedGeofence status(StatusEnum status) {
     this.status = status;
     return this;
   }
 
    /**
-   * Get status
+   * The API response status. Indicates if the request was successful, failed or was unauthorised.
    * @return status
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The API response status. Indicates if the request was successful, failed or was unauthorised.")
   public StatusEnum getStatus() {
     return status;
   }
@@ -151,16 +162,16 @@ public class CSApiResponseForPaginatedTranscription {
     this.status = status;
   }
 
-  public CSApiResponseForPaginatedTranscription message(String message) {
+  public CSApiResponseForPaginatedListExtendedGeofence message(String message) {
     this.message = message;
     return this;
   }
 
    /**
-   * Get message
+   * A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.
    * @return message
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.")
   public String getMessage() {
     return message;
   }
@@ -178,11 +189,11 @@ public class CSApiResponseForPaginatedTranscription {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSApiResponseForPaginatedTranscription apiResponseForPaginatedTranscription = (CSApiResponseForPaginatedTranscription) o;
-    return Objects.equals(this.totalSetCount, apiResponseForPaginatedTranscription.totalSetCount) &&
-        Objects.equals(this.data, apiResponseForPaginatedTranscription.data) &&
-        Objects.equals(this.status, apiResponseForPaginatedTranscription.status) &&
-        Objects.equals(this.message, apiResponseForPaginatedTranscription.message);
+    CSApiResponseForPaginatedListExtendedGeofence apiResponseForPaginatedListExtendedGeofence = (CSApiResponseForPaginatedListExtendedGeofence) o;
+    return Objects.equals(this.totalSetCount, apiResponseForPaginatedListExtendedGeofence.totalSetCount) &&
+        Objects.equals(this.data, apiResponseForPaginatedListExtendedGeofence.data) &&
+        Objects.equals(this.status, apiResponseForPaginatedListExtendedGeofence.status) &&
+        Objects.equals(this.message, apiResponseForPaginatedListExtendedGeofence.message);
   }
 
   @Override
@@ -194,7 +205,7 @@ public class CSApiResponseForPaginatedTranscription {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSApiResponseForPaginatedTranscription {\n");
+    sb.append("class CSApiResponseForPaginatedListExtendedGeofence {\n");
     
     sb.append("    totalSetCount: ").append(toIndentedString(totalSetCount)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");

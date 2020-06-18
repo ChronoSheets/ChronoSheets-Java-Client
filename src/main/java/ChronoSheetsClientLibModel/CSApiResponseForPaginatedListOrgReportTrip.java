@@ -28,9 +28,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * CSApiResponseForPaginatedListOrgReportTrip
+ * A paginated API repsonse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-04-28T23:19:15.777+10:00")
+@ApiModel(description = "A paginated API repsonse")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T19:20:43.284+10:00")
 public class CSApiResponseForPaginatedListOrgReportTrip {
   @SerializedName("TotalSetCount")
   private Integer totalSetCount = null;
@@ -39,7 +40,7 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   private List<CSOrgReportTrip> data = null;
 
   /**
-   * Gets or Sets status
+   * The API response status. Indicates if the request was successful, failed or was unauthorised.
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
@@ -105,10 +106,10 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   }
 
    /**
-   * Get totalSetCount
+   * The count of total records that are being paginated
    * @return totalSetCount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The count of total records that are being paginated")
   public Integer getTotalSetCount() {
     return totalSetCount;
   }
@@ -131,10 +132,10 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   }
 
    /**
-   * Get data
+   * The main Data of the response
    * @return data
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The main Data of the response")
   public List<CSOrgReportTrip> getData() {
     return data;
   }
@@ -149,10 +150,10 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   }
 
    /**
-   * Get status
+   * The API response status. Indicates if the request was successful, failed or was unauthorised.
    * @return status
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The API response status. Indicates if the request was successful, failed or was unauthorised.")
   public StatusEnum getStatus() {
     return status;
   }
@@ -167,10 +168,10 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   }
 
    /**
-   * Get message
+   * A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.
    * @return message
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.")
   public String getMessage() {
     return message;
   }
