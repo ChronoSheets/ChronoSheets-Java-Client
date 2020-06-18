@@ -28,7 +28,7 @@ import java.io.IOException;
  * A standard API response
  */
 @ApiModel(description = "A standard API response")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T19:40:56.212+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T20:09:49.552+10:00")
 public class CSApiResponseInt32 {
   @SerializedName("Data")
   private Integer data = null;
