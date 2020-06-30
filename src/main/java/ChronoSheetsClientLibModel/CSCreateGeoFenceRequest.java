@@ -31,7 +31,7 @@ import java.util.List;
  * A request object for creating a new geofence
  */
 @ApiModel(description = "A request object for creating a new geofence")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T20:09:49.552+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-01T00:13:30.131+10:00")
 public class CSCreateGeoFenceRequest {
   @SerializedName("Name")
   private String name = null;

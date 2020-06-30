@@ -14,6 +14,7 @@
 package ChronoSheetsClientLibApi;
 
 import ChronoSheetsClient.ApiException;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence;
 import ChronoSheetsClientLibModel.CSApiResponseInt32;
 import ChronoSheetsClientLibModel.CSCreateAutomationStepRequest;
 import org.junit.Test;
@@ -46,6 +47,28 @@ public class TimesheetAutomationApiTest {
         CSCreateAutomationStepRequest request = null;
         String xChronosheetsAuth = null;
         CSApiResponseInt32 response = api.timesheetAutomationCreateAutomationStep(request, xChronosheetsAuth);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void timesheetAutomationGetTimesheetAutomationAuditTrailTest() throws ApiException {
+        Integer geofenceId = null;
+        Integer userId = null;
+        String sort = null;
+        String order = null;
+        String xChronosheetsAuth = null;
+        Integer skip = null;
+        Integer take = null;
+        CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence response = api.timesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
 
         // TODO: test validations
     }

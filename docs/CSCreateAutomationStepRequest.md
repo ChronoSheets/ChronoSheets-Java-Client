@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **automationActionType** | [**AutomationActionTypeEnum**](#AutomationActionTypeEnum) |  |  [optional]
 **latitude** | **Double** |  |  [optional]
 **longitude** | **Double** |  |  [optional]
+**clientTime** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 
 
 <a name="AutomationActionTypeEnum"></a>

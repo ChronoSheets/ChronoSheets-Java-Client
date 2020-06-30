@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CSUserJobFavourite
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T20:09:49.552+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-01T00:13:30.131+10:00")
 public class CSUserJobFavourite {
   @SerializedName("Id")
   private Integer id = null;

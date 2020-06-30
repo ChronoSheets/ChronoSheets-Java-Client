@@ -72,7 +72,7 @@ public class TasksApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Tasks/CreateTask";
+        String localVarPath = "/Tasks/CreateTask";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -205,7 +205,7 @@ public class TasksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Tasks/DeleteTask";
+        String localVarPath = "/Tasks/DeleteTask";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -340,7 +340,7 @@ public class TasksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Tasks/GetTaskById";
+        String localVarPath = "/Tasks/GetTaskById";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -474,7 +474,7 @@ public class TasksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Tasks/GetTasks";
+        String localVarPath = "/Tasks/GetTasks";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -599,7 +599,7 @@ public class TasksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Tasks/GetTasksForJob";
+        String localVarPath = "/Tasks/GetTasksForJob";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -734,7 +734,7 @@ public class TasksApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Tasks/UpdateTask";
+        String localVarPath = "/Tasks/UpdateTask";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

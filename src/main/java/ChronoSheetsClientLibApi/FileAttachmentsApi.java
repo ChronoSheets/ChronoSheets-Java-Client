@@ -70,7 +70,7 @@ public class FileAttachmentsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/FileAttachments/DeleteTimesheetFileAttachment";
+        String localVarPath = "/FileAttachments/DeleteTimesheetFileAttachment";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -205,7 +205,7 @@ public class FileAttachmentsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/FileAttachments/GetFileAttachmentById";
+        String localVarPath = "/FileAttachments/GetFileAttachmentById";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -343,7 +343,7 @@ public class FileAttachmentsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/FileAttachments/GetMyFileAttachments";
+        String localVarPath = "/FileAttachments/GetMyFileAttachments";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

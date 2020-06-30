@@ -28,7 +28,7 @@ import java.io.IOException;
  * Fields for updating an employee User Account
  */
 @ApiModel(description = "Fields for updating an employee User Account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T20:09:49.552+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-01T00:13:30.131+10:00")
 public class CSUpdateUserRequest {
   @SerializedName("UserId")
   private Integer userId = null;

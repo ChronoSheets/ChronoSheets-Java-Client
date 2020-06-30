@@ -52,7 +52,7 @@ import ChronoSheetsClient.auth.OAuth;
 
 public class ApiClient {
 
-    private String basePath = "https://www.chronosheets.com";
+    private String basePath = "https://api.chronosheets.com";
     private boolean debugging = false;
     private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
     private String tempFolderPath = null;
@@ -106,7 +106,7 @@ public class ApiClient {
     /**
      * Set base path
      *
-     * @param basePath Base path of the URL (e.g https://www.chronosheets.com
+     * @param basePath Base path of the URL (e.g https://api.chronosheets.com
      * @return An instance of OkHttpClient
      */
     public ApiClient setBasePath(String basePath) {

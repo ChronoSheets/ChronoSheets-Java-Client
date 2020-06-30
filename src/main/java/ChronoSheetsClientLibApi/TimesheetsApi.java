@@ -73,7 +73,7 @@ public class TimesheetsApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Timesheets/CreateSingleTimesheet";
+        String localVarPath = "/Timesheets/CreateSingleTimesheet";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -206,7 +206,7 @@ public class TimesheetsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Timesheets/DeleteTimesheet";
+        String localVarPath = "/Timesheets/DeleteTimesheet";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -342,7 +342,7 @@ public class TimesheetsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Timesheets/GetTimesheets";
+        String localVarPath = "/Timesheets/GetTimesheets";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -487,7 +487,7 @@ public class TimesheetsApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Timesheets/UpdateTimesheets";
+        String localVarPath = "/Timesheets/UpdateTimesheets";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

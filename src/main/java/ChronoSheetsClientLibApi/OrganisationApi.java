@@ -68,7 +68,7 @@ public class OrganisationApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Organisation/GetOrganisation";
+        String localVarPath = "/Organisation/GetOrganisation";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -193,7 +193,7 @@ public class OrganisationApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Organisation/UpdateOrganisation";
+        String localVarPath = "/Organisation/UpdateOrganisation";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

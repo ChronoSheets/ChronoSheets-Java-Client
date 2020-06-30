@@ -71,7 +71,7 @@ public class GeoFencingApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/GeoFencing/CreateGeofence";
+        String localVarPath = "/GeoFencing/CreateGeofence";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -204,7 +204,7 @@ public class GeoFencingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/GeoFencing/DeleteGeofence";
+        String localVarPath = "/GeoFencing/DeleteGeofence";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -339,7 +339,7 @@ public class GeoFencingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/GeoFencing/GetGeofenceById";
+        String localVarPath = "/GeoFencing/GetGeofenceById";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -475,7 +475,7 @@ public class GeoFencingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/GeoFencing/GetGeofences";
+        String localVarPath = "/GeoFencing/GetGeofences";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -610,7 +610,7 @@ public class GeoFencingApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/GeoFencing/UpdateGeofence";
+        String localVarPath = "/GeoFencing/UpdateGeofence";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

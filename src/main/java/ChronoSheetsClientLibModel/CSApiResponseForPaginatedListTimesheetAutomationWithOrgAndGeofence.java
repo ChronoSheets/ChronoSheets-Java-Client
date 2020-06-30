@@ -15,7 +15,7 @@ package ChronoSheetsClientLibModel;
 
 import java.util.Objects;
 import java.util.Arrays;
-import ChronoSheetsClientLibModel.CSOrgReportTrip;
+import ChronoSheetsClientLibModel.CSTimesheetAutomationWithOrgAndGeofence;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -32,12 +32,12 @@ import java.util.List;
  */
 @ApiModel(description = "A paginated API repsonse")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-01T00:13:30.131+10:00")
-public class CSApiResponseForPaginatedListOrgReportTrip {
+public class CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence {
   @SerializedName("TotalSetCount")
   private Integer totalSetCount = null;
 
   @SerializedName("Data")
-  private List<CSOrgReportTrip> data = null;
+  private List<CSTimesheetAutomationWithOrgAndGeofence> data = null;
 
   /**
    * The API response status. Indicates if the request was successful, failed or was unauthorised.
@@ -100,7 +100,7 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   @SerializedName("Message")
   private String message = null;
 
-  public CSApiResponseForPaginatedListOrgReportTrip totalSetCount(Integer totalSetCount) {
+  public CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence totalSetCount(Integer totalSetCount) {
     this.totalSetCount = totalSetCount;
     return this;
   }
@@ -118,14 +118,14 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
     this.totalSetCount = totalSetCount;
   }
 
-  public CSApiResponseForPaginatedListOrgReportTrip data(List<CSOrgReportTrip> data) {
+  public CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence data(List<CSTimesheetAutomationWithOrgAndGeofence> data) {
     this.data = data;
     return this;
   }
 
-  public CSApiResponseForPaginatedListOrgReportTrip addDataItem(CSOrgReportTrip dataItem) {
+  public CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence addDataItem(CSTimesheetAutomationWithOrgAndGeofence dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<CSOrgReportTrip>();
+      this.data = new ArrayList<CSTimesheetAutomationWithOrgAndGeofence>();
     }
     this.data.add(dataItem);
     return this;
@@ -136,15 +136,15 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
    * @return data
   **/
   @ApiModelProperty(value = "The main Data of the response")
-  public List<CSOrgReportTrip> getData() {
+  public List<CSTimesheetAutomationWithOrgAndGeofence> getData() {
     return data;
   }
 
-  public void setData(List<CSOrgReportTrip> data) {
+  public void setData(List<CSTimesheetAutomationWithOrgAndGeofence> data) {
     this.data = data;
   }
 
-  public CSApiResponseForPaginatedListOrgReportTrip status(StatusEnum status) {
+  public CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence status(StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -162,7 +162,7 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
     this.status = status;
   }
 
-  public CSApiResponseForPaginatedListOrgReportTrip message(String message) {
+  public CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence message(String message) {
     this.message = message;
     return this;
   }
@@ -189,11 +189,11 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSApiResponseForPaginatedListOrgReportTrip apiResponseForPaginatedListOrgReportTrip = (CSApiResponseForPaginatedListOrgReportTrip) o;
-    return Objects.equals(this.totalSetCount, apiResponseForPaginatedListOrgReportTrip.totalSetCount) &&
-        Objects.equals(this.data, apiResponseForPaginatedListOrgReportTrip.data) &&
-        Objects.equals(this.status, apiResponseForPaginatedListOrgReportTrip.status) &&
-        Objects.equals(this.message, apiResponseForPaginatedListOrgReportTrip.message);
+    CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence apiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence = (CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence) o;
+    return Objects.equals(this.totalSetCount, apiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence.totalSetCount) &&
+        Objects.equals(this.data, apiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence.data) &&
+        Objects.equals(this.status, apiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence.status) &&
+        Objects.equals(this.message, apiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence.message);
   }
 
   @Override
@@ -205,7 +205,7 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSApiResponseForPaginatedListOrgReportTrip {\n");
+    sb.append("class CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence {\n");
     
     sb.append("    totalSetCount: ").append(toIndentedString(totalSetCount)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");

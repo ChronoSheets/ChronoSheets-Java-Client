@@ -72,7 +72,7 @@ public class ClientsApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Clients/CreateClient";
+        String localVarPath = "/Clients/CreateClient";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -205,7 +205,7 @@ public class ClientsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Clients/GetClient";
+        String localVarPath = "/Clients/GetClient";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -339,7 +339,7 @@ public class ClientsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Clients/GetClients";
+        String localVarPath = "/Clients/GetClients";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -464,7 +464,7 @@ public class ClientsApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Clients/UpdateClient";
+        String localVarPath = "/Clients/UpdateClient";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

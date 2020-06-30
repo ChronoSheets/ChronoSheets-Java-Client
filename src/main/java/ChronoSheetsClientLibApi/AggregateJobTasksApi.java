@@ -66,7 +66,7 @@ public class AggregateJobTasksApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/AggregateJobTasks/GetAggregateJobTasks";
+        String localVarPath = "/AggregateJobTasks/GetAggregateJobTasks";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

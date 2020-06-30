@@ -71,7 +71,7 @@ public class TripsApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Trips/CreateTrip";
+        String localVarPath = "/Trips/CreateTrip";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -204,7 +204,7 @@ public class TripsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Trips/GetMyTripById";
+        String localVarPath = "/Trips/GetMyTripById";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -343,7 +343,7 @@ public class TripsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Trips/GetMyTrips";
+        String localVarPath = "/Trips/GetMyTrips";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

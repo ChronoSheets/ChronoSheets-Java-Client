@@ -23,11 +23,12 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * CSCreateAutomationStepRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-06-18T20:09:49.552+10:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-07-01T00:13:30.131+10:00")
 public class CSCreateAutomationStepRequest {
   @SerializedName("GeofencingId")
   private Integer geofencingId = null;
@@ -92,6 +93,9 @@ public class CSCreateAutomationStepRequest {
 
   @SerializedName("Longitude")
   private Double longitude = null;
+
+  @SerializedName("ClientTime")
+  private OffsetDateTime clientTime = null;
 
   public CSCreateAutomationStepRequest geofencingId(Integer geofencingId) {
     this.geofencingId = geofencingId;
@@ -183,6 +187,24 @@ public class CSCreateAutomationStepRequest {
     this.longitude = longitude;
   }
 
+  public CSCreateAutomationStepRequest clientTime(OffsetDateTime clientTime) {
+    this.clientTime = clientTime;
+    return this;
+  }
+
+   /**
+   * Get clientTime
+   * @return clientTime
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getClientTime() {
+    return clientTime;
+  }
+
+  public void setClientTime(OffsetDateTime clientTime) {
+    this.clientTime = clientTime;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -197,12 +219,13 @@ public class CSCreateAutomationStepRequest {
         Objects.equals(this.nfcId, createAutomationStepRequest.nfcId) &&
         Objects.equals(this.automationActionType, createAutomationStepRequest.automationActionType) &&
         Objects.equals(this.latitude, createAutomationStepRequest.latitude) &&
-        Objects.equals(this.longitude, createAutomationStepRequest.longitude);
+        Objects.equals(this.longitude, createAutomationStepRequest.longitude) &&
+        Objects.equals(this.clientTime, createAutomationStepRequest.clientTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(geofencingId, nfcId, automationActionType, latitude, longitude);
+    return Objects.hash(geofencingId, nfcId, automationActionType, latitude, longitude, clientTime);
   }
 
 
@@ -216,6 +239,7 @@ public class CSCreateAutomationStepRequest {
     sb.append("    automationActionType: ").append(toIndentedString(automationActionType)).append("\n");
     sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
     sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
+    sb.append("    clientTime: ").append(toIndentedString(clientTime)).append("\n");
     sb.append("}");
     return sb.toString();
   }

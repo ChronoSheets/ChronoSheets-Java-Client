@@ -66,7 +66,7 @@ public class AggregateClientProjectsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/AggregateClientProjects/GetAggregateClientProjects";
+        String localVarPath = "/AggregateClientProjects/GetAggregateClientProjects";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

@@ -69,7 +69,7 @@ public class UserPayRatesApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/UserPayRates/CreatePayRate";
+        String localVarPath = "/UserPayRates/CreatePayRate";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -202,7 +202,7 @@ public class UserPayRatesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/UserPayRates/GetPayRates";
+        String localVarPath = "/UserPayRates/GetPayRates";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

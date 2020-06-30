@@ -69,7 +69,7 @@ public class TranscriptsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Transcripts/GetMyTranscript";
+        String localVarPath = "/Transcripts/GetMyTranscript";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -208,7 +208,7 @@ public class TranscriptsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Transcripts/GetMyTranscripts";
+        String localVarPath = "/Transcripts/GetMyTranscripts";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

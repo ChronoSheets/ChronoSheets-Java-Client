@@ -69,7 +69,7 @@ public class UsualHoursApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/UsualHours/GetUsualHours";
+        String localVarPath = "/UsualHours/GetUsualHours";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -204,7 +204,7 @@ public class UsualHoursApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/UsualHours/SetUsualHours";
+        String localVarPath = "/UsualHours/SetUsualHours";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

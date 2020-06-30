@@ -72,7 +72,7 @@ public class FleetApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Fleet/CreateVehicle";
+        String localVarPath = "/Fleet/CreateVehicle";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -205,7 +205,7 @@ public class FleetApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Fleet/DeleteVehicle";
+        String localVarPath = "/Fleet/DeleteVehicle";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -340,7 +340,7 @@ public class FleetApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Fleet/GetVehicleById";
+        String localVarPath = "/Fleet/GetVehicleById";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -475,7 +475,7 @@ public class FleetApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Fleet/GetVehicles";
+        String localVarPath = "/Fleet/GetVehicles";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -605,7 +605,7 @@ public class FleetApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/Fleet/UpdateVehicle";
+        String localVarPath = "/Fleet/UpdateVehicle";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

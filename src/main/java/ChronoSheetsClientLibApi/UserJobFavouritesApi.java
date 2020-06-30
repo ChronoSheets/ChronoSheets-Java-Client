@@ -70,7 +70,7 @@ public class UserJobFavouritesApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/UserJobFavourites/CreateJobFavourite";
+        String localVarPath = "/UserJobFavourites/CreateJobFavourite";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -203,7 +203,7 @@ public class UserJobFavouritesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/UserJobFavourites/DeleteJobFavourite";
+        String localVarPath = "/UserJobFavourites/DeleteJobFavourite";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -337,7 +337,7 @@ public class UserJobFavouritesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/UserJobFavourites/GetJobFavourites";
+        String localVarPath = "/UserJobFavourites/GetJobFavourites";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

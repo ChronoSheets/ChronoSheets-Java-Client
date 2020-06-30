@@ -79,7 +79,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/GetAllChartsDataAdmin";
+        String localVarPath = "/Reports/GetAllChartsDataAdmin";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -235,7 +235,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/GetAllChartsDataUser";
+        String localVarPath = "/Reports/GetAllChartsDataUser";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -382,7 +382,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/GetFleetSummaryAdmin";
+        String localVarPath = "/Reports/GetFleetSummaryAdmin";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -532,7 +532,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/GetOrgTripById";
+        String localVarPath = "/Reports/GetOrgTripById";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -671,7 +671,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/GetOrganisationTimesheetFileAttachments";
+        String localVarPath = "/Reports/GetOrganisationTimesheetFileAttachments";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -836,7 +836,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/GetOrganisationTranscripts";
+        String localVarPath = "/Reports/GetOrganisationTranscripts";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1005,7 +1005,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/GetOrganisationTrips";
+        String localVarPath = "/Reports/GetOrganisationTrips";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1171,7 +1171,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/GetRawDataAdmin";
+        String localVarPath = "/Reports/GetRawDataAdmin";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1343,7 +1343,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/ProjectCostingsAdmin";
+        String localVarPath = "/Reports/ProjectCostingsAdmin";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1494,7 +1494,7 @@ public class ReportsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/Reports/UserJobsOverTime";
+        String localVarPath = "/Reports/UserJobsOverTime";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

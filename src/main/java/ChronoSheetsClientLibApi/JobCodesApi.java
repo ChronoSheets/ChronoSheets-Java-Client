@@ -72,7 +72,7 @@ public class JobCodesApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/JobCodes/CreateJobCode";
+        String localVarPath = "/JobCodes/CreateJobCode";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -205,7 +205,7 @@ public class JobCodesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/JobCodes/DeleteJobCode";
+        String localVarPath = "/JobCodes/DeleteJobCode";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -340,7 +340,7 @@ public class JobCodesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/JobCodes/GetJobCodeById";
+        String localVarPath = "/JobCodes/GetJobCodeById";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -474,7 +474,7 @@ public class JobCodesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/JobCodes/GetJobCodes";
+        String localVarPath = "/JobCodes/GetJobCodes";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -599,7 +599,7 @@ public class JobCodesApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/JobCodes/UpdateJobCode";
+        String localVarPath = "/JobCodes/UpdateJobCode";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

@@ -71,7 +71,7 @@ public class UserProfileApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/UserProfile/DoLogin";
+        String localVarPath = "/UserProfile/DoLogin";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -193,7 +193,7 @@ public class UserProfileApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/UserProfile/DoLogout";
+        String localVarPath = "/UserProfile/DoLogout";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -317,7 +317,7 @@ public class UserProfileApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/UserProfile/GetMyProfile";
+        String localVarPath = "/UserProfile/GetMyProfile";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -441,7 +441,7 @@ public class UserProfileApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/UserProfile/KeepSessionAlive";
+        String localVarPath = "/UserProfile/KeepSessionAlive";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -566,7 +566,7 @@ public class UserProfileApi {
         Object localVarPostBody = request;
 
         // create path and map variables
-        String localVarPath = "/api/UserProfile/UpdateMyProfile";
+        String localVarPath = "/UserProfile/UpdateMyProfile";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
