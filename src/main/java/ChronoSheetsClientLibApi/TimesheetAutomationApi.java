@@ -182,6 +182,7 @@ public class TimesheetAutomationApi {
     /**
      * Build call for timesheetAutomationGetTimesheetAutomationAuditTrail
      * @param geofenceId The ID of the Geofence (required)
+     * @param nfcId  (required)
      * @param userId  (required)
      * @param sort  (required)
      * @param order  (required)
@@ -197,7 +198,7 @@ public class TimesheetAutomationApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call timesheetAutomationGetTimesheetAutomationAuditTrailCall(Integer geofenceId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call timesheetAutomationGetTimesheetAutomationAuditTrailCall(Integer geofenceId, Integer nfcId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -207,6 +208,10 @@ public class TimesheetAutomationApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (geofenceId != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("GeofenceId", geofenceId));
+        }
+
+        if (nfcId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("NfcId", nfcId));
         }
 
         if (userId != null) {
@@ -255,11 +260,16 @@ public class TimesheetAutomationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call timesheetAutomationGetTimesheetAutomationAuditTrailValidateBeforeCall(Integer geofenceId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call timesheetAutomationGetTimesheetAutomationAuditTrailValidateBeforeCall(Integer geofenceId, Integer nfcId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'geofenceId' is set
         if (geofenceId == null) {
             throw new ApiException("Missing the required parameter 'geofenceId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail(Async)");
+        }
+        
+        // verify the required parameter 'nfcId' is set
+        if (nfcId == null) {
+            throw new ApiException("Missing the required parameter 'nfcId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail(Async)");
         }
         
         // verify the required parameter 'userId' is set
@@ -283,7 +293,7 @@ public class TimesheetAutomationApi {
         }
         
 
-        okhttp3.Call localVarCall = timesheetAutomationGetTimesheetAutomationAuditTrailCall(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take, _callback);
+        okhttp3.Call localVarCall = timesheetAutomationGetTimesheetAutomationAuditTrailCall(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take, _callback);
         return localVarCall;
 
     }
@@ -292,6 +302,7 @@ public class TimesheetAutomationApi {
      * Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
      * 
      * @param geofenceId The ID of the Geofence (required)
+     * @param nfcId  (required)
      * @param userId  (required)
      * @param sort  (required)
      * @param order  (required)
@@ -306,8 +317,8 @@ public class TimesheetAutomationApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheetAutomationGetTimesheetAutomationAuditTrail(Integer geofenceId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take) throws ApiException {
-        ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResp = timesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+    public ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheetAutomationGetTimesheetAutomationAuditTrail(Integer geofenceId, Integer nfcId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take) throws ApiException {
+        ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResp = timesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take);
         return localVarResp.getData();
     }
 
@@ -315,6 +326,7 @@ public class TimesheetAutomationApi {
      * Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
      * 
      * @param geofenceId The ID of the Geofence (required)
+     * @param nfcId  (required)
      * @param userId  (required)
      * @param sort  (required)
      * @param order  (required)
@@ -329,8 +341,8 @@ public class TimesheetAutomationApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> timesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo(Integer geofenceId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take) throws ApiException {
-        okhttp3.Call localVarCall = timesheetAutomationGetTimesheetAutomationAuditTrailValidateBeforeCall(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take, null);
+    public ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> timesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo(Integer geofenceId, Integer nfcId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take) throws ApiException {
+        okhttp3.Call localVarCall = timesheetAutomationGetTimesheetAutomationAuditTrailValidateBeforeCall(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take, null);
         Type localVarReturnType = new TypeToken<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -339,6 +351,7 @@ public class TimesheetAutomationApi {
      * Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission. (asynchronously)
      * 
      * @param geofenceId The ID of the Geofence (required)
+     * @param nfcId  (required)
      * @param userId  (required)
      * @param sort  (required)
      * @param order  (required)
@@ -354,9 +367,9 @@ public class TimesheetAutomationApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call timesheetAutomationGetTimesheetAutomationAuditTrailAsync(Integer geofenceId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take, final ApiCallback<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> _callback) throws ApiException {
+    public okhttp3.Call timesheetAutomationGetTimesheetAutomationAuditTrailAsync(Integer geofenceId, Integer nfcId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take, final ApiCallback<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = timesheetAutomationGetTimesheetAutomationAuditTrailValidateBeforeCall(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take, _callback);
+        okhttp3.Call localVarCall = timesheetAutomationGetTimesheetAutomationAuditTrailValidateBeforeCall(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take, _callback);
         Type localVarReturnType = new TypeToken<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

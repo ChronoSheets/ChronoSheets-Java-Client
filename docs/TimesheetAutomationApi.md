@@ -72,7 +72,7 @@ No authorization required
 
 <a name="timesheetAutomationGetTimesheetAutomationAuditTrail"></a>
 # **timesheetAutomationGetTimesheetAutomationAuditTrail**
-> ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take)
+> ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take)
 
 Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
 
@@ -92,6 +92,7 @@ public class Example {
 
     TimesheetAutomationApi apiInstance = new TimesheetAutomationApi(defaultClient);
     Integer geofenceId = 56; // Integer | The ID of the Geofence
+    Integer nfcId = 56; // Integer | 
     Integer userId = 56; // Integer | 
     String sort = "sort_example"; // String | 
     String order = "order_example"; // String | 
@@ -99,7 +100,7 @@ public class Example {
     Integer skip = 56; // Integer | Skip this many records
     Integer take = 56; // Integer | Take this many records
     try {
-      ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence result = apiInstance.timesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+      ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence result = apiInstance.timesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling TimesheetAutomationApi#timesheetAutomationGetTimesheetAutomationAuditTrail");
@@ -117,6 +118,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geofenceId** | **Integer**| The ID of the Geofence |
+ **nfcId** | **Integer**|  |
  **userId** | **Integer**|  |
  **sort** | **String**|  | [enum: UserName, AutomationActionType, ClientDateTime, IsProcessed]
  **order** | **String**|  | [enum: Ascending, Descending]

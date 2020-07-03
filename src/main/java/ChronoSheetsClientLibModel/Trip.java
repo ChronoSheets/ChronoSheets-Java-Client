@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Trip
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-03T19:40:40.863+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-03T21:12:18.282+10:00[Australia/Sydney]")
 public class Trip {
   public static final String SERIALIZED_NAME_TRIP_ID = "TripId";
   @SerializedName(SERIALIZED_NAME_TRIP_ID)

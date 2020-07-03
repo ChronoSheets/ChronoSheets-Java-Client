@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Timesheet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-03T19:40:40.863+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-03T21:12:18.282+10:00[Australia/Sydney]")
 public class Timesheet {
   public static final String SERIALIZED_NAME_TIMESHEET_ID = "TimesheetId";
   @SerializedName(SERIALIZED_NAME_TIMESHEET_ID)

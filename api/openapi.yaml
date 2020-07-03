@@ -2814,6 +2814,12 @@ paths:
           format: int32
           type: integer
       - in: query
+        name: NfcId
+        required: true
+        schema:
+          format: int32
+          type: integer
+      - in: query
         name: UserId
         required: true
         schema:
