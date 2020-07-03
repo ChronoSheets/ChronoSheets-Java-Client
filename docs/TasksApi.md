@@ -14,26 +14,38 @@ Method | HTTP request | Description
 
 <a name="tasksCreateTask"></a>
 # **tasksCreateTask**
-> CSApiResponseInt32 tasksCreateTask(request, xChronosheetsAuth)
+> ApiResponseInt32 tasksCreateTask(xChronosheetsAuth, request)
 
 Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.TasksApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.TasksApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-TasksApi apiInstance = new TasksApi();
-CSInsertTaskRequest request = new CSInsertTaskRequest(); // CSInsertTaskRequest | An Insert Task Request object containing values for the new Task to create
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseInt32 result = apiInstance.tasksCreateTask(request, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TasksApi#tasksCreateTask");
-    e.printStackTrace();
+    TasksApi apiInstance = new TasksApi(defaultClient);
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    InsertTaskRequest request = new InsertTaskRequest(); // InsertTaskRequest | An Insert Task Request object containing values for the new Task to create
+    try {
+      ApiResponseInt32 result = apiInstance.tasksCreateTask(xChronosheetsAuth, request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TasksApi#tasksCreateTask");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -41,12 +53,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertTaskRequest**](CSInsertTaskRequest.md)| An Insert Task Request object containing values for the new Task to create |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **request** | [**InsertTaskRequest**](InsertTaskRequest.md)| An Insert Task Request object containing values for the new Task to create |
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -57,28 +69,45 @@ No authorization required
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="tasksDeleteTask"></a>
 # **tasksDeleteTask**
-> CSApiResponseBoolean tasksDeleteTask(taskId, xChronosheetsAuth)
+> ApiResponseBoolean tasksDeleteTask(taskId, xChronosheetsAuth)
 
 Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.TasksApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.TasksApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-TasksApi apiInstance = new TasksApi();
-Integer taskId = 56; // Integer | The ID of the Task you want to delete
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseBoolean result = apiInstance.tasksDeleteTask(taskId, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TasksApi#tasksDeleteTask");
-    e.printStackTrace();
+    TasksApi apiInstance = new TasksApi(defaultClient);
+    Integer taskId = 56; // Integer | The ID of the Task you want to delete
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    try {
+      ApiResponseBoolean result = apiInstance.tasksDeleteTask(taskId, xChronosheetsAuth);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TasksApi#tasksDeleteTask");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -91,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -102,28 +131,45 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="tasksGetTaskById"></a>
 # **tasksGetTaskById**
-> CSApiResponseTimesheetTask tasksGetTaskById(taskId, xChronosheetsAuth)
+> ApiResponseTimesheetTask tasksGetTaskById(taskId, xChronosheetsAuth)
 
 Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.TasksApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.TasksApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-TasksApi apiInstance = new TasksApi();
-Integer taskId = 56; // Integer | The ID of the TimesheetTask you want to get
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseTimesheetTask result = apiInstance.tasksGetTaskById(taskId, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TasksApi#tasksGetTaskById");
-    e.printStackTrace();
+    TasksApi apiInstance = new TasksApi(defaultClient);
+    Integer taskId = 56; // Integer | The ID of the TimesheetTask you want to get
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    try {
+      ApiResponseTimesheetTask result = apiInstance.tasksGetTaskById(taskId, xChronosheetsAuth);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TasksApi#tasksGetTaskById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -136,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseTimesheetTask**](CSApiResponseTimesheetTask.md)
+[**ApiResponseTimesheetTask**](ApiResponseTimesheetTask.md)
 
 ### Authorization
 
@@ -147,27 +193,44 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="tasksGetTasks"></a>
 # **tasksGetTasks**
-> CSApiResponseListTimesheetTask tasksGetTasks(xChronosheetsAuth)
+> ApiResponseListTimesheetTask tasksGetTasks(xChronosheetsAuth)
 
 Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.TasksApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.TasksApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-TasksApi apiInstance = new TasksApi();
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseListTimesheetTask result = apiInstance.tasksGetTasks(xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TasksApi#tasksGetTasks");
-    e.printStackTrace();
+    TasksApi apiInstance = new TasksApi(defaultClient);
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    try {
+      ApiResponseListTimesheetTask result = apiInstance.tasksGetTasks(xChronosheetsAuth);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TasksApi#tasksGetTasks");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -179,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
+[**ApiResponseListTimesheetTask**](ApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -190,28 +253,45 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="tasksGetTasksForJob"></a>
 # **tasksGetTasksForJob**
-> CSApiResponseListTimesheetTask tasksGetTasksForJob(jobId, xChronosheetsAuth)
+> ApiResponseListTimesheetTask tasksGetTasksForJob(jobId, xChronosheetsAuth)
 
 Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.TasksApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.TasksApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-TasksApi apiInstance = new TasksApi();
-Integer jobId = 56; // Integer | The ID of the job
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseListTimesheetTask result = apiInstance.tasksGetTasksForJob(jobId, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TasksApi#tasksGetTasksForJob");
-    e.printStackTrace();
+    TasksApi apiInstance = new TasksApi(defaultClient);
+    Integer jobId = 56; // Integer | The ID of the job
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    try {
+      ApiResponseListTimesheetTask result = apiInstance.tasksGetTasksForJob(jobId, xChronosheetsAuth);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TasksApi#tasksGetTasksForJob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -224,7 +304,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
+[**ApiResponseListTimesheetTask**](ApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -235,28 +315,45 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="tasksUpdateTask"></a>
 # **tasksUpdateTask**
-> CSApiResponseBoolean tasksUpdateTask(request, xChronosheetsAuth)
+> ApiResponseBoolean tasksUpdateTask(xChronosheetsAuth, request)
 
 Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.TasksApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.TasksApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-TasksApi apiInstance = new TasksApi();
-CSUpdateTaskRequest request = new CSUpdateTaskRequest(); // CSUpdateTaskRequest | An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseBoolean result = apiInstance.tasksUpdateTask(request, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TasksApi#tasksUpdateTask");
-    e.printStackTrace();
+    TasksApi apiInstance = new TasksApi(defaultClient);
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    UpdateTaskRequest request = new UpdateTaskRequest(); // UpdateTaskRequest | An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
+    try {
+      ApiResponseBoolean result = apiInstance.tasksUpdateTask(xChronosheetsAuth, request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TasksApi#tasksUpdateTask");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -264,12 +361,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateTaskRequest**](CSUpdateTaskRequest.md)| An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **request** | [**UpdateTaskRequest**](UpdateTaskRequest.md)| An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update |
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -279,4 +376,9 @@ No authorization required
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
 

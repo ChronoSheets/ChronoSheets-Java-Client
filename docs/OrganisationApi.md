@@ -10,25 +10,37 @@ Method | HTTP request | Description
 
 <a name="organisationGetOrganisation"></a>
 # **organisationGetOrganisation**
-> CSApiResponseOrganisation organisationGetOrganisation(xChronosheetsAuth)
+> ApiResponseOrganisation organisationGetOrganisation(xChronosheetsAuth)
 
 Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.OrganisationApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.OrganisationApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-OrganisationApi apiInstance = new OrganisationApi();
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseOrganisation result = apiInstance.organisationGetOrganisation(xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling OrganisationApi#organisationGetOrganisation");
-    e.printStackTrace();
+    OrganisationApi apiInstance = new OrganisationApi(defaultClient);
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    try {
+      ApiResponseOrganisation result = apiInstance.organisationGetOrganisation(xChronosheetsAuth);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling OrganisationApi#organisationGetOrganisation");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -40,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseOrganisation**](CSApiResponseOrganisation.md)
+[**ApiResponseOrganisation**](ApiResponseOrganisation.md)
 
 ### Authorization
 
@@ -51,28 +63,45 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="organisationUpdateOrganisation"></a>
 # **organisationUpdateOrganisation**
-> CSApiResponseUpdateOrganisationResponse organisationUpdateOrganisation(request, xChronosheetsAuth)
+> ApiResponseUpdateOrganisationResponse organisationUpdateOrganisation(xChronosheetsAuth, request)
 
 Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.OrganisationApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.OrganisationApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-OrganisationApi apiInstance = new OrganisationApi();
-CSUpdateOrganisationRequest request = new CSUpdateOrganisationRequest(); // CSUpdateOrganisationRequest | An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseUpdateOrganisationResponse result = apiInstance.organisationUpdateOrganisation(request, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling OrganisationApi#organisationUpdateOrganisation");
-    e.printStackTrace();
+    OrganisationApi apiInstance = new OrganisationApi(defaultClient);
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    UpdateOrganisationRequest request = new UpdateOrganisationRequest(); // UpdateOrganisationRequest | An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
+    try {
+      ApiResponseUpdateOrganisationResponse result = apiInstance.organisationUpdateOrganisation(xChronosheetsAuth, request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling OrganisationApi#organisationUpdateOrganisation");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -80,12 +109,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateOrganisationRequest**](CSUpdateOrganisationRequest.md)| An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **request** | [**UpdateOrganisationRequest**](UpdateOrganisationRequest.md)| An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update |
 
 ### Return type
 
-[**CSApiResponseUpdateOrganisationResponse**](CSApiResponseUpdateOrganisationResponse.md)
+[**ApiResponseUpdateOrganisationResponse**](ApiResponseUpdateOrganisationResponse.md)
 
 ### Authorization
 
@@ -95,4 +124,9 @@ No authorization required
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
 

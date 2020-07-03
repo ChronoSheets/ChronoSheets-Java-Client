@@ -13,26 +13,38 @@ Method | HTTP request | Description
 
 <a name="fleetCreateVehicle"></a>
 # **fleetCreateVehicle**
-> CSApiResponseInt32 fleetCreateVehicle(request, xChronosheetsAuth)
+> ApiResponseInt32 fleetCreateVehicle(xChronosheetsAuth, request)
 
 Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.FleetApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.FleetApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-FleetApi apiInstance = new FleetApi();
-CSInsertVehicleRequest request = new CSInsertVehicleRequest(); // CSInsertVehicleRequest | An Insert Vehicle Request object containing values for the new Vehicle to create
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseInt32 result = apiInstance.fleetCreateVehicle(request, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling FleetApi#fleetCreateVehicle");
-    e.printStackTrace();
+    FleetApi apiInstance = new FleetApi(defaultClient);
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    InsertVehicleRequest request = new InsertVehicleRequest(); // InsertVehicleRequest | An Insert Vehicle Request object containing values for the new Vehicle to create
+    try {
+      ApiResponseInt32 result = apiInstance.fleetCreateVehicle(xChronosheetsAuth, request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FleetApi#fleetCreateVehicle");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -40,12 +52,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertVehicleRequest**](CSInsertVehicleRequest.md)| An Insert Vehicle Request object containing values for the new Vehicle to create |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **request** | [**InsertVehicleRequest**](InsertVehicleRequest.md)| An Insert Vehicle Request object containing values for the new Vehicle to create |
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -56,28 +68,45 @@ No authorization required
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="fleetDeleteVehicle"></a>
 # **fleetDeleteVehicle**
-> CSApiResponseBoolean fleetDeleteVehicle(vehicleId, xChronosheetsAuth)
+> ApiResponseBoolean fleetDeleteVehicle(vehicleId, xChronosheetsAuth)
 
 Delete a vehicle from the fleet.  Requires the &#39;ManageFleet&#39; permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.FleetApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.FleetApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-FleetApi apiInstance = new FleetApi();
-Integer vehicleId = 56; // Integer | The unique ID of the vehicle you wish to delete
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseBoolean result = apiInstance.fleetDeleteVehicle(vehicleId, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling FleetApi#fleetDeleteVehicle");
-    e.printStackTrace();
+    FleetApi apiInstance = new FleetApi(defaultClient);
+    Integer vehicleId = 56; // Integer | The unique ID of the vehicle you wish to delete
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    try {
+      ApiResponseBoolean result = apiInstance.fleetDeleteVehicle(vehicleId, xChronosheetsAuth);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FleetApi#fleetDeleteVehicle");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -90,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -101,28 +130,45 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="fleetGetVehicleById"></a>
 # **fleetGetVehicleById**
-> CSApiResponseFleetVehicle fleetGetVehicleById(vehicleId, xChronosheetsAuth)
+> ApiResponseFleetVehicle fleetGetVehicleById(vehicleId, xChronosheetsAuth)
 
 Get a particular vehicle.  Does not require any special permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.FleetApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.FleetApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-FleetApi apiInstance = new FleetApi();
-Integer vehicleId = 56; // Integer | The ID of the Vehicle you want to get
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseFleetVehicle result = apiInstance.fleetGetVehicleById(vehicleId, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling FleetApi#fleetGetVehicleById");
-    e.printStackTrace();
+    FleetApi apiInstance = new FleetApi(defaultClient);
+    Integer vehicleId = 56; // Integer | The ID of the Vehicle you want to get
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    try {
+      ApiResponseFleetVehicle result = apiInstance.fleetGetVehicleById(vehicleId, xChronosheetsAuth);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FleetApi#fleetGetVehicleById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -135,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseFleetVehicle**](CSApiResponseFleetVehicle.md)
+[**ApiResponseFleetVehicle**](ApiResponseFleetVehicle.md)
 
 ### Authorization
 
@@ -146,28 +192,45 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="fleetGetVehicles"></a>
 # **fleetGetVehicles**
-> CSApiResponseListFleetVehicle fleetGetVehicles(xChronosheetsAuth, includeDeleted)
+> ApiResponseListFleetVehicle fleetGetVehicles(xChronosheetsAuth, includeDeleted)
 
 Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.FleetApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.FleetApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-FleetApi apiInstance = new FleetApi();
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-Boolean includeDeleted = true; // Boolean | Whether or not to include deleted vehicles
-try {
-    CSApiResponseListFleetVehicle result = apiInstance.fleetGetVehicles(xChronosheetsAuth, includeDeleted);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling FleetApi#fleetGetVehicles");
-    e.printStackTrace();
+    FleetApi apiInstance = new FleetApi(defaultClient);
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    Boolean includeDeleted = true; // Boolean | Whether or not to include deleted vehicles
+    try {
+      ApiResponseListFleetVehicle result = apiInstance.fleetGetVehicles(xChronosheetsAuth, includeDeleted);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FleetApi#fleetGetVehicles");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -180,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseListFleetVehicle**](CSApiResponseListFleetVehicle.md)
+[**ApiResponseListFleetVehicle**](ApiResponseListFleetVehicle.md)
 
 ### Authorization
 
@@ -191,28 +254,45 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
 <a name="fleetUpdateVehicle"></a>
 # **fleetUpdateVehicle**
-> CSApiResponseBoolean fleetUpdateVehicle(request, xChronosheetsAuth)
+> ApiResponseBoolean fleetUpdateVehicle(xChronosheetsAuth, request)
 
 Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 ### Example
 ```java
 // Import classes:
-//import ChronoSheetsClient.ApiException;
-//import ChronoSheetsClientLibApi.FleetApi;
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.FleetApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
 
-FleetApi apiInstance = new FleetApi();
-CSSaveVehicleRequest request = new CSSaveVehicleRequest(); // CSSaveVehicleRequest | A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-try {
-    CSApiResponseBoolean result = apiInstance.fleetUpdateVehicle(request, xChronosheetsAuth);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling FleetApi#fleetUpdateVehicle");
-    e.printStackTrace();
+    FleetApi apiInstance = new FleetApi(defaultClient);
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    SaveVehicleRequest request = new SaveVehicleRequest(); // SaveVehicleRequest | A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
+    try {
+      ApiResponseBoolean result = apiInstance.fleetUpdateVehicle(xChronosheetsAuth, request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling FleetApi#fleetUpdateVehicle");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -220,12 +300,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSaveVehicleRequest**](CSSaveVehicleRequest.md)| A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **request** | [**SaveVehicleRequest**](SaveVehicleRequest.md)| A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update |
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -235,4 +315,9 @@ No authorization required
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
 
