@@ -28,7 +28,7 @@ import java.io.IOException;
  * An API Request object for logging into ChronoSheets
  */
 @ApiModel(description = "An API Request object for logging into ChronoSheets")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-03T21:12:18.282+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-07T23:33:39.490+10:00[Australia/Sydney]")
 public class DoLoginRequest {
   public static final String SERIALIZED_NAME_USERNAME_OR_EMAIL = "UsernameOrEmail";
   @SerializedName(SERIALIZED_NAME_USERNAME_OR_EMAIL)
@@ -37,6 +37,10 @@ public class DoLoginRequest {
   public static final String SERIALIZED_NAME_PASSWORD = "Password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
   private String password;
+
+  public static final String SERIALIZED_NAME_REMEMBER_ME = "RememberMe";
+  @SerializedName(SERIALIZED_NAME_REMEMBER_ME)
+  private Boolean rememberMe;
 
 
   public DoLoginRequest usernameOrEmail(String usernameOrEmail) {
@@ -85,6 +89,29 @@ public class DoLoginRequest {
   }
 
 
+  public DoLoginRequest rememberMe(Boolean rememberMe) {
+    
+    this.rememberMe = rememberMe;
+    return this;
+  }
+
+   /**
+   * Increase session expiry beyond default of 1 hour
+   * @return rememberMe
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Increase session expiry beyond default of 1 hour")
+
+  public Boolean getRememberMe() {
+    return rememberMe;
+  }
+
+
+  public void setRememberMe(Boolean rememberMe) {
+    this.rememberMe = rememberMe;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -95,12 +122,13 @@ public class DoLoginRequest {
     }
     DoLoginRequest doLoginRequest = (DoLoginRequest) o;
     return Objects.equals(this.usernameOrEmail, doLoginRequest.usernameOrEmail) &&
-        Objects.equals(this.password, doLoginRequest.password);
+        Objects.equals(this.password, doLoginRequest.password) &&
+        Objects.equals(this.rememberMe, doLoginRequest.rememberMe);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(usernameOrEmail, password);
+    return Objects.hash(usernameOrEmail, password, rememberMe);
   }
 
 
@@ -110,6 +138,7 @@ public class DoLoginRequest {
     sb.append("class DoLoginRequest {\n");
     sb.append("    usernameOrEmail: ").append(toIndentedString(usernameOrEmail)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    rememberMe: ").append(toIndentedString(rememberMe)).append("\n");
     sb.append("}");
     return sb.toString();
   }

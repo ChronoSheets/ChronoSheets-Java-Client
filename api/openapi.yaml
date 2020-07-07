@@ -9099,6 +9099,7 @@ components:
     DoLoginRequest:
       description: An API Request object for logging into ChronoSheets
       example:
+        RememberMe: true
         UsernameOrEmail: UsernameOrEmail
         Password: Password
       properties:
@@ -9108,6 +9109,9 @@ components:
         Password:
           description: Your ChronoSheets password
           type: string
+        RememberMe:
+          description: Increase session expiry beyond default of 1 hour
+          type: boolean
       type: object
     ApiResponse[DoLoginResponse]:
       description: A standard API response

@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * UserForManagement
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-03T21:12:18.282+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-07T23:33:39.490+10:00[Australia/Sydney]")
 public class UserForManagement {
   public static final String SERIALIZED_NAME_IS_ACCOUNT_ACTIVE = "IsAccountActive";
   @SerializedName(SERIALIZED_NAME_IS_ACCOUNT_ACTIVE)

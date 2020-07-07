@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fields for updating a project
  */
 @ApiModel(description = "Fields for updating a project")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-03T21:12:18.282+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-07T23:33:39.490+10:00[Australia/Sydney]")
 public class UpdateProjectRequest {
   public static final String SERIALIZED_NAME_PROJECT_ID = "ProjectId";
   @SerializedName(SERIALIZED_NAME_PROJECT_ID)

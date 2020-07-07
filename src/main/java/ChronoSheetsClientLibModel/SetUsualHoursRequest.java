@@ -31,7 +31,7 @@ import java.util.List;
  * An object that can be used to set the Usual Hours (Rostered Hours) of an employee user account
  */
 @ApiModel(description = "An object that can be used to set the Usual Hours (Rostered Hours) of an employee user account")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-03T21:12:18.282+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-07T23:33:39.490+10:00[Australia/Sydney]")
 public class SetUsualHoursRequest {
   public static final String SERIALIZED_NAME_USUAL_HOURS_DATA = "UsualHoursData";
   @SerializedName(SERIALIZED_NAME_USUAL_HOURS_DATA)

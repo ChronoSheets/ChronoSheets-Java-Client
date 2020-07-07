@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ClientSideUser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-03T21:12:18.282+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-07-07T23:33:39.490+10:00[Australia/Sydney]")
 public class ClientSideUser {
   public static final String SERIALIZED_NAME_ID = "Id";
   @SerializedName(SERIALIZED_NAME_ID)
