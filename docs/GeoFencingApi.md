@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**geoFencingDeleteGeofence**](GeoFencingApi.md#geoFencingDeleteGeofence) | **DELETE** /GeoFencing/DeleteGeofence | Deletes a geofence.  Requires the &#39;ManageGeofencing&#39; permission.
 [**geoFencingGetGeofenceById**](GeoFencingApi.md#geoFencingGetGeofenceById) | **GET** /GeoFencing/GetGeofenceById | Get a geofence by ID  Requires the &#39;SubmitTimesheets&#39; permission.
 [**geoFencingGetGeofences**](GeoFencingApi.md#geoFencingGetGeofences) | **GET** /GeoFencing/GetGeofences | Get geofences belonging to your organisation  Requires the &#39;SubmitTimesheets&#39; permission.
+[**geoFencingGetGeofencesBasicInfo**](GeoFencingApi.md#geoFencingGetGeofencesBasicInfo) | **GET** /GeoFencing/GetGeofencesBasicInfo | Gets a list of all geofences in your organisation, including just the name and ID.
 [**geoFencingUpdateGeofence**](GeoFencingApi.md#geoFencingUpdateGeofence) | **PUT** /GeoFencing/UpdateGeofence | Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
 
 
@@ -246,6 +247,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseForPaginatedListExtendedGeofence**](ApiResponseForPaginatedListExtendedGeofence.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+<a name="geoFencingGetGeofencesBasicInfo"></a>
+# **geoFencingGetGeofencesBasicInfo**
+> ApiResponseForPaginatedListBasicGeofence geoFencingGetGeofencesBasicInfo(xChronosheetsAuth)
+
+Gets a list of all geofences in your organisation, including just the name and ID.
+
+### Example
+```java
+// Import classes:
+import ChronoSheetsClient.ApiClient;
+import ChronoSheetsClient.ApiException;
+import ChronoSheetsClient.Configuration;
+import ChronoSheetsClient.models.*;
+import ChronoSheetsClientLibApi.GeoFencingApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.chronosheets.com");
+
+    GeoFencingApi apiInstance = new GeoFencingApi(defaultClient);
+    String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+    try {
+      ApiResponseForPaginatedListBasicGeofence result = apiInstance.geoFencingGetGeofencesBasicInfo(xChronosheetsAuth);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GeoFencingApi#geoFencingGetGeofencesBasicInfo");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+
+### Return type
+
+[**ApiResponseForPaginatedListBasicGeofence**](ApiResponseForPaginatedListBasicGeofence.md)
 
 ### Authorization
 

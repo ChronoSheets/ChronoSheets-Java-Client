@@ -25,62 +25,62 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * SetOrganisationGroupUsersRequest
+ * BasicGeofence
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
-public class SetOrganisationGroupUsersRequest {
-  public static final String SERIALIZED_NAME_ORGANISATION_GROUP_ID = "OrganisationGroupId";
-  @SerializedName(SERIALIZED_NAME_ORGANISATION_GROUP_ID)
-  private Integer organisationGroupId;
+public class BasicGeofence {
+  public static final String SERIALIZED_NAME_GEO_FENCING_ID = "GeoFencingId";
+  @SerializedName(SERIALIZED_NAME_GEO_FENCING_ID)
+  private Integer geoFencingId;
 
-  public static final String SERIALIZED_NAME_CSV_USER_IDS = "CsvUserIds";
-  @SerializedName(SERIALIZED_NAME_CSV_USER_IDS)
-  private String csvUserIds;
+  public static final String SERIALIZED_NAME_NAME = "Name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
 
-  public SetOrganisationGroupUsersRequest organisationGroupId(Integer organisationGroupId) {
+  public BasicGeofence geoFencingId(Integer geoFencingId) {
     
-    this.organisationGroupId = organisationGroupId;
+    this.geoFencingId = geoFencingId;
     return this;
   }
 
    /**
-   * Get organisationGroupId
-   * @return organisationGroupId
+   * Get geoFencingId
+   * @return geoFencingId
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Integer getOrganisationGroupId() {
-    return organisationGroupId;
+  public Integer getGeoFencingId() {
+    return geoFencingId;
   }
 
 
-  public void setOrganisationGroupId(Integer organisationGroupId) {
-    this.organisationGroupId = organisationGroupId;
+  public void setGeoFencingId(Integer geoFencingId) {
+    this.geoFencingId = geoFencingId;
   }
 
 
-  public SetOrganisationGroupUsersRequest csvUserIds(String csvUserIds) {
+  public BasicGeofence name(String name) {
     
-    this.csvUserIds = csvUserIds;
+    this.name = name;
     return this;
   }
 
    /**
-   * Get csvUserIds
-   * @return csvUserIds
+   * Get name
+   * @return name
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getCsvUserIds() {
-    return csvUserIds;
+  public String getName() {
+    return name;
   }
 
 
-  public void setCsvUserIds(String csvUserIds) {
-    this.csvUserIds = csvUserIds;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -92,23 +92,23 @@ public class SetOrganisationGroupUsersRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SetOrganisationGroupUsersRequest setOrganisationGroupUsersRequest = (SetOrganisationGroupUsersRequest) o;
-    return Objects.equals(this.organisationGroupId, setOrganisationGroupUsersRequest.organisationGroupId) &&
-        Objects.equals(this.csvUserIds, setOrganisationGroupUsersRequest.csvUserIds);
+    BasicGeofence basicGeofence = (BasicGeofence) o;
+    return Objects.equals(this.geoFencingId, basicGeofence.geoFencingId) &&
+        Objects.equals(this.name, basicGeofence.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(organisationGroupId, csvUserIds);
+    return Objects.hash(geoFencingId, name);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SetOrganisationGroupUsersRequest {\n");
-    sb.append("    organisationGroupId: ").append(toIndentedString(organisationGroupId)).append("\n");
-    sb.append("    csvUserIds: ").append(toIndentedString(csvUserIds)).append("\n");
+    sb.append("class BasicGeofence {\n");
+    sb.append("    geoFencingId: ").append(toIndentedString(geoFencingId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

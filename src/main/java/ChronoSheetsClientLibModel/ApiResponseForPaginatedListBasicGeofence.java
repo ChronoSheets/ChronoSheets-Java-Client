@@ -15,7 +15,7 @@ package ChronoSheetsClientLibModel;
 
 import java.util.Objects;
 import java.util.Arrays;
-import ChronoSheetsClientLibModel.OrganisationGroup;
+import ChronoSheetsClientLibModel.BasicGeofence;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,14 +28,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A standard API response
+ * A paginated API repsonse
  */
-@ApiModel(description = "A standard API response")
+@ApiModel(description = "A paginated API repsonse")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
-public class ApiResponseListOrganisationGroup {
+public class ApiResponseForPaginatedListBasicGeofence {
+  public static final String SERIALIZED_NAME_TOTAL_SET_COUNT = "TotalSetCount";
+  @SerializedName(SERIALIZED_NAME_TOTAL_SET_COUNT)
+  private Integer totalSetCount;
+
   public static final String SERIALIZED_NAME_DATA = "Data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<OrganisationGroup> data = null;
+  private List<BasicGeofence> data = null;
 
   /**
    * The API response status. Indicates if the request was successful, failed or was unauthorised.
@@ -101,15 +105,38 @@ public class ApiResponseListOrganisationGroup {
   private String message;
 
 
-  public ApiResponseListOrganisationGroup data(List<OrganisationGroup> data) {
+  public ApiResponseForPaginatedListBasicGeofence totalSetCount(Integer totalSetCount) {
+    
+    this.totalSetCount = totalSetCount;
+    return this;
+  }
+
+   /**
+   * The count of total records that are being paginated
+   * @return totalSetCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The count of total records that are being paginated")
+
+  public Integer getTotalSetCount() {
+    return totalSetCount;
+  }
+
+
+  public void setTotalSetCount(Integer totalSetCount) {
+    this.totalSetCount = totalSetCount;
+  }
+
+
+  public ApiResponseForPaginatedListBasicGeofence data(List<BasicGeofence> data) {
     
     this.data = data;
     return this;
   }
 
-  public ApiResponseListOrganisationGroup addDataItem(OrganisationGroup dataItem) {
+  public ApiResponseForPaginatedListBasicGeofence addDataItem(BasicGeofence dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<OrganisationGroup>();
+      this.data = new ArrayList<BasicGeofence>();
     }
     this.data.add(dataItem);
     return this;
@@ -122,17 +149,17 @@ public class ApiResponseListOrganisationGroup {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The main Data of the response")
 
-  public List<OrganisationGroup> getData() {
+  public List<BasicGeofence> getData() {
     return data;
   }
 
 
-  public void setData(List<OrganisationGroup> data) {
+  public void setData(List<BasicGeofence> data) {
     this.data = data;
   }
 
 
-  public ApiResponseListOrganisationGroup status(StatusEnum status) {
+  public ApiResponseForPaginatedListBasicGeofence status(StatusEnum status) {
     
     this.status = status;
     return this;
@@ -155,7 +182,7 @@ public class ApiResponseListOrganisationGroup {
   }
 
 
-  public ApiResponseListOrganisationGroup message(String message) {
+  public ApiResponseForPaginatedListBasicGeofence message(String message) {
     
     this.message = message;
     return this;
@@ -186,22 +213,24 @@ public class ApiResponseListOrganisationGroup {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ApiResponseListOrganisationGroup apiResponseListOrganisationGroup = (ApiResponseListOrganisationGroup) o;
-    return Objects.equals(this.data, apiResponseListOrganisationGroup.data) &&
-        Objects.equals(this.status, apiResponseListOrganisationGroup.status) &&
-        Objects.equals(this.message, apiResponseListOrganisationGroup.message);
+    ApiResponseForPaginatedListBasicGeofence apiResponseForPaginatedListBasicGeofence = (ApiResponseForPaginatedListBasicGeofence) o;
+    return Objects.equals(this.totalSetCount, apiResponseForPaginatedListBasicGeofence.totalSetCount) &&
+        Objects.equals(this.data, apiResponseForPaginatedListBasicGeofence.data) &&
+        Objects.equals(this.status, apiResponseForPaginatedListBasicGeofence.status) &&
+        Objects.equals(this.message, apiResponseForPaginatedListBasicGeofence.message);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, status, message);
+    return Objects.hash(totalSetCount, data, status, message);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ApiResponseListOrganisationGroup {\n");
+    sb.append("class ApiResponseForPaginatedListBasicGeofence {\n");
+    sb.append("    totalSetCount: ").append(toIndentedString(totalSetCount)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");

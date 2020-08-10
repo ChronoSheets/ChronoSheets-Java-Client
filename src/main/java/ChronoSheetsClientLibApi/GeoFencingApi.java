@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import ChronoSheetsClientLibModel.ApiResponseForPaginatedListBasicGeofence;
 import ChronoSheetsClientLibModel.ApiResponseForPaginatedListExtendedGeofence;
 import ChronoSheetsClientLibModel.ApiResponseGeofence;
 import ChronoSheetsClientLibModel.ApiResponseInt32;
@@ -562,6 +563,120 @@ public class GeoFencingApi {
 
         okhttp3.Call localVarCall = geoFencingGetGeofencesValidateBeforeCall(xChronosheetsAuth, skip, take, _callback);
         Type localVarReturnType = new TypeToken<ApiResponseForPaginatedListExtendedGeofence>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for geoFencingGetGeofencesBasicInfo
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call geoFencingGetGeofencesBasicInfoCall(String xChronosheetsAuth, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/GeoFencing/GetGeofencesBasicInfo";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (xChronosheetsAuth != null) {
+            localVarHeaderParams.put("x-chronosheets-auth", localVarApiClient.parameterToString(xChronosheetsAuth));
+        }
+
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml", "multipart/form-data"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call geoFencingGetGeofencesBasicInfoValidateBeforeCall(String xChronosheetsAuth, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'xChronosheetsAuth' is set
+        if (xChronosheetsAuth == null) {
+            throw new ApiException("Missing the required parameter 'xChronosheetsAuth' when calling geoFencingGetGeofencesBasicInfo(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = geoFencingGetGeofencesBasicInfoCall(xChronosheetsAuth, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Gets a list of all geofences in your organisation, including just the name and ID.
+     * 
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @return ApiResponseForPaginatedListBasicGeofence
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponseForPaginatedListBasicGeofence geoFencingGetGeofencesBasicInfo(String xChronosheetsAuth) throws ApiException {
+        ApiResponse<ApiResponseForPaginatedListBasicGeofence> localVarResp = geoFencingGetGeofencesBasicInfoWithHttpInfo(xChronosheetsAuth);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Gets a list of all geofences in your organisation, including just the name and ID.
+     * 
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @return ApiResponse&lt;ApiResponseForPaginatedListBasicGeofence&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ApiResponseForPaginatedListBasicGeofence> geoFencingGetGeofencesBasicInfoWithHttpInfo(String xChronosheetsAuth) throws ApiException {
+        okhttp3.Call localVarCall = geoFencingGetGeofencesBasicInfoValidateBeforeCall(xChronosheetsAuth, null);
+        Type localVarReturnType = new TypeToken<ApiResponseForPaginatedListBasicGeofence>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Gets a list of all geofences in your organisation, including just the name and ID. (asynchronously)
+     * 
+     * @param xChronosheetsAuth The ChronoSheets Auth Token (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call geoFencingGetGeofencesBasicInfoAsync(String xChronosheetsAuth, final ApiCallback<ApiResponseForPaginatedListBasicGeofence> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = geoFencingGetGeofencesBasicInfoValidateBeforeCall(xChronosheetsAuth, _callback);
+        Type localVarReturnType = new TypeToken<ApiResponseForPaginatedListBasicGeofence>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

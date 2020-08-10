@@ -892,6 +892,40 @@ paths:
       tags:
       - GeoFencing
       x-accepts: application/json
+  /GeoFencing/GetGeofencesBasicInfo:
+    get:
+      operationId: GeoFencing_GetGeofencesBasicInfo
+      parameters:
+      - description: The ChronoSheets Auth Token
+        in: header
+        name: x-chronosheets-auth
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseForPaginated[List[BasicGeofence]]'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseForPaginated[List[BasicGeofence]]'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponseForPaginated[List[BasicGeofence]]'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ApiResponseForPaginated[List[BasicGeofence]]'
+            multipart/form-data:
+              schema:
+                $ref: '#/components/schemas/ApiResponseForPaginated[List[BasicGeofence]]'
+          description: OK
+      summary: Gets a list of all geofences in your organisation, including just the
+        name and ID.
+      tags:
+      - GeoFencing
+      x-accepts: application/json
   /JobCodes/GetJobCodeById:
     get:
       operationId: JobCodes_GetJobCodeById
@@ -5719,6 +5753,54 @@ components:
         EndTimeMinute:
           format: int32
           type: integer
+      type: object
+    ApiResponseForPaginated[List[BasicGeofence]]:
+      description: A paginated API repsonse
+      example:
+        Status: Succeeded
+        TotalSetCount: 0
+        Message: Message
+        Data:
+        - GeoFencingId: 6
+          Name: Name
+        - GeoFencingId: 6
+          Name: Name
+      properties:
+        TotalSetCount:
+          description: The count of total records that are being paginated
+          format: int32
+          type: integer
+        Data:
+          description: The main Data of the response
+          items:
+            $ref: '#/components/schemas/BasicGeofence'
+          type: array
+        Status:
+          description: The API response status. Indicates if the request was successful,
+            failed or was unauthorised.
+          enum:
+          - Succeeded
+          - FatalException
+          - GeneralError
+          - ValidationError
+          - UnAuthorized
+          - SessionExpired
+          type: string
+        Message:
+          description: A message to accompany the response status.  If the Status
+            is failed, this message will hint why it failed and what you need to do.
+          type: string
+      type: object
+    BasicGeofence:
+      example:
+        GeoFencingId: 6
+        Name: Name
+      properties:
+        GeoFencingId:
+          format: int32
+          type: integer
+        Name:
+          type: string
       type: object
     ApiResponse[JobCode]:
       description: A standard API response
