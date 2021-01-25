@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **userId** | **Integer** |  |  [optional]
 **orgId** | **Integer** |  |  [optional]
 **mobilePlatform** | [**MobilePlatformEnum**](#MobilePlatformEnum) |  |  [optional]
-**startDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**endDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**startDate** | **OffsetDateTime** |  |  [optional]
+**endDate** | **OffsetDateTime** |  |  [optional]
 **vehicleName** | **String** |  |  [optional]
 **vehicleMake** | **String** |  |  [optional]
 **vehicleModel** | **String** |  |  [optional]
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **startAddress** | **String** |  |  [optional]
 **endAddress** | **String** |  |  [optional]
 **pathCoordinates** | [**List&lt;TripCoordinate&gt;**](TripCoordinate.md) |  |  [optional]
-**cacheExpiryDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**cacheExpiryDate** | **OffsetDateTime** |  |  [optional]
 
 
 

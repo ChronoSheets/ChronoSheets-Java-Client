@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **userName** | **String** | The UserName of the employee.  This can be used when logging into ChronoSheets |  [optional]
 **hourlyPayRate** | **Double** | Set the starting usual Hourly Pay Rate with this value.  This is the Pay Rate the employee receives for working during Rostered Hours |  [optional]
 **hourlyOvertimePayRate** | **Double** | Set the starting usual Overtime Hourly Pay Rate with this value.  This is the Pay Rate the employee receives for working outside of Rostered Hours |  [optional]
-**currentDate** | [**OffsetDateTime**](OffsetDateTime.md) | The Current date time |  [optional]
+**currentDate** | **OffsetDateTime** | The Current date time |  [optional]
 
 
 

@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * BasicGeofence
+ * A basic geofence
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@ApiModel(description = "A basic geofence")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class BasicGeofence {
   public static final String SERIALIZED_NAME_GEO_FENCING_ID = "GeoFencingId";
   @SerializedName(SERIALIZED_NAME_GEO_FENCING_ID)
@@ -45,11 +46,11 @@ public class BasicGeofence {
   }
 
    /**
-   * Get geoFencingId
+   * The ID of the geofence
    * @return geoFencingId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the geofence")
 
   public Integer getGeoFencingId() {
     return geoFencingId;
@@ -68,11 +69,11 @@ public class BasicGeofence {
   }
 
    /**
-   * Get name
+   * The descriptive name of the geofence
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The descriptive name of the geofence")
 
   public String getName() {
     return name;
@@ -85,7 +86,7 @@ public class BasicGeofence {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -117,7 +118,7 @@ public class BasicGeofence {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

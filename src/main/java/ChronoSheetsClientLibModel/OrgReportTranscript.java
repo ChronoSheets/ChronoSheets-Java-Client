@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * OrgReportTranscript
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class OrgReportTranscript {
   public static final String SERIALIZED_NAME_FINISHED_JOB = "FinishedJob";
   @SerializedName(SERIALIZED_NAME_FINISHED_JOB)
@@ -227,7 +227,7 @@ public class OrgReportTranscript {
   private Integer orgId;
 
   /**
-   * Gets or Sets mobilePlatform
+   * The mobile platform that was used to attach the file
    */
   @JsonAdapter(MobilePlatformEnum.Adapter.class)
   public enum MobilePlatformEnum {
@@ -280,7 +280,7 @@ public class OrgReportTranscript {
   private MobilePlatformEnum mobilePlatform;
 
   /**
-   * Gets or Sets attachmentType
+   * The type of file attachment
    */
   @JsonAdapter(AttachmentTypeEnum.Adapter.class)
   public enum AttachmentTypeEnum {
@@ -699,11 +699,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get timesheetId
+   * The ID of the timesheet this attachment is attached to.
    * @return timesheetId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the timesheet this attachment is attached to.")
 
   public Integer getTimesheetId() {
     return timesheetId;
@@ -722,11 +722,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get documentS3SignedUrl
+   * The limited use signed URL for the document (if it&#39;s not an image).  This URL is unique and will eventually expire.  If the attachment is an image, then this won&#39;t be set.
    * @return documentS3SignedUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The limited use signed URL for the document (if it's not an image).  This URL is unique and will eventually expire.  If the attachment is an image, then this won't be set.")
 
   public String getDocumentS3SignedUrl() {
     return documentS3SignedUrl;
@@ -745,11 +745,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get imageLargeS3SignedUrl
+   * The limited use signed URL for the large version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.
    * @return imageLargeS3SignedUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The limited use signed URL for the large version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.")
 
   public String getImageLargeS3SignedUrl() {
     return imageLargeS3SignedUrl;
@@ -768,11 +768,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get imageMediumS3SignedUrl
+   * The limited use signed URL for the medium version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.
    * @return imageMediumS3SignedUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The limited use signed URL for the medium version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.")
 
   public String getImageMediumS3SignedUrl() {
     return imageMediumS3SignedUrl;
@@ -791,11 +791,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get imageSmallS3SignedUrl
+   * The limited use signed URL for the small version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.
    * @return imageSmallS3SignedUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The limited use signed URL for the small version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.")
 
   public String getImageSmallS3SignedUrl() {
     return imageSmallS3SignedUrl;
@@ -814,11 +814,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get timesheetStart
+   * The start date and time of the timesheet that this attachment is attached to
    * @return timesheetStart
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The start date and time of the timesheet that this attachment is attached to")
 
   public OffsetDateTime getTimesheetStart() {
     return timesheetStart;
@@ -837,11 +837,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get timesheetEnd
+   * The end date and time of the timesheet that this attachment is attached to
    * @return timesheetEnd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The end date and time of the timesheet that this attachment is attached to")
 
   public OffsetDateTime getTimesheetEnd() {
     return timesheetEnd;
@@ -860,11 +860,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get fileAttachmentId
+   * The ID of the file attachment
    * @return fileAttachmentId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the file attachment")
 
   public Integer getFileAttachmentId() {
     return fileAttachmentId;
@@ -883,11 +883,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get userId
+   * The ID of the user who attached the file
    * @return userId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the user who attached the file")
 
   public Integer getUserId() {
     return userId;
@@ -906,11 +906,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get orgId
+   * The ID of the organisation that owns the file and employs the employee
    * @return orgId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation that owns the file and employs the employee")
 
   public Integer getOrgId() {
     return orgId;
@@ -929,11 +929,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get mobilePlatform
+   * The mobile platform that was used to attach the file
    * @return mobilePlatform
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The mobile platform that was used to attach the file")
 
   public MobilePlatformEnum getMobilePlatform() {
     return mobilePlatform;
@@ -952,11 +952,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get attachmentType
+   * The type of file attachment
    * @return attachmentType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The type of file attachment")
 
   public AttachmentTypeEnum getAttachmentType() {
     return attachmentType;
@@ -975,11 +975,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get notes
+   * Any notes regarding the file attachment
    * @return notes
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Any notes regarding the file attachment")
 
   public String getNotes() {
     return notes;
@@ -998,11 +998,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get nonImageFilePath
+   * The path to the file attachment as hosted by ChronoSheets storage, if it&#39;s not an image.  If the attachment is an image then this won&#39;t be set.
    * @return nonImageFilePath
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The path to the file attachment as hosted by ChronoSheets storage, if it's not an image.  If the attachment is an image then this won't be set.")
 
   public String getNonImageFilePath() {
     return nonImageFilePath;
@@ -1021,11 +1021,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get imageLargeFilePath
+   * The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the large version of the image.
    * @return imageLargeFilePath
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The path to the file attachment as hosted by ChronoSheets storage, only set if it's an image.  This is regarding the large version of the image.")
 
   public String getImageLargeFilePath() {
     return imageLargeFilePath;
@@ -1044,11 +1044,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get imageMediumFilePath
+   * The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the medium version of the image.
    * @return imageMediumFilePath
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The path to the file attachment as hosted by ChronoSheets storage, only set if it's an image.  This is regarding the medium version of the image.")
 
   public String getImageMediumFilePath() {
     return imageMediumFilePath;
@@ -1067,11 +1067,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get imageSmallFilePath
+   * The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the small version of the image.
    * @return imageSmallFilePath
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The path to the file attachment as hosted by ChronoSheets storage, only set if it's an image.  This is regarding the small version of the image.")
 
   public String getImageSmallFilePath() {
     return imageSmallFilePath;
@@ -1090,11 +1090,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get originalFileName
+   * The original file name of the attachment
    * @return originalFileName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The original file name of the attachment")
 
   public String getOriginalFileName() {
     return originalFileName;
@@ -1113,11 +1113,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get latitude
+   * Meta-data indicating the latitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.
    * @return latitude
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Meta-data indicating the latitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.")
 
   public Double getLatitude() {
     return latitude;
@@ -1136,11 +1136,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get longitude
+   * Meta-data indicating the longitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.
    * @return longitude
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Meta-data indicating the longitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.")
 
   public Double getLongitude() {
     return longitude;
@@ -1159,11 +1159,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get dateUploaded
+   * The date and time the attachment was uploaded.  Time is in UTC.
    * @return dateUploaded
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date and time the attachment was uploaded.  Time is in UTC.")
 
   public OffsetDateTime getDateUploaded() {
     return dateUploaded;
@@ -1182,11 +1182,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get dateImageCaptured
+   * The original date and time the image was captured, if it was an image.  This data originates from the meta data inside the image file.
    * @return dateImageCaptured
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The original date and time the image was captured, if it was an image.  This data originates from the meta data inside the image file.")
 
   public OffsetDateTime getDateImageCaptured() {
     return dateImageCaptured;
@@ -1205,11 +1205,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get storageAllocationBytes
+   * The number of bytes allocated for storing the file attachment.
    * @return storageAllocationBytes
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The number of bytes allocated for storing the file attachment.")
 
   public Long getStorageAllocationBytes() {
     return storageAllocationBytes;
@@ -1228,11 +1228,11 @@ public class OrgReportTranscript {
   }
 
    /**
-   * Get audioDurationSeconds
+   * If the attachment was an audio file, this field indicates the duration of the audio file in seconds.  This data originates from the meta data inside the audio file.
    * @return audioDurationSeconds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "If the attachment was an audio file, this field indicates the duration of the audio file in seconds.  This data originates from the meta data inside the audio file.")
 
   public Integer getAudioDurationSeconds() {
     return audioDurationSeconds;
@@ -1245,7 +1245,7 @@ public class OrgReportTranscript {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -1347,7 +1347,7 @@ public class OrgReportTranscript {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

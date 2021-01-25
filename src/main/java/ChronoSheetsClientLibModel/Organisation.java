@@ -29,9 +29,10 @@ import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Organisation
+ * An organisation in ChronoSheets
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@ApiModel(description = "An organisation in ChronoSheets")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class Organisation {
   public static final String SERIALIZED_NAME_ID = "Id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -94,7 +95,7 @@ public class Organisation {
   private String stripeCouponCode;
 
   /**
-   * Gets or Sets subscriptionSource
+   * The source of the subscription
    */
   @JsonAdapter(SubscriptionSourceEnum.Adapter.class)
   public enum SubscriptionSourceEnum {
@@ -149,7 +150,7 @@ public class Organisation {
   private SubscriptionSourceEnum subscriptionSource;
 
   /**
-   * Gets or Sets signUpSource
+   * The source where the organisation signed up
    */
   @JsonAdapter(SignUpSourceEnum.Adapter.class)
   public enum SignUpSourceEnum {
@@ -225,11 +226,11 @@ public class Organisation {
   }
 
    /**
-   * Get id
+   * The ID of the organisation
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation")
 
   public Integer getId() {
     return id;
@@ -248,11 +249,11 @@ public class Organisation {
   }
 
    /**
-   * Get name
+   * The name of the organisation
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the organisation")
 
   public String getName() {
     return name;
@@ -271,11 +272,11 @@ public class Organisation {
   }
 
    /**
-   * Get addressLine01
+   * Address line 1 of the organisation
    * @return addressLine01
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Address line 1 of the organisation")
 
   public String getAddressLine01() {
     return addressLine01;
@@ -294,11 +295,11 @@ public class Organisation {
   }
 
    /**
-   * Get addressLine02
+   * Address line 2 of the organisation
    * @return addressLine02
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Address line 2 of the organisation")
 
   public String getAddressLine02() {
     return addressLine02;
@@ -317,11 +318,11 @@ public class Organisation {
   }
 
    /**
-   * Get suburb
+   * The suburb where the organisation is located
    * @return suburb
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The suburb where the organisation is located")
 
   public String getSuburb() {
     return suburb;
@@ -340,11 +341,11 @@ public class Organisation {
   }
 
    /**
-   * Get state
+   * The state where the organisation is located
    * @return state
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The state where the organisation is located")
 
   public String getState() {
     return state;
@@ -363,11 +364,11 @@ public class Organisation {
   }
 
    /**
-   * Get postcode
+   * The postcode of the organisation
    * @return postcode
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The postcode of the organisation")
 
   public String getPostcode() {
     return postcode;
@@ -386,11 +387,11 @@ public class Organisation {
   }
 
    /**
-   * Get country
+   * The country of the organisation
    * @return country
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The country of the organisation")
 
   public String getCountry() {
     return country;
@@ -409,11 +410,11 @@ public class Organisation {
   }
 
    /**
-   * Get phone
+   * The primary phone contact number of the organisation
    * @return phone
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The primary phone contact number of the organisation")
 
   public String getPhone() {
     return phone;
@@ -432,11 +433,11 @@ public class Organisation {
   }
 
    /**
-   * Get emailAddress
+   * The primary email address of the organisation
    * @return emailAddress
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The primary email address of the organisation")
 
   public String getEmailAddress() {
     return emailAddress;
@@ -455,11 +456,11 @@ public class Organisation {
   }
 
    /**
-   * Get timezone
+   * The timezone of the organisation
    * @return timezone
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The timezone of the organisation")
 
   public String getTimezone() {
     return timezone;
@@ -478,11 +479,11 @@ public class Organisation {
   }
 
    /**
-   * Get subscriptionCustomerId
+   * The customer ID of the payments subscription
    * @return subscriptionCustomerId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The customer ID of the payments subscription")
 
   public String getSubscriptionCustomerId() {
     return subscriptionCustomerId;
@@ -501,11 +502,11 @@ public class Organisation {
   }
 
    /**
-   * Get signupToken
+   * The sign up token
    * @return signupToken
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The sign up token")
 
   public String getSignupToken() {
     return signupToken;
@@ -524,11 +525,11 @@ public class Organisation {
   }
 
    /**
-   * Get isActive
+   * Whether or not the organisation is active
    * @return isActive
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the organisation is active")
 
   public Boolean getIsActive() {
     return isActive;
@@ -547,11 +548,11 @@ public class Organisation {
   }
 
    /**
-   * Get stripeCouponCode
+   * The payments coupon code
    * @return stripeCouponCode
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The payments coupon code")
 
   public String getStripeCouponCode() {
     return stripeCouponCode;
@@ -570,11 +571,11 @@ public class Organisation {
   }
 
    /**
-   * Get subscriptionSource
+   * The source of the subscription
    * @return subscriptionSource
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The source of the subscription")
 
   public SubscriptionSourceEnum getSubscriptionSource() {
     return subscriptionSource;
@@ -593,11 +594,11 @@ public class Organisation {
   }
 
    /**
-   * Get signUpSource
+   * The source where the organisation signed up
    * @return signUpSource
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The source where the organisation signed up")
 
   public SignUpSourceEnum getSignUpSource() {
     return signUpSource;
@@ -616,11 +617,11 @@ public class Organisation {
   }
 
    /**
-   * Get mobileSignUpCode
+   * A temporary mobile sign up code
    * @return mobileSignUpCode
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A temporary mobile sign up code")
 
   public String getMobileSignUpCode() {
     return mobileSignUpCode;
@@ -639,11 +640,11 @@ public class Organisation {
   }
 
    /**
-   * Get subscriptionCycleStart
+   * The start date and time of the organisations subscription
    * @return subscriptionCycleStart
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The start date and time of the organisations subscription")
 
   public OffsetDateTime getSubscriptionCycleStart() {
     return subscriptionCycleStart;
@@ -662,11 +663,11 @@ public class Organisation {
   }
 
    /**
-   * Get subscriptionCycleEnd
+   * The end date and time of the organisations subscription
    * @return subscriptionCycleEnd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The end date and time of the organisations subscription")
 
   public OffsetDateTime getSubscriptionCycleEnd() {
     return subscriptionCycleEnd;
@@ -693,11 +694,11 @@ public class Organisation {
   }
 
    /**
-   * Get pricingPlans
+   * The organisation&#39;s pricing plans
    * @return pricingPlans
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The organisation's pricing plans")
 
   public List<OrganisationPricingPlan> getPricingPlans() {
     return pricingPlans;
@@ -710,7 +711,7 @@ public class Organisation {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -780,7 +781,7 @@ public class Organisation {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

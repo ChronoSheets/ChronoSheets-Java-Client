@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **organisationId** | **Integer** | The ID of your organisation |  [optional]
 **projectName** | **String** | The name of the project (can be viewed in PROJECT TIMELINES) |  [optional]
 **costEstimation** | **Double** | The estimated cost of the project (can be viewed in PROJECT TIMELINES) |  [optional]
-**startDate** | [**OffsetDateTime**](OffsetDateTime.md) | The start date of the project (can be viewed in PROJECT TIMELINES) |  [optional]
-**endDate** | [**OffsetDateTime**](OffsetDateTime.md) | The end date of the project (can be viewed in PROJECT TIMELINES) |  [optional]
+**startDate** | **OffsetDateTime** | The start date of the project (can be viewed in PROJECT TIMELINES) |  [optional]
+**endDate** | **OffsetDateTime** | The end date of the project (can be viewed in PROJECT TIMELINES) |  [optional]
 
 
 

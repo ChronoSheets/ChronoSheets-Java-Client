@@ -29,9 +29,10 @@ import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Geofence
+ * A geofence
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@ApiModel(description = "A geofence")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class Geofence {
   public static final String SERIALIZED_NAME_GEO_FENCING_ID = "GeoFencingId";
   @SerializedName(SERIALIZED_NAME_GEO_FENCING_ID)
@@ -78,7 +79,7 @@ public class Geofence {
   private Integer triggerTaskId;
 
   /**
-   * Gets or Sets triggerSettings
+   * The settings for triggering actions
    */
   @JsonAdapter(TriggerSettingsEnum.Adapter.class)
   public enum TriggerSettingsEnum {
@@ -137,7 +138,7 @@ public class Geofence {
   private Integer alertToOrgGroupId;
 
   /**
-   * Gets or Sets alertSettings
+   * The settings for trigger alerts
    */
   @JsonAdapter(AlertSettingsEnum.Adapter.class)
   public enum AlertSettingsEnum {
@@ -215,11 +216,11 @@ public class Geofence {
   }
 
    /**
-   * Get geoFencingId
+   * The ID of the geofence
    * @return geoFencingId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the geofence")
 
   public Integer getGeoFencingId() {
     return geoFencingId;
@@ -238,11 +239,11 @@ public class Geofence {
   }
 
    /**
-   * Get orgId
+   * The ID of the organisation owning the geofence record
    * @return orgId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation owning the geofence record")
 
   public Integer getOrgId() {
     return orgId;
@@ -261,11 +262,11 @@ public class Geofence {
   }
 
    /**
-   * Get createdByUserId
+   * The ID of the user/employee who created the geofence
    * @return createdByUserId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the user/employee who created the geofence")
 
   public Integer getCreatedByUserId() {
     return createdByUserId;
@@ -284,11 +285,11 @@ public class Geofence {
   }
 
    /**
-   * Get lastUpdatedByUserId
+   * The ID of the user/employee who last updated the geofence
    * @return lastUpdatedByUserId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the user/employee who last updated the geofence")
 
   public Integer getLastUpdatedByUserId() {
     return lastUpdatedByUserId;
@@ -307,11 +308,11 @@ public class Geofence {
   }
 
    /**
-   * Get name
+   * A descriptive name of the geofence
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A descriptive name of the geofence")
 
   public String getName() {
     return name;
@@ -330,11 +331,11 @@ public class Geofence {
   }
 
    /**
-   * Get locationName
+   * The name of the approx. location of the geofence
    * @return locationName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the approx. location of the geofence")
 
   public String getLocationName() {
     return locationName;
@@ -361,11 +362,11 @@ public class Geofence {
   }
 
    /**
-   * Get coordinates
+   * A list of co-ordinates specifying the geofence
    * @return coordinates
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A list of co-ordinates specifying the geofence")
 
   public List<BasicCoordinate> getCoordinates() {
     return coordinates;
@@ -384,11 +385,11 @@ public class Geofence {
   }
 
    /**
-   * Get createdAt
+   * The date and time the geofence was created.  Time is in UTC.
    * @return createdAt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date and time the geofence was created.  Time is in UTC.")
 
   public OffsetDateTime getCreatedAt() {
     return createdAt;
@@ -407,11 +408,11 @@ public class Geofence {
   }
 
    /**
-   * Get updatedAt
+   * The date and time the geofence was updated last.  Time is in UTC.
    * @return updatedAt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date and time the geofence was updated last.  Time is in UTC.")
 
   public OffsetDateTime getUpdatedAt() {
     return updatedAt;
@@ -430,11 +431,11 @@ public class Geofence {
   }
 
    /**
-   * Get triggerJobCodeId
+   * The ID of the job code used when the employee enters/exits the geofence
    * @return triggerJobCodeId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the job code used when the employee enters/exits the geofence")
 
   public Integer getTriggerJobCodeId() {
     return triggerJobCodeId;
@@ -453,11 +454,11 @@ public class Geofence {
   }
 
    /**
-   * Get triggerTaskId
+   * The ID of the task used when the employee enters/exits the geofence
    * @return triggerTaskId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the task used when the employee enters/exits the geofence")
 
   public Integer getTriggerTaskId() {
     return triggerTaskId;
@@ -476,11 +477,11 @@ public class Geofence {
   }
 
    /**
-   * Get triggerSettings
+   * The settings for triggering actions
    * @return triggerSettings
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The settings for triggering actions")
 
   public TriggerSettingsEnum getTriggerSettings() {
     return triggerSettings;
@@ -499,11 +500,11 @@ public class Geofence {
   }
 
    /**
-   * Get alertToOrgGroupId
+   * The organisation group that will be notified when the geofence is triggered
    * @return alertToOrgGroupId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The organisation group that will be notified when the geofence is triggered")
 
   public Integer getAlertToOrgGroupId() {
     return alertToOrgGroupId;
@@ -522,11 +523,11 @@ public class Geofence {
   }
 
    /**
-   * Get alertSettings
+   * The settings for trigger alerts
    * @return alertSettings
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The settings for trigger alerts")
 
   public AlertSettingsEnum getAlertSettings() {
     return alertSettings;
@@ -545,11 +546,11 @@ public class Geofence {
   }
 
    /**
-   * Get startTimeHour
+   * The hour start time. E.g. 13 would be 1pm.  Time is in 24hr format.
    * @return startTimeHour
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The hour start time. E.g. 13 would be 1pm.  Time is in 24hr format.")
 
   public Integer getStartTimeHour() {
     return startTimeHour;
@@ -568,11 +569,11 @@ public class Geofence {
   }
 
    /**
-   * Get startTimeMinute
+   * The minute start time.  E.g. 46 would be the 46th minute of the hour.
    * @return startTimeMinute
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The minute start time.  E.g. 46 would be the 46th minute of the hour.")
 
   public Integer getStartTimeMinute() {
     return startTimeMinute;
@@ -591,11 +592,11 @@ public class Geofence {
   }
 
    /**
-   * Get endTimeHour
+   * The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format.
    * @return endTimeHour
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format.")
 
   public Integer getEndTimeHour() {
     return endTimeHour;
@@ -614,11 +615,11 @@ public class Geofence {
   }
 
    /**
-   * Get endTimeMinute
+   * The minute end time.  E.g. 13 would be the 13th minute of the hour.
    * @return endTimeMinute
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The minute end time.  E.g. 13 would be the 13th minute of the hour.")
 
   public Integer getEndTimeMinute() {
     return endTimeMinute;
@@ -631,7 +632,7 @@ public class Geofence {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -695,7 +696,7 @@ public class Geofence {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -2,33 +2,34 @@
 
 # ExtendedGeofence
 
+An extended geofence record
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**jobCode** | **String** |  |  [optional]
-**taskName** | **String** |  |  [optional]
-**createdBy** | **String** |  |  [optional]
-**updatedBy** | **String** |  |  [optional]
-**alertOrganisation** | **String** |  |  [optional]
-**geoFencingId** | **Integer** |  |  [optional]
-**orgId** | **Integer** |  |  [optional]
-**createdByUserId** | **Integer** |  |  [optional]
-**lastUpdatedByUserId** | **Integer** |  |  [optional]
-**name** | **String** |  |  [optional]
-**locationName** | **String** |  |  [optional]
-**coordinates** | [**List&lt;BasicCoordinate&gt;**](BasicCoordinate.md) |  |  [optional]
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**triggerJobCodeId** | **Integer** |  |  [optional]
-**triggerTaskId** | **Integer** |  |  [optional]
-**triggerSettings** | [**TriggerSettingsEnum**](#TriggerSettingsEnum) |  |  [optional]
-**alertToOrgGroupId** | **Integer** |  |  [optional]
-**alertSettings** | [**AlertSettingsEnum**](#AlertSettingsEnum) |  |  [optional]
-**startTimeHour** | **Integer** |  |  [optional]
-**startTimeMinute** | **Integer** |  |  [optional]
-**endTimeHour** | **Integer** |  |  [optional]
-**endTimeMinute** | **Integer** |  |  [optional]
+**jobCode** | **String** | The Job code used when the employee enters/exits the geofence |  [optional]
+**taskName** | **String** | The name of the task used when the employee enters/exits the geofence |  [optional]
+**createdBy** | **String** | The name of the employee who created the geofence |  [optional]
+**updatedBy** | **String** | The name of the employee who last updated the geofence |  [optional]
+**alertOrganisation** | **String** | The name of the organisation group who will be notified when the geofence is triggered |  [optional]
+**geoFencingId** | **Integer** | The ID of the geofence |  [optional]
+**orgId** | **Integer** | The ID of the organisation owning the geofence record |  [optional]
+**createdByUserId** | **Integer** | The ID of the user/employee who created the geofence |  [optional]
+**lastUpdatedByUserId** | **Integer** | The ID of the user/employee who last updated the geofence |  [optional]
+**name** | **String** | A descriptive name of the geofence |  [optional]
+**locationName** | **String** | The name of the approx. location of the geofence |  [optional]
+**coordinates** | [**List&lt;BasicCoordinate&gt;**](BasicCoordinate.md) | A list of co-ordinates specifying the geofence |  [optional]
+**createdAt** | **OffsetDateTime** | The date and time the geofence was created.  Time is in UTC. |  [optional]
+**updatedAt** | **OffsetDateTime** | The date and time the geofence was updated last.  Time is in UTC. |  [optional]
+**triggerJobCodeId** | **Integer** | The ID of the job code used when the employee enters/exits the geofence |  [optional]
+**triggerTaskId** | **Integer** | The ID of the task used when the employee enters/exits the geofence |  [optional]
+**triggerSettings** | [**TriggerSettingsEnum**](#TriggerSettingsEnum) | The settings for triggering actions |  [optional]
+**alertToOrgGroupId** | **Integer** | The organisation group that will be notified when the geofence is triggered |  [optional]
+**alertSettings** | [**AlertSettingsEnum**](#AlertSettingsEnum) | The settings for trigger alerts |  [optional]
+**startTimeHour** | **Integer** | The hour start time. E.g. 13 would be 1pm.  Time is in 24hr format. |  [optional]
+**startTimeMinute** | **Integer** | The minute start time.  E.g. 46 would be the 46th minute of the hour. |  [optional]
+**endTimeHour** | **Integer** | The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format. |  [optional]
+**endTimeMinute** | **Integer** | The minute end time.  E.g. 13 would be the 13th minute of the hour. |  [optional]
 
 
 

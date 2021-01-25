@@ -26,9 +26,10 @@ import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Project
+ * A project in ChronoSheets
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@ApiModel(description = "A project in ChronoSheets")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class Project {
   public static final String SERIALIZED_NAME_ID = "Id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -70,11 +71,11 @@ public class Project {
   }
 
    /**
-   * Get id
+   * The ID of the project
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the project")
 
   public Integer getId() {
     return id;
@@ -93,11 +94,11 @@ public class Project {
   }
 
    /**
-   * Get clientId
+   * The ID of the client for which the project is being undertaken for
    * @return clientId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the client for which the project is being undertaken for")
 
   public Integer getClientId() {
     return clientId;
@@ -116,11 +117,11 @@ public class Project {
   }
 
    /**
-   * Get organisationId
+   * The ID of the organisation that is completing the project
    * @return organisationId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation that is completing the project")
 
   public Integer getOrganisationId() {
     return organisationId;
@@ -139,11 +140,11 @@ public class Project {
   }
 
    /**
-   * Get projectName
+   * A descriptive name of the project
    * @return projectName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A descriptive name of the project")
 
   public String getProjectName() {
     return projectName;
@@ -162,11 +163,11 @@ public class Project {
   }
 
    /**
-   * Get costEstimation
+   * The project&#39;s estimated cost
    * @return costEstimation
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The project's estimated cost")
 
   public Double getCostEstimation() {
     return costEstimation;
@@ -185,11 +186,11 @@ public class Project {
   }
 
    /**
-   * Get costActual
+   * The project&#39;s actual cost
    * @return costActual
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The project's actual cost")
 
   public Double getCostActual() {
     return costActual;
@@ -208,11 +209,11 @@ public class Project {
   }
 
    /**
-   * Get startDate
+   * The start date and time of the project
    * @return startDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The start date and time of the project")
 
   public OffsetDateTime getStartDate() {
     return startDate;
@@ -231,11 +232,11 @@ public class Project {
   }
 
    /**
-   * Get endDate
+   * The end date and time of the project
    * @return endDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The end date and time of the project")
 
   public OffsetDateTime getEndDate() {
     return endDate;
@@ -248,7 +249,7 @@ public class Project {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -292,7 +293,7 @@ public class Project {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

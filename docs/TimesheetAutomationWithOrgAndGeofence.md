@@ -15,12 +15,12 @@ Name | Type | Description | Notes
 **lastName** | **String** |  |  [optional]
 **automationId** | **Integer** |  |  [optional]
 **automationActionType** | [**AutomationActionTypeEnum**](#AutomationActionTypeEnum) |  |  [optional]
-**created** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**created** | **OffsetDateTime** |  |  [optional]
 **latitude** | **Double** |  |  [optional]
 **longitude** | **Double** |  |  [optional]
 **isProcessed** | **Boolean** |  |  [optional]
-**expires** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**clientDateTime** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**expires** | **OffsetDateTime** |  |  [optional]
+**clientDateTime** | **OffsetDateTime** |  |  [optional]
 
 
 

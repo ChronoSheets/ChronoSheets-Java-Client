@@ -82,12 +82,13 @@ public class TimesheetsApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
         if (xChronosheetsAuth != null) {
             localVarHeaderParams.put("x-chronosheets-auth", localVarApiClient.parameterToString(xChronosheetsAuth));
         }
 
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json", "text/json", "application/xml", "text/xml", "multipart/form-data"
         };
@@ -204,17 +205,18 @@ public class TimesheetsApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
         if (timesheetId != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("TimesheetId", timesheetId));
         }
 
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (xChronosheetsAuth != null) {
             localVarHeaderParams.put("x-chronosheets-auth", localVarApiClient.parameterToString(xChronosheetsAuth));
         }
 
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json", "text/json", "application/xml", "text/xml", "multipart/form-data"
         };
@@ -332,6 +334,10 @@ public class TimesheetsApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
         if (startDate != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("StartDate", startDate));
         }
@@ -340,13 +346,10 @@ public class TimesheetsApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("EndDate", endDate));
         }
 
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (xChronosheetsAuth != null) {
             localVarHeaderParams.put("x-chronosheets-auth", localVarApiClient.parameterToString(xChronosheetsAuth));
         }
 
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json", "text/json", "application/xml", "text/xml", "multipart/form-data"
         };
@@ -472,12 +475,13 @@ public class TimesheetsApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
         if (xChronosheetsAuth != null) {
             localVarHeaderParams.put("x-chronosheets-auth", localVarApiClient.parameterToString(xChronosheetsAuth));
         }
 
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json", "text/json", "application/xml", "text/xml", "multipart/form-data"
         };

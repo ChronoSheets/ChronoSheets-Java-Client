@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **isCurrent** | **Boolean** |  |  [optional]
 **hourlyRate** | **Double** |  |  [optional]
 **hourlyOvertimeRate** | **Double** |  |  [optional]
-**startDateTime** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**endDateTime** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**startDateTime** | **OffsetDateTime** |  |  [optional]
+**endDateTime** | **OffsetDateTime** |  |  [optional]
 
 
 

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Contains fields for creating a Trip
  */
 @ApiModel(description = "Contains fields for creating a Trip")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class CreateTripRequest {
   public static final String SERIALIZED_NAME_TIMESHEET_ID = "TimesheetId";
   @SerializedName(SERIALIZED_NAME_TIMESHEET_ID)
@@ -216,7 +216,7 @@ public class CreateTripRequest {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -254,7 +254,7 @@ public class CreateTripRequest {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

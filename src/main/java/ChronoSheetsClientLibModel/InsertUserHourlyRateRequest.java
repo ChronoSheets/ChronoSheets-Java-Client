@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fields for inserting a new set of Pay Rates for a user.  Archiving of the previous Pay Rate is done for you automatically
  */
 @ApiModel(description = "Fields for inserting a new set of Pay Rates for a user.  Archiving of the previous Pay Rate is done for you automatically")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class InsertUserHourlyRateRequest {
   public static final String SERIALIZED_NAME_USER_ID = "UserId";
   @SerializedName(SERIALIZED_NAME_USER_ID)
@@ -141,7 +141,7 @@ public class InsertUserHourlyRateRequest {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -177,7 +177,7 @@ public class InsertUserHourlyRateRequest {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

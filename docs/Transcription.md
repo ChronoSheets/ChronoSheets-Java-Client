@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  |  [optional]
 **orgId** | **Integer** |  |  [optional]
 **fileAttachmentId** | **Integer** |  |  [optional]
-**created** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**created** | **OffsetDateTime** |  |  [optional]
 **status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
 **mediaType** | [**MediaTypeEnum**](#MediaTypeEnum) |  |  [optional]
 **contents** | **String** |  |  [optional]

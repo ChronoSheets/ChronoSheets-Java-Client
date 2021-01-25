@@ -26,9 +26,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * ClientSideUser
+ * A user within ChronoSheets
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@ApiModel(description = "A user within ChronoSheets")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class ClientSideUser {
   public static final String SERIALIZED_NAME_ID = "Id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -86,11 +87,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get id
+   * The ID of the user
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the user")
 
   public Integer getId() {
     return id;
@@ -109,11 +110,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get organisationId
+   * The ID of the organisation
    * @return organisationId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation")
 
   public Integer getOrganisationId() {
     return organisationId;
@@ -132,11 +133,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get userName
+   * The username of the user
    * @return userName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The username of the user")
 
   public String getUserName() {
     return userName;
@@ -155,11 +156,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get firstName
+   * The first name of the user
    * @return firstName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The first name of the user")
 
   public String getFirstName() {
     return firstName;
@@ -178,11 +179,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get lastName
+   * The last name of the user
    * @return lastName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The last name of the user")
 
   public String getLastName() {
     return lastName;
@@ -201,11 +202,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get emailAddress
+   * The email address of the user
    * @return emailAddress
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The email address of the user")
 
   public String getEmailAddress() {
     return emailAddress;
@@ -224,11 +225,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get roles
+   * A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details
    * @return roles
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details")
 
   public Long getRoles() {
     return roles;
@@ -247,11 +248,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get alertSettings
+   * A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details
    * @return alertSettings
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details")
 
   public Long getAlertSettings() {
     return alertSettings;
@@ -270,11 +271,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get setupWizardRequired
+   * Whether or not the setup wizard is required
    * @return setupWizardRequired
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the setup wizard is required")
 
   public Boolean getSetupWizardRequired() {
     return setupWizardRequired;
@@ -293,11 +294,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get isSubscribedToNewsletter
+   * Whether or not the user is subscribed to the user
    * @return isSubscribedToNewsletter
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the user is subscribed to the user")
 
   public Boolean getIsSubscribedToNewsletter() {
     return isSubscribedToNewsletter;
@@ -339,11 +340,11 @@ public class ClientSideUser {
   }
 
    /**
-   * Get isPrimaryAccount
+   * Whether or not this account is the organisation&#39;s primary account.
    * @return isPrimaryAccount
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not this account is the organisation's primary account.")
 
   public Boolean getIsPrimaryAccount() {
     return isPrimaryAccount;
@@ -356,7 +357,7 @@ public class ClientSideUser {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -408,7 +409,7 @@ public class ClientSideUser {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

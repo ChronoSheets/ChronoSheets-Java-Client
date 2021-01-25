@@ -31,7 +31,7 @@ import java.util.List;
  * A request object for creating a new geofence
  */
 @ApiModel(description = "A request object for creating a new geofence")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class CreateGeoFenceRequest {
   public static final String SERIALIZED_NAME_NAME = "Name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -54,7 +54,7 @@ public class CreateGeoFenceRequest {
   private Integer sendAlertToOrgGroupId;
 
   /**
-   * Define when you want the alerts to be setn
+   * Define when you want the alerts to be sent
    */
   @JsonAdapter(AlertSettingsEnum.Adapter.class)
   public enum AlertSettingsEnum {
@@ -310,11 +310,11 @@ public class CreateGeoFenceRequest {
   }
 
    /**
-   * Define when you want the alerts to be setn
+   * Define when you want the alerts to be sent
    * @return alertSettings
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Define when you want the alerts to be setn")
+  @ApiModelProperty(value = "Define when you want the alerts to be sent")
 
   public AlertSettingsEnum getAlertSettings() {
     return alertSettings;
@@ -442,7 +442,7 @@ public class CreateGeoFenceRequest {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -492,7 +492,7 @@ public class CreateGeoFenceRequest {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -37,8 +37,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     ReportsApi apiInstance = new ReportsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     String forceOnlyThisChart = "forceOnlyThisChart_example"; // String | A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the 'NotForced' option.
@@ -105,8 +105,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     ReportsApi apiInstance = new ReportsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     try {
       ApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
@@ -169,8 +169,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     ReportsApi apiInstance = new ReportsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     try {
@@ -297,8 +297,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     ReportsApi apiInstance = new ReportsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     Integer skip = 56; // Integer | Skip this many items
     Integer take = 56; // Integer | Take this many items
@@ -367,8 +367,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     ReportsApi apiInstance = new ReportsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     Integer skip = 56; // Integer | Skip this many items
     Integer take = 56; // Integer | Take this many items
@@ -439,8 +439,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     ReportsApi apiInstance = new ReportsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     Integer skip = 56; // Integer | Skip this many items
     Integer take = 56; // Integer | Take this many items
@@ -509,8 +509,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     ReportsApi apiInstance = new ReportsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     String sort = "sort_example"; // String | Decide which column to sort on
@@ -583,8 +583,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     ReportsApi apiInstance = new ReportsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
     try {
@@ -649,8 +649,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     ReportsApi apiInstance = new ReportsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date for the date range.  Report data in the response is after this date
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date for the date range.  Report data in the response is before this date
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     try {
       ApiResponseListJobSeriesReportItem result = apiInstance.reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);

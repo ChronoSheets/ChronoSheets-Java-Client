@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * FleetSummaryReportItem
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class FleetSummaryReportItem {
   public static final String SERIALIZED_NAME_TOTAL_DISTANCE_METERS_FILTERED = "TotalDistanceMetersFiltered";
   @SerializedName(SERIALIZED_NAME_TOTAL_DISTANCE_METERS_FILTERED)
@@ -187,11 +187,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get id
+   * The ID of the vehicle
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the vehicle")
 
   public Integer getId() {
     return id;
@@ -210,11 +210,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get organisationId
+   * The ID of the organisation managing the vehicle
    * @return organisationId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation managing the vehicle")
 
   public Integer getOrganisationId() {
     return organisationId;
@@ -233,11 +233,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get name
+   * A name given to the vehicle
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A name given to the vehicle")
 
   public String getName() {
     return name;
@@ -256,11 +256,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get costPerKilometer
+   * The cost, in dollars, of running the vehicle over one kilometer
    * @return costPerKilometer
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The cost, in dollars, of running the vehicle over one kilometer")
 
   public Double getCostPerKilometer() {
     return costPerKilometer;
@@ -279,11 +279,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get make
+   * The make of the vehicle
    * @return make
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The make of the vehicle")
 
   public String getMake() {
     return make;
@@ -302,11 +302,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get model
+   * The model of the vehicle
    * @return model
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The model of the vehicle")
 
   public String getModel() {
     return model;
@@ -325,11 +325,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get year
+   * The year the vehicle was manufactured
    * @return year
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The year the vehicle was manufactured")
 
   public String getYear() {
     return year;
@@ -348,11 +348,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get licencePlateNumber
+   * The licence plate number of the vehicle
    * @return licencePlateNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The licence plate number of the vehicle")
 
   public String getLicencePlateNumber() {
     return licencePlateNumber;
@@ -371,11 +371,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get isDeleted
+   * Whether or not the vehicle is deleted
    * @return isDeleted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the vehicle is deleted")
 
   public Boolean getIsDeleted() {
     return isDeleted;
@@ -402,11 +402,11 @@ public class FleetSummaryReportItem {
   }
 
    /**
-   * Get permittedEmployees
+   * An array of employee IDs that are permitted to use the vehicle
    * @return permittedEmployees
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of employee IDs that are permitted to use the vehicle")
 
   public List<Integer> getPermittedEmployees() {
     return permittedEmployees;
@@ -419,7 +419,7 @@ public class FleetSummaryReportItem {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -475,7 +475,7 @@ public class FleetSummaryReportItem {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

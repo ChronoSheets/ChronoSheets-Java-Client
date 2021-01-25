@@ -155,8 +155,8 @@ public class Example {
     defaultClient.setBasePath("https://api.chronosheets.com");
 
     TimesheetsApi apiInstance = new TimesheetsApi(defaultClient);
-    OffsetDateTime startDate = new OffsetDateTime(); // OffsetDateTime | The start date of the date range
-    OffsetDateTime endDate = new OffsetDateTime(); // OffsetDateTime | The end date of the date range
+    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | The start date of the date range
+    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of the date range
     String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
     try {
       ApiResponseListTimesheet result = apiInstance.timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);

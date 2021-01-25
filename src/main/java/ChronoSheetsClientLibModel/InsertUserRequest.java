@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fields for Inserting a new User account (employee) under your Organisation in ChronoSheets
  */
 @ApiModel(description = "Fields for Inserting a new User account (employee) under your Organisation in ChronoSheets")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class InsertUserRequest {
   public static final String SERIALIZED_NAME_EMAIL_ADDRESS = "EmailAddress";
   @SerializedName(SERIALIZED_NAME_EMAIL_ADDRESS)
@@ -303,7 +303,7 @@ public class InsertUserRequest {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -351,7 +351,7 @@ public class InsertUserRequest {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

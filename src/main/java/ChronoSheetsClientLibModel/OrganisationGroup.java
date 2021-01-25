@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * OrganisationGroup
+ * An organisation group.  Organisation groups are used throughout ChronoSheets to assign many groups to one alert, action or restriction.  E.g. you can assign an organisation group to receive geofence alerts, or you could restrict access to vehicles to users within an organisation group.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-10T22:27:55.870+10:00[Australia/Sydney]")
+@ApiModel(description = "An organisation group.  Organisation groups are used throughout ChronoSheets to assign many groups to one alert, action or restriction.  E.g. you can assign an organisation group to receive geofence alerts, or you could restrict access to vehicles to users within an organisation group.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-25T22:43:31.260+11:00[Australia/Sydney]")
 public class OrganisationGroup {
   public static final String SERIALIZED_NAME_ID = "Id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -53,11 +54,11 @@ public class OrganisationGroup {
   }
 
    /**
-   * Get id
+   * The ID of the organisation group
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation group")
 
   public Integer getId() {
     return id;
@@ -76,11 +77,11 @@ public class OrganisationGroup {
   }
 
    /**
-   * Get organisationId
+   * The ID of the organisation
    * @return organisationId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation")
 
   public Integer getOrganisationId() {
     return organisationId;
@@ -99,11 +100,11 @@ public class OrganisationGroup {
   }
 
    /**
-   * Get organisationGroupName
+   * The descriptive name of the organisation group
    * @return organisationGroupName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The descriptive name of the organisation group")
 
   public String getOrganisationGroupName() {
     return organisationGroupName;
@@ -122,11 +123,11 @@ public class OrganisationGroup {
   }
 
    /**
-   * Get isDeleted
+   * Whether or not the organisation group is deleted
    * @return isDeleted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the organisation group is deleted")
 
   public Boolean getIsDeleted() {
     return isDeleted;
@@ -139,7 +140,7 @@ public class OrganisationGroup {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -175,7 +176,7 @@ public class OrganisationGroup {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -4892,6 +4892,7 @@ components:
           type: string
       type: object
     TimesheetFileAttachment:
+      description: A file attachment attached to a timesheet
       example:
         TimesheetStart: 2000-01-23T04:56:07.000+00:00
         TimesheetEnd: 2000-01-23T04:56:07.000+00:00
@@ -4919,38 +4920,61 @@ components:
         DateUploaded: 2000-01-23T04:56:07.000+00:00
       properties:
         TimesheetId:
+          description: The ID of the timesheet this attachment is attached to.
           format: int32
           type: integer
         DocumentS3SignedUrl:
+          description: The limited use signed URL for the document (if it's not an
+            image).  This URL is unique and will eventually expire.  If the attachment
+            is an image, then this won't be set.
           type: string
         ImageLargeS3SignedUrl:
+          description: The limited use signed URL for the large version of the image.  This
+            URL is unique and will eventually expire.  Only set when the attachment
+            is actually an image.
           type: string
         ImageMediumS3SignedUrl:
+          description: The limited use signed URL for the medium version of the image.  This
+            URL is unique and will eventually expire.  Only set when the attachment
+            is actually an image.
           type: string
         ImageSmallS3SignedUrl:
+          description: The limited use signed URL for the small version of the image.  This
+            URL is unique and will eventually expire.  Only set when the attachment
+            is actually an image.
           type: string
         TimesheetStart:
+          description: The start date and time of the timesheet that this attachment
+            is attached to
           format: date-time
           type: string
         TimesheetEnd:
+          description: The end date and time of the timesheet that this attachment
+            is attached to
           format: date-time
           type: string
         FileAttachmentId:
+          description: The ID of the file attachment
           format: int32
           type: integer
         UserId:
+          description: The ID of the user who attached the file
           format: int32
           type: integer
         OrgId:
+          description: The ID of the organisation that owns the file and employs the
+            employee
           format: int32
           type: integer
         MobilePlatform:
+          description: The mobile platform that was used to attach the file
           enum:
           - Unknown
           - iOS
           - Android
           type: string
         AttachmentType:
+          description: The type of file attachment
           enum:
           - Image
           - WordDoc
@@ -4963,33 +4987,61 @@ components:
           - Audio
           type: string
         Notes:
+          description: Any notes regarding the file attachment
           type: string
         NonImageFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            if it's not an image.  If the attachment is an image then this won't be
+            set.
           type: string
         ImageLargeFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            only set if it's an image.  This is regarding the large version of the
+            image.
           type: string
         ImageMediumFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            only set if it's an image.  This is regarding the medium version of the
+            image.
           type: string
         ImageSmallFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            only set if it's an image.  This is regarding the small version of the
+            image.
           type: string
         OriginalFileName:
+          description: The original file name of the attachment
           type: string
         Latitude:
+          description: Meta-data indicating the latitude of the file attachment.  If
+            the attachment is an image, this data originates from the meta data inside
+            the image file.
           format: double
           type: number
         Longitude:
+          description: Meta-data indicating the longitude of the file attachment.  If
+            the attachment is an image, this data originates from the meta data inside
+            the image file.
           format: double
           type: number
         DateUploaded:
+          description: The date and time the attachment was uploaded.  Time is in
+            UTC.
           format: date-time
           type: string
         DateImageCaptured:
+          description: The original date and time the image was captured, if it was
+            an image.  This data originates from the meta data inside the image file.
           format: date-time
           type: string
         StorageAllocationBytes:
+          description: The number of bytes allocated for storing the file attachment.
           format: int64
           type: integer
         AudioDurationSeconds:
+          description: If the attachment was an audio file, this field indicates the
+            duration of the audio file in seconds.  This data originates from the
+            meta data inside the audio file.
           format: int32
           type: integer
       type: object
@@ -5095,6 +5147,7 @@ components:
           type: string
       type: object
     FleetVehicle:
+      description: A vehicle within the fleet
       example:
         IsDeleted: true
         Year: Year
@@ -5110,27 +5163,37 @@ components:
         Name: Name
       properties:
         Id:
+          description: The ID of the vehicle
           format: int32
           type: integer
         OrganisationId:
+          description: The ID of the organisation managing the vehicle
           format: int32
           type: integer
         Name:
+          description: A name given to the vehicle
           type: string
         CostPerKilometer:
+          description: The cost, in dollars, of running the vehicle over one kilometer
           format: double
           type: number
         Make:
+          description: The make of the vehicle
           type: string
         Model:
+          description: The model of the vehicle
           type: string
         Year:
+          description: The year the vehicle was manufactured
           type: string
         LicencePlateNumber:
+          description: The licence plate number of the vehicle
           type: string
         IsDeleted:
+          description: Whether or not the vehicle is deleted
           type: boolean
         PermittedEmployees:
+          description: An array of employee IDs that are permitted to use the vehicle
           items:
             format: int32
             type: integer
@@ -5302,7 +5365,7 @@ components:
           format: int32
           type: integer
         AlertSettings:
-          description: Define when you want the alerts to be setn
+          description: Define when you want the alerts to be sent
           enum:
           - None
           - SendWhenEntering
@@ -5395,7 +5458,7 @@ components:
           format: int32
           type: integer
         AlertSettings:
-          description: Define when you want the alerts to be setn
+          description: Define when you want the alerts to be sent
           enum:
           - None
           - SendWhenEntering
@@ -5479,6 +5542,7 @@ components:
           type: string
       type: object
     Geofence:
+      description: A geofence
       example:
         EndTimeMinute: 4
         GeoFencingId: 0
@@ -5504,38 +5568,53 @@ components:
         EndTimeHour: 2
       properties:
         GeoFencingId:
+          description: The ID of the geofence
           format: int32
           type: integer
         OrgId:
+          description: The ID of the organisation owning the geofence record
           format: int32
           type: integer
         CreatedByUserId:
+          description: The ID of the user/employee who created the geofence
           format: int32
           type: integer
         LastUpdatedByUserId:
+          description: The ID of the user/employee who last updated the geofence
           format: int32
           type: integer
         Name:
+          description: A descriptive name of the geofence
           type: string
         LocationName:
+          description: The name of the approx. location of the geofence
           type: string
         Coordinates:
+          description: A list of co-ordinates specifying the geofence
           items:
             $ref: '#/components/schemas/BasicCoordinate'
           type: array
         CreatedAt:
+          description: The date and time the geofence was created.  Time is in UTC.
           format: date-time
           type: string
         UpdatedAt:
+          description: The date and time the geofence was updated last.  Time is in
+            UTC.
           format: date-time
           type: string
         TriggerJobCodeId:
+          description: The ID of the job code used when the employee enters/exits
+            the geofence
           format: int32
           type: integer
         TriggerTaskId:
+          description: The ID of the task used when the employee enters/exits the
+            geofence
           format: int32
           type: integer
         TriggerSettings:
+          description: The settings for triggering actions
           enum:
           - None
           - StartTimesheetWhenEntering
@@ -5543,9 +5622,12 @@ components:
           - StartOnEnterStopOnLeave
           type: string
         AlertToOrgGroupId:
+          description: The organisation group that will be notified when the geofence
+            is triggered
           format: int32
           type: integer
         AlertSettings:
+          description: The settings for trigger alerts
           enum:
           - None
           - SendWhenEntering
@@ -5553,15 +5635,22 @@ components:
           - SendWhenEnteringOrExiting
           type: string
         StartTimeHour:
+          description: The hour start time. E.g. 13 would be 1pm.  Time is in 24hr
+            format.
           format: int32
           type: integer
         StartTimeMinute:
+          description: The minute start time.  E.g. 46 would be the 46th minute of
+            the hour.
           format: int32
           type: integer
         EndTimeHour:
+          description: The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format.
           format: int32
           type: integer
         EndTimeMinute:
+          description: The minute end time.  E.g. 13 would be the 13th minute of the
+            hour.
           format: int32
           type: integer
       type: object
@@ -5653,6 +5742,7 @@ components:
           type: string
       type: object
     ExtendedGeofence:
+      description: An extended geofence record
       example:
         EndTimeMinute: 7
         CreatedBy: CreatedBy
@@ -5683,48 +5773,70 @@ components:
         EndTimeHour: 4
       properties:
         JobCode:
+          description: The Job code used when the employee enters/exits the geofence
           type: string
         TaskName:
+          description: The name of the task used when the employee enters/exits the
+            geofence
           type: string
         CreatedBy:
+          description: The name of the employee who created the geofence
           type: string
         UpdatedBy:
+          description: The name of the employee who last updated the geofence
           type: string
         AlertOrganisation:
+          description: The name of the organisation group who will be notified when
+            the geofence is triggered
           type: string
         GeoFencingId:
+          description: The ID of the geofence
           format: int32
           type: integer
         OrgId:
+          description: The ID of the organisation owning the geofence record
           format: int32
           type: integer
         CreatedByUserId:
+          description: The ID of the user/employee who created the geofence
           format: int32
           type: integer
         LastUpdatedByUserId:
+          description: The ID of the user/employee who last updated the geofence
           format: int32
           type: integer
         Name:
+          description: A descriptive name of the geofence
           type: string
         LocationName:
+          description: The name of the approx. location of the geofence
           type: string
         Coordinates:
+          description: A list of co-ordinates specifying the geofence
           items:
             $ref: '#/components/schemas/BasicCoordinate'
           type: array
         CreatedAt:
+          description: The date and time the geofence was created.  Time is in UTC.
           format: date-time
           type: string
         UpdatedAt:
+          description: The date and time the geofence was updated last.  Time is in
+            UTC.
           format: date-time
           type: string
         TriggerJobCodeId:
+          description: The ID of the job code used when the employee enters/exits
+            the geofence
           format: int32
           type: integer
         TriggerTaskId:
+          description: The ID of the task used when the employee enters/exits the
+            geofence
           format: int32
           type: integer
         TriggerSettings:
+          description: The settings for triggering actions
           enum:
           - None
           - StartTimesheetWhenEntering
@@ -5732,9 +5844,12 @@ components:
           - StartOnEnterStopOnLeave
           type: string
         AlertToOrgGroupId:
+          description: The organisation group that will be notified when the geofence
+            is triggered
           format: int32
           type: integer
         AlertSettings:
+          description: The settings for trigger alerts
           enum:
           - None
           - SendWhenEntering
@@ -5742,15 +5857,22 @@ components:
           - SendWhenEnteringOrExiting
           type: string
         StartTimeHour:
+          description: The hour start time. E.g. 13 would be 1pm.  Time is in 24hr
+            format.
           format: int32
           type: integer
         StartTimeMinute:
+          description: The minute start time.  E.g. 46 would be the 46th minute of
+            the hour.
           format: int32
           type: integer
         EndTimeHour:
+          description: The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format.
           format: int32
           type: integer
         EndTimeMinute:
+          description: The minute end time.  E.g. 13 would be the 13th minute of the
+            hour.
           format: int32
           type: integer
       type: object
@@ -5792,14 +5914,17 @@ components:
           type: string
       type: object
     BasicGeofence:
+      description: A basic geofence
       example:
         GeoFencingId: 6
         Name: Name
       properties:
         GeoFencingId:
+          description: The ID of the geofence
           format: int32
           type: integer
         Name:
+          description: The descriptive name of the geofence
           type: string
       type: object
     ApiResponse[JobCode]:
@@ -6147,6 +6272,7 @@ components:
           type: string
       type: object
     Organisation:
+      description: An organisation in ChronoSheets
       example:
         Timezone: Timezone
         Suburb: Suburb
@@ -6175,37 +6301,53 @@ components:
         SignUpSource: Desktop
       properties:
         Id:
+          description: The ID of the organisation
           format: int32
           type: integer
         Name:
+          description: The name of the organisation
           type: string
         AddressLine01:
+          description: Address line 1 of the organisation
           type: string
         AddressLine02:
+          description: Address line 2 of the organisation
           type: string
         Suburb:
+          description: The suburb where the organisation is located
           type: string
         State:
+          description: The state where the organisation is located
           type: string
         Postcode:
+          description: The postcode of the organisation
           type: string
         Country:
+          description: The country of the organisation
           type: string
         Phone:
+          description: The primary phone contact number of the organisation
           type: string
         EmailAddress:
+          description: The primary email address of the organisation
           type: string
         Timezone:
+          description: The timezone of the organisation
           type: string
         SubscriptionCustomerId:
+          description: The customer ID of the payments subscription
           type: string
         SignupToken:
+          description: The sign up token
           type: string
         IsActive:
+          description: Whether or not the organisation is active
           type: boolean
         StripeCouponCode:
+          description: The payments coupon code
           type: string
         SubscriptionSource:
+          description: The source of the subscription
           enum:
           - None
           - Stripe
@@ -6213,20 +6355,25 @@ components:
           - GoogleInApp
           type: string
         SignUpSource:
+          description: The source where the organisation signed up
           enum:
           - Desktop
           - MobileiOS
           - MobileAndroid
           type: string
         MobileSignUpCode:
+          description: A temporary mobile sign up code
           type: string
         SubscriptionCycleStart:
+          description: The start date and time of the organisations subscription
           format: date-time
           type: string
         SubscriptionCycleEnd:
+          description: The end date and time of the organisations subscription
           format: date-time
           type: string
         PricingPlans:
+          description: The organisation's pricing plans
           items:
             $ref: '#/components/schemas/OrganisationPricingPlan'
           type: array
@@ -6279,6 +6426,10 @@ components:
           type: string
       type: object
     OrganisationGroup:
+      description: An organisation group.  Organisation groups are used throughout
+        ChronoSheets to assign many groups to one alert, action or restriction.  E.g.
+        you can assign an organisation group to receive geofence alerts, or you could
+        restrict access to vehicles to users within an organisation group.
       example:
         IsDeleted: true
         OrganisationGroupName: OrganisationGroupName
@@ -6286,14 +6437,18 @@ components:
         Id: 0
       properties:
         Id:
+          description: The ID of the organisation group
           format: int32
           type: integer
         OrganisationId:
+          description: The ID of the organisation
           format: int32
           type: integer
         OrganisationGroupName:
+          description: The descriptive name of the organisation group
           type: string
         IsDeleted:
+          description: Whether or not the organisation group is deleted
           type: boolean
       type: object
     ApiResponse[OrganisationGroup]:
@@ -6511,32 +6666,46 @@ components:
         IsAccountActive:
           type: boolean
         Id:
+          description: The ID of the user
           format: int32
           type: integer
         OrganisationId:
+          description: The ID of the organisation
           format: int32
           type: integer
         UserName:
+          description: The username of the user
           type: string
         FirstName:
+          description: The first name of the user
           type: string
         LastName:
+          description: The last name of the user
           type: string
         EmailAddress:
+          description: The email address of the user
           type: string
         Roles:
+          description: A BIT field designating which Roles/Permissions the employee
+            will have when they sign in.  See the {timesheets.types.Enums.UserRoles}
+            Enum for more details
           format: int64
           type: integer
         AlertSettings:
+          description: A BIT field designating which Alerts the employee will receive.  See
+            the {timesheets.types.Enums.AlertSettings} Enum for more details
           format: int64
           type: integer
         SetupWizardRequired:
+          description: Whether or not the setup wizard is required
           type: boolean
         IsSubscribedToNewsletter:
+          description: Whether or not the user is subscribed to the user
           type: boolean
         Organisation:
           $ref: '#/components/schemas/Organisation'
         IsPrimaryAccount:
+          description: Whether or not this account is the organisation's primary account.
           type: boolean
       type: object
     SetOrganisationGroupUsersRequest:
@@ -6595,6 +6764,7 @@ components:
           type: string
       type: object
     Project:
+      description: A project in ChronoSheets
       example:
         StartDate: 2000-01-23T04:56:07.000+00:00
         ProjectName: ProjectName
@@ -6606,26 +6776,35 @@ components:
         CostEstimation: 5.962133916683182
       properties:
         Id:
+          description: The ID of the project
           format: int32
           type: integer
         ClientId:
+          description: The ID of the client for which the project is being undertaken
+            for
           format: int32
           type: integer
         OrganisationId:
+          description: The ID of the organisation that is completing the project
           format: int32
           type: integer
         ProjectName:
+          description: A descriptive name of the project
           type: string
         CostEstimation:
+          description: The project's estimated cost
           format: double
           type: number
         CostActual:
+          description: The project's actual cost
           format: double
           type: number
         StartDate:
+          description: The start date and time of the project
           format: date-time
           type: string
         EndDate:
+          description: The end date and time of the project
           format: date-time
           type: string
       type: object
@@ -7779,38 +7958,61 @@ components:
         LastName:
           type: string
         TimesheetId:
+          description: The ID of the timesheet this attachment is attached to.
           format: int32
           type: integer
         DocumentS3SignedUrl:
+          description: The limited use signed URL for the document (if it's not an
+            image).  This URL is unique and will eventually expire.  If the attachment
+            is an image, then this won't be set.
           type: string
         ImageLargeS3SignedUrl:
+          description: The limited use signed URL for the large version of the image.  This
+            URL is unique and will eventually expire.  Only set when the attachment
+            is actually an image.
           type: string
         ImageMediumS3SignedUrl:
+          description: The limited use signed URL for the medium version of the image.  This
+            URL is unique and will eventually expire.  Only set when the attachment
+            is actually an image.
           type: string
         ImageSmallS3SignedUrl:
+          description: The limited use signed URL for the small version of the image.  This
+            URL is unique and will eventually expire.  Only set when the attachment
+            is actually an image.
           type: string
         TimesheetStart:
+          description: The start date and time of the timesheet that this attachment
+            is attached to
           format: date-time
           type: string
         TimesheetEnd:
+          description: The end date and time of the timesheet that this attachment
+            is attached to
           format: date-time
           type: string
         FileAttachmentId:
+          description: The ID of the file attachment
           format: int32
           type: integer
         UserId:
+          description: The ID of the user who attached the file
           format: int32
           type: integer
         OrgId:
+          description: The ID of the organisation that owns the file and employs the
+            employee
           format: int32
           type: integer
         MobilePlatform:
+          description: The mobile platform that was used to attach the file
           enum:
           - Unknown
           - iOS
           - Android
           type: string
         AttachmentType:
+          description: The type of file attachment
           enum:
           - Image
           - WordDoc
@@ -7823,33 +8025,61 @@ components:
           - Audio
           type: string
         Notes:
+          description: Any notes regarding the file attachment
           type: string
         NonImageFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            if it's not an image.  If the attachment is an image then this won't be
+            set.
           type: string
         ImageLargeFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            only set if it's an image.  This is regarding the large version of the
+            image.
           type: string
         ImageMediumFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            only set if it's an image.  This is regarding the medium version of the
+            image.
           type: string
         ImageSmallFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            only set if it's an image.  This is regarding the small version of the
+            image.
           type: string
         OriginalFileName:
+          description: The original file name of the attachment
           type: string
         Latitude:
+          description: Meta-data indicating the latitude of the file attachment.  If
+            the attachment is an image, this data originates from the meta data inside
+            the image file.
           format: double
           type: number
         Longitude:
+          description: Meta-data indicating the longitude of the file attachment.  If
+            the attachment is an image, this data originates from the meta data inside
+            the image file.
           format: double
           type: number
         DateUploaded:
+          description: The date and time the attachment was uploaded.  Time is in
+            UTC.
           format: date-time
           type: string
         DateImageCaptured:
+          description: The original date and time the image was captured, if it was
+            an image.  This data originates from the meta data inside the image file.
           format: date-time
           type: string
         StorageAllocationBytes:
+          description: The number of bytes allocated for storing the file attachment.
           format: int64
           type: integer
         AudioDurationSeconds:
+          description: If the attachment was an audio file, this field indicates the
+            duration of the audio file in seconds.  This data originates from the
+            meta data inside the audio file.
           format: int32
           type: integer
       type: object
@@ -8042,38 +8272,61 @@ components:
         LastName:
           type: string
         TimesheetId:
+          description: The ID of the timesheet this attachment is attached to.
           format: int32
           type: integer
         DocumentS3SignedUrl:
+          description: The limited use signed URL for the document (if it's not an
+            image).  This URL is unique and will eventually expire.  If the attachment
+            is an image, then this won't be set.
           type: string
         ImageLargeS3SignedUrl:
+          description: The limited use signed URL for the large version of the image.  This
+            URL is unique and will eventually expire.  Only set when the attachment
+            is actually an image.
           type: string
         ImageMediumS3SignedUrl:
+          description: The limited use signed URL for the medium version of the image.  This
+            URL is unique and will eventually expire.  Only set when the attachment
+            is actually an image.
           type: string
         ImageSmallS3SignedUrl:
+          description: The limited use signed URL for the small version of the image.  This
+            URL is unique and will eventually expire.  Only set when the attachment
+            is actually an image.
           type: string
         TimesheetStart:
+          description: The start date and time of the timesheet that this attachment
+            is attached to
           format: date-time
           type: string
         TimesheetEnd:
+          description: The end date and time of the timesheet that this attachment
+            is attached to
           format: date-time
           type: string
         FileAttachmentId:
+          description: The ID of the file attachment
           format: int32
           type: integer
         UserId:
+          description: The ID of the user who attached the file
           format: int32
           type: integer
         OrgId:
+          description: The ID of the organisation that owns the file and employs the
+            employee
           format: int32
           type: integer
         MobilePlatform:
+          description: The mobile platform that was used to attach the file
           enum:
           - Unknown
           - iOS
           - Android
           type: string
         AttachmentType:
+          description: The type of file attachment
           enum:
           - Image
           - WordDoc
@@ -8086,33 +8339,61 @@ components:
           - Audio
           type: string
         Notes:
+          description: Any notes regarding the file attachment
           type: string
         NonImageFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            if it's not an image.  If the attachment is an image then this won't be
+            set.
           type: string
         ImageLargeFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            only set if it's an image.  This is regarding the large version of the
+            image.
           type: string
         ImageMediumFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            only set if it's an image.  This is regarding the medium version of the
+            image.
           type: string
         ImageSmallFilePath:
+          description: The path to the file attachment as hosted by ChronoSheets storage,
+            only set if it's an image.  This is regarding the small version of the
+            image.
           type: string
         OriginalFileName:
+          description: The original file name of the attachment
           type: string
         Latitude:
+          description: Meta-data indicating the latitude of the file attachment.  If
+            the attachment is an image, this data originates from the meta data inside
+            the image file.
           format: double
           type: number
         Longitude:
+          description: Meta-data indicating the longitude of the file attachment.  If
+            the attachment is an image, this data originates from the meta data inside
+            the image file.
           format: double
           type: number
         DateUploaded:
+          description: The date and time the attachment was uploaded.  Time is in
+            UTC.
           format: date-time
           type: string
         DateImageCaptured:
+          description: The original date and time the image was captured, if it was
+            an image.  This data originates from the meta data inside the image file.
           format: date-time
           type: string
         StorageAllocationBytes:
+          description: The number of bytes allocated for storing the file attachment.
           format: int64
           type: integer
         AudioDurationSeconds:
+          description: If the attachment was an audio file, this field indicates the
+            duration of the audio file in seconds.  This data originates from the
+            meta data inside the audio file.
           format: int32
           type: integer
       type: object
@@ -8338,27 +8619,37 @@ components:
           format: double
           type: number
         Id:
+          description: The ID of the vehicle
           format: int32
           type: integer
         OrganisationId:
+          description: The ID of the organisation managing the vehicle
           format: int32
           type: integer
         Name:
+          description: A name given to the vehicle
           type: string
         CostPerKilometer:
+          description: The cost, in dollars, of running the vehicle over one kilometer
           format: double
           type: number
         Make:
+          description: The make of the vehicle
           type: string
         Model:
+          description: The model of the vehicle
           type: string
         Year:
+          description: The year the vehicle was manufactured
           type: string
         LicencePlateNumber:
+          description: The licence plate number of the vehicle
           type: string
         IsDeleted:
+          description: Whether or not the vehicle is deleted
           type: boolean
         PermittedEmployees:
+          description: An array of employee IDs that are permitted to use the vehicle
           items:
             format: int32
             type: integer
@@ -9313,6 +9604,7 @@ components:
           $ref: '#/components/schemas/ClientSideUser'
       type: object
     ClientSideUser:
+      description: A user within ChronoSheets
       example:
         IsPrimaryAccount: true
         SetupWizardRequired: true
@@ -9353,32 +9645,46 @@ components:
         EmailAddress: EmailAddress
       properties:
         Id:
+          description: The ID of the user
           format: int32
           type: integer
         OrganisationId:
+          description: The ID of the organisation
           format: int32
           type: integer
         UserName:
+          description: The username of the user
           type: string
         FirstName:
+          description: The first name of the user
           type: string
         LastName:
+          description: The last name of the user
           type: string
         EmailAddress:
+          description: The email address of the user
           type: string
         Roles:
+          description: A BIT field designating which Roles/Permissions the employee
+            will have when they sign in.  See the {timesheets.types.Enums.UserRoles}
+            Enum for more details
           format: int64
           type: integer
         AlertSettings:
+          description: A BIT field designating which Alerts the employee will receive.  See
+            the {timesheets.types.Enums.AlertSettings} Enum for more details
           format: int64
           type: integer
         SetupWizardRequired:
+          description: Whether or not the setup wizard is required
           type: boolean
         IsSubscribedToNewsletter:
+          description: Whether or not the user is subscribed to the user
           type: boolean
         Organisation:
           $ref: '#/components/schemas/Organisation'
         IsPrimaryAccount:
+          description: Whether or not this account is the organisation's primary account.
           type: boolean
       type: object
     ApiResponse[UserProfile]:
@@ -10013,4 +10319,5 @@ components:
       in: header
       name: x-chronosheets-auth
       type: apiKey
+x-original-swagger-version: "2.0"
 
